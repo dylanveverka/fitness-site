@@ -1,0 +1,370 @@
+---
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import { amazonLink } from "../../utils/affiliate";
+import Layout from "../../layouts/Layout.astro";
+
+const title = "Creatine for Beginners: Do You Actually Need It?";
+const description =
+  "Everything a college student needs to know about creatine — what it does, whether it's safe, and the best cheap options to buy.";
+const pubDate = "2026-04-15";
+const slug = "creatine-for-beginners";
+
+const affiliateUrl = amazonLink("B002DYIZEO");
+
+const pros = [
+  "The most research-backed supplement in existence — thousands of studies confirm it works",
+  "Cheap: $15–25 for 60 servings puts it at under $0.40 a day",
+  "Tasteless and odorless — dissolves in any drink without changing it",
+  "Benefits go beyond lifting: creatine supports brain energy and may improve focus",
+  "No cycling required — safe to take every day indefinitely",
+];
+
+const cons = [
+  "Initial water retention (3–5 lbs) can feel discouraging if you're cutting",
+  "Results are subtle week-to-week — people who expect dramatic changes get disappointed",
+  "You need to be consistent; missing days slows the saturation process",
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+    <article class="review">
+      <header>
+        <h1>{title}</h1>
+        <p class="meta">
+          Published: <time datetime={pubDate}>{pubDate}</time>
+        </p>
+      </header>
+
+      <!-- Intro -->
+      <section>
+        <p>
+          You've been lifting for a few months, you're eating enough protein, and now every guy
+          at the gym is throwing a scoop of white powder into their water bottle and telling you
+          creatine is the one thing you're missing. It's $20 a tub, it sounds vaguely scientific,
+          and you have no idea if it's going to do anything or just sit in your cabinet next to
+          the protein powder you maybe use three times a week.
+        </p>
+        <p>
+          Here's the honest answer: creatine is the single most studied, most consistently
+          effective, and most cost-efficient supplement you can buy. It's not a magic shortcut,
+          but it's also not hype. This page breaks down exactly what it does, how to take it,
+          and whether it makes sense for where you're at right now — no bro-science required.
+        </p>
+      </section>
+
+      <!-- Quick Verdict Box -->
+      <div class="verdict-box">
+        <h2>Quick Verdict</h2>
+        <div class="verdict-grid">
+          <div>
+            <span class="verdict-label">Value Rating</span>
+            <span class="verdict-value">5 / 5</span>
+          </div>
+          <div>
+            <span class="verdict-label">Best For</span>
+            <span class="verdict-value">Anyone lifting 3+ days a week</span>
+          </div>
+          <div>
+            <span class="verdict-label">Price Range</span>
+            <span class="verdict-value">$15–25 for 60 servings</span>
+          </div>
+        </div>
+        <p class="verdict-summary">
+          Creatine monohydrate is the rare supplement where the research actually matches the
+          real-world results. At under $0.40 a day, it's the highest return-on-investment
+          purchase in fitness. If you're training consistently, there's almost no reason not
+          to take it.
+        </p>
+        <AffiliateButton href={affiliateUrl} label="See Current Price on Amazon" />
+      </div>
+
+      <!-- Full Review -->
+      <section>
+        <h2>What Is Creatine and What Does It Actually Do?</h2>
+        <p>
+          Your muscles run on a molecule called ATP (adenosine triphosphate) — it's the
+          currency your body spends to contract muscle fibers. The problem is your cells can
+          only store a tiny amount of ATP at once, enough for about 8–10 seconds of maximum
+          effort. After that, your body scrambles to recycle spent ATP back into usable form.
+        </p>
+        <p>
+          This is where creatine comes in. Your muscles store creatine as
+          <strong>phosphocreatine</strong>, which acts like a rapid recharge system for spent
+          ATP. More phosphocreatine on hand means your muscles can sustain high-intensity
+          effort slightly longer before they have to slow down. In practical terms: you get an
+          extra rep or two on your hardest sets, you recover faster between sets, and over
+          months of training those marginal improvements compound into measurably more muscle
+          and strength.
+        </p>
+        <p>
+          Your body produces creatine naturally (about 1–2g per day) and you get some from
+          meat and fish. Supplementing adds enough to fully saturate your muscles' storage
+          capacity — roughly <strong>20% more phosphocreatine</strong> than you'd have
+          otherwise. That's the entire mechanism. There's nothing exotic about it.
+        </p>
+
+        <h2>Loading Phase vs. Maintenance Dose: Which Do You Need?</h2>
+        <p>
+          You'll hear two approaches:
+        </p>
+        <p>
+          <strong>Loading phase:</strong> Take 20g per day (split into 4 × 5g doses) for
+          5–7 days, then drop to 3–5g daily. This saturates your muscles faster — you'll feel
+          the effects within a week. The downside is more water retention upfront and a higher
+          chance of stomach discomfort if you're sensitive to it.
+        </p>
+        <p>
+          <strong>No loading — just maintenance:</strong> Take 3–5g every day from the start.
+          Your muscles reach full saturation in about 3–4 weeks instead of one week. The end
+          result is identical. Unless you have a specific reason to rush (a competition, a
+          bulk starting date), skipping the loading phase is the simpler and more comfortable
+          approach for most beginners.
+        </p>
+        <p>
+          The recommendation here: <strong>skip the loading phase.</strong> Take 5g every day,
+          don't overthink the timing, and give it a month. You'll get the same result with less
+          bloat and fewer variables to manage.
+        </p>
+
+        <h2>Is It Safe? What the Research Actually Says</h2>
+        <p>
+          Creatine monohydrate has been studied continuously since the early 1990s — it has
+          more human research behind it than almost any other dietary supplement. The consensus
+          across hundreds of trials is consistent: it's safe for healthy adults at standard
+          doses, with no evidence of kidney damage, liver stress, or long-term harm in people
+          without pre-existing conditions.
+        </p>
+        <p>
+          The kidney damage concern you've probably heard is a myth that originated from a
+          single poorly-designed case study and has since been thoroughly debunked. Creatine
+          does raise creatinine levels in blood tests (creatinine is a metabolite of creatine),
+          which can look alarming on a panel if your doctor doesn't know you're supplementing —
+          worth mentioning if you get bloodwork done, but not a cause for concern.
+        </p>
+        <p>
+          The one real caveat: if you have a kidney condition or family history of kidney
+          disease, talk to a doctor first. For everyone else, the safety profile is about as
+          clean as supplements get.
+        </p>
+
+        <h2>Creatine Monohydrate vs. Creatine HCl: Don't Overthink This</h2>
+        <p>
+          You'll see creatine HCl (hydrochloride) marketed as "better absorbed" and "no
+          bloating" at two to three times the price of monohydrate. The evidence for HCl
+          being meaningfully superior to monohydrate is thin. Monohydrate is what almost every
+          peer-reviewed study has used — when researchers say creatine works, they mean
+          monohydrate. There's no compelling reason to pay more for HCl, kre-alkalyn, or any
+          other form. Buy monohydrate, specifically micronized monohydrate, which dissolves
+          more cleanly in water.
+        </p>
+
+        <h2>When Should You Take It?</h2>
+        <p>
+          Timing matters less than consistency. The research on "best time to take creatine"
+          is inconclusive — some studies show a slight advantage to post-workout, others show
+          no meaningful difference. What's clear is that daily saturation matters far more than
+          the window you take it in.
+        </p>
+        <p>
+          The practical answer: take it whenever you'll actually remember to take it. Most
+          people add it to a post-workout shake, a morning coffee, or a glass of water with
+          breakfast. Pick a habit it can attach to and stop worrying about the clock.
+        </p>
+
+        <h2>What to Expect in Weeks 1–4</h2>
+        <p>
+          <strong>Week 1–2:</strong> You may notice you're holding 2–4 lbs of extra water
+          weight. This is creatine drawing water into your muscle cells — it's a sign it's
+          working, not fat gain. Some people also notice slightly fuller-looking muscles during
+          this period.
+        </p>
+        <p>
+          <strong>Week 2–3:</strong> The gym benefits start becoming noticeable. An extra rep
+          on your last set, slightly less burnout near the end of a tough session. The changes
+          are subtle — you won't feel a dramatic surge, but you'll start noticing you're
+          recovering faster between sets.
+        </p>
+        <p>
+          <strong>Week 4+:</strong> Full saturation. Your muscles are operating with a fully
+          loaded phosphocreatine system. You won't feel a new wave of effects — this is just
+          your new baseline. The long-term benefit is training harder consistently, which
+          compounds into more muscle and strength over months.
+        </p>
+        <p>
+          Manage expectations: creatine is not a pre-workout stimulant. You won't feel it kick
+          in. The benefit is structural and cumulative, not acute.
+        </p>
+      </section>
+
+      <!-- Pros & Cons -->
+      <section>
+        <h2>Pros & Cons</h2>
+        <ProsConsList pros={pros} cons={cons} />
+      </section>
+
+      <!-- Who Should Buy -->
+      <section>
+        <h2>Who Should Buy Creatine</h2>
+        <ul>
+          <li>
+            <strong>Students lifting 3 or more days a week.</strong> If you're training
+            consistently, creatine gives you a measurable return. If you're lifting once a week
+            casually, focus on consistency first.
+          </li>
+          <li>
+            <strong>Anyone on a tight budget.</strong> At under $0.40 a day, this is the
+            cheapest performance boost in fitness. A $20 tub lasts two months. Nothing else
+            comes close to this value-to-effect ratio.
+          </li>
+          <li>
+            <strong>People eating mostly plant-based.</strong> Creatine is found almost
+            exclusively in meat and fish. Vegetarians and vegans have lower baseline muscle
+            creatine levels and tend to see even larger gains from supplementation than
+            omnivores.
+          </li>
+          <li>
+            <strong>Anyone who wants to train harder without spending more time in the gym.</strong>
+            More output per session, not more sessions. That's the whole value proposition.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Who Should Skip -->
+      <section>
+        <h2>Who Should Skip It (For Now)</h2>
+        <ul>
+          <li>
+            <strong>People who've been training less than 2–3 months.</strong> Your body has
+            plenty of beginner adaptation gains left — you'll make fast progress on training
+            and diet alone. Get the fundamentals locked in before adding supplements.
+          </li>
+          <li>
+            <strong>Students in a hard cut who can't afford any water weight.</strong> The
+            initial 2–4 lbs of water retention is temporary, but if you're actively dieting
+            down for a specific event and the scale number matters, start creatine after the cut.
+          </li>
+          <li>
+            <strong>Anyone with existing kidney issues.</strong> Talk to a doctor first. The
+            research supports safety in healthy adults, but pre-existing conditions change the
+            equation.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Final Verdict -->
+      <section>
+        <h2>Final Verdict</h2>
+        <p>
+          If there's one supplement worth buying before anything else, it's creatine monohydrate.
+          Not because it's exciting or because you'll feel it working — but because decades of
+          research say it consistently does what it claims to do, it costs almost nothing, and
+          it has no meaningful downside for healthy people who train regularly.
+        </p>
+        <p>
+          Skip the loading phase. Buy micronized monohydrate. Take 5g a day. Give it a month.
+          That's genuinely the entire protocol — no cycling, no special timing, no stacking
+          required. Optimum Nutrition's micronized creatine is unflavored, mixes clean, and is
+          one of the most trusted brands in the space. At this price point, there's nothing
+          to deliberate over.
+        </p>
+        <AffiliateButton
+          href={affiliateUrl}
+          label="Buy ON Creatine Monohydrate on Amazon"
+        />
+      </section>
+    </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    margin: 1.75rem 0 0.5rem;
+    color: #1e293b;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  .verdict-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #7c3aed;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    margin-top: 0;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #0f172a;
+  }
+
+  .verdict-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .verdict-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #64748b;
+    font-weight: 600;
+  }
+
+  .verdict-value {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .verdict-summary {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+</style>

@@ -1,0 +1,526 @@
+---
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import { amazonLink } from "../../utils/affiliate";
+import Layout from "../../layouts/Layout.astro";
+
+const title = "Best Blender Bottle for Protein Shakes (2025) — Reviewed";
+const description =
+  "The best shaker bottles for college students who mix protein powder every day. No clumps, no leaks, no wasted money.";
+const pubDate = "2026-04-15";
+const slug = "best-blender-bottle-protein-shakes";
+
+const blenderBottleUrl = amazonLink("B001NZ9HCI");
+const hydraCupUrl = amazonLink("B01LXBUA3Y");
+const contigoUrl = amazonLink("B00YJKUUOY");
+
+const pros = [
+  "Wire whisk ball eliminates clumps completely — works with every protein powder formula",
+  "Flip cap stays locked in both open and closed positions, eliminating mid-bag leaks",
+  "Wide mouth makes it easy to add powder, clean by hand, and dry completely",
+  "Dishwasher safe on the top rack — every component, including the whisk ball",
+  "Under $12 and built to last years with basic care",
+];
+
+const cons = [
+  "Plastic retains odors over time if you don't rinse it immediately after use",
+  "The loop cap attachment can collect residue if not scrubbed weekly",
+  "28oz is the right size for most shakes but may feel large for pre-workout-only mixing",
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+    <article class="review">
+      <header>
+        <h1>{title}</h1>
+        <p class="meta">
+          Published: <time datetime={pubDate}>{pubDate}</time>
+        </p>
+      </header>
+
+      <!-- Intro -->
+      <section>
+        <p>
+          You already know the two ways a shaker bottle fails you. The first: you pull it
+          out of your backpack after class and there's a protein-scented ring around
+          everything in the main pocket because the lid didn't seal. The second: you shake
+          for 30 seconds, take a sip, and get a wet clump of vanilla whey directly on your
+          tongue. Neither of these is acceptable, and both are completely avoidable if you
+          buy the right bottle.
+        </p>
+        <p>
+          A good shaker bottle is not a complicated product. It needs to mix powder without
+          clumps, seal without leaking, and survive a dishwasher without warping or retaining
+          smell. Here are the three best options at different price points, with zero
+          marketing fluff.
+        </p>
+      </section>
+
+      <!-- Quick Verdict Box -->
+      <div class="verdict-box">
+        <h2>Our Top Picks at a Glance</h2>
+        <div class="picks-grid">
+          <div class="pick-card">
+            <span class="pick-badge">Best Overall</span>
+            <p class="pick-name">BlenderBottle Classic 28oz</p>
+            <p class="pick-detail">Wire whisk · Flip lock · Under $12</p>
+            <a href={blenderBottleUrl} target="_blank" rel="noopener noreferrer sponsored" class="pick-link">
+              View on Amazon →
+            </a>
+          </div>
+          <div class="pick-card">
+            <span class="pick-badge alt">Best Dual-Compartment</span>
+            <p class="pick-name">Hydra Cup Dual Shaker</p>
+            <p class="pick-detail">Two chambers · Pre-workout + protein</p>
+            <a href={hydraCupUrl} target="_blank" rel="noopener noreferrer sponsored" class="pick-link">
+              View on Amazon →
+            </a>
+          </div>
+          <div class="pick-card">
+            <span class="pick-badge premium">Best Budget Leak-Proof</span>
+            <p class="pick-name">Contigo Shake and Go</p>
+            <p class="pick-detail">Autoseal lid · No flip cap to forget</p>
+            <a href={contigoUrl} target="_blank" rel="noopener noreferrer sponsored" class="pick-link">
+              View on Amazon →
+            </a>
+          </div>
+        </div>
+        <p class="disclosure">
+          <small>As an Amazon Associate I earn from qualifying purchases.</small>
+        </p>
+      </div>
+
+      <!-- Full Reviews -->
+      <section>
+        <h2>Full Reviews</h2>
+
+        <!-- Pick 1 -->
+        <div class="product-section">
+          <h3>
+            <span class="badge">Best Overall</span>
+            BlenderBottle Classic 28oz
+          </h3>
+          <p>
+            The BlenderBottle Classic has been the default recommendation for protein shakers
+            for over a decade, and it still holds that position because nothing at this price
+            has improved on the core design. It does three things better than almost every
+            competitor: it mixes cleanly, seals reliably, and survives dishwasher cycles
+            without degrading.
+          </p>
+          <p>
+            <strong>Capacity:</strong> 28oz, with measurement markings on both sides in oz
+            and mL. Enough room for a double scoop shake plus ice without overflow when
+            shaking. A 20oz version exists if you want something more compact for a single
+            scoop.
+          </p>
+          <p>
+            <strong>Wire whisk ball:</strong> The 316 surgical-grade stainless steel whisk
+            ball is the product's defining feature. Drop it in, add liquid first, then powder,
+            shake for 10 seconds, and the shake is smooth. It works with every powder
+            consistency — fine whey isolate, thick casein, gritty plant protein — where
+            alternatives like mesh grids or plastic balls fall short. The ball itself is
+            dishwasher safe and doesn't rust or deform.
+          </p>
+          <p>
+            <strong>Leak-proof rating:</strong> The flip cap locks in the closed position
+            with an audible click, and the seal is tight enough that holding it upside down
+            and shaking vigorously produces no drips. This is the move to test any shaker
+            before putting it in your bag — if it leaks upside down dry, it'll leak with
+            liquid under pressure. The Classic passes consistently.
+          </p>
+          <p>
+            <strong>Cleaning:</strong> Wide mouth, no tight corners, and every component
+            disassembles fully (lid, flip cap, spout cover, whisk ball). Top-rack dishwasher
+            safe. Hand washing takes 60 seconds if you rinse it immediately after use.
+          </p>
+          <p>
+            <strong>Price:</strong> Around $10–12. In a product category full of $30–40
+            options that don't meaningfully outperform it, this is the correct price for
+            what it is.
+          </p>
+
+          <h4>Pros & Cons</h4>
+          <ProsConsList pros={pros} cons={cons} />
+          <AffiliateButton href={blenderBottleUrl} label="Buy BlenderBottle Classic on Amazon" />
+        </div>
+
+        <!-- Pick 2 -->
+        <div class="product-section">
+          <h3>
+            <span class="badge alt">Best Dual-Compartment</span>
+            Hydra Cup Dual Shaker Bottle
+          </h3>
+          <p>
+            The Hydra Cup solves a specific problem: you want to mix your pre-workout and
+            your post-workout protein shake before you leave for the gym without carrying
+            two separate bottles. It has two independent chambers that share one outer body —
+            each side seals separately, mixes separately, and holds 12–16oz depending on
+            configuration. You drink from one side at the gym, the other on the way home.
+          </p>
+          <p>
+            <strong>Capacity:</strong> Two chambers totaling around 28oz. The split isn't
+            perfectly even, which works out fine — pre-workout mixes typically use less
+            liquid than a full protein shake.
+          </p>
+          <p>
+            <strong>Whisk balls:</strong> Each chamber includes its own mixing ball. Both
+            sides mix cleanly, and the seals on each chamber are independent, so a leak on
+            one side doesn't compromise the other.
+          </p>
+          <p>
+            <strong>Leak-proof rating:</strong> Solid but slightly below the BlenderBottle
+            Classic due to the more complex dual-cap mechanism. The caps lock securely, but
+            the design has more failure points than a single-chamber bottle. Rinse both sides
+            well after use — residue in the seam between chambers is the main cleaning
+            challenge.
+          </p>
+          <p>
+            <strong>Cleaning:</strong> More involved than a single-chamber bottle. The two
+            chambers require individual attention, and the junction between them can trap
+            moisture if not dried completely. Dishwasher safe, but hand drying the interior
+            of both chambers after a cycle is recommended.
+          </p>
+          <p>
+            <strong>Price:</strong> Around $15–18. A reasonable premium over the Classic
+            for the dual functionality — worth it if you're consistently taking both
+            pre-workout and a post-workout shake to the gym. Not worth it if you just
+            need a reliable single shaker.
+          </p>
+          <p>
+            <strong>Best for:</strong> Students who prep both a pre and post-workout drink
+            before leaving and don't want to carry two bottles.
+          </p>
+        </div>
+
+        <!-- Pick 3 -->
+        <div class="product-section">
+          <h3>
+            <span class="badge premium">Best Budget Leak-Proof</span>
+            Contigo Shake and Go
+          </h3>
+          <p>
+            The Contigo Shake and Go takes a different approach to the leak problem: instead
+            of a flip cap that you have to remember to lock, it uses an autoseal mechanism
+            that seals automatically when you're not actively drinking. The spout only opens
+            when you press the button. There's nothing to forget to flip closed before
+            throwing it in your bag.
+          </p>
+          <p>
+            <strong>Capacity:</strong> 28oz, with a narrower profile than the BlenderBottle
+            Classic that fits more water bottle pockets and car cup holders.
+          </p>
+          <p>
+            <strong>Whisk ball:</strong> Included and functional. Mixing performance is
+            comparable to the BlenderBottle for most standard protein powders, though the
+            narrower mouth makes adding powder slightly less convenient.
+          </p>
+          <p>
+            <strong>Leak-proof rating:</strong> The autoseal mechanism is genuinely
+            excellent — press to drink, release to seal, and the seal holds even when the
+            bottle is inverted and shaken. For people who have a history of leaving flip
+            caps unlocked, this design eliminates the problem entirely.
+          </p>
+          <p>
+            <strong>Cleaning:</strong> The autoseal spout mechanism is the trade-off. It
+            has more internal parts than a simple flip cap, and the spout assembly can trap
+            protein residue if not disassembled and cleaned weekly. The bottle body is
+            top-rack dishwasher safe; the lid requires hand washing to clean the mechanism
+            properly.
+          </p>
+          <p>
+            <strong>Price:</strong> Around $10–14, comparable to the Classic. Good value
+            for the leak-proof design, with the cleaning complexity as the main caveat.
+          </p>
+          <p>
+            <strong>Best for:</strong> Students who consistently forget to lock their
+            shaker lid before it goes in a bag and have paid the price for it.
+          </p>
+        </div>
+      </section>
+
+      <!-- Cleaning Bonus Section -->
+      <section>
+        <h2>How to Actually Clean a Shaker Bottle So It Doesn't Smell</h2>
+        <p>
+          Protein shaker smell is entirely preventable and entirely the result of one thing:
+          leaving a used shaker closed in a warm space — a backpack, a gym bag, a car — for
+          more than a couple of hours. Milk protein at room temperature in a sealed container
+          is a fast route to a smell that does not come out with a single rinse.
+        </p>
+        <p>
+          <strong>The one rule that prevents 90% of smell problems:</strong> Rinse with cold
+          water immediately after finishing your shake. Don't cap it. Leave it open. Do this
+          before you go to class, before you get in the car, before you sit down at your
+          desk. The ten-second rinse while the bottle is still in your hand is the entire
+          prevention protocol.
+        </p>
+        <p>
+          <strong>For actual washing:</strong> Hot water, dish soap, and the whisk ball
+          loose inside does most of the work. Shake with soapy water for 15 seconds, rinse,
+          leave uncapped to air dry completely. Capping a bottle that's still damp inside
+          is how mildew smell starts.
+        </p>
+        <p>
+          <strong>If the smell is already there:</strong> Fill the bottle with a mixture
+          of warm water and two tablespoons of baking soda, cap it, shake, and let it sit
+          for 30 minutes. Rinse thoroughly. For stubborn smells, white vinegar works the
+          same way. Do not use bleach — it degrades the plastic and leaves its own smell
+          that doesn't go away.
+        </p>
+        <p>
+          <strong>Weekly maintenance:</strong> Disassemble the lid fully — flip cap, spout
+          cover, seal ring if removable — and scrub each piece separately with a small brush
+          or toothbrush. Protein residue collects in the hinge and seal areas where water
+          alone doesn't reach.
+        </p>
+      </section>
+
+      <!-- Who Should Buy -->
+      <section>
+        <h2>Who Should Buy a BlenderBottle Classic</h2>
+        <ul>
+          <li>
+            <strong>Anyone mixing protein powder more than twice a week.</strong> A dedicated
+            shaker with a whisk ball produces a noticeably smoother shake than a water
+            bottle or glass, and at $10–12 there's no reason to improvise.
+          </li>
+          <li>
+            <strong>Students who meal prep shakes in bulk.</strong> Wide mouth, easy to
+            clean, dishwasher safe — this fits into a meal prep routine without adding
+            friction.
+          </li>
+          <li>
+            <strong>People who've had cheap shakers leak or smell.</strong> The BlenderBottle
+            Classic fixes both problems cleanly and reliably at the same price point as
+            whatever failed you last time.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Who Should Skip -->
+      <section>
+        <h2>Who Should Skip the BlenderBottle Classic</h2>
+        <ul>
+          <li>
+            <strong>Anyone who needs two drinks at the gym.</strong> Get the Hydra Cup
+            instead. The Classic is a single-chamber bottle — that's a design constraint,
+            not a flaw.
+          </li>
+          <li>
+            <strong>People who consistently forget to lock lids.</strong> The Contigo's
+            autoseal design removes that failure mode entirely. If you've ruined a backpack
+            to a shaker leak more than once, that's worth the trade-off.
+          </li>
+          <li>
+            <strong>Students who want an insulated bottle that also shakes.</strong> The
+            BlenderBottle Classic is plastic and not insulated — your shake will warm up
+            if you leave it sitting. For cold shakes on a hot day, look at the BlenderBottle
+            Radian (stainless) or add ice and drink it quickly.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Final Verdict -->
+      <section>
+        <h2>Final Verdict</h2>
+        <p>
+          The BlenderBottle Classic has been the right answer to this question for years and
+          still is. It's not exciting, it doesn't have a feature list, and it doesn't need
+          one. It mixes protein powder without clumps, seals without leaking, survives the
+          dishwasher, and costs $10. That's the entire job description of a shaker bottle,
+          and it does it better than almost everything else at any price.
+        </p>
+        <p>
+          Buy one, rinse it immediately every time you use it, and it'll last through your
+          entire college career. The only reason to buy a different shaker is if you have
+          a specific need — dual chambers, autoseal, insulation — that the Classic doesn't
+          cover. For everything else, this is the one.
+        </p>
+        <AffiliateButton
+          href={blenderBottleUrl}
+          label="Buy BlenderBottle Classic on Amazon"
+        />
+      </section>
+    </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    margin: 1.75rem 0 0.5rem;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  h4 {
+    font-size: 1rem;
+    margin: 1.5rem 0 0.5rem;
+    color: #1e293b;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Verdict box */
+  .verdict-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #0284c7;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    margin-top: 0;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #0f172a;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .pick-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    padding: 1rem;
+  }
+
+  .pick-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .pick-badge.alt {
+    background: #fef9c3;
+    color: #854d0e;
+  }
+
+  .pick-badge.premium {
+    background: #f0fdf4;
+    color: #15803d;
+  }
+
+  .pick-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin: 0.4rem 0 0.2rem;
+    color: #0f172a;
+    line-height: 1.35;
+  }
+
+  .pick-detail {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0 0 0.5rem;
+  }
+
+  .pick-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0284c7;
+    text-decoration: none;
+  }
+
+  .pick-link:hover {
+    text-decoration: underline;
+  }
+
+  .disclosure {
+    color: #64748b;
+    font-size: 0.78rem;
+    margin: 0.75rem 0 0;
+  }
+
+  /* Product sections */
+  .product-section {
+    border-top: 2px solid #e2e8f0;
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  /* Badges */
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+  }
+
+  .badge.alt {
+    background: #fef9c3;
+    color: #854d0e;
+  }
+
+  .badge.premium {
+    background: #f0fdf4;
+    color: #15803d;
+  }
+
+  @media (max-width: 600px) {
+    .picks-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

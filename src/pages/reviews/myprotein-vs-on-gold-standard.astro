@@ -1,0 +1,424 @@
+---
+import ComparisonTable from "../../components/ComparisonTable.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import { amazonLink } from "../../utils/affiliate";
+import Layout from "../../layouts/Layout.astro";
+
+const title = "MyProtein vs ON Gold Standard: Which Protein Is Better for the Price?";
+const description =
+  "Two of the most popular protein powders go head to head. We compare macros, cost per serving, taste, and value so you don't waste money on the wrong tub.";
+const pubDate = "2026-04-15";
+const slug = "myprotein-vs-on-gold-standard";
+
+const onUrl = amazonLink("B000QSNYGI");
+const myproteinUrl = amazonLink("B09NWD163P");
+
+const tableRows = [
+  {
+    label: "Price per tub (5 lb)",
+    a: "~$54–60",
+    b: "~$38–45",
+    winner: "b",
+  },
+  {
+    label: "Servings per tub",
+    a: "~74 servings",
+    b: "~75 servings",
+    winner: "tie",
+  },
+  {
+    label: "Cost per serving",
+    a: "~$0.73–0.81",
+    b: "~$0.51–0.60",
+    winner: "b",
+  },
+  {
+    label: "Protein per serving",
+    a: "24g",
+    b: "21g",
+    winner: "a",
+  },
+  {
+    label: "Carbs per serving",
+    a: "3g",
+    b: "3g",
+    winner: "tie",
+  },
+  {
+    label: "Fat per serving",
+    a: "1.5g",
+    b: "1.9g",
+    winner: "a",
+  },
+  {
+    label: "Calories",
+    a: "120",
+    b: "103",
+    winner: "b",
+  },
+  {
+    label: "Flavors available",
+    a: "20+",
+    b: "50+",
+    winner: "b",
+  },
+  {
+    label: "Mixability",
+    a: "Excellent",
+    b: "Good",
+    winner: "a",
+  },
+  {
+    label: "Third-party tested",
+    a: "Yes (Informed Sport)",
+    b: "No",
+    winner: "a",
+  },
+  {
+    label: "Best place to buy",
+    a: "Amazon / retailer",
+    b: "MyProtein.com (sales)",
+    winner: "tie",
+  },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+    <article class="review">
+      <header>
+        <h1>{title}</h1>
+        <p class="meta">
+          Published: <time datetime={pubDate}>{pubDate}</time>
+        </p>
+      </header>
+
+      <!-- Intro -->
+      <section>
+        <p>
+          ON Gold Standard and MyProtein Impact Whey are two of the most bought protein
+          powders in the world, and they're both recommended constantly — in the same
+          breath, often, as if they're interchangeable. They're not. One costs significantly
+          more, mixes better, and carries third-party testing that the other doesn't bother
+          with. The other has a flavor list that reads like a dessert menu and goes on sale
+          so aggressively that the price-per-serving drops below almost anything else on the
+          market.
+        </p>
+        <p>
+          Which one you should buy depends almost entirely on how much you're spending, how
+          picky you are about taste, and whether you care about what's actually in the tub.
+          Here's the full breakdown.
+        </p>
+      </section>
+
+      <!-- Comparison Table -->
+      <section>
+        <h2>Side-by-Side Comparison</h2>
+        <ComparisonTable
+          nameA="ON Gold Standard"
+          nameB="MyProtein Impact Whey"
+          rows={tableRows}
+        />
+      </section>
+
+      <!-- Winner Callouts -->
+      <section>
+        <h2>Category Winners</h2>
+        <div class="winners-grid">
+          <div class="winner-card on">
+            <span class="winner-label">Best Overall</span>
+            <span class="winner-name">ON Gold Standard</span>
+            <span class="winner-reason">Better macros, superior mixability, third-party tested</span>
+          </div>
+          <div class="winner-card mp">
+            <span class="winner-label">Best Value</span>
+            <span class="winner-name">MyProtein Impact Whey</span>
+            <span class="winner-reason">Up to 30% cheaper per serving on sale, huge flavor variety</span>
+          </div>
+          <div class="winner-card on">
+            <span class="winner-label">Best for Bulking</span>
+            <span class="winner-name">ON Gold Standard</span>
+            <span class="winner-reason">Higher protein per serving, cleaner macro density</span>
+          </div>
+          <div class="winner-card mp">
+            <span class="winner-label">Best for Cutting</span>
+            <span class="winner-name">MyProtein Impact Whey</span>
+            <span class="winner-reason">Lower calories per serving, budget headroom for food</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ON Gold Standard Deep Dive -->
+      <section>
+        <h2>ON Gold Standard Whey: Full Breakdown</h2>
+        <p>
+          Optimum Nutrition's Gold Standard has been the benchmark protein powder since the
+          late 1990s, and it retains that position for legitimate reasons. The formula leads
+          with whey protein isolate as the primary ingredient — not concentrate, not a blend
+          where isolate appears third on the list — which is why the fat and carb numbers
+          are low even at 24g protein per serving. At 120 calories per scoop with 1.5g fat
+          and 3g carbs, the macro efficiency is genuinely excellent.
+        </p>
+        <p>
+          Mixability is where Gold Standard has no real competition at this price. A single
+          shake in 8–10oz of water or milk and it dissolves completely, no blender required.
+          The texture is smooth rather than gritty, and it doesn't foam excessively the way
+          some concentrates do. For students mixing in a dorm room with only a shaker bottle,
+          this matters more than it sounds — lumpy protein is a motivation killer.
+        </p>
+        <p>
+          The third-party testing through Informed Sport is the other differentiator. Informed
+          Sport certifies that what's on the label is what's in the tub, and that there are
+          no banned substances present. For most college students this doesn't matter day to
+          day, but if you're a college athlete subject to drug testing, this certification is
+          non-negotiable. No equivalent certification exists for MyProtein Impact Whey.
+        </p>
+        <p>
+          The trade-off is cost. At $54–60 for a 5 lb tub on Amazon — around $0.75–0.80
+          per serving — Gold Standard is one of the pricier options in its tier. It doesn't
+          go on sale as dramatically as MyProtein, and you won't find it significantly
+          cheaper at Walmart or GNC than on Amazon. You're paying for consistency,
+          formulation quality, and brand accountability, which is worth it for some
+          budgets and not for others.
+        </p>
+        <p>
+          The flavor lineup is solid if not expansive: Double Rich Chocolate and Vanilla
+          Ice Cream are the standards, both well-rated, and the Chocolate Peanut Butter
+          variant has a legitimate following. Twenty-plus flavors is enough variety for most
+          people without tipping into novelty territory.
+        </p>
+        <AffiliateButton href={onUrl} label="Buy ON Gold Standard on Amazon" />
+      </section>
+
+      <!-- MyProtein Deep Dive -->
+      <section>
+        <h2>MyProtein Impact Whey: Full Breakdown</h2>
+        <p>
+          MyProtein is a UK-based brand that cracked the US market largely on the strength
+          of one thing: aggressive, frequent discounts that make their protein powder
+          substantially cheaper per serving than anything comparable. During a sale — which
+          happen multiple times a month on their website — a 5 lb equivalent of Impact Whey
+          drops to $38–42, putting the cost per serving around $0.50–0.55. At that price, it
+          undercuts almost every protein powder in the mid-tier market.
+        </p>
+        <p>
+          The formula is a whey concentrate rather than isolate, which is why the calorie
+          count is slightly lower (103 per serving) but the fat content is marginally higher
+          than Gold Standard. The protein per serving sits at 21g — three grams less than
+          Gold Standard — which is a real difference if you're tracking macros carefully but
+          negligible if you're not. Over a 75-serving tub, that gap is roughly 225g of
+          total protein, or about seven extra servings worth at Gold Standard's numbers.
+        </p>
+        <p>
+          The flavor selection is genuinely impressive. Fifty-plus options including
+          Salted Caramel, Birthday Cake, Tiramisu, and Sticky Toffee Pudding give you
+          range that no competitor in this price tier can match. Quality across flavors is
+          inconsistent — the chocolate and vanilla variants are reliably good, while some
+          of the novelty flavors are polarizing — but the breadth means you're very unlikely
+          to be stuck with something you hate.
+        </p>
+        <p>
+          Mixability is good but not as clean as Gold Standard. With a shaker ball it
+          mixes adequately with no major clumping, but the concentrate base produces slightly
+          more foam and occasional texture variation between batches. It's not a problem —
+          just a noticeable step down from Gold Standard's near-perfect dissolution.
+        </p>
+        <p>
+          The key buying note: <strong>do not buy MyProtein at full price.</strong> Their
+          sale cadence is frequent enough that waiting a week almost always yields a
+          20–30% discount. Subscribe to their email list or check their site during
+          holidays and flash sale periods. At sale price this is an excellent product.
+          At full price the value case weakens considerably.
+        </p>
+        <AffiliateButton href={myproteinUrl} label="Buy MyProtein Impact Whey on Amazon" />
+      </section>
+
+      <!-- Final Verdict -->
+      <section>
+        <h2>Final Verdict: Which Should You Buy?</h2>
+
+        <div class="verdict-scenario">
+          <h3>Buy ON Gold Standard if:</h3>
+          <ul>
+            <li>
+              <strong>You're a college athlete subject to drug testing.</strong> Informed Sport
+              certification is the only safe choice here. No debate.
+            </li>
+            <li>
+              <strong>Mixability is a dealbreaker.</strong> If you're mixing in a dorm room
+              with a shaker bottle and no blender, Gold Standard's dissolution is noticeably
+              better day-to-day.
+            </li>
+            <li>
+              <strong>You want to buy once and not track sales.</strong> Gold Standard is
+              available everywhere at a consistent price. There's no waiting, no timing,
+              no email list required.
+            </li>
+            <li>
+              <strong>You're in a calorie surplus and want to maximize protein density.</strong>
+              24g per 120 calories is a better protein-per-calorie ratio when every macro
+              counts on a structured bulk.
+            </li>
+          </ul>
+        </div>
+
+        <div class="verdict-scenario alt">
+          <h3>Buy MyProtein Impact Whey if:</h3>
+          <ul>
+            <li>
+              <strong>Budget is the primary constraint.</strong> At sale price, nothing in
+              this tier beats the cost per serving. Over six months of consistent use, the
+              savings versus Gold Standard compound to $50–80.
+            </li>
+            <li>
+              <strong>You get bored of the same flavor quickly.</strong> Fifty-plus options
+              versus twenty means you can rotate through flavors for a year without repeating.
+              If taste variety keeps you consistent, that's a legitimate factor.
+            </li>
+            <li>
+              <strong>You're cutting and calorie-counting carefully.</strong> 103 calories
+              versus 120 per serving is a modest difference, but across two scoops a day it
+              adds up to roughly 34 fewer calories — about 1,000 calories a month.
+            </li>
+            <li>
+              <strong>You're willing to buy from their website on sale.</strong> If you're
+              buying off Amazon at full price, the value case evaporates. The discount is the
+              product; plan your purchases around it.
+            </li>
+          </ul>
+        </div>
+
+        <p>
+          The honest summary: ON Gold Standard is the safer, more consistent choice for
+          students who want a no-thinking-required protein powder that performs well across
+          every metric. MyProtein Impact Whey is the smarter financial choice for students
+          who are willing to shop strategically and don't need third-party certification.
+          Neither is a bad pick — you're choosing between a premium daily driver and a
+          budget option that requires a little more intentionality to get the most out of.
+        </p>
+      </section>
+    </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    margin: 1.25rem 0 0.5rem;
+    color: #1e293b;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Winner callout cards */
+  .winners-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .winner-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+  }
+
+  .winner-card.on {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+  }
+
+  .winner-card.mp {
+    background: #fefce8;
+    border-color: #fde68a;
+  }
+
+  .winner-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #64748b;
+  }
+
+  .winner-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .winner-reason {
+    font-size: 0.8rem;
+    color: #475569;
+    line-height: 1.4;
+  }
+
+  /* Verdict scenario blocks */
+  .verdict-scenario {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 0.5rem;
+    padding: 1.25rem 1.5rem;
+    margin: 1.25rem 0;
+  }
+
+  .verdict-scenario.alt {
+    background: #fefce8;
+    border-color: #fde68a;
+  }
+
+  .verdict-scenario h3 {
+    margin-top: 0;
+    color: #0f172a;
+  }
+
+  .verdict-scenario ul {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 560px) {
+    .winners-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

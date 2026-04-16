@@ -1,0 +1,94 @@
+---
+interface Props {
+  pros: string[];
+  cons: string[];
+}
+
+const { pros, cons } = Astro.props;
+---
+
+<div class="pros-cons">
+  <div class="pros">
+    <h3>Pros</h3>
+    <ul>
+      {pros.map((item) => <li>{item}</li>)}
+    </ul>
+  </div>
+  <div class="cons">
+    <h3>Cons</h3>
+    <ul>
+      {cons.map((item) => <li>{item}</li>)}
+    </ul>
+  </div>
+</div>
+
+<style>
+  .pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .pros,
+  .cons {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .pros {
+    background: #f0fdf4;
+  }
+
+  .cons {
+    background: #fff5f5;
+  }
+
+  h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .pros h3 {
+    color: #16a34a;
+  }
+
+  .cons h3 {
+    color: #dc2626;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    padding: 0.3rem 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .pros li::before {
+    content: "✓ ";
+    color: #16a34a;
+    font-weight: 700;
+  }
+
+  .cons li::before {
+    content: "✗ ";
+    color: #dc2626;
+    font-weight: 700;
+  }
+
+  @media (max-width: 600px) {
+    .pros-cons {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

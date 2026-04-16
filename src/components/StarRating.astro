@@ -1,0 +1,56 @@
+---
+interface Props {
+  rating: number; // 0–5, supports halves (e.g. 4.5)
+  max?: number;
+}
+
+const { rating, max = 5 } = Astro.props;
+
+const stars = Array.from({ length: max }, (_, i) => {
+  const fill = Math.min(1, Math.max(0, rating - i));
+  if (fill >= 1) return "full";
+  if (fill >= 0.5) return "half";
+  return "empty";
+});
+---
+
+<span class="star-rating" aria-label={`${rating} out of ${max} stars`}>
+  {stars.map((type) => (
+    <span class={`star star--${type}`} aria-hidden="true">
+      {type === "full" ? "★" : type === "half" ? "⯨" : "☆"}
+    </span>
+  ))}
+  <span class="rating-number">{rating}/{max}</span>
+</span>
+
+<style>
+  .star-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.1rem;
+  }
+
+  .star {
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+
+  .star--full {
+    color: #f59e0b;
+  }
+
+  .star--half {
+    color: #f59e0b;
+  }
+
+  .star--empty {
+    color: #d1d5db;
+  }
+
+  .rating-number {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #64748b;
+    margin-left: 0.35rem;
+  }
+</style>

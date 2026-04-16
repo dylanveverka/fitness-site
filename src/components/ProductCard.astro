@@ -1,0 +1,149 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  badge?: string;
+  rating?: number;
+  priceRange?: string;
+  category?: string;
+}
+
+const {
+  title,
+  description,
+  href,
+  badge,
+  rating,
+  priceRange,
+  category,
+} = Astro.props;
+---
+
+<a href={href} class="product-card">
+  {badge && <span class="card-badge">{badge}</span>}
+  {category && <p class="card-category">{category}</p>}
+  <h3 class="card-title">{title}</h3>
+  <p class="card-description">{description}</p>
+  <div class="card-footer">
+    {rating !== undefined && (
+      <div class="card-rating">
+        {Array.from({ length: 5 }, (_, i) => (
+          <span class={i < Math.round(rating) ? "star filled" : "star"}>★</span>
+        ))}
+        <span class="rating-val">{rating}/5</span>
+      </div>
+    )}
+    {priceRange && <span class="card-price">{priceRange}</span>}
+    <span class="card-cta">Read Review →</span>
+  </div>
+</a>
+
+<style>
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.625rem;
+    padding: 1.25rem;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+    position: relative;
+  }
+
+  .product-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+  }
+
+  .card-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: #f97316;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  .card-category {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    margin: 0 0 0.5rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.5rem;
+    line-height: 1.35;
+    padding-right: 3rem;
+  }
+
+  .card-description {
+    font-size: 0.875rem;
+    color: #475569;
+    line-height: 1.6;
+    margin: 0 0 auto;
+    padding-bottom: 1rem;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .card-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+  }
+
+  .star {
+    font-size: 0.85rem;
+    color: #d1d5db;
+  }
+
+  .star.filled {
+    color: #f59e0b;
+  }
+
+  .rating-val {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    margin-left: 0.25rem;
+  }
+
+  .card-price {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #16a34a;
+    background: #f0fdf4;
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.25rem;
+  }
+
+  .card-cta {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #f97316;
+    margin-left: auto;
+  }
+</style>

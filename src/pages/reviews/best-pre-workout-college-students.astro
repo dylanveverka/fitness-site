@@ -1,0 +1,526 @@
+---
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import { amazonLink } from "../../utils/affiliate";
+import Layout from "../../layouts/Layout.astro";
+
+const title = "Best Pre-Workout for College Students in 2025";
+const description =
+  "The best pre-workouts for college students — strong enough to get you off the couch after a full day of class, cheap enough to not wreck your budget.";
+const pubDate = "2026-04-15";
+const slug = "best-pre-workout-college-students";
+
+const tlBulkUrl = amazonLink("B07SMGPK85");
+const c4Url = amazonLink("B00EKZJBHY");
+const legionUrl = amazonLink("B08CCZZ4BW");
+
+const pros = [
+  "Fully transparent label — every ingredient and dose is listed, no hiding behind 'blends'",
+  "200mg caffeine + 6g citrulline is a clinically effective, well-dosed stack",
+  "No artificial dyes, no unnecessary fillers — cleaner formula than most competitors",
+  "Strong enough for experienced lifters, not so stimulant-heavy it causes anxiety",
+  "Mixes clean and tastes good — flavors actually hold up across a whole tub",
+];
+
+const cons = [
+  "More expensive than budget options — around $1.50–2.00 per serving",
+  "Beta-alanine tingles will catch you off guard the first few times if you're not used to them",
+  "Only available online, not in stores, so no same-day pickup when you run out",
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+    <article class="review">
+      <header>
+        <h1>{title}</h1>
+        <p class="meta">
+          Published: <time datetime={pubDate}>{pubDate}</time>
+        </p>
+      </header>
+
+      <!-- Intro -->
+      <section>
+        <p>
+          It's 3 PM. You had an 8 AM lecture, a noon lab, and you've been staring at a laptop
+          screen for the last four hours. Your gym session is at 5. You know you should go.
+          You also know that if you sit on your couch for more than ten minutes, you're done —
+          that workout is not happening.
+        </p>
+        <p>
+          That's the actual use case for pre-workout as a college student. Not to turn you into
+          a superhuman — just to bridge the gap between "I'm exhausted from existing" and "I'm
+          actually in the gym moving weight." The right pre-workout does that reliably without
+          leaving you wired at 2 AM or shaking through your warm-up sets. Here are the three
+          best options at different price points, with no proprietary blends and no ingredient
+          fairy dust.
+        </p>
+      </section>
+
+      <!-- Quick Verdict Box -->
+      <div class="verdict-box">
+        <h2>Our Top Picks at a Glance</h2>
+        <div class="picks-grid">
+          <div class="pick-card">
+            <span class="pick-badge">Best Overall</span>
+            <p class="pick-name">Transparent Labs BULK</p>
+            <p class="pick-detail">200mg caffeine · Full label disclosure</p>
+            <a href={tlBulkUrl} target="_blank" rel="noopener noreferrer sponsored" class="pick-link">
+              View on Amazon →
+            </a>
+          </div>
+          <div class="pick-card">
+            <span class="pick-badge alt">Best Budget</span>
+            <p class="pick-name">Cellucor C4 Original</p>
+            <p class="pick-detail">150mg caffeine · ~$1.00/serving</p>
+            <a href={c4Url} target="_blank" rel="noopener noreferrer sponsored" class="pick-link">
+              View on Amazon →
+            </a>
+          </div>
+          <div class="pick-card">
+            <span class="pick-badge stim">Best Stim-Free</span>
+            <p class="pick-name">Legion Pulse</p>
+            <p class="pick-detail">0mg caffeine · Full clinical doses</p>
+            <a href={legionUrl} target="_blank" rel="noopener noreferrer sponsored" class="pick-link">
+              View on Amazon →
+            </a>
+          </div>
+        </div>
+        <p class="disclosure">
+          <small>As an Amazon Associate I earn from qualifying purchases.</small>
+        </p>
+      </div>
+
+      <!-- Full Reviews -->
+      <section>
+        <h2>Full Reviews</h2>
+
+        <!-- Pick 1: TL BULK -->
+        <div class="product-section">
+          <h3>
+            <span class="badge">Best Overall</span>
+            Transparent Labs BULK
+          </h3>
+          <p>
+            Transparent Labs built their reputation on one simple idea: show every ingredient
+            and every dose on the label. No "proprietary blends," no mystery compounds, no
+            hiding an underdosed key ingredient behind a big total number. For a beginner or
+            intermediate lifter who wants to know exactly what they're putting in their body,
+            that matters a lot.
+          </p>
+          <p>
+            <strong>Caffeine:</strong> 200mg per serving — roughly two strong cups of coffee.
+            Enough to meaningfully increase alertness and power output without the jittery
+            ceiling you get from 300mg+ products that read like they were designed for
+            professional powerlifters.
+          </p>
+          <p>
+            <strong>Key ingredients:</strong> 6g of <strong>citrulline malate</strong> (a
+            clinically studied dose for improved blood flow and endurance), 4g of
+            <strong>beta-alanine</strong> (expect a pins-and-needles sensation on your skin
+            for 15–20 minutes — this is normal and harmless), and 2.5g of
+            <strong>betaine anhydrous</strong>, which research links to improved power output
+            and muscle endurance. These are full doses, not token amounts.
+          </p>
+          <p>
+            <strong>Taste and mixability:</strong> Mixes cleanly with no grit or clumping.
+            The flavor lineup is large and most are genuinely good — Blue Raspberry and
+            Strawberry Lemonade are consistently rated highest. Not the sickly-sweet profile
+            of some budget pre-workouts.
+          </p>
+          <p>
+            <strong>Value:</strong> Around $1.50–2.00 per serving, which is more expensive
+            than C4 but cheaper than a coffee from the campus café. Given the ingredient
+            quality and doses, it punches above its price class.
+          </p>
+          <p>
+            <strong>Best for:</strong> Students who train consistently and want a product
+            that's clean, well-dosed, and backed by something other than marketing.
+          </p>
+
+          <h4>Pros & Cons</h4>
+          <ProsConsList pros={pros} cons={cons} />
+          <AffiliateButton href={tlBulkUrl} label="Buy Transparent Labs BULK on Amazon" />
+        </div>
+
+        <!-- Pick 2: C4 -->
+        <div class="product-section">
+          <h3>
+            <span class="badge alt">Best Budget</span>
+            Cellucor C4 Original
+          </h3>
+          <p>
+            C4 is the best-selling pre-workout in the US for a reason: it's cheap, it's
+            available everywhere (Amazon, Walmart, GNC, Target), and for a first-time pre-workout
+            user it does exactly what you need it to do. A 60-serving tub runs $30–35, which
+            works out to around $0.55–0.60 per serving — less than a Red Bull with more
+            functional ingredients.
+          </p>
+          <p>
+            <strong>Caffeine:</strong> 150mg per serving. Lower than BULK, which is actually
+            an advantage for people who are caffeine-sensitive, new to pre-workouts, or training
+            later in the evening. It's enough to feel a noticeable shift in energy without
+            the crash risk of higher-stim products.
+          </p>
+          <p>
+            <strong>Key ingredients:</strong> 1.6g beta-alanine (you'll still get mild
+            tingling), 1g creatine nitrate, and CarnoSyn beta-alanine. The honest caveat here
+            is that C4 uses a <strong>proprietary blend</strong> for some components, which
+            means the exact doses of certain ingredients aren't disclosed. The citrulline dose
+            in particular is lower than the clinical threshold. You're getting a real effect,
+            but the formula is optimized for cost, not maximum performance.
+          </p>
+          <p>
+            <strong>Taste:</strong> Very sweet. C4's flavor profile leans hard into candy-style
+            taste — Watermelon and Fruit Punch are the crowd favorites. If you prefer something
+            less sweet, this might grate on you after a few weeks of daily use.
+          </p>
+          <p>
+            <strong>Value:</strong> Best in class. If your budget is tight and you just want
+            something that works without spending $50 on a tub, C4 is the right call.
+          </p>
+          <p>
+            <strong>Best for:</strong> First-time pre-workout users, caffeine-sensitive people,
+            students who want a reliable product at the lowest price.
+          </p>
+        </div>
+
+        <!-- Pick 3: Legion Pulse -->
+        <div class="product-section">
+          <h3>
+            <span class="badge stim">Best Stim-Free</span>
+            Legion Pulse (Stim-Free)
+          </h3>
+          <p>
+            If you train at night, run high on anxiety, or just don't want to add more caffeine
+            on top of the three coffees you've already had today, Legion Pulse Stim-Free is the
+            best option in this category. It gives you all the performance ingredients —
+            citrulline, beta-alanine, betaine, alpha-GPC for focus — without the stimulants that
+            keep you awake until 3 AM the night before an exam.
+          </p>
+          <p>
+            <strong>Caffeine:</strong> Zero. This is the whole point. Legion has a caffeinated
+            version of Pulse as well, but the stim-free variant is what earns it this slot.
+          </p>
+          <p>
+            <strong>Key ingredients:</strong> 8g of citrulline malate (the highest dose of any
+            pick here), 3.6g beta-alanine, 2.5g betaine, and 300mg alpha-GPC, which is
+            linked to improved focus and mind-muscle connection. These are all fully disclosed,
+            clinical doses — Legion's transparency rivals Transparent Labs.
+          </p>
+          <p>
+            <strong>Taste:</strong> Clean and not over-sweetened. Legion uses natural flavors
+            and stevia, which won't appeal to everyone but tends to hold up better over a full
+            tub than artificial sweetener profiles that become cloying.
+          </p>
+          <p>
+            <strong>Value:</strong> Comparable to Transparent Labs at around $1.50–1.75 per
+            serving. More expensive than C4, but the ingredient doses justify it.
+          </p>
+          <p>
+            <strong>Best for:</strong> Evening trainers, caffeine-sensitive students, anyone
+            already consuming significant caffeine from other sources who wants to avoid
+            stacking stimulants.
+          </p>
+        </div>
+      </section>
+
+      <!-- Warning Section -->
+      <section>
+        <h2>Before You Buy: What Nobody Tells You</h2>
+
+        <h3>The Jitter Risk Is Real</h3>
+        <p>
+          Pre-workout hits differently depending on your caffeine tolerance, body weight, and
+          whether you've eaten. If you've had no food since noon and you slam a full serving of
+          a 200mg+ pre-workout at 5 PM, there's a decent chance you'll feel anxious, shaky,
+          or nauseous through your warm-up. Start with half a serving the first time to see
+          how you respond — this is especially true with C4 if you're not used to stimulants.
+        </p>
+
+        <h3>Avoid Proprietary Blends</h3>
+        <p>
+          A "proprietary blend" is when a company lists a group of ingredients under one total
+          weight without disclosing the individual doses. This lets them include 50mg of
+          citrulline alongside a clinical dose of something cheap and charge you for both. The
+          three picks above are either fully transparent (TL BULK, Legion) or partially
+          transparent with known trade-offs (C4). As a rule, if a pre-workout label shows a
+          blend total with no individual doses, move on.
+        </p>
+
+        <h3>Don't Take It on an Empty Stomach</h3>
+        <p>
+          Eat something first — even a banana or a handful of crackers. Pre-workout on a
+          completely empty stomach significantly increases the chance of nausea and the
+          uncomfortable crash that comes after the caffeine wears off. It doesn't need to be
+          a full meal, but something in your stomach makes a meaningful difference.
+        </p>
+
+        <h3>Watch Your Total Daily Caffeine</h3>
+        <p>
+          College students are already high-caffeine users — coffee, energy drinks, and study
+          sessions stack up fast. Adding 200mg of pre-workout on top of 400mg you've already
+          had today is a recipe for poor sleep and diminishing returns. Track roughly what
+          you're taking in and give yourself a cutoff time (a general guideline is 6 hours
+          before bed, though individual sensitivity varies).
+        </p>
+      </section>
+
+      <!-- Who Should Buy -->
+      <section>
+        <h2>Who Should Buy Pre-Workout</h2>
+        <ul>
+          <li>
+            <strong>Students whose schedule pushes gym sessions into low-energy windows.</strong>
+            After back-to-back classes or a long study session, pre-workout is a practical
+            energy bridge, not a crutch.
+          </li>
+          <li>
+            <strong>Intermediate lifters who've plateaued on motivation.</strong> The boost in
+            focus and training intensity can reignite consistency during stretches when the gym
+            feels like a chore.
+          </li>
+          <li>
+            <strong>Anyone who already drinks coffee before training.</strong> You're already
+            using caffeine as a performance tool — a pre-workout gives you the same stimulant
+            plus performance ingredients like citrulline and betaine that coffee doesn't have.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Who Should Skip -->
+      <section>
+        <h2>Who Should Skip Pre-Workout</h2>
+        <ul>
+          <li>
+            <strong>True beginners in their first month of lifting.</strong> Learning movement
+            patterns and building the gym habit matters more right now. Pre-workout can mask
+            fatigue signals that beginners need to pay attention to. Get the routine down first.
+          </li>
+          <li>
+            <strong>Anyone with anxiety, heart conditions, or caffeine sensitivity.</strong>
+            Stimulant-based pre-workouts are not appropriate here. If you want pump and
+            endurance ingredients without the stimulants, Legion Pulse Stim-Free is designed
+            exactly for this.
+          </li>
+          <li>
+            <strong>Students who train within 4–5 hours of sleep.</strong> Caffeine has a
+            5–6 hour half-life — half the dose is still active five hours after you take it.
+            Pre-workout late at night will degrade your sleep quality, which is the single
+            biggest recovery variable you have control over in college.
+          </li>
+          <li>
+            <strong>People looking for a shortcut to results.</strong> Pre-workout makes good
+            training better. It doesn't make bad training good. If your nutrition, sleep, and
+            consistency aren't in order, skip the supplement and fix those first.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Final Verdict -->
+      <section>
+        <h2>Final Verdict</h2>
+        <p>
+          Of the three picks, <strong>Transparent Labs BULK</strong> is the one worth spending
+          slightly more on. A full label, clinical ingredient doses, and a caffeine level that's
+          strong without being stupid — it threads the needle between budget options that
+          cut corners and premium products that charge you for branding. If you're going to add
+          pre-workout to your routine, start with something you can trust the label on.
+        </p>
+        <p>
+          If money is the main constraint, C4 works and the price is hard to argue with. If you
+          train at night or want to skip caffeine entirely, Legion Pulse Stim-Free gives you
+          the performance stack without the stimulants.
+        </p>
+        <p>
+          Whichever you choose: eat something first, start with half a serving, and don't take
+          it within five hours of when you need to sleep. The gym session will happen. The sleep
+          needs to happen too.
+        </p>
+        <AffiliateButton
+          href={tlBulkUrl}
+          label="Buy Transparent Labs BULK on Amazon"
+        />
+      </section>
+    </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    margin: 1.75rem 0 0.5rem;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  h4 {
+    font-size: 1rem;
+    margin: 1.5rem 0 0.5rem;
+    color: #1e293b;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Verdict / picks box */
+  .verdict-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #dc2626;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    margin-top: 0;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #0f172a;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .pick-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    padding: 1rem;
+  }
+
+  .pick-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .pick-badge.alt {
+    background: #fef9c3;
+    color: #854d0e;
+  }
+
+  .pick-badge.stim {
+    background: #f0fdf4;
+    color: #15803d;
+  }
+
+  .pick-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin: 0.4rem 0 0.2rem;
+    color: #0f172a;
+    line-height: 1.35;
+  }
+
+  .pick-detail {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0 0 0.5rem;
+  }
+
+  .pick-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #dc2626;
+    text-decoration: none;
+  }
+
+  .pick-link:hover {
+    text-decoration: underline;
+  }
+
+  .disclosure {
+    color: #64748b;
+    font-size: 0.78rem;
+    margin: 0.75rem 0 0;
+  }
+
+  /* Product sections */
+  .product-section {
+    border-top: 2px solid #e2e8f0;
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  /* Badges on h3 */
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+  }
+
+  .badge.alt {
+    background: #fef9c3;
+    color: #854d0e;
+  }
+
+  .badge.stim {
+    background: #f0fdf4;
+    color: #15803d;
+  }
+
+  @media (max-width: 600px) {
+    .picks-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

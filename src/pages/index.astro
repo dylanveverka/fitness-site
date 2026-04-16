@@ -1,0 +1,258 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProductCard from "../components/ProductCard.astro";
+
+const title = "Fit on a Budget — Fitness Gear & Nutrition Reviews for College Students";
+const description =
+  "Honest fitness reviews, macro breakdowns, and gear picks for college students who want real results without overspending.";
+
+const featuredReviews = [
+  {
+    title: "Is Premier Protein Good for Building Muscle?",
+    description:
+      "30g protein, 160 calories, $1.50–2.00 per shake. We break down whether it actually earns its place in your rotation.",
+    href: "/reviews/premier-protein-shake-review",
+    badge: "Top Pick",
+    rating: 4,
+    priceRange: "$1.50–2.00/shake",
+    category: "Protein",
+  },
+  {
+    title: "Kodiak Waffles Review: Worth It for Fitness?",
+    description:
+      "~12g protein per waffle, whole grain oats, and a taste that doesn't make you feel like you're dieting.",
+    href: "/reviews/kodiak-waffles-review",
+    badge: "4.5/5",
+    rating: 4.5,
+    priceRange: "$5–7/box",
+    category: "Food",
+  },
+  {
+    title: "Best Resistance Bands Under $30 for Dorm Workouts",
+    description:
+      "No gym? No problem. Three picks that cover every resistance level for under $30 total.",
+    href: "/reviews/best-resistance-bands-dorm-workout",
+    badge: "Roundup",
+    rating: 4.5,
+    priceRange: "$14–30",
+    category: "Equipment",
+  },
+  {
+    title: "Creatine for Beginners: Do You Actually Need It?",
+    description:
+      "The most research-backed supplement in fitness, under $0.40/day. Here's what it does and how to take it.",
+    href: "/reviews/creatine-for-beginners",
+    badge: "5/5 Value",
+    rating: 5,
+    priceRange: "$15–25/tub",
+    category: "Supplements",
+  },
+  {
+    title: "Best Pre-Workout for College Students in 2025",
+    description:
+      "Three picks at different price points — from a $30 budget option to a fully transparent label formula.",
+    href: "/reviews/best-pre-workout-college-students",
+    badge: "Roundup",
+    rating: 4,
+    priceRange: "$30–55",
+    category: "Supplements",
+  },
+  {
+    title: "How to Build a Home Gym Under $200",
+    description:
+      "Five pieces of gear, ~$150 total, fits in a closet. A full-body program included.",
+    href: "/guides/home-gym-under-200",
+    badge: "Guide",
+    rating: 4.5,
+    priceRange: "$124–164 total",
+    category: "Guides",
+  },
+  {
+    title: "Chick-fil-A Grilled Nuggets: Good for Bulking?",
+    description:
+      "25–38g protein per order. Full macro breakdown, cost-per-gram analysis, and best combos by goal.",
+    href: "/guides/chick-fil-a-grilled-nuggets-macros",
+    badge: "Guide",
+    rating: 4,
+    priceRange: "$6–8/order",
+    category: "Nutrition",
+  },
+  {
+    title: "Best Blender Bottle for Protein Shakes (2025)",
+    description:
+      "Three shakers reviewed on leak-proofing, mixability, cleaning, and price. No clumps, no backpack disasters.",
+    href: "/reviews/best-blender-bottle-protein-shakes",
+    badge: "Roundup",
+    rating: 4.5,
+    priceRange: "$10–18",
+    category: "Gear",
+  },
+  {
+    title: "MyProtein vs ON Gold Standard: Which Is Worth It?",
+    description:
+      "Full side-by-side on macros, cost per serving, mixability, and third-party testing so you buy the right tub.",
+    href: "/reviews/myprotein-vs-on-gold-standard",
+    badge: "Comparison",
+    rating: 4.5,
+    priceRange: "$38–60/tub",
+    category: "Protein",
+  },
+];
+---
+
+<Layout {title} {description}>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">For college students on a budget</p>
+      <h1>Train smarter.<br />Spend less.</h1>
+      <p class="hero-subtitle">
+        Honest reviews of protein, supplements, and gear — ranked by value, not by who paid us.
+        Every pick comes with real macro numbers and real price breakdowns.
+      </p>
+      <div class="hero-ctas">
+        <a href="/guides/home-gym-under-200" class="btn-primary">Build a $200 Home Gym</a>
+        <a href="/reviews/creatine-for-beginners" class="btn-secondary">Start with Creatine</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Grid -->
+  <section class="reviews-section">
+    <div class="section-inner">
+      <h2 class="section-title">All Reviews & Guides</h2>
+      <div class="reviews-grid">
+        {featuredReviews.map((review) => (
+          <ProductCard
+            title={review.title}
+            description={review.description}
+            href={review.href}
+            badge={review.badge}
+            rating={review.rating}
+            priceRange={review.priceRange}
+            category={review.category}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #f8fafc;
+    padding: 5rem 1.25rem 4rem;
+  }
+
+  .hero-inner {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #f97316;
+    margin: 0 0 1rem;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 7vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 1.25rem;
+    letter-spacing: -0.03em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0 0 2rem;
+    max-width: 560px;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: #f97316;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: #ea6c00;
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: #cbd5e1;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+    border: 1px solid #334155;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-secondary:hover {
+    color: #f8fafc;
+    border-color: #64748b;
+  }
+
+  /* Reviews grid */
+  .reviews-section {
+    padding: 4rem 1.25rem;
+  }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 2rem;
+    letter-spacing: -0.02em;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 900px) {
+    .reviews-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 560px) {
+    .reviews-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero {
+      padding: 3rem 1.25rem 2.5rem;
+    }
+  }
+</style>
