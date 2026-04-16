@@ -1,0 +1,431 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Gym Bags for College Students Under $50 (2025)";
+const description =
+  "The best gym bags for college students who need to go straight from class to the gym — affordable, durable, and big enough for all your gear.";
+const pubDate = "2026-04-16";
+const slug = "best-gym-bags-college-students";
+
+const nikeUrl = "https://www.amazon.com/s?k=nike+brasilia+duffel+bag&tag=dveverka-20";
+const uaUrl   = "https://www.amazon.com/s?k=under+armour+undeniable+duffel&tag=dveverka-20";
+const adidasUrl = "https://www.amazon.com/s?k=adidas+defender+duffel+bag&tag=dveverka-20";
+
+const comparisonRows = [
+  { label: "Price",          a: "~$35–45",        b: "~$40–50",         c: "~$25–35",         winner: "c" },
+  { label: "Size",           a: "41L (medium)",   b: "55L (large)",     c: "41L (medium)",    winner: "b" },
+  { label: "Shoe Pocket",    a: "Yes",            b: "Yes",             c: "Yes",             winner: "tie" },
+  { label: "Water Resistant",a: "Yes",            b: "Yes",             c: "Partial",         winner: "a" },
+  { label: "Best For",       a: "Most students",  b: "Heavy lifters",   c: "Ultra-budget",    winner: "tie" },
+];
+
+const nikePros = [
+  "41L hits the sweet spot for most routines — big enough for shoes, clothes, a shaker, and a towel without being the size of a carry-on",
+  "Ventilated shoe compartment at the bottom keeps dirty sneakers and their smell separated from everything else",
+  "Water bottle side pocket is wide enough to actually fit a wide-mouth Nalgene, not just a skinny plastic bottle",
+  "Durable enough to take daily use — the base material holds up to gym floor abuse, locker throws, and rain without falling apart",
+  "Recognizable Nike design doesn't look like gym gear when you're carrying it to class, which matters when you're going class-to-gym",
+];
+
+const nikeCons = [
+  "No internal organization beyond the main compartment — one big open space means loose items shift around unless you're disciplined about packing",
+  "Medium size works for most, but if you're carrying lifting shoes, a belt, and a full change of clothes, you'll be packing strategically",
+  "No padded laptop sleeve, which is fine for a gym bag but means it's not a genuine hybrid backpack for students who want one bag for everything",
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        Carrying your protein shaker, lifting belt, and change of clothes in a
+        grocery bag is not the move. Neither is showing up to class with a
+        gym bag that looks like you just robbed a locker room. You need something
+        that fits your gear, doesn't embarrass you between 9am lecture and a noon
+        training session, and costs less than a month of creatine.
+      </p>
+      <p>
+        The good news: there are three gym bags under $50 that are genuinely
+        worth buying, and the differences between them are real enough to matter
+        depending on what you're training and how much stuff you carry. Here's
+        the breakdown.
+      </p>
+    </section>
+
+    <!-- Quick Verdict -->
+    <section>
+      <h2>Quick Verdict</h2>
+      <div class="verdict-box">
+        <div class="picks-grid">
+          <div class="pick-card">
+            <span class="pick-label">Best Overall</span>
+            <p class="pick-name">Nike Brasilia Duffel</p>
+            <p class="pick-detail">41L, ventilated shoe pocket, ~$35–45</p>
+            <a href={nikeUrl} class="pick-link" rel="noopener noreferrer sponsored" target="_blank">View on Amazon →</a>
+          </div>
+          <div class="pick-card">
+            <span class="pick-label">Best for Heavy Lifters</span>
+            <p class="pick-name">Under Armour Undeniable</p>
+            <p class="pick-detail">55L, structured pockets, ~$40–50</p>
+            <a href={uaUrl} class="pick-link" rel="noopener noreferrer sponsored" target="_blank">View on Amazon →</a>
+          </div>
+          <div class="pick-card">
+            <span class="pick-label">Best Budget</span>
+            <p class="pick-name">Adidas Defender Duffel</p>
+            <p class="pick-detail">41L, shoe pocket, ~$25–35</p>
+            <a href={adidasUrl} class="pick-link" rel="noopener noreferrer sponsored" target="_blank">View on Amazon →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What to Look For -->
+    <section>
+      <h2>What to Look for in a Gym Bag</h2>
+      <p>
+        Most gym bags fail because they were designed by someone who doesn't
+        actually go to the gym. Here's what actually matters:
+      </p>
+      <p>
+        <strong>Separate shoe compartment.</strong> This is non-negotiable. Putting
+        your gym shoes in the same compartment as your clean clothes and your
+        pre-workout is how you end up with a bag that smells like a locker room
+        by week two. A ventilated shoe pocket at the bottom keeps odors isolated
+        and your other gear clean.
+      </p>
+      <p>
+        <strong>A water bottle pocket that actually fits your bottle.</strong>
+        Some side pockets are designed for a 16oz plastic bottle. If you carry
+        a Nalgene, a Hydro Flask, or a 32oz shaker, you need a pocket wide enough
+        to fit it without forcing. Check the dimensions or read reviews specifically
+        mentioning bottle fit before buying.
+      </p>
+      <p>
+        <strong>Size for your actual routine.</strong> If you're doing cardio and
+        a light lift, a 25–35L bag is fine. If you're carrying lifting shoes, a
+        belt, a towel, a change of clothes, pre-workout, and a shaker, you want
+        40–55L. Don't undersize and then have to stuff the bag on every session.
+      </p>
+      <p>
+        <strong>Water resistance on the base.</strong> Gym floors are wet. Locker
+        room floors are wetter. A bag that soaks through the bottom the first time
+        it touches a damp surface is a bag you'll hate within a month.
+      </p>
+    </section>
+
+    <!-- Duffel vs Backpack -->
+    <section>
+      <h2>Duffel vs Backpack for the Gym</h2>
+      <p>
+        The honest answer: duffels win for the gym, backpacks win for class,
+        and hybrid gym-backpacks usually compromise both. Here's why.
+      </p>
+      <p>
+        Duffels load from the top and give you one big opening, which makes
+        packing and unpacking fast — important when you're changing between class
+        and lifting. They also sit flat in a locker, don't have rigid frames that
+        take up shelf space, and the wider base design makes it easier to find
+        things quickly. Most lifters use duffels for this reason.
+      </p>
+      <p>
+        Backpacks distribute weight better on your back and keep your hands free,
+        which matters if you're walking or biking to campus. The problem: most
+        backpack gym bags either have too little capacity for a real gym kit or
+        are so big they look absurd in a classroom. If you absolutely need one
+        bag for class and the gym, a 25–30L gym backpack can work — but you'll
+        be packing tighter than you'd like.
+      </p>
+      <p>
+        For the typical college student going class → gym → dorm, a 40L duffel
+        is the right call. Pack it the night before, throw it in the car or over
+        your shoulder, done.
+      </p>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Nike Brasilia"
+        nameB="UA Undeniable"
+        nameC="Adidas Defender"
+        rows={comparisonRows}
+      />
+    </section>
+
+    <!-- Nike Brasilia -->
+    <section>
+      <h2>1. Nike Brasilia Duffel — Best Overall</h2>
+      <p>
+        The Nike Brasilia is the default recommendation for a reason: it hits
+        every checkbox at a price that doesn't require justification. The 41L
+        medium size is the right call for most students — big enough for a full
+        kit without being the bag you need two hands to carry. The main
+        compartment opens fully at the top and gives you enough room for clothes,
+        a towel, pre-workout, a shaker, and whatever else you're hauling.
+      </p>
+      <p>
+        The ventilated shoe compartment on the bottom is genuinely well-designed.
+        Mesh panels let air circulate so your bag doesn't trap moisture and odor,
+        and the separate zipper means you're never digging past your sneakers
+        to find your earbuds. The side water bottle pocket fits most wide-mouth
+        bottles, and the smaller front zippered pocket handles the stuff you
+        want fast access to — keys, wallet, headphones.
+      </p>
+      <p>
+        Material is durable nylon with reinforced stitching at the stress points.
+        It holds up to daily use — dropping it on gym floors, running in the rain
+        between buildings, getting thrown in a car trunk — without the seams
+        fraying or the zipper pulling out. Available in a dozen colorways, most
+        of which look clean enough to not announce themselves as gym gear.
+      </p>
+      <p>Price: typically $35–45 depending on colorway and size.</p>
+      <AffiliateButton href={nikeUrl} label="Buy Nike Brasilia on Amazon" />
+    </section>
+
+    <!-- Under Armour Undeniable -->
+    <section>
+      <h2>2. Under Armour Undeniable — Best for Heavy Lifters</h2>
+      <p>
+        If you're carrying more gear than the average student — lifting shoes,
+        a leather belt, knee sleeves, wrist wraps, a full change of clothes, and
+        a shaker — the Nike Brasilia's 41L starts to feel tight. The Under Armour
+        Undeniable in medium or large solves that problem. The larger version runs
+        55L, which is enough capacity to pack everything for a serious training
+        session without having to Tetris your gear every morning.
+      </p>
+      <p>
+        The Undeniable has more organized pockets than the Brasilia — a separate
+        laundry or shoe compartment, a lockable valuables pocket for your ID and
+        keys, and structured side pockets that hold their shape. It's built from
+        UA's Storm fabric, which is water resistant rather than just water
+        resistant on the base, so the whole bag holds up better in wet conditions.
+      </p>
+      <p>
+        It runs a bit more — usually $40–50 for the sizes that are actually useful
+        — but it's still within budget and the additional organization is worth it
+        if you're training seriously and hate a disorganized bag.
+      </p>
+      <AffiliateButton href={uaUrl} label="Buy UA Undeniable on Amazon" />
+    </section>
+
+    <!-- Adidas Defender -->
+    <section>
+      <h2>3. Adidas Defender — Best Budget Pick</h2>
+      <p>
+        The Adidas Defender is the pick if you want to spend as little as
+        possible while still getting a real gym bag and not a drawstring
+        backpack. At $25–35, it's the cheapest option here, and for the price
+        it delivers: similar 41L capacity to the Brasilia, a separate shoe
+        compartment, and a clean three-stripe design that doesn't look cheap.
+      </p>
+      <p>
+        Where it falls short of the Nike: the material isn't as water resistant
+        across the whole bag (the base holds up fine, but the sides will soak
+        through in heavy rain), and the zippers feel slightly cheaper on extended
+        use. For a student testing whether they'll actually commit to regular
+        gym sessions, or for someone who just needs a functional bag without a
+        strong preference on brand, the Defender absolutely does the job.
+      </p>
+      <p>
+        It's also a solid backup bag — one to keep in your dorm for quick sessions
+        while your main bag is airing out, or a travel bag for weekend trips where
+        you want to bring training gear.
+      </p>
+      <AffiliateButton href={adidasUrl} label="Buy Adidas Defender on Amazon" />
+    </section>
+
+    <!-- Pros & Cons -->
+    <section>
+      <h2>Nike Brasilia: Pros &amp; Cons</h2>
+      <ProsConsList pros={nikePros} cons={nikeCons} />
+    </section>
+
+    <!-- Who Should Buy -->
+    <section>
+      <h2>Who Should Buy the Nike Brasilia</h2>
+      <ul>
+        <li>
+          <strong>Students going straight from class to the gym.</strong> The size
+          and organization are designed for exactly this use case — one bag that
+          handles your class morning and your training afternoon without being
+          awkward for either.
+        </li>
+        <li>
+          <strong>Anyone doing 3–5 gym sessions per week.</strong> Daily use is
+          where the Brasilia's durability matters. Cheaper bags fail at seams and
+          zippers within a few months of daily abuse; the Brasilia lasts years.
+        </li>
+        <li>
+          <strong>Students who care about not looking like they're carrying gym
+          gear everywhere.</strong> It reads as a bag, not specifically a gym bag,
+          which matters when you're walking through a classroom building.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Who Should Skip It</h2>
+      <ul>
+        <li>
+          <strong>Serious powerlifters with a lot of equipment.</strong> Lifting
+          shoes + belt + sleeves + wraps + full change of clothes will fill the
+          41L fast. Go with the UA Undeniable 55L instead.
+        </li>
+        <li>
+          <strong>Students who need a laptop compartment.</strong> The Brasilia
+          has no padded sleeve. If you want one bag for class and gym that
+          protects a laptop, look at gym backpacks with a dedicated sleeve —
+          just know you'll be making compromises on gym-specific features.
+        </li>
+        <li>
+          <strong>Anyone who needs maximum weather protection.</strong> The base
+          is water resistant but the sides aren't fully waterproof. In heavy rain
+          on a long walk, some moisture will get through. The UA Undeniable's
+          Storm fabric handles that better.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        For most college students, the Nike Brasilia is the right bag. It's the
+        right size, it keeps your shoes away from your clean clothes, it doesn't
+        look out of place anywhere on campus, and it's built well enough to last
+        through multiple years of daily use. At $35–45, it's one of the better
+        value purchases you can make for your training setup.
+      </p>
+      <p>
+        If you're training seriously and carrying more gear than fits comfortably
+        in 41L, step up to the Under Armour Undeniable. If you're genuinely on
+        the tightest possible budget and just need something functional, the
+        Adidas Defender works fine for the price.
+      </p>
+      <p>
+        Either way, retire the grocery bag.
+      </p>
+      <AffiliateButton href={nikeUrl} label="Buy Nike Brasilia on Amazon" />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Quick Verdict Box */
+  .verdict-box {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-left: 4px solid #f97316;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 0.75rem;
+  }
+
+  .pick-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    padding: 1rem;
+  }
+
+  .pick-label {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f97316;
+    margin-bottom: 0.4rem;
+  }
+
+  .pick-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.25rem;
+    line-height: 1.3;
+  }
+
+  .pick-detail {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0 0 0.75rem;
+    line-height: 1.4;
+  }
+
+  .pick-link {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #f97316;
+    text-decoration: none;
+  }
+
+  .pick-link:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    .picks-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
