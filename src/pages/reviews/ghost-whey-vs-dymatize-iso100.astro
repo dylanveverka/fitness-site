@@ -1,0 +1,456 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Ghost Whey vs Dymatize ISO100: Which Protein Is Worth It? (2025)";
+const description =
+  "Ghost Whey has the hype, ISO100 has the macros. Here's which one college students should actually buy and why.";
+const pubDate = "2026-04-16";
+const slug = "ghost-whey-vs-dymatize-iso100";
+
+const ghostUrl = "https://www.amazon.com/s?k=ghost+whey+protein+powder&tag=dveverka-20";
+const dymatizeUrl = "https://www.amazon.com/s?k=dymatize+iso100+whey+protein&tag=dveverka-20";
+
+const comparisonRows = [
+  {
+    label: "Price per tub (2lb)",
+    a: "~$50–55",
+    b: "~$45–50",
+    winner: "b",
+  },
+  {
+    label: "Cost per serving",
+    a: "~$2.20–2.50",
+    b: "~$1.80–2.10",
+    winner: "b",
+  },
+  {
+    label: "Protein per serving",
+    a: "25g",
+    b: "25g",
+    winner: "tie",
+  },
+  {
+    label: "Carbs per serving",
+    a: "5–7g",
+    b: "2–3g",
+    winner: "b",
+  },
+  {
+    label: "Fat per serving",
+    a: "3–4g",
+    b: "0.5g",
+    winner: "b",
+  },
+  {
+    label: "Calories per serving",
+    a: "150–160",
+    b: "110–120",
+    winner: "b",
+  },
+  {
+    label: "Flavor variety",
+    a: "Excellent (collab flavors)",
+    b: "Good (classic options)",
+    winner: "a",
+  },
+  {
+    label: "Mixability",
+    a: "Very good",
+    b: "Excellent",
+    winner: "b",
+  },
+  {
+    label: "Best for",
+    a: "Bulking, enjoyment",
+    b: "Cutting, clean macros",
+    winner: "tie",
+  },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        Ghost Whey has the best flavors in the protein powder market and it's not particularly
+        close. Chips Ahoy, Nutter Butter, Cinnabon, Sour Patch Kids — the collab lineup reads
+        like a gas station snack aisle, and somehow most of them actually taste the part. If
+        you've been living on bland chocolate or vanilla protein for a year, cracking open a
+        tub of Nutter Butter Ghost Whey is a genuine quality-of-life upgrade.
+      </p>
+      <p>
+        Dymatize ISO100 doesn't care about any of that. It's a straightforward whey isolate
+        with a cleaner macro profile, lower calories, lower carbs, lower fat, and a lower
+        price per serving. It's what you buy when you want protein powder to do its job and
+        stay out of the way.
+      </p>
+      <p>
+        Both are legitimate products. Which one is the smarter buy depends on what you're
+        actually training for — and how much your taste buds factor into your supplement
+        spending.
+      </p>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Ghost Whey"
+        nameB="Dymatize ISO100"
+        rows={comparisonRows}
+      />
+    </section>
+
+    <!-- Winner callouts -->
+    <section>
+      <h2>Category Winners</h2>
+      <div class="winner-grid">
+        <div class="winner-card ghost">
+          <span class="winner-badge">Ghost Whey</span>
+          <p class="winner-category">Best Flavors</p>
+          <p class="winner-reason">
+            Chips Ahoy, Nutter Butter, and Cinnabon collabs that actually taste like
+            the real thing. Nothing else on the market competes here.
+          </p>
+        </div>
+        <div class="winner-card ghost">
+          <span class="winner-badge">Ghost Whey</span>
+          <p class="winner-category">Best for Enjoyment</p>
+          <p class="winner-reason">
+            If your protein shake is the thing you look forward to at the end of a
+            training session, Ghost wins by a wide margin.
+          </p>
+        </div>
+        <div class="winner-card iso">
+          <span class="winner-badge">Dymatize ISO100</span>
+          <p class="winner-category">Best Macros</p>
+          <p class="winner-reason">
+            Whey isolate with 25g protein, under 3g carbs, and 0.5g fat per serving.
+            Cleaner profile than Ghost across the board.
+          </p>
+        </div>
+        <div class="winner-card iso">
+          <span class="winner-badge">Dymatize ISO100</span>
+          <p class="winner-category">Best Value</p>
+          <p class="winner-reason">
+            Cheaper per tub and cheaper per serving than Ghost, with equal protein
+            and better macros for the money.
+          </p>
+        </div>
+        <div class="winner-card iso">
+          <span class="winner-badge">Dymatize ISO100</span>
+          <p class="winner-category">Best for Cutting</p>
+          <p class="winner-reason">
+            At 110–120 calories per serving versus Ghost's 150–160, ISO100 saves
+            you 150+ calories per week without sacrificing protein.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ghost Whey breakdown -->
+    <section>
+      <h2>Ghost Whey: The Full Breakdown</h2>
+      <p>
+        Ghost Lifestyle built their brand on two things: transparent labeling and
+        aggressive flavor collaborations. The labeling side means no proprietary blends,
+        no hidden fillers — you can see exactly what's in each scoop and in what quantity.
+        That's genuinely refreshing in a supplement industry that still relies on mystery
+        blends more than it should.
+      </p>
+      <p>
+        The flavor side is where Ghost actually made their name. The Chips Ahoy
+        collaboration is the best-known, and it delivers — the cookies and cream character
+        is real, not just "sweet and vaguely chocolate." Nutter Butter is another standout,
+        with a peanut butter cookie flavor that's accurate enough to be uncanny. Cinnabon
+        is good if you like sweet, cinnamon-forward profiles. The Sour Patch Kids variant
+        is legitimately interesting — a fruity-tart protein powder that works in water
+        without tasting medicinal.
+      </p>
+      <p>
+        On paper, Ghost Whey is a whey protein blend — a combination of whey concentrate
+        and whey isolate. That blend structure is why the carb and fat numbers are higher
+        than a pure isolate. You're getting 25g of protein but also 5–7g of carbs and
+        3–4g of fat, landing at 150–160 calories per serving. That's not a problem for
+        bulking or maintenance, but it adds up if you're cutting aggressively and every
+        macro counts.
+      </p>
+      <p>
+        Mixability is very good — Ghost dissolves cleanly in a shaker with 8–10oz of
+        water or milk with no clumping. Price lands around $50–55 for a 2lb tub,
+        which works out to roughly $2.20–2.50 per serving depending on the flavor.
+        It's a premium price for a premium experience, and the experience is genuinely
+        there. The question is whether flavor quality is worth a $10–15 premium per
+        tub over ISO100.
+      </p>
+
+      <AffiliateButton href={ghostUrl} label="Buy Ghost Whey on Amazon" />
+    </section>
+
+    <!-- ISO100 breakdown -->
+    <section>
+      <h2>Dymatize ISO100: The Full Breakdown</h2>
+      <p>
+        ISO100 is a pure whey protein isolate, which is a meaningfully different product
+        from a concentrate-isolate blend. The isolation process filters out most of the
+        fat, lactose, and carbohydrates that remain in concentrate, leaving you with a
+        higher protein-per-calorie ratio and a faster-digesting protein source. For people
+        who are lactose-sensitive with standard whey, isolate often sits better.
+      </p>
+      <p>
+        The macro profile reflects this. At 110–120 calories, 25g protein, 2–3g carbs,
+        and 0.5g fat, ISO100 is as lean as protein powder gets in the mainstream market.
+        If you're running a calorie deficit, those numbers matter — 40 fewer calories
+        per shake adds up to about 280 calories per week. Over a 12-week cut, that's
+        nearly a pound of fat difference from the protein powder choice alone.
+      </p>
+      <p>
+        Flavor selection is solid if not spectacular. Fruity Pebbles is a cult favorite
+        and it's genuinely good — sweet, cereal-forward, works in both water and milk.
+        Chocolate Fudge is reliable without being exciting. Gourmet Vanilla is clean
+        and versatile enough to pair with frozen fruit or peanut butter. The flavors
+        are good; they're just not Nutter Butter good.
+      </p>
+      <p>
+        Mixability is excellent — ISO100 dissolves faster and more completely than most
+        protein powders, leaving almost no residue even in a glass with a spoon. This is
+        a small thing until you've been stuck washing a chalky shaker bottle every day,
+        at which point it becomes noticeably pleasant.
+      </p>
+      <p>
+        Pricing runs $45–50 for a 2lb tub, or $1.80–2.10 per serving. It's not cheap
+        by any measure, but it's consistently $0.30–0.40 cheaper per serving than Ghost,
+        which is real money across a 30-serving tub.
+      </p>
+
+      <AffiliateButton href={dymatizeUrl} label="Buy Dymatize ISO100 on Amazon" />
+    </section>
+
+    <!-- Who should buy which -->
+    <section>
+      <h2>Who Should Buy Ghost Whey</h2>
+      <ul>
+        <li>
+          <strong>Anyone in a bulk or maintenance phase</strong> where hitting a daily protein
+          target is the priority and the extra carbs and calories don't conflict with your goal.
+        </li>
+        <li>
+          <strong>Students who hate protein powder</strong> and have been forcing down bland
+          shakes for months. If flavor is what's stopping you from hitting your protein
+          intake consistently, Ghost fixes that.
+        </li>
+        <li>
+          <strong>Anyone who treats post-workout nutrition as part of the enjoyment
+          of training.</strong> Ghost is the protein equivalent of choosing a good coffee
+          over a caffeine pill — it works, and you actually want to drink it.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Who Should Buy Dymatize ISO100</h2>
+      <ul>
+        <li>
+          <strong>Anyone cutting or on a calorie deficit</strong> where macro precision matters.
+          The lower calorie and carb count per serving gives you more flexibility in your diet.
+        </li>
+        <li>
+          <strong>Budget-focused buyers</strong> who want the best protein-per-dollar ratio
+          without compromising on quality or mixability.
+        </li>
+        <li>
+          <strong>Anyone lactose-sensitive</strong> who has had issues with concentrate-based
+          proteins in the past. The isolate process removes most lactose.
+        </li>
+        <li>
+          <strong>Post-workout recovery priority.</strong> The faster digestion of whey isolate
+          means the amino acids reach your muscles more quickly than a concentrate blend —
+          a small but real advantage in the post-training window.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Final verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        ISO100 is the better buy for most college students. The macro profile is cleaner,
+        the cost per serving is lower, the mixability is excellent, and it does everything
+        protein powder is supposed to do without asking you to pay a flavor premium.
+        If you're in a cut, or you're managing a tight food budget, or you just want a
+        reliable protein source without overthinking it — ISO100 is the answer.
+      </p>
+      <p>
+        Ghost Whey is the better experience. If you've been grinding through the same
+        chocolate or vanilla protein for a year and you're sick of it, spending an extra
+        $10 per tub on a flavor you actually look forward to is a reasonable quality-of-life
+        purchase. Consistency matters more than marginal calorie differences for most
+        people, and if Ghost's Nutter Butter or Chips Ahoy flavor is what gets you to
+        hit your protein target every day, the math works in its favor.
+      </p>
+      <p>
+        The simple version: <strong>default to ISO100</strong>, switch to Ghost when you
+        need to make your routine more enjoyable. They're both quality products — the
+        choice comes down to whether you're optimizing for your wallet and macros, or
+        for the part of the day that involves drinking a protein shake.
+      </p>
+
+      <div class="final-ctas">
+        <div class="final-cta-block">
+          <p class="final-cta-label">Best Value &amp; Macros</p>
+          <AffiliateButton href={dymatizeUrl} label="Buy Dymatize ISO100 on Amazon" />
+        </div>
+        <div class="final-cta-block">
+          <p class="final-cta-label">Best Flavors</p>
+          <AffiliateButton href={ghostUrl} label="Buy Ghost Whey on Amazon" />
+        </div>
+      </div>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Winner callout grid */
+  .winner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.875rem;
+    margin: 1rem 0;
+  }
+
+  .winner-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 1rem 1.1rem 1.1rem;
+  }
+
+  .winner-card.ghost {
+    border-left: 4px solid #7c3aed;
+    background: #faf5ff;
+  }
+
+  .winner-card.iso {
+    border-left: 4px solid #0284c7;
+    background: #f0f9ff;
+  }
+
+  .winner-badge {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .winner-card.ghost .winner-badge {
+    background: #7c3aed;
+    color: #fff;
+  }
+
+  .winner-card.iso .winner-badge {
+    background: #0284c7;
+    color: #fff;
+  }
+
+  .winner-category {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0.25rem 0 0.4rem;
+  }
+
+  .winner-reason {
+    font-size: 0.82rem;
+    color: #475569;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Final CTAs */
+  .final-ctas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .final-cta-block {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 1rem 0.5rem 0;
+    background: #f8fafc;
+  }
+
+  .final-cta-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    text-align: center;
+    margin: 0 0 0.25rem;
+  }
+
+  @media (max-width: 560px) {
+    .winner-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .final-ctas {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
