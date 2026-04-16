@@ -1,0 +1,479 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+
+const title = "How Much Protein Do You Actually Need to Build Muscle? (2025)";
+const description =
+  "The real answer to how much protein you need to build muscle — backed by research, not gym bro advice. Plus how to hit your number on a college budget.";
+const pubDate = "2026-04-16";
+const slug = "how-much-protein-to-build-muscle";
+
+const wheyUrl       = "https://www.amazon.com/s?k=optimum+nutrition+gold+standard+whey&tag=dveverka-20";
+const foodScaleUrl  = "https://www.amazon.com/s?k=food+kitchen+scale&tag=dveverka-20";
+
+const powderPros = [
+  "Fills the gap between what you eat and what you need — especially useful on days when whole food protein sources are hard to access",
+  "Fast, convenient, and portable — a shaker and a scoop takes 90 seconds and travels anywhere",
+  "Cost-competitive with whole food protein when bought in bulk: ON Gold Standard works out to about $0.75–1.00 per 25g of protein",
+  "Accurate and consistent — every scoop is the same macros, which makes hitting a daily protein target predictable",
+  "Useful as a post-workout tool when appetite is low but protein timing matters",
+];
+
+const powderCons = [
+  "Not a replacement for whole food protein — lacks the micronutrients, fiber, and satiety that come with eating actual food",
+  "Easy to over-rely on, which can mask an otherwise poor diet rather than supplement a good one",
+  "Adds up cost-wise if you're using 2–3 scoops a day instead of fixing your food intake first",
+];
+
+const proteinSources = [
+  { food: "Chicken breast (4oz cooked)", protein: "35g", cost: "~$0.90" },
+  { food: "Chicken thighs (4oz cooked)", protein: "28g", cost: "~$0.60" },
+  { food: "93% lean ground beef (4oz)", protein: "22g", cost: "~$0.85" },
+  { food: "Eggs (3 large)", protein: "18g", cost: "~$0.50" },
+  { food: "Canned tuna (1 can, 5oz)", protein: "25g", cost: "~$1.00" },
+  { food: "Cottage cheese (1 cup)", protein: "25g", cost: "~$0.70" },
+  { food: "Greek yogurt (1 cup, plain)", protein: "20g", cost: "~$0.90" },
+  { food: "Whey protein (1 scoop)", protein: "25g", cost: "~$0.90" },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/guides/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        Ask ten people at your gym how much protein you need to build muscle and you'll
+        get ten different answers. Your roommate who just started lifting says 1g per
+        pound, minimum. Someone on Reddit says 0.6g per pound is enough. The guy who
+        benches 225 says he eats 300g a day and credits it for everything. The fitness
+        influencer in your FYP is sponsored by a protein brand and recommends 2g per
+        pound "to be safe."
+      </p>
+      <p>
+        Here's what the research actually says: most of those numbers are either close
+        enough to be useful or dramatically higher than necessary. The sweet spot is
+        narrower and cheaper to hit than the supplement industry would like you to
+        believe. Understanding it properly will save you money, simplify your eating,
+        and give you a realistic target that doesn't require living on chicken breast
+        and protein shakes.
+      </p>
+    </section>
+
+    <!-- What the research says -->
+    <section>
+      <h2>What Does the Research Actually Say?</h2>
+      <p>
+        The most comprehensive analysis of protein requirements for muscle building
+        comes from a 2018 meta-analysis published in the <em>British Journal of
+        Sports Medicine</em> by Morton et al., which pooled data from 49 studies
+        covering over 1,800 participants. The conclusion: protein intakes beyond
+        <strong>0.73g per pound of bodyweight per day (1.62g/kg)</strong> produced
+        no additional muscle growth or strength gains. That's the ceiling above which
+        more protein stops doing more.
+      </p>
+      <p>
+        The floor — the minimum intake needed to meaningfully support muscle protein
+        synthesis during resistance training — sits around <strong>0.5–0.6g per pound
+        per day</strong>. Below that, you're leaving gains on the table. The practical
+        sweet spot is <strong>0.7–1.0g per pound</strong>, with most people landing
+        closer to the lower end of that range as the optimal target. The 1g/lb number
+        is easy to remember and gives you a comfortable buffer, but it's not
+        physiologically necessary — it's a round number that became standard gym
+        advice because it's memorable.
+      </p>
+      <p>
+        A 2020 position statement from the International Society of Sports Nutrition
+        aligns with this: 1.4–2.0g/kg (0.63–0.91g/lb) daily is their recommended
+        range for exercising individuals. The upper end of that is 0.91g/lb — below
+        the 1g/lb figure that gets repeated constantly.
+      </p>
+      <p>
+        The one context where higher intake (up to 1.2–1.3g/lb) is supported by
+        evidence: aggressive calorie deficits. When you're cutting hard, extra protein
+        helps preserve muscle mass during the deficit. At maintenance or in a surplus,
+        you don't need it.
+      </p>
+    </section>
+
+    <!-- Protein calculator -->
+    <section>
+      <h2>How Much Protein Do You Actually Need? (The Calculator)</h2>
+      <p>
+        Use this formula: <strong>bodyweight in pounds × 0.8 = daily protein target
+        in grams</strong>. That lands you comfortably within the research-supported
+        range with a small buffer above the minimum. If you're cutting aggressively,
+        bump it to 1.0g per pound. If you're in a moderate bulk and eating plenty,
+        0.7g per pound is likely sufficient.
+      </p>
+
+      <div class="calc-table-wrap">
+        <table class="calc-table">
+          <thead>
+            <tr>
+              <th>Bodyweight</th>
+              <th>Conservative (0.7g/lb)</th>
+              <th>Recommended (0.8g/lb)</th>
+              <th>Cutting (1.0g/lb)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>130 lbs</strong></td>
+              <td>91g</td>
+              <td>104g</td>
+              <td>130g</td>
+            </tr>
+            <tr>
+              <td><strong>150 lbs</strong></td>
+              <td>105g</td>
+              <td>120g</td>
+              <td>150g</td>
+            </tr>
+            <tr>
+              <td><strong>170 lbs</strong></td>
+              <td>119g</td>
+              <td>136g</td>
+              <td>170g</td>
+            </tr>
+            <tr>
+              <td><strong>190 lbs</strong></td>
+              <td>133g</td>
+              <td>152g</td>
+              <td>190g</td>
+            </tr>
+            <tr>
+              <td><strong>210 lbs</strong></td>
+              <td>147g</td>
+              <td>168g</td>
+              <td>210g</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        For a 170lb college student in a moderate training program aiming to build
+        muscle, 136g of protein per day is a completely achievable target that the
+        research supports. That's not 200g. That's not a chicken breast at every
+        meal. It's a number you can hit with normal food choices and maybe one
+        protein shake on busy days.
+      </p>
+    </section>
+
+    <!-- Protein timing -->
+    <section>
+      <h2>Does Protein Timing Actually Matter?</h2>
+      <p>
+        The short answer: less than the supplement industry wants you to think,
+        but more than the contrarian "it doesn't matter at all" crowd claims.
+      </p>
+      <p>
+        Total daily protein intake is the most important variable by a wide margin.
+        Getting your daily target is more important than when you eat it. That said,
+        research does support distributing protein across three to four meals rather
+        than eating the same amount in one or two large sittings. The reason is
+        muscle protein synthesis — the process that builds muscle — responds to leucine
+        threshold triggering rather than just total protein availability. Each meal
+        needs roughly <strong>2.5–3g of leucine</strong> to maximally stimulate MPS,
+        which corresponds to about 30–40g of complete protein per meal. Eating 150g
+        of protein in two meals of 75g each doesn't produce twice the MPS response
+        of two meals of 37.5g — your body has a ceiling per meal.
+      </p>
+      <p>
+        Practical implication: spread your protein across three or four meals,
+        aim for 30–40g per sitting, and don't stress about eating within 30 minutes
+        of training (the "anabolic window" research is much less dramatic than gym
+        culture suggests). Consistency over weeks matters more than any single meal's
+        timing.
+      </p>
+    </section>
+
+    <!-- Best cheap protein sources -->
+    <section>
+      <h2>Best Cheap Protein Sources, Ranked by Cost Per Gram</h2>
+
+      <div class="source-table-wrap">
+        <table class="source-table">
+          <thead>
+            <tr>
+              <th>Food</th>
+              <th>Protein</th>
+              <th>Approx. Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            {proteinSources.map((row) => (
+              <tr>
+                <td>{row.food}</td>
+                <td class="protein-cell">{row.protein}</td>
+                <td>{row.cost}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        <strong>Eggs</strong> are the best overall protein value in most grocery stores —
+        a dozen eggs gives you 72g of protein for $3–4, with complete amino acid
+        profiles and the highest protein digestibility score of any food. Hard boil
+        a batch at the start of the week and you have portable, zero-prep protein
+        for four days.
+      </p>
+      <p>
+        <strong>Chicken thighs</strong> are systematically underrated. They're cheaper
+        than breasts, more forgiving to cook, and only slightly lower in protein per
+        ounce. If you've been buying chicken breasts because they're "cleaner," run
+        the cost comparison — thighs are often 30–40% cheaper and taste better when
+        you inevitably overcook them at 11pm.
+      </p>
+      <p>
+        <strong>Canned tuna</strong> is the most budget-efficient complete protein
+        source that requires zero cooking. $1 per can, 25g of protein, shelf-stable
+        indefinitely. Mix with mustard and eat straight from the can if you're
+        optimizing for effort-to-protein ratio.
+      </p>
+      <p>
+        <strong>Cottage cheese</strong> is underused by people who haven't tried it
+        recently. Full-fat or 2% cottage cheese runs about $3–4 for a 16oz container
+        delivering 100g of protein. It's also mostly casein, making it a cheap
+        pre-sleep protein source for students who don't want to buy a dedicated
+        casein powder.
+      </p>
+    </section>
+
+    <!-- How to hit your goal on a budget -->
+    <section>
+      <h2>How to Hit Your Protein Goal on a College Budget</h2>
+      <p>
+        The mistake most students make is treating protein as the expensive part of
+        their diet. It doesn't have to be. A 170lb student targeting 136g of protein
+        per day can hit that number for roughly <strong>$4–6 in protein costs</strong>
+        per day if they're buying the right sources.
+      </p>
+      <p>
+        A simple day that gets you to 140g without trying hard:
+      </p>
+      <ul>
+        <li>Breakfast: 3 scrambled eggs + 1 cup Greek yogurt = 38g</li>
+        <li>Lunch: 1 can tuna + 1 cup cottage cheese = 50g</li>
+        <li>Dinner: 5oz chicken thigh = 35g</li>
+        <li>Total: 123g — add one protein shake to close the gap if needed</li>
+      </ul>
+      <p>
+        That day costs under $6 in protein-specific food costs. No supplements
+        required. The shake is optional gap-filling, not the foundation.
+      </p>
+      <p>
+        <strong>Buy a food scale.</strong> This is the single highest-leverage
+        tool for hitting a protein target accurately. Most people dramatically
+        underestimate how much protein is in the food they're eating — a "serving"
+        of chicken at a dining hall could be anywhere from 3 to 8 ounces, which is
+        the difference between 20g and 55g of protein. Weighing your food for two
+        weeks builds an intuitive sense of portions that pays dividends for years.
+        A basic kitchen scale costs $10–12 and lasts forever.
+      </p>
+      <AffiliateButton href={foodScaleUrl} label="Buy a Food Scale on Amazon" />
+      <p>
+        <strong>Leverage dining hall protein when it's there.</strong> Grilled
+        chicken, eggs at breakfast, any fish option — eat it in volume when it's
+        convenient. Front-load your protein earlier in the day so you're not
+        scrambling to find 60g at 10pm.
+      </p>
+    </section>
+
+    <!-- What if you eat too much -->
+    <section>
+      <h2>What Happens If You Eat Too Much Protein?</h2>
+      <p>
+        The honest answer is: not much that's harmful, but also not much that's useful.
+        Protein consumed beyond what your body can use for muscle repair and synthesis
+        is broken down and the carbon skeletons are used for energy or stored as fat —
+        the same fate as excess carbs or dietary fat. You don't get extra muscle
+        from eating 300g of protein instead of 160g. You get extra calories and
+        a bigger food budget.
+      </p>
+      <p>
+        The kidney damage concern that gets raised periodically is not supported by
+        research in healthy individuals. Multiple long-term studies have found no
+        adverse kidney effects from high protein diets in people without pre-existing
+        kidney disease. If you have a kidney condition, talk to a doctor. If you're
+        otherwise healthy, eating 200g of protein instead of 160g isn't dangerous —
+        it's just unnecessary.
+      </p>
+      <p>
+        The more practical downside: very high protein diets can displace other
+        macronutrients and micronutrients. If you're eating 250g of protein per day
+        on a 2,500-calorie budget, you have very little room left for carbs and fats,
+        which impairs training performance and general health. Protein is important
+        but not so important it should crowd out everything else.
+      </p>
+    </section>
+
+    <!-- Protein powder as strategy -->
+    <section>
+      <h2>Protein Powder as a Supplement Strategy: Pros &amp; Cons</h2>
+      <ProsConsList pros={powderPros} cons={powderCons} />
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        You don't need 1g of protein per pound of bodyweight. You don't need 200g
+        per day unless you're a large athlete in a hard cut. You need roughly
+        <strong>0.7–1.0g per pound</strong>, distributed across three or four
+        meals with 30–40g each, primarily from whole food sources you can afford
+        to eat consistently.
+      </p>
+      <p>
+        For most college students that's 120–160g per day. Eggs, chicken, tuna,
+        cottage cheese, and Greek yogurt get you most of the way there for under
+        $6 a day. A single scoop of whey protein covers the gap on days when
+        food options are limited. Nothing else is required.
+      </p>
+      <p>
+        The research is clear: once you're consistently hitting your target, adding
+        more protein produces no additional muscle. Spend the money you'd blow on
+        extra protein on better sleep, more food variety, or a gym membership that
+        actually has the equipment you need. The return on those investments is better.
+      </p>
+      <AffiliateButton
+        href={wheyUrl}
+        label="Buy ON Gold Standard Whey on Amazon"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Calculator table */
+  .calc-table-wrap {
+    overflow-x: auto;
+    margin: 1.25rem 0;
+  }
+
+  .calc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    min-width: 380px;
+  }
+
+  .calc-table thead tr {
+    background: #f1f5f9;
+  }
+
+  .calc-table th {
+    padding: 0.65rem 1rem;
+    text-align: left;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #475569;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  .calc-table th:first-child { border-bottom-color: #e2e8f0; }
+  .calc-table th:nth-child(2) { background: #fefce8; color: #854d0e; border-bottom-color: #ca8a04; }
+  .calc-table th:nth-child(3) { background: #eff6ff; color: #1d4ed8; border-bottom-color: #1d4ed8; }
+  .calc-table th:nth-child(4) { background: #fdf4ff; color: #7e22ce; border-bottom-color: #9333ea; }
+
+  .calc-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+  }
+
+  .calc-table tbody tr:last-child td { border-bottom: none; }
+  .calc-table tbody tr:hover td { background: #f8fafc; }
+
+  /* Protein source table */
+  .source-table-wrap {
+    overflow-x: auto;
+    margin: 1.25rem 0;
+  }
+
+  .source-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+
+  .source-table thead tr {
+    background: #f1f5f9;
+  }
+
+  .source-table th {
+    padding: 0.65rem 1rem;
+    text-align: left;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #475569;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  .source-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+    vertical-align: middle;
+  }
+
+  .source-table tbody tr:last-child td { border-bottom: none; }
+  .source-table tbody tr:hover td { background: #f8fafc; }
+
+  .protein-cell {
+    font-weight: 700;
+    color: #15803d;
+  }
+</style>
