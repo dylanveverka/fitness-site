@@ -1,0 +1,492 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Transparent Labs vs Legion Athletics: Which Brand Is Worth It? (2025)";
+const description =
+  "Two of the most popular premium supplement brands go head to head. Here's which one college students should actually spend their money on.";
+const pubDate = "2026-04-16";
+const slug = "transparent-labs-vs-legion-athletics";
+
+const tlUrl     = "https://www.amazon.com/s?k=transparent+labs+whey+protein&tag=dveverka-20";
+const legionUrl = "https://www.amazon.com/s?k=legion+athletics+whey+protein&tag=dveverka-20";
+
+const comparisonRows = [
+  {
+    label: "Price per serving (whey)",
+    a: "~$2.00–2.20",
+    b: "~$2.10–2.30",
+    winner: "a",
+  },
+  {
+    label: "Protein per serving",
+    a: "28g",
+    b: "26g",
+    winner: "a",
+  },
+  {
+    label: "Artificial sweeteners",
+    a: "None (stevia)",
+    b: "None (stevia)",
+    winner: "tie",
+  },
+  {
+    label: "Third-party tested",
+    a: "Informed Choice",
+    b: "Labdoor + Informed Sport",
+    winner: "b",
+  },
+  {
+    label: "Flavor variety",
+    a: "Good (15+ flavors)",
+    b: "Excellent (20+ flavors)",
+    winner: "b",
+  },
+  {
+    label: "Customer service",
+    a: "Good",
+    b: "Excellent",
+    winner: "b",
+  },
+  {
+    label: "Best flagship product",
+    a: "Bulk pre-workout",
+    b: "Pulse pre-workout",
+    winner: "tie",
+  },
+  {
+    label: "Value for money",
+    a: "Better (more protein per $)",
+    b: "Good but slightly behind",
+    winner: "a",
+  },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        Walk through the upper end of the supplement market and you'll run into
+        Transparent Labs and Legion Athletics at every turn. Both brands position
+        themselves as the antidote to the supplement industry's worst habits —
+        underdosed ingredients, proprietary blends, artificial everything, and
+        marketing that relies on aesthetics over substance. Both claim to use
+        full clinical doses. Both disclose every ingredient. Both charge more
+        than most brands on the shelf.
+      </p>
+      <p>
+        The question for a college student standing between two $50+ tubs of protein
+        powder is: are they actually different in ways that matter, and is either of
+        them worth the premium over a $30 tub of ON Gold Standard? This comparison
+        breaks down both brands across products, pricing, testing standards, and the
+        contexts where each makes the most sense.
+      </p>
+    </section>
+
+    <!-- Brand overviews -->
+    <section>
+      <h2>Transparent Labs: Brand Overview</h2>
+      <p>
+        Transparent Labs launched in 2015 out of Utah with a single premise: put
+        the full ingredient label on everything, dose every active compound at
+        clinically studied levels, and use no artificial sweeteners, colors, or
+        preservatives. That philosophy is baked into the name and it's held up
+        consistently. Their products use stevia as the sole sweetener across the
+        lineup, which is either a selling point or a drawback depending on your
+        relationship with stevia's aftertaste.
+      </p>
+      <p>
+        The flagship protein is <strong>100% Grass-Fed Whey Protein Isolate</strong>
+        — 28g of protein per serving, under 1g of fat, under 2g of carbs, and no
+        fillers. It's one of the leanest protein profiles on the market. Their
+        pre-workout lineup is where Transparent Labs built its strongest reputation:
+        BULK (for mass phases) and LEAN (for cutting) both use research-backed doses
+        of citrulline malate (8g), beta-alanine (4g), and betaine, putting them at
+        or above what the clinical literature uses — a meaningful distinction from
+        most pre-workouts that include the same ingredients at half the studied dose.
+      </p>
+      <p>
+        The brand sells direct-to-consumer through its website, which keeps prices
+        slightly lower than brands that sell through retail middlemen. Third-party
+        testing through Informed Choice means you can verify the label claims without
+        taking the company's word for it. The trade-off: a heavier stevia presence
+        than some people prefer, and fewer flavor options than Legion.
+      </p>
+    </section>
+
+    <section>
+      <h2>Legion Athletics: Brand Overview</h2>
+      <p>
+        Legion was founded by Mike Matthews, who built the brand alongside his fitness
+        books (<em>Bigger Leaner Stronger</em>, <em>Thinner Leaner Stronger</em>) and
+        has become one of the more credible voices in evidence-based fitness writing.
+        That background shows in how Legion approaches its products: the website is
+        unusually transparent about the research behind every ingredient, including
+        honest assessments of what the evidence does and doesn't support. It's the
+        rare supplement brand that will tell you when a popular ingredient doesn't
+        have strong enough data to justify inclusion.
+      </p>
+      <p>
+        <strong>Whey+</strong> is Legion's protein flagship — 22g of protein from
+        100% whey isolate per serving, no artificial sweeteners (stevia and erythritol),
+        and Labdoor A-rated for purity. The lower protein count versus Transparent Labs
+        is a real trade-off at a similar price per serving. Where Legion compensates is
+        in flavor — they have one of the best flavor development programs in the premium
+        supplement space, with 20+ options for Whey+ that consistently score well in
+        taste reviews, including more unusual options like Cinnamon Cereal and Apple Pie.
+      </p>
+      <p>
+        <strong>Pulse</strong> is Legion's pre-workout and arguably their strongest
+        product: 8g citrulline malate, 3.6g beta-alanine, 2.5g betaine, 300mg caffeine,
+        and a fully disclosed label. The stim-free version (Pulse Stim-Free) is rare
+        in the premium market and useful for students who are caffeine-sensitive or
+        train in the evening. Customer service is a genuine differentiator — Legion has
+        built a reputation for responsive, no-hassle support that most supplement brands
+        don't come close to.
+      </p>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Transparent Labs"
+        nameB="Legion Athletics"
+        rows={comparisonRows}
+      />
+    </section>
+
+    <!-- Winner callouts -->
+    <section>
+      <h2>Category Winners</h2>
+      <div class="winner-grid">
+        <div class="winner-card tl">
+          <span class="winner-badge">Transparent Labs</span>
+          <p class="winner-category">Best Protein</p>
+          <p class="winner-reason">
+            28g of protein per serving vs Legion's 26g, at a slightly lower cost
+            per serving. Better protein-per-dollar by a small but real margin.
+          </p>
+        </div>
+        <div class="winner-card tl">
+          <span class="winner-badge">Transparent Labs</span>
+          <p class="winner-category">Best Value</p>
+          <p class="winner-reason">
+            More protein per serving at a slightly lower price point, with
+            clinical doses across the pre-workout lineup. Better math per gram
+            of active ingredient.
+          </p>
+        </div>
+        <div class="winner-card legion">
+          <span class="winner-badge">Legion Athletics</span>
+          <p class="winner-category">Best Pre-Workout</p>
+          <p class="winner-reason">
+            Legion Pulse's stim-free option is unique in the premium market —
+            full clinical doses without caffeine for evening training or
+            caffeine-sensitive students.
+          </p>
+        </div>
+        <div class="winner-card legion">
+          <span class="winner-badge">Legion Athletics</span>
+          <p class="winner-category">Best Flavors</p>
+          <p class="winner-reason">
+            20+ Whey+ options including Cinnamon Cereal and Apple Pie. Broader
+            selection and consistently better taste scores than Transparent Labs
+            across community reviews.
+          </p>
+        </div>
+        <div class="winner-card legion">
+          <span class="winner-badge">Legion Athletics</span>
+          <p class="winner-category">Best for Beginners</p>
+          <p class="winner-reason">
+            The Legion website has the most thorough evidence-based education
+            of any supplement brand — ingredient explanations, study citations,
+            and honest assessments of what actually works.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deep dives -->
+    <section>
+      <h2>Transparent Labs: Where It Wins and Where It Doesn't</h2>
+      <p>
+        The protein math is straightforward. At 28g per serving for $2.00–2.20,
+        Transparent Labs delivers more protein per dollar than Legion and most other
+        premium brands. If your primary use case is hitting a daily protein target
+        as efficiently as possible with a clean ingredient profile, Transparent Labs
+        is the stronger buy.
+      </p>
+      <p>
+        Their pre-workout lineup is the most consistent in the premium space.
+        BULK pre-workout at 8g citrulline malate, 4g beta-alanine, 2.5g betaine,
+        and 200mg caffeine from natural sources hits clinical doses across the board
+        — not in the "within the studied range" way that more affordable pre-workouts
+        use as cover, but at the doses the most favorable research actually used.
+        For a serious lifter who reads labels, this matters. LEAN pre-workout
+        substitutes a fat-burning stack for some of the bulk-phase compounds,
+        making it the better choice during a cut.
+      </p>
+      <p>
+        The stevia point deserves honest treatment. Transparent Labs uses stevia
+        exclusively and uses it in enough quantity that you will taste it. Some
+        people don't notice stevia at all. Others find it has a bitter or licorice
+        aftertaste that makes the protein unpleasant over time. This is genuinely
+        subjective, but it's the most common reason people try Transparent Labs
+        and don't come back — not the quality, which is universally praised, but
+        the taste. If you're sensitive to stevia, order a sample before committing
+        to a full tub.
+      </p>
+      <AffiliateButton href={tlUrl} label="Buy Transparent Labs Whey on Amazon" />
+    </section>
+
+    <section>
+      <h2>Legion Athletics: Where It Wins and Where It Doesn't</h2>
+      <p>
+        Legion's advantage is the complete package experience. The flavors are
+        better, the customer service is better, the website is more educational,
+        and the certifications are more thorough (both Labdoor and Informed Sport,
+        versus Transparent Labs' Informed Choice alone). For a first-time buyer
+        of premium supplements who wants confidence in what they're buying and
+        a pleasant experience using it, Legion is easier to recommend.
+      </p>
+      <p>
+        Whey+ is a genuinely excellent protein powder. The 26g per serving is
+        slightly behind Transparent Labs, and the price per serving is slightly
+        higher, but the taste is consistently better and the texture is smoother.
+        Cinnamon Cereal is one of the better protein flavors on the market period —
+        it actually tastes like cereal milk without being cloying. Apple Pie is
+        another standout. If you're the kind of person who looks forward to
+        their protein shake, Legion gives you more to work with.
+      </p>
+      <p>
+        Pulse pre-workout's stim-free option is worth singling out. Most pre-workout
+        brands offer a stimulant-free version that drops caffeine and cuts the
+        rest of the formula down to save money. Legion's stim-free Pulse keeps
+        the full citrulline, beta-alanine, and betaine doses intact — you get
+        the pump and endurance benefits without the central nervous system
+        stimulation. For students who train at 8pm and still need to sleep by
+        midnight, this is genuinely useful. No other premium brand does this as
+        well at this price point.
+      </p>
+      <AffiliateButton href={legionUrl} label="Buy Legion Whey+ on Amazon" />
+    </section>
+
+    <!-- Are premium supplements worth it -->
+    <section>
+      <h2>Are Premium Supplements Worth It vs ON Gold Standard?</h2>
+      <p>
+        This is the honest question that neither brand's marketing wants to answer
+        directly. The short version: for protein powder, probably not for most
+        students. For pre-workout, maybe.
+      </p>
+      <p>
+        ON Gold Standard Whey delivers 24g of protein per serving for roughly
+        $1.00–1.25 per serving — half to two-thirds the cost of both premium brands.
+        It uses some artificial sweeteners (sucralose and acesulfame potassium),
+        it's a whey blend rather than pure isolate, and the carb and fat content
+        is slightly higher per serving. For a student whose primary goal is hitting
+        a daily protein target on a college budget, the extra $0.80–1.00 per serving
+        for a premium brand doesn't produce more muscle. You're paying for cleaner
+        ingredients and a better taste experience — real things, but things with
+        diminishing returns when you're also paying tuition.
+      </p>
+      <p>
+        The pre-workout case is stronger. Budget pre-workouts like C4 use therapeutic
+        doses of caffeine but dramatically underdose citrulline, beta-alanine, and
+        other performance compounds. At 6g of citrulline versus 8g, or 1.6g of
+        beta-alanine versus 4g, you're getting a fraction of the studied dose of
+        the performance-relevant ingredients. If pre-workout performance matters to
+        your training, the premium price on Legion Pulse or Transparent Labs BULK
+        delivers meaningfully more active ingredient per dollar for those specific
+        compounds — even if the total product price is higher.
+      </p>
+      <p>
+        The practical framework: use ON Gold Standard or Dymatize ISO100 for daily
+        protein. Invest the premium budget in pre-workout if you use one, where
+        the dose difference between budget and premium is large enough to affect
+        training outcomes.
+      </p>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        Both brands are legitimate and both are worth the premium over the supplement
+        industry's worst actors — underdosed, proprietary-blend products that list
+        impressive ingredients and include them at homeopathic amounts. If you're
+        spending money on supplements, spending it on a brand that actually tells
+        you what's in the product and doses it correctly is the baseline minimum.
+      </p>
+      <p>
+        <strong>Choose Transparent Labs if:</strong> you care most about protein
+        per dollar, you're not sensitive to stevia, and your priority is clean
+        macros and clinically dosed pre-workout performance. The protein math
+        is better and BULK pre-workout is as good as it gets at this price point.
+      </p>
+      <p>
+        <strong>Choose Legion if:</strong> you want the best flavor experience,
+        you train late and want a legitimate stim-free pre-workout option, or
+        you value the educational depth of the brand's content and customer
+        support. The Whey+ flavor lineup and Pulse Stim-Free are two of the
+        best products in their respective categories.
+      </p>
+      <p>
+        They're both premium products at premium prices. Neither is the right
+        call for a student on a strict budget who just needs protein — ON Gold
+        Standard handles that job at half the cost. But if you're buying into
+        the premium tier anyway, the choice between these two comes down to
+        whether you're optimizing for value and clinical doses (Transparent Labs)
+        or taste, education, and caffeine flexibility (Legion).
+      </p>
+
+      <div class="final-ctas">
+        <div class="final-cta-block">
+          <p class="final-cta-label">Best Value &amp; Protein</p>
+          <AffiliateButton href={tlUrl} label="Buy Transparent Labs Whey on Amazon" />
+        </div>
+        <div class="final-cta-block">
+          <p class="final-cta-label">Best Flavors &amp; Service</p>
+          <AffiliateButton href={legionUrl} label="Buy Legion Whey+ on Amazon" />
+        </div>
+      </div>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Winner callout grid */
+  .winner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.875rem;
+    margin: 1rem 0;
+  }
+
+  .winner-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 1rem 1.1rem 1.1rem;
+  }
+
+  .winner-card.tl {
+    border-left: 4px solid #0284c7;
+    background: #f0f9ff;
+  }
+
+  .winner-card.legion {
+    border-left: 4px solid #dc2626;
+    background: #fff5f5;
+  }
+
+  .winner-badge {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .winner-card.tl .winner-badge {
+    background: #0284c7;
+    color: #fff;
+  }
+
+  .winner-card.legion .winner-badge {
+    background: #dc2626;
+    color: #fff;
+  }
+
+  .winner-category {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0.25rem 0 0.4rem;
+  }
+
+  .winner-reason {
+    font-size: 0.82rem;
+    color: #475569;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Final CTAs */
+  .final-ctas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .final-cta-block {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 1rem 0.5rem 0;
+    background: #f8fafc;
+  }
+
+  .final-cta-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    text-align: center;
+    margin: 0 0 0.25rem;
+  }
+
+  @media (max-width: 560px) {
+    .winner-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .final-ctas {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
