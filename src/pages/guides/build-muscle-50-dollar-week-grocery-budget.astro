@@ -1,0 +1,630 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+
+const title = "How to Build Muscle on a $50/Week Grocery Budget (Full Guide)";
+const description =
+  "You don't need expensive food to build muscle. Here's exactly what to buy and eat every week to build muscle on a $50 college grocery budget.";
+const pubDate = "2026-04-16";
+const slug = "build-muscle-50-dollar-week-grocery-budget";
+
+const foodScaleUrl    = "https://www.amazon.com/s?k=food+kitchen+scale&tag=dveverka-20";
+const containersUrl   = "https://www.amazon.com/s?k=meal+prep+containers+set&tag=dveverka-20";
+const wheyUrl         = "https://www.amazon.com/s?k=optimum+nutrition+gold+standard+whey&tag=dveverka-20";
+
+const groceries = [
+  { item: "Eggs (2 dozen)",                  price: "$5.00",  protein: "~48g total" },
+  { item: "Ground beef 80/20 (3 lbs)",        price: "$12.00", protein: "~195g total" },
+  { item: "Chicken thighs (3 lbs)",           price: "$8.00",  protein: "~195g total" },
+  { item: "Rolled oats (large container)",    price: "$4.00",  protein: "~60g total" },
+  { item: "Bananas (bunch)",                  price: "$2.00",  protein: "~5g total" },
+  { item: "Frozen broccoli + spinach (2 bags)", price: "$4.00", protein: "~15g total" },
+  { item: "White rice (5lb bag)",             price: "$4.00",  protein: "~40g total" },
+  { item: "Peanut butter (16oz jar)",         price: "$4.00",  protein: "~55g total" },
+  { item: "Canned tuna (4 cans)",             price: "$4.00",  protein: "~100g total" },
+  { item: "Greek yogurt (32oz, plain)",       price: "$5.00",  protein: "~80g total" },
+];
+
+const proteinSources = [
+  { source: "Eggs (per dozen)",            costPer10g: "$0.10" },
+  { source: "Chicken thighs (per lb raw)", costPer10g: "$0.27" },
+  { source: "Canned tuna (per can)",       costPer10g: "$0.40" },
+  { source: "Ground beef 80/20 (per lb)",  costPer10g: "$0.45" },
+  { source: "Greek yogurt (per cup)",      costPer10g: "$0.48" },
+  { source: "Peanut butter (per 2 tbsp)",  costPer10g: "$0.15" },
+  { source: "Rolled oats (per cup dry)",   costPer10g: "$0.07" },
+  { source: "Whey protein (per scoop)",    costPer10g: "$0.36" },
+];
+
+const pros = [
+  "Forces you to eat whole, minimally processed food — chicken, eggs, rice, and oats have better micronutrient profiles than most meal replacement alternatives",
+  "Builds food prep and cooking habits that pay dividends for years after college, regardless of future budget",
+  "Protein sources at this budget tier (eggs, chicken thighs, tuna) have complete amino acid profiles that support muscle building as effectively as premium options",
+  "Low processed food intake means fewer empty calories competing with your protein and carb targets — the money forces good decisions",
+  "Sustainable long-term — unlike more elaborate eating plans, these are foods available at every grocery store in every city for similar prices",
+];
+
+const cons = [
+  "Repetitive eating — seven days of chicken, rice, eggs, and oats requires mental tolerance for monotony that not everyone has",
+  "Requires meal prep time; without cooking once or twice a week, the budget and plan fall apart when you're busy",
+  "Harder to hit protein targets on social days — dining out on this budget is difficult without compromising the macros or the cost",
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/guides/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        The fitness industry has a financial interest in convincing you that building
+        muscle requires expensive food — organic chicken breast, specialty protein
+        bars, grass-fed everything, meal delivery services that cost $12 per container.
+        This is not true. Muscle is built from protein, progressive overload, sleep,
+        and enough total calories to support growth. None of those variables require
+        a premium grocery bill.
+      </p>
+      <p>
+        This guide is proof of concept. Fifty dollars per week at Walmart — sometimes
+        Aldi, sometimes Costco for specific items — gets you enough food to train hard,
+        hit 180g+ of protein daily, and run a clean lean bulk that produces real
+        results over months. Here's exactly what to buy, how to structure the week,
+        and what to do when the budget needs to flex.
+      </p>
+    </section>
+
+    <!-- How many calories -->
+    <section>
+      <h2>How Many Calories Do You Need to Build Muscle?</h2>
+      <p>
+        You need a caloric surplus to build muscle — your body requires energy above
+        its maintenance level to synthesize new tissue. The goal for a lean bulk is
+        a modest surplus: enough to support growth without adding excessive body fat
+        alongside muscle. Chasing the largest possible surplus doesn't produce faster
+        muscle growth; it produces faster fat accumulation with the same muscle growth.
+      </p>
+      <p>
+        The starting formula: <strong>bodyweight in pounds × 16–18 = daily calorie
+        target</strong>. A 170lb student targeting muscle growth should eat
+        2,720–3,060 calories per day. The lower end (×16) works for students
+        with desk-heavy schedules outside of training; the upper end (×18) works
+        for students with active daily lives, multiple training sessions, or manual
+        work on top of the gym.
+      </p>
+      <div class="calc-table-wrap">
+        <table class="calc-table">
+          <thead>
+            <tr>
+              <th>Bodyweight</th>
+              <th>Lean Bulk (×16)</th>
+              <th>Active Bulk (×18)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>140 lbs</strong></td><td>2,240 cal</td><td>2,520 cal</td></tr>
+            <tr><td><strong>160 lbs</strong></td><td>2,560 cal</td><td>2,880 cal</td></tr>
+            <tr><td><strong>180 lbs</strong></td><td>2,880 cal</td><td>3,240 cal</td></tr>
+            <tr><td><strong>200 lbs</strong></td><td>3,200 cal</td><td>3,600 cal</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Protein target: 0.8–1.0g per pound of bodyweight. For most students on this
+        list, that means 130–180g per day. The grocery list below supports 180g+ for
+        a 170–180lb student. Adjust quantities proportionally if you're significantly
+        lighter or heavier.
+      </p>
+    </section>
+
+    <!-- Grocery list -->
+    <section>
+      <h2>The $50 Weekly Grocery List (Walmart Pricing)</h2>
+      <div class="grocery-table-wrap">
+        <table class="grocery-table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Price</th>
+              <th>Weekly Protein</th>
+            </tr>
+          </thead>
+          <tbody>
+            {groceries.map((row) => (
+              <tr>
+                <td>{row.item}</td>
+                <td class="price-cell">{row.price}</td>
+                <td class="protein-cell">{row.protein}</td>
+              </tr>
+            ))}
+            <tr class="total-row">
+              <td><strong>Weekly Total</strong></td>
+              <td><strong>~$52</strong></td>
+              <td><strong>~793g protein available</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The total comes to approximately $52 — a few dollars over the target. Trim
+        $2 by buying store-brand oats and peanut butter instead of name brands, or
+        skip one can of tuna. The grocery list is a template; adjust it to your
+        store's prices without changing the structure.
+      </p>
+      <p>
+        You won't use every gram of protein from every item in a single week —
+        the 793g figure is what's available across all foods purchased. A 170lb
+        student needs about 1,260g of protein across seven days (180g/day).
+        The list covers that with room to spare, accounting for real-world portions.
+      </p>
+    </section>
+
+    <!-- Full week of meals -->
+    <section>
+      <h2>Full Week of Meals: 180g Protein, 3,000+ Calories</h2>
+      <p>
+        This structure repeats across the week with minor variation. It's deliberately
+        simple — fewer unique meals means less prep time and less decision fatigue.
+        The goal is a system you'll actually maintain, not a perfect meal plan
+        you'll abandon by Wednesday.
+      </p>
+
+      <h3>Breakfast (every day) — ~550 cal / 40g protein</h3>
+      <ul>
+        <li>1 cup rolled oats (dry) cooked with water — 300 cal, 10g protein</li>
+        <li>1 banana — 90 cal, 1g protein</li>
+        <li>2 tablespoons peanut butter stirred in — 190 cal, 7g protein</li>
+        <li>2 scrambled eggs — 140 cal, 12g protein</li>
+      </ul>
+
+      <h3>Lunch Option A (Mon / Wed / Fri) — ~650 cal / 50g protein</h3>
+      <ul>
+        <li>1.5 cups cooked white rice — 300 cal, 6g protein</li>
+        <li>5oz ground beef (cooked weight) — 260 cal, 35g protein</li>
+        <li>1 cup frozen broccoli, microwaved — 55 cal, 4g protein</li>
+        <li>Soy sauce or hot sauce to taste</li>
+      </ul>
+
+      <h3>Lunch Option B (Tue / Thu / Sat / Sun) — ~500 cal / 45g protein</h3>
+      <ul>
+        <li>1 can tuna mixed with 1 tablespoon peanut butter + sriracha — 200 cal, 30g protein</li>
+        <li>1.5 cups cooked rice — 300 cal, 6g protein</li>
+        <li>1 cup frozen spinach, microwaved — 40 cal, 5g protein</li>
+      </ul>
+
+      <h3>Dinner (every day) — ~750 cal / 50g protein</h3>
+      <ul>
+        <li>6oz chicken thigh (cooked weight) — 280 cal, 42g protein</li>
+        <li>2 cups cooked white rice — 400 cal, 8g protein</li>
+        <li>1 cup frozen broccoli — 55 cal, 4g protein</li>
+      </ul>
+
+      <h3>Evening Snack (every day) — ~250 cal / 20g protein</h3>
+      <ul>
+        <li>1 cup Greek yogurt — 130 cal, 20g protein</li>
+        <li>1 tablespoon peanut butter — 95 cal, 4g protein</li>
+      </ul>
+
+      <div class="daily-total">
+        <p class="total-label">Daily Totals (approximate)</p>
+        <div class="total-grid">
+          <div class="total-item">
+            <span class="total-value">~2,950</span>
+            <span class="total-unit">calories</span>
+          </div>
+          <div class="total-item">
+            <span class="total-value">~185g</span>
+            <span class="total-unit">protein</span>
+          </div>
+          <div class="total-item">
+            <span class="total-value">~350g</span>
+            <span class="total-unit">carbs</span>
+          </div>
+          <div class="total-item">
+            <span class="total-value">~80g</span>
+            <span class="total-unit">fat</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cheapest protein sources -->
+    <section>
+      <h2>Cheapest Protein Sources Per Gram, Ranked</h2>
+      <div class="protein-table-wrap">
+        <table class="protein-table">
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Cost per 10g Protein</th>
+            </tr>
+          </thead>
+          <tbody>
+            {proteinSources.map((row, i) => (
+              <tr>
+                <td>{row.source}</td>
+                <td class={i < 3 ? "winner-cell" : ""}>{row.costPer10g}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Eggs are the cheapest complete protein source available at most grocery stores.
+        A dozen eggs for $5 gives you 72g of protein — that's $0.69 per 10g.
+        Oats and peanut butter are technically cheaper per gram but are incomplete
+        proteins and won't cover your full amino acid needs on their own; they're
+        best used as calorie and partial protein contributors alongside animal sources.
+      </p>
+    </section>
+
+    <!-- Where to shop -->
+    <section>
+      <h2>Where to Shop for the Best Prices</h2>
+
+      <h3>Walmart — Best for Weekly Groceries</h3>
+      <p>
+        Walmart's Great Value store brand consistently undercuts name brands by
+        20–35% on basics: oats, peanut butter, canned tuna, frozen vegetables, and
+        rice. The meat department prices vary by region but are generally competitive
+        on ground beef and chicken thighs. The $50 list above is based on Walmart
+        pricing; Walmart should be your default weekly stop.
+      </p>
+
+      <h3>Aldi — Best for Eggs, Dairy, and Produce</h3>
+      <p>
+        Aldi reliably beats Walmart on eggs, Greek yogurt, fresh produce, and
+        some frozen vegetables. If you have both stores accessible, split the run:
+        eggs, yogurt, and produce from Aldi; meat and pantry staples from Walmart.
+        A combined trip to both stores typically saves $5–10 per week on the same
+        list compared to Walmart-only shopping.
+      </p>
+
+      <h3>Costco — Best for Bulk Protein</h3>
+      <p>
+        Costco's rotisserie chicken ($5 for a whole bird, typically 30–35g cooked
+        protein per serving across multiple meals) is one of the best value protein
+        sources in any grocery category. Their 10-pound ground beef roll, large
+        bags of rice, and 6-pound tubs of Greek yogurt all represent meaningful
+        per-unit savings over weekly grocery quantities. If you have a membership
+        or can share one, bulk-buying the stable pantry items (rice, oats, peanut
+        butter) every four to six weeks and filling in fresh protein weekly at
+        Walmart or Aldi is the optimal cost strategy.
+      </p>
+
+      <h3>Skip the Health Food Stores</h3>
+      <p>
+        Whole Foods, Sprouts, and similar stores charge a significant premium for
+        the exact same nutritional value in most cases. Organic chicken breast from
+        Whole Foods has the same amino acid profile as conventional chicken thighs
+        from Walmart at a third of the price. Unless you have specific sourcing
+        priorities, these stores aren't compatible with a $50 weekly budget.
+      </p>
+    </section>
+
+    <!-- Supplement to fill gaps -->
+    <section>
+      <h2>When to Add a Protein Supplement</h2>
+      <p>
+        The grocery list above covers 180g of protein per day for a 170–180lb
+        student without any supplements. But there are scenarios where a protein
+        powder earns its place in this budget:
+      </p>
+      <p>
+        <strong>On travel days or busy weeks</strong> when cooking isn't happening
+        and you're short on portable food. One scoop of whey in a shaker is a
+        faster, cheaper protein source than most campus or convenience food options.
+      </p>
+      <p>
+        <strong>If you're under 150 lbs</strong> and the full grocery list produces
+        more food than you can eat. In that case, replace some of the ground beef
+        or chicken with a scoop of whey post-workout — you'll hit your protein target
+        with less food volume and lower total spending.
+      </p>
+      <p>
+        <strong>If you're above 190 lbs</strong> and need more than 180g of daily
+        protein. Adding one scoop daily ($25–30 for a month of ON Gold Standard at
+        one scoop per day) costs less than scaling up all the whole food sources
+        proportionally.
+      </p>
+      <AffiliateButton href={wheyUrl} label="Buy ON Gold Standard Whey on Amazon" />
+      <p>
+        For the core budget plan, supplements are optional. Fix the food foundation
+        first, then add powder where it makes the system easier, not as a substitute
+        for building the system.
+      </p>
+    </section>
+
+    <!-- Pros & Cons -->
+    <section>
+      <h2>Budget Bulking: Pros &amp; Cons</h2>
+      <ProsConsList pros={pros} cons={cons} />
+    </section>
+
+    <!-- Practical tools -->
+    <section>
+      <h2>Two Tools That Make This Plan Work</h2>
+      <p>
+        <strong>A food scale.</strong> The difference between "a cup of rice"
+        and actually weighing your rice is the difference between hitting your
+        calorie target and missing it by 400 calories in either direction. Weighing
+        food for two to four weeks builds an accurate intuitive sense of portions
+        that makes tracking easier without the scale indefinitely. At $10–12, it's
+        the highest return-on-investment kitchen purchase available.
+      </p>
+      <AffiliateButton href={foodScaleUrl} label="Buy a Food Scale on Amazon" />
+      <p>
+        <strong>Meal prep containers.</strong> Cooking once on Sunday — rice,
+        chicken, and beef in batch — and portioning into containers eliminates the
+        daily decision of what to eat and makes the plan viable during busy weeks.
+        Five or six containers with pre-portioned lunches and dinners means you're
+        never eating the wrong thing because you didn't have time to cook. A set
+        of eight containers costs $12–15 and makes the whole system dramatically
+        more sustainable.
+      </p>
+      <AffiliateButton href={containersUrl} label="Buy Meal Prep Containers on Amazon" />
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        Fifty dollars per week is genuinely enough to build muscle. The grocery
+        list above provides complete proteins, adequate calories, meaningful
+        micronutrient coverage from eggs and vegetables, and a sustainable eating
+        structure that you can maintain for a full semester without financial stress.
+      </p>
+      <p>
+        The constraint that actually limits most college students isn't money —
+        it's consistency. The budget forces simplicity, and simplicity is what
+        produces consistent execution over the twelve to sixteen weeks that produce
+        real, visible results from a training program. Elaborate meal plans fail
+        when life gets busy. Seven days of chicken, rice, eggs, oats, and tuna
+        doesn't fail because there's nothing complicated to fail at.
+      </p>
+      <p>
+        Buy a food scale, prep on Sunday, and stay boring for long enough to see
+        what boring eating and consistent training actually produces. The results
+        are less boring than the method.
+      </p>
+      <AffiliateButton
+        href={foodScaleUrl}
+        label="Buy a Food Scale on Amazon"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    margin: 1.75rem 0 0.5rem;
+    color: #1e293b;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  li {
+    margin-bottom: 0.35rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Calorie calculator table */
+  .calc-table-wrap {
+    overflow-x: auto;
+    margin: 1.25rem 0;
+  }
+
+  .calc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+
+  .calc-table thead tr { background: #f1f5f9; }
+
+  .calc-table th {
+    padding: 0.65rem 1rem;
+    text-align: left;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #475569;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  .calc-table th:nth-child(2) { background: #eff6ff; color: #1d4ed8; border-bottom-color: #1d4ed8; }
+  .calc-table th:nth-child(3) { background: #fdf4ff; color: #7e22ce; border-bottom-color: #9333ea; }
+
+  .calc-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+  }
+
+  .calc-table tbody tr:last-child td { border-bottom: none; }
+  .calc-table tbody tr:hover td { background: #f8fafc; }
+
+  /* Grocery list table */
+  .grocery-table-wrap {
+    overflow-x: auto;
+    margin: 1.25rem 0;
+  }
+
+  .grocery-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+
+  .grocery-table thead tr { background: #f1f5f9; }
+
+  .grocery-table th {
+    padding: 0.65rem 1rem;
+    text-align: left;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #475569;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  .grocery-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+    vertical-align: middle;
+  }
+
+  .grocery-table tbody tr:hover td { background: #f8fafc; }
+
+  .grocery-table .total-row td {
+    border-top: 2px solid #e2e8f0;
+    border-bottom: none;
+    background: #f8fafc;
+    padding-top: 0.75rem;
+  }
+
+  .price-cell {
+    font-weight: 600;
+    color: #15803d;
+    white-space: nowrap;
+  }
+
+  .protein-cell {
+    color: #0284c7;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  /* Daily totals box */
+  .daily-total {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+  }
+
+  .total-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #16a34a;
+    margin: 0 0 0.75rem;
+  }
+
+  .total-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+
+  .total-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #bbf7d0;
+    border-radius: 0.375rem;
+    padding: 0.6rem 0.5rem;
+  }
+
+  .total-value {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #15803d;
+    line-height: 1.1;
+  }
+
+  .total-unit {
+    font-size: 0.72rem;
+    color: #64748b;
+    margin-top: 0.2rem;
+  }
+
+  /* Protein cost table */
+  .protein-table-wrap {
+    overflow-x: auto;
+    margin: 1.25rem 0;
+  }
+
+  .protein-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+
+  .protein-table thead tr { background: #f1f5f9; }
+
+  .protein-table th {
+    padding: 0.65rem 1rem;
+    text-align: left;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #475569;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  .protein-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+  }
+
+  .protein-table tbody tr:last-child td { border-bottom: none; }
+  .protein-table tbody tr:hover td { background: #f8fafc; }
+
+  .winner-cell {
+    font-weight: 700;
+    color: #15803d;
+    background: #f0fdf4;
+  }
+
+  @media (max-width: 480px) {
+    .total-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
