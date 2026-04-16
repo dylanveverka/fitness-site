@@ -1,0 +1,483 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Electrolyte Drinks for Working Out (Budget Picks for 2025)";
+const description =
+  "Skip the $3 Gatorade. These are the best electrolyte drinks and powders for college students who work out, ranked by value and effectiveness.";
+const pubDate = "2026-04-16";
+const slug = "best-electrolyte-drinks-working-out";
+
+const liquidIvUrl  = "https://www.amazon.com/s?k=liquid+iv+hydration+multiplier&tag=dveverka-20";
+const nuunUrl      = "https://www.amazon.com/s?k=nuun+sport+electrolyte+tablets&tag=dveverka-20";
+const ultimaUrl    = "https://www.amazon.com/s?k=ultima+replenisher+electrolyte+powder&tag=dveverka-20";
+const lmntUrl      = "https://www.amazon.com/s?k=LMNT+electrolyte+drink+mix&tag=dveverka-20";
+
+const comparisonRows = [
+  {
+    label: "Price per serving",
+    a: "$1.50–2.00",
+    b: "$0.70–0.85",
+    c: "$0.50–0.65",
+    d: "$1.50–1.75",
+    winner: "c",
+  },
+  {
+    label: "Sodium",
+    a: "500mg",
+    b: "300mg",
+    c: "55mg",
+    d: "1000mg",
+    winner: "d",
+  },
+  {
+    label: "Potassium",
+    a: "380mg",
+    b: "150mg",
+    c: "250mg",
+    d: "200mg",
+    winner: "a",
+  },
+  {
+    label: "Sugar",
+    a: "11g",
+    b: "1g",
+    c: "0g",
+    d: "0g",
+    winner: "tie",
+  },
+  {
+    label: "Calories",
+    a: "45",
+    b: "10",
+    c: "10",
+    d: "10",
+    winner: "tie",
+  },
+  {
+    label: "Best use case",
+    a: "Heavy sweat, hangover",
+    b: "Daily training",
+    c: "Cutting, low sugar",
+    d: "Hot climate, keto",
+    winner: "tie",
+  },
+];
+
+const nuunPros = [
+  "Solid electrolyte profile — 300mg sodium, 150mg potassium — at a price that doesn't sting",
+  "Only 1g of sugar per tablet, making it practical for cutting phases or macro-tracking students",
+  "Dissolves cleanly in 16oz of water in under two minutes with no stirring required",
+  "Comes in 10-tablet tubes that fit in a gym bag, backpack, or desk drawer without taking up space",
+  "Wide flavor variety — Lemon Lime, Tri-Berry, Citrus Fruit, Watermelon — all are genuinely drinkable",
+];
+
+const nuunCons = [
+  "Lower sodium than Liquid IV or LMNT, so it's less effective after very heavy or prolonged sweating sessions",
+  "The tablet fizz can be polarizing — some people find the carbonation unpleasant, especially before training",
+  "Doesn't include glucose, which limits the oral rehydration absorption speed compared to products that use the sodium-glucose co-transport mechanism",
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        Here's how the Gatorade math works out over a semester: if you're buying a
+        $3 bottle at the campus store before or after every gym session, five days a
+        week, that's $60 a month on flavored sugar water. There are better options
+        at a fraction of that cost — options that actually deliver more sodium and
+        potassium per serving than a 20oz Gatorade, without the 34 grams of sugar
+        that come along for the ride.
+      </p>
+      <p>
+        This roundup covers four electrolyte products that are worth keeping in your
+        dorm room, gym bag, or backpack. They cover different price points, different
+        use cases, and different philosophies about what an electrolyte drink should do.
+        Here's which one fits your situation.
+      </p>
+    </section>
+
+    <!-- Quick Verdict Box -->
+    <section class="verdict-box">
+      <h2 class="verdict-title">Our Picks at a Glance</h2>
+      <div class="picks-grid">
+        <div class="pick-item">
+          <span class="pick-badge">Best Overall</span>
+          <p class="pick-name">Nuun Sport Tablets</p>
+          <p class="pick-detail">~$0.75/serving · Low sugar · Most versatile</p>
+        </div>
+        <div class="pick-item">
+          <span class="pick-badge">Best After Heavy Sweating</span>
+          <p class="pick-name">Liquid IV</p>
+          <p class="pick-detail">~$1.75/serving · Fastest absorption · High potassium</p>
+        </div>
+        <div class="pick-item">
+          <span class="pick-badge">Best for Cutting</span>
+          <p class="pick-name">Ultima Replenisher</p>
+          <p class="pick-detail">~$0.55/serving · Zero sugar · Lightest formula</p>
+        </div>
+        <div class="pick-item">
+          <span class="pick-badge">Best for Hot Climates</span>
+          <p class="pick-name">LMNT</p>
+          <p class="pick-detail">~$1.60/serving · 1000mg sodium · No sugar</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Do you actually need electrolytes -->
+    <section>
+      <h2>Do You Actually Need Electrolytes?</h2>
+      <p>
+        Honest answer: it depends entirely on how hard you're working and how much you're
+        sweating. Electrolytes are minerals — primarily sodium, potassium, magnesium, and
+        chloride — that your body loses through sweat. When those levels drop significantly,
+        you experience fatigue, cramping, reduced performance, and in serious cases, symptoms
+        that go beyond the gym.
+      </p>
+      <p>
+        For a 45-minute lifting session in an air-conditioned gym where you're drinking
+        water throughout, plain water is fine. You're not losing electrolytes fast enough
+        to create a meaningful deficit, and replacing them with a supplement doesn't
+        produce a measurable performance benefit in that context.
+      </p>
+      <p>
+        For sessions over 60–75 minutes, outdoor training in heat and humidity, back-to-back
+        workout days, or any situation where your shirt is soaked — electrolytes matter.
+        Sweat is mostly sodium, and sodium loss at volume genuinely impairs how your muscles
+        contract and how well your body retains fluid. Drinking plain water in that state
+        can actually dilute your remaining sodium further before your kidneys can compensate.
+        That's when an electrolyte product earns its place.
+      </p>
+      <p>
+        The other honest use case for college students: hangovers. Alcohol is a diuretic that
+        depletes sodium and potassium, and the next-morning headache is partly a hydration
+        and electrolyte issue. An electrolyte packet before bed or first thing in the morning
+        genuinely helps.
+      </p>
+    </section>
+
+    <!-- What to look for -->
+    <section>
+      <h2>What to Look For in an Electrolyte Drink</h2>
+      <p>
+        <strong>Sodium first.</strong> This is the primary electrolyte lost in sweat and the
+        one that matters most for rehydration. Look for at least 200–300mg per serving for
+        moderate training, 500mg+ if you sweat heavily. Products with under 100mg of sodium
+        are mostly flavored water.
+      </p>
+      <p>
+        <strong>Potassium second.</strong> Potassium supports muscle function and pairs with
+        sodium to regulate fluid balance. Aim for 100mg+ per serving. Most sports drinks
+        underdose this compared to the sodium content.
+      </p>
+      <p>
+        <strong>Sugar depends on your goal.</strong> Some sugar (glucose specifically) actually
+        speeds up electrolyte absorption via the sodium-glucose co-transport mechanism — that's
+        the science behind Liquid IV's CTT technology and why oral rehydration salts include
+        glucose. If you're cutting or tracking macros carefully, a zero-sugar option like
+        Nuun or Ultima is the smarter call. If you just had a brutal session and need to
+        rehydrate fast, a small amount of glucose is a feature, not a flaw.
+      </p>
+      <p>
+        <strong>Skip proprietary blends.</strong> Any electrolyte product that lists a
+        "mineral blend" without specifying amounts can't be evaluated on efficacy. You want
+        to see exact milligrams on the label.
+      </p>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Liquid IV"
+        nameB="Nuun Sport"
+        nameC="Ultima"
+        nameD="LMNT"
+        rows={comparisonRows}
+      />
+    </section>
+
+    <!-- Individual reviews -->
+    <section>
+      <h2>1. Nuun Sport Tablets — Best Overall</h2>
+      <p>
+        Nuun Sport lands the best balance of electrolyte content, price, convenience, and
+        taste of anything in this category. Each tablet delivers 300mg sodium and 150mg
+        potassium in a formula with just 1g of sugar and 10 calories. Drop one in a 16oz
+        water bottle, wait two minutes, and you have a lightly flavored electrolyte drink
+        that covers most training scenarios without costing much or adding meaningful
+        calories to your day.
+      </p>
+      <p>
+        The tube format is genuinely useful — ten tablets fit in a pocket or zipper pouch,
+        which makes them easier to carry than a tub of powder and more discreet than a box
+        of sticks. Lemon Lime and Tri-Berry are the strongest flavors; both are clean and
+        lightly carbonated without being aggressively sweet. Price runs about $7 for a
+        10-tablet tube, which comes out to roughly $0.70–0.85 per serving depending on
+        where you buy.
+      </p>
+      <p>
+        The trade-off is that Nuun doesn't include glucose, so it doesn't use the
+        sodium-glucose absorption pathway that Liquid IV does. For very heavy sweating or
+        rapid rehydration needs, Liquid IV will outperform it. For everyday training
+        hydration, Nuun is the better value by a meaningful margin.
+      </p>
+      <AffiliateButton href={nuunUrl} label="Buy Nuun Sport on Amazon" />
+    </section>
+
+    <section>
+      <h2>2. Liquid IV — Best After Heavy Sweating</h2>
+      <p>
+        Liquid IV uses Cellular Transport Technology (CTT) — a sodium-glucose co-transport
+        mechanism borrowed from oral rehydration therapy — to absorb fluid faster than plain
+        water. The science is legitimate. When you're meaningfully dehydrated after a hard
+        session, a long run in the heat, or a rough night out, Liquid IV rehydrates you
+        faster than any other product on this list.
+      </p>
+      <p>
+        The formula delivers 500mg sodium, 380mg potassium, and 11g of glucose per stick
+        at 45 calories — the highest potassium content of the four picks here. The glucose
+        is what drives the accelerated absorption, but it also makes this the wrong choice
+        if you're cutting or avoiding added sugar. Lemon Lime is the best flavor; mix it
+        into at least 16oz of water or the sodium becomes uncomfortably prominent.
+      </p>
+      <p>
+        At $1.50–2.00 per stick, Liquid IV is the most expensive option here. It earns
+        that premium in specific situations — post-race recovery, outdoor summer training,
+        genuinely depleted days. For routine gym sessions, Nuun does 80% of the job at
+        40% of the cost.
+      </p>
+      <AffiliateButton href={liquidIvUrl} label="Buy Liquid IV on Amazon" />
+    </section>
+
+    <section>
+      <h2>3. Ultima Replenisher — Best for Cutting</h2>
+      <p>
+        Ultima is the cleanest formula on this list: zero sugar, zero calories, no
+        artificial sweeteners, and a six-electrolyte blend (sodium, potassium, magnesium,
+        chloride, calcium, phosphorus) sweetened with stevia. The sodium dose at 55mg per
+        serving is low — this isn't a heavy-sweat recovery product — but for students who
+        want to stay lightly hydrated throughout the day or during moderate workouts without
+        adding any calories or sugar, it fills that role cheaply and cleanly.
+      </p>
+      <p>
+        The stevia sweetness is noticeable but not as polarizing as it is in some products.
+        Raspberry and Cherry Pomegranate are the most reliable flavors. At $0.50–0.65 per
+        serving in the large tub, Ultima is the most affordable option here by a meaningful
+        margin and makes the most sense as a daily-use hydration habit rather than a
+        targeted post-workout product.
+      </p>
+      <AffiliateButton href={ultimaUrl} label="Buy Ultima Replenisher on Amazon" />
+    </section>
+
+    <section>
+      <h2>4. LMNT — Best for Hot Climates and Heavy Sweaters</h2>
+      <p>
+        LMNT is built around a simple premise: most electrolyte drinks are dramatically
+        under-sodiumed. Each packet delivers 1000mg of sodium, 200mg of potassium, and
+        60mg of magnesium with zero sugar and zero calories. That sodium number is jarring
+        if you're used to reading Nuun or Liquid IV labels, but it's closer to what
+        actual sweat data shows athletes lose during prolonged, intense exercise in heat.
+      </p>
+      <p>
+        LMNT is the right call for summer outdoor training, long endurance sessions,
+        athletes doing two-a-days, or anyone who follows a low-carb or ketogenic diet
+        (which increases sodium excretion). It's not an everyday gym product — 1000mg of
+        sodium on top of your normal diet for a 45-minute lifting session is more than you
+        need. Used for its actual target scenario, it works exceptionally well. The Citrus
+        Salt and Raspberry Salt flavors handle the high sodium content better than the
+        others, masking it with enough brightness that it doesn't taste like you're drinking
+        the ocean.
+      </p>
+      <AffiliateButton href={lmntUrl} label="Buy LMNT on Amazon" />
+    </section>
+
+    <!-- Nuun Pros & Cons -->
+    <section>
+      <h2>Nuun Sport: Pros &amp; Cons</h2>
+      <ProsConsList pros={nuunPros} cons={nuunCons} />
+    </section>
+
+    <!-- Who should buy / skip Nuun -->
+    <section>
+      <h2>Who Should Buy Nuun Sport</h2>
+      <ul>
+        <li>
+          <strong>Students who train 4–5 days a week</strong> and want a daily electrolyte
+          habit that doesn't cost $50 a month or spike their sugar intake.
+        </li>
+        <li>
+          <strong>Anyone tracking macros on a cut</strong> who needs hydration support
+          without adding meaningful calories or carbs.
+        </li>
+        <li>
+          <strong>People who work out in the afternoon or evening</strong> and want
+          something to sip during or after training without committing to a full
+          electrolyte packet on days when the session was moderate.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Who Should Skip Nuun (and What to Buy Instead)</h2>
+      <ul>
+        <li>
+          <strong>Heavy sweaters after 90+ minute sessions</strong> — reach for Liquid IV
+          or LMNT instead. Nuun's 300mg sodium won't replace enough to matter after
+          a serious endurance effort.
+        </li>
+        <li>
+          <strong>Anyone who hates carbonation</strong> — the tablet fizz is mild but
+          real. Ultima or Liquid IV are non-carbonated alternatives.
+        </li>
+        <li>
+          <strong>Students in extremely hot climates or doing outdoor summer training</strong>
+          — LMNT's 1000mg sodium is the right tool for that environment.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        For most college students, <strong>Nuun Sport is the default buy</strong>. It's
+        affordable enough to use consistently, portable enough to keep in your gym bag
+        permanently, and the electrolyte profile covers the majority of training scenarios
+        without adding sugar or calories you didn't ask for. Buy two tubes, put one in
+        your bag and one on your desk, and you'll use them without thinking about it.
+      </p>
+      <p>
+        Keep Liquid IV in reserve for heavy sessions, outdoor training days, or the
+        mornings when you need to actually function in class. LMNT is worth trying if
+        you're a serious endurance athlete or live somewhere that gets genuinely hot in
+        the summer. Ultima is the right call if you're actively cutting and want zero
+        additional calories or sugar from your hydration routine.
+      </p>
+      <p>
+        Any of these beats a $3 Gatorade. All four beat plain water in situations where
+        electrolytes actually matter. Pick the one that fits your training style and stop
+        overpaying at the campus convenience store.
+      </p>
+      <AffiliateButton href={nuunUrl} label="Buy Nuun Sport on Amazon" />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Verdict / picks box */
+  .verdict-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #f97316;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f97316;
+    margin: 0 0 1rem;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.875rem;
+  }
+
+  .pick-item {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    padding: 0.75rem 0.9rem;
+  }
+
+  .pick-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: #f97316;
+    color: #fff;
+    padding: 0.15rem 0.45rem;
+    border-radius: 0.2rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .pick-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0.2rem 0 0.25rem;
+  }
+
+  .pick-detail {
+    font-size: 0.78rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.45;
+  }
+
+  @media (max-width: 520px) {
+    .picks-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
