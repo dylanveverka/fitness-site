@@ -1,0 +1,509 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Budget Gym Shoes for Lifting Under $60 (2025)";
+const description =
+  "You don't need $150 Nobulls to lift heavy. These are the best budget gym shoes for college students who lift, ranked by stability, value, and durability.";
+const pubDate = "2026-04-16";
+const slug = "best-budget-gym-shoes-lifting";
+
+const converseUrl  = "https://www.amazon.com/s?k=converse+chuck+taylor+low+top&tag=dveverka-20";
+const adidasUrl    = "https://www.amazon.com/s?k=adidas+powerlift+weightlifting+shoes&tag=dveverka-20";
+const nbUrl        = "https://www.amazon.com/s?k=new+balance+minimus+training+shoe&tag=dveverka-20";
+const asicsUrl     = "https://www.amazon.com/s?k=asics+gel+contend+training+shoe&tag=dveverka-20";
+
+const comparisonRows = [
+  {
+    label: "Price",
+    a: "~$65 (sale ~$45)",
+    b: "~$55–70",
+    c: "~$50–65",
+    d: "~$50–60",
+    winner: "tie",
+  },
+  {
+    label: "Heel drop",
+    a: "0mm (flat)",
+    b: "15mm (raised heel)",
+    c: "4mm (near-flat)",
+    d: "8mm (moderate)",
+    winner: "tie",
+  },
+  {
+    label: "Best for",
+    a: "Squats, deadlifts, general",
+    b: "Olympic lifts, front squats",
+    c: "Deadlifts, rows",
+    d: "Mixed training, cardio days",
+    winner: "tie",
+  },
+  {
+    label: "Durability",
+    a: "Excellent (years)",
+    b: "Excellent (years)",
+    c: "Good (1–2 years)",
+    d: "Good (1–2 years)",
+    winner: "tie",
+  },
+  {
+    label: "Style outside gym",
+    a: "Excellent",
+    b: "Poor",
+    c: "Decent",
+    d: "Good",
+    winner: "a",
+  },
+];
+
+const conversePros = [
+  "Completely flat, hard sole transfers force directly into the floor — no energy lost to compressing cushion on every squat rep",
+  "Zero heel drop means your ankles and calves dictate your squat depth, not your shoe — better long-term mobility development",
+  "Doubles as actual footwear outside the gym; most colorways work as casual shoes, which means you're not buying a dedicated gym shoe",
+  "Built to last — canvas Chucks with rubber soles hold up to years of training without sole separation or breakdown",
+  "Cheap relative to dedicated lifting shoes, widely available on sale for $45–55, and easy to find in any size",
+];
+
+const converseCons = [
+  "No ankle support at all in the low-top; the high-top version adds stability but is warmer and takes longer to lace",
+  "Thin flat sole means you feel the floor, which is a feature for lifters but uncomfortable for long sessions that include standing cardio or walking",
+  "Not a great choice for any high-impact or lateral movement — these are lifting shoes, not training shoes",
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        If you're squatting or deadlifting in running shoes, you're training on a
+        platform that's actively working against you. Running shoes are engineered
+        for impact absorption — thick, compressible midsoles that cushion each foot
+        strike. That's exactly what you want when you're logging miles. It's exactly
+        what you don't want when you're trying to drive 200 pounds of barbell out of
+        the hole.
+      </p>
+      <p>
+        The compressed cushioning creates an unstable base that your foot sinks into
+        under load, reduces force transfer into the floor, and shifts your weight
+        distribution in ways that affect your squat mechanics and increase injury
+        risk at heavy weights. The fix doesn't require spending $150 on Nobull Trainers
+        or $200 on Reebok Nanos. It requires a flat, stiff sole — which you can get
+        for $50–65 in several forms, one of which you probably already own.
+      </p>
+    </section>
+
+    <!-- Quick Verdict Box -->
+    <section class="verdict-box">
+      <h2 class="verdict-title">Our Picks at a Glance</h2>
+      <div class="picks-grid">
+        <div class="pick-item">
+          <span class="pick-badge">Best Overall</span>
+          <p class="pick-name">Converse Chuck Taylor</p>
+          <p class="pick-detail">~$45–65 · Flat sole · Squats &amp; deadlifts · Doubles as casual shoe</p>
+        </div>
+        <div class="pick-item">
+          <span class="pick-badge">Best Dedicated Lifting</span>
+          <p class="pick-name">Adidas Powerlift</p>
+          <p class="pick-detail">~$55–70 · 15mm heel · Olympic lifts &amp; front squats</p>
+        </div>
+        <div class="pick-item">
+          <span class="pick-badge">Best Flat Sole</span>
+          <p class="pick-name">New Balance Minimus</p>
+          <p class="pick-detail">~$50–65 · 4mm drop · Deadlifts &amp; strength work</p>
+        </div>
+        <div class="pick-item">
+          <span class="pick-badge">Best All-Around</span>
+          <p class="pick-name">ASICS Gel Contend</p>
+          <p class="pick-detail">~$50–60 · Mixed training · Lifting + cardio days</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why running shoes are bad -->
+    <section>
+      <h2>Why Running Shoes Are Bad for Lifting</h2>
+      <p>
+        The problem is the midsole. Modern running shoes have 20–40mm of cushioning
+        between your foot and the ground — foam, gel, air pockets, or some combination —
+        designed to absorb the impact of each footstrike when you run. That cushioning
+        is compressible by design. Under a barbell squat, it compresses unevenly
+        depending on how your weight shifts, creating a wobbling, unstable base that
+        your body has to compensate for with every rep.
+      </p>
+      <p>
+        Two specific problems this causes. First, energy loss: when you drive out of
+        the bottom of a squat, some of your force goes into compressing the foam rather
+        than moving the bar. It's a small percentage, but it adds up across a training
+        session and compounds at heavy weights. Second, ankle instability: the soft
+        sole allows your ankle to rock side to side under load, which shifts stress to
+        the knee and hip in ways that increase injury risk over time. Powerlifters have
+        known this for decades; the flat-sole standard in competition lifting is because
+        the rule books require it, not because it's arbitrary.
+      </p>
+      <p>
+        The solution is simple: a shoe with a hard, flat, non-compressible sole that
+        puts your foot in direct, stable contact with the floor. You don't need a
+        specialized lifting shoe to get this. You need a shoe that isn't engineered
+        for cushioning.
+      </p>
+    </section>
+
+    <!-- What to look for -->
+    <section>
+      <h2>What to Look For in a Lifting Shoe</h2>
+      <p>
+        <strong>Sole stiffness above everything else.</strong> The sole should not
+        compress or flex under load. Press your thumb hard into the midsole — if it
+        gives noticeably, it's too soft for lifting. Converse rubber soles barely
+        compress at all. New Balance Minimus soles are firmer than standard training
+        shoes. Running shoe soles give like a foam pad.
+      </p>
+      <p>
+        <strong>Heel drop determines what the shoe is good for.</strong> Heel drop
+        is the difference in height between the heel and the toe of the shoe. A flat
+        shoe (0–4mm drop) puts your entire foot at the same level and is best for
+        deadlifts, Romanian deadlifts, and conventional squats where you want to
+        feel the floor. A raised heel (8–15mm) tilts your ankle forward, which
+        helps with ankle mobility and torso positioning during squats — particularly
+        front squats and Olympic lifts. Neither is universally better; they're
+        tools for different movements.
+      </p>
+      <p>
+        <strong>Fit is non-negotiable.</strong> A lifting shoe that's loose allows
+        lateral foot movement under load, which defeats the purpose of the stable
+        sole. Fit should be snug across the midfoot with no heel slippage. Lace
+        tightly, especially during heavy compound movements.
+      </p>
+      <p>
+        <strong>Durability matters more than with running shoes.</strong> Lifting
+        shoes don't absorb impact the way running shoes do, so the foam doesn't
+        break down the same way. A good pair of Chucks or Powerlifts can last
+        three to five years of regular training. Budget accordingly.
+      </p>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Converse CT"
+        nameB="Adidas Powerlift"
+        nameC="NB Minimus"
+        nameD="ASICS Contend"
+        rows={comparisonRows}
+      />
+    </section>
+
+    <!-- Individual reviews -->
+    <section>
+      <h2>1. Converse Chuck Taylor — Best Overall</h2>
+      <p>
+        The Chuck Taylor has been used as a lifting shoe for longer than most dedicated
+        lifting shoes have existed. The vulcanized rubber sole is completely flat with
+        zero heel drop and virtually no compression under load. The canvas upper is
+        stiff enough to provide lateral support without being restrictive. The fit runs
+        slightly narrow, which is actually an advantage for a lifting shoe — it keeps
+        your foot from sliding inside the shoe during heavy sets.
+      </p>
+      <p>
+        The low-top is the version most people buy, and it works well for squats,
+        deadlifts, bench, and any standing accessory work. The high-top adds ankle
+        support that can feel restrictive or stabilizing depending on your preference —
+        if you have weak ankles or are new to heavy compound lifts, the extra support
+        is a reasonable trade-off for the warmer, stiffer collar.
+      </p>
+      <p>
+        The non-lifting advantage: Chucks are actual shoes that people wear outside
+        gyms. If you're a college student who doesn't want to carry a dedicated pair
+        of gym shoes in a bag, you can wear them to the gym, lift in them, and wear
+        them to class. No other shoe on this list offers that flexibility without
+        looking ridiculous. At $45–65 depending on colorway and sale timing, they're
+        the best value here by a meaningful margin when you account for outside-gym use.
+      </p>
+      <AffiliateButton href={converseUrl} label="Buy Converse Chuck Taylor on Amazon" />
+    </section>
+
+    <section>
+      <h2>2. Adidas Powerlift — Best Dedicated Lifting Shoe</h2>
+      <p>
+        If you do Olympic lifts (clean and jerk, snatch) or front squats regularly,
+        the Powerlift's 15mm raised heel is a tool that changes what your squat
+        mechanics can do. The elevated heel compensates for limited ankle mobility by
+        tilting your ankle forward, which lets your knees track further over your toes
+        and your torso stay more upright. This is why Olympic lifters and CrossFitters
+        with heavy front squat volume swear by heeled lifting shoes — the heel raise
+        unlocks depth and positions that flat-soled athletes have to earn through
+        months of ankle mobility work.
+      </p>
+      <p>
+        The Powerlift is Adidas's entry-level heeled shoe, sitting well below the
+        Adipower in price while sharing the same fundamental design principle. The
+        sole is hard TPU — extremely stiff, zero compression. The metatarsal strap
+        adds midfoot lockdown that lacing alone doesn't fully provide. Durability is
+        excellent; the TPU sole doesn't break down the way foam does.
+      </p>
+      <p>
+        The trade-off: this is a single-purpose shoe. You would not wear these
+        outside a gym and they're actively uncomfortable for any movement that isn't
+        lifting — the raised heel makes walking, running, or lateral movement awkward.
+        Buy these if squatting and Olympic lifting are the primary focus of your
+        training. Buy Chucks if you need something more versatile.
+      </p>
+      <AffiliateButton href={adidasUrl} label="Buy Adidas Powerlift on Amazon" />
+    </section>
+
+    <section>
+      <h2>3. New Balance Minimus — Best Flat Sole</h2>
+      <p>
+        The Minimus sits between a Converse and a conventional training shoe — more
+        structured than Chucks, flatter than a standard trainer. The 4mm heel drop
+        is close enough to zero that for most lifting purposes it behaves like a
+        flat shoe, while the more conventional sneaker construction makes it more
+        versatile for days that include both lifting and cardio work.
+      </p>
+      <p>
+        The sole is firmer than a standard training shoe but has slightly more give
+        than Converse rubber — not enough to matter for most lifters, but noticeable
+        at very heavy deadlift weights if you're being precise about foot feel. The
+        upper provides better lateral support than Chucks for any dynamic movement.
+        Fit runs true to size and the toe box is wider than Converse, which some
+        people strongly prefer.
+      </p>
+      <p>
+        Best use case: students who want one pair of shoes for both strength training
+        and conditioning work but don't want to sacrifice too much stability. At
+        $50–65 it's priced similarly to Chucks while offering more versatility within
+        the gym environment.
+      </p>
+      <AffiliateButton href={nbUrl} label="Buy New Balance Minimus on Amazon" />
+    </section>
+
+    <section>
+      <h2>4. ASICS Gel Contend — Best All-Around Training Shoe</h2>
+      <p>
+        The Gel Contend isn't a pure lifting shoe — the 8mm heel drop and moderate
+        cushioning put it in cross-training territory rather than the dedicated lifting
+        category. What it offers is a reasonable compromise for students whose gym
+        sessions include a mix of lifting, machines, HIIT, and cardio without a
+        separate pair of running shoes.
+      </p>
+      <p>
+        For deadlifts and squat accessories it's acceptable, though noticeably softer
+        underfoot than Chucks or the Minimus. For anything involving lateral movement,
+        box jumps, or treadmill intervals, it handles those better than any other shoe
+        on this list. ASICS build quality is reliably good at this price point and the
+        Gel Contend tends to last 12–18 months of regular mixed use.
+      </p>
+      <p>
+        Honest framing: if 70% of your gym time is lifting, buy Chucks or the Minimus.
+        If your sessions are split closer to 50/50 between lifting and conditioning,
+        the Gel Contend is the more practical single-shoe solution.
+      </p>
+      <AffiliateButton href={asicsUrl} label="Buy ASICS Gel Contend on Amazon" />
+    </section>
+
+    <!-- Pros & Cons -->
+    <section>
+      <h2>Converse Chuck Taylor: Pros &amp; Cons</h2>
+      <ProsConsList pros={conversePros} cons={converseCons} />
+    </section>
+
+    <!-- Who should buy -->
+    <section>
+      <h2>Who Should Buy Lifting-Specific Shoes</h2>
+      <ul>
+        <li>
+          <strong>Anyone squatting or deadlifting over 135 lbs regularly.</strong>
+          Below that weight, the instability of running shoes isn't dangerous.
+          Above it, and especially as weight climbs toward bodyweight and beyond,
+          a stable base is no longer optional.
+        </li>
+        <li>
+          <strong>Students who notice knee cave, forward lean, or heel rise
+          during squats.</strong> These are often mechanics issues that can be
+          partially addressed with footwear before they become mobility or
+          coaching problems.
+        </li>
+        <li>
+          <strong>Anyone who currently lifts in running shoes with 20mm+
+          of cushioning.</strong> The difference is immediately noticeable on
+          your first heavy squat session in flat shoes — you'll feel more rooted
+          and less like you're balancing on foam.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Who Can Skip the Upgrade (For Now)</h2>
+      <ul>
+        <li>
+          <strong>Beginners in their first 1–3 months of lifting.</strong>
+          If you're still learning movement patterns and working with weights
+          under 100 lbs, shoe choice is not your limiting factor. Get the
+          technique down first.
+        </li>
+        <li>
+          <strong>Anyone primarily doing machine-based training.</strong>
+          Leg press, cable machines, and isolation exercises don't create the
+          same ground-contact stability demands as free-weight compound lifts.
+          Running shoes are adequate for machine work.
+        </li>
+        <li>
+          <strong>Students who already own Chucks or Vans.</strong> Check your
+          closet first — if you have a pair of flat-soled canvas shoes, you may
+          already own a serviceable lifting shoe. Vans Old Skool and Vans Slip-Ons
+          have near-identical sole profiles to Converse at the same price point.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        For the majority of college students who primarily squat, deadlift, and do
+        barbell work, <strong>Converse Chuck Taylors are the answer</strong>. They're
+        flat, they're stiff, they last for years, they double as actual shoes, and
+        they cost $45–65. The performance case against them compared to a $150
+        dedicated lifting shoe is marginal for anyone not competing in powerlifting
+        or Olympic lifting.
+      </p>
+      <p>
+        If you do heavy front squats or Olympic lifts and ankle mobility is a
+        limiting factor, the Adidas Powerlift is worth the investment — the raised
+        heel is a legitimate performance tool for those specific movements. If you
+        want something more versatile than Chucks within the gym environment, the
+        New Balance Minimus covers lifting and conditioning without compromising
+        either badly. If your sessions are split between lifting and cardio and you
+        only want one pair, the ASICS Gel Contend handles the mixed-use case better
+        than the other three.
+      </p>
+      <p>
+        Start with Chucks. If you outgrow them because your training specializes,
+        you'll know exactly what you need when you need it. Most people never
+        outgrow them.
+      </p>
+      <AffiliateButton
+        href={converseUrl}
+        label="Buy Converse Chuck Taylor on Amazon"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Verdict / picks box */
+  .verdict-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #f97316;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f97316;
+    margin: 0 0 1rem;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.875rem;
+  }
+
+  .pick-item {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    padding: 0.75rem 0.9rem;
+  }
+
+  .pick-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: #f97316;
+    color: #fff;
+    padding: 0.15rem 0.45rem;
+    border-radius: 0.2rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .pick-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0.2rem 0 0.25rem;
+  }
+
+  .pick-detail {
+    font-size: 0.78rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.45;
+  }
+
+  @media (max-width: 520px) {
+    .picks-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
