@@ -1,0 +1,429 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Creatine Gummies vs Powder: Which Is Actually Better? (2025)";
+const description =
+  "Creatine gummies are blowing up on Amazon and TikTok. But are they actually better than regular creatine powder or just a gimmick?";
+const pubDate = "2026-04-16";
+const slug = "creatine-gummies-vs-powder";
+
+const gummiesUrl = "https://www.amazon.com/s?k=creatine+monohydrate+gummies&tag=dveverka-20";
+const powderUrl = "https://www.amazon.com/s?k=optimum+nutrition+creatine+powder&tag=dveverka-20";
+
+const comparisonRows = [
+  {
+    label: "Price per serving",
+    a: "~$0.25–0.35",
+    b: "$1.00–1.50+",
+    winner: "a",
+  },
+  {
+    label: "Creatine per serving",
+    a: "3–5g (one scoop)",
+    b: "1–2g per gummy (need 3–5)",
+    winner: "a",
+  },
+  {
+    label: "Sugar content",
+    a: "0g",
+    b: "2–4g per gummy",
+    winner: "a",
+  },
+  {
+    label: "Convenience",
+    a: "Needs water + mixing",
+    b: "No prep, eat anywhere",
+    winner: "b",
+  },
+  {
+    label: "Taste",
+    a: "Neutral/chalky in water",
+    b: "Actually tastes good",
+    winner: "b",
+  },
+  {
+    label: "Value for money",
+    a: "Excellent",
+    b: "Poor",
+    winner: "a",
+  },
+];
+
+const powderPros = [
+  "Cheapest effective form of creatine — about $0.25–0.35 per serving in bulk",
+  "Full 3–5g dose in a single scoop, no math required",
+  "Zero sugar, zero fillers — just creatine monohydrate",
+  "Mixes easily into water, protein shakes, or juice with no noticeable taste",
+  "Decades of research behind this exact form — monohydrate is the gold standard",
+];
+
+const powderCons = [
+  "You have to actually mix it into something, which requires a shaker or glass nearby",
+  "Can clump if exposed to moisture — store with the lid sealed",
+  "Slightly chalky texture if you don't use enough liquid",
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        Creatine gummies are having a moment. They're all over TikTok fitness pages, they've
+        been stacking up Amazon Best Seller badges, and supplement brands are launching new
+        SKUs every few months trying to cash in. The pitch is simple: same creatine, but in
+        a form that tastes like candy instead of requiring you to dissolve white powder into
+        a drink at 6am before the gym.
+      </p>
+      <p>
+        It sounds like a no-brainer upgrade. But there's a catch buried in the nutrition label
+        that most TikTok reviews skip over entirely — and it makes a bigger difference to your
+        results than whether the gummy tastes like watermelon or peach. Here's the full breakdown.
+      </p>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Creatine Powder vs Gummies: Side by Side</h2>
+      <ComparisonTable
+        nameA="Powder"
+        nameB="Gummies"
+        rows={comparisonRows}
+      />
+    </section>
+
+    <!-- Do gummies actually work -->
+    <section>
+      <h2>Do Creatine Gummies Actually Work?</h2>
+      <p>
+        Yes — with a significant asterisk. The creatine in gummies is the same creatine
+        monohydrate that's been studied for 30+ years. Your body absorbs and uses it the
+        same way regardless of whether it arrived dissolved in water or embedded in a
+        chewable gummy. The molecule itself isn't different, and the mechanism — increasing
+        phosphocreatine stores in your muscles — is identical.
+      </p>
+      <p>
+        So gummies aren't snake oil. The active ingredient works. The problem is getting
+        enough of it in a form that doesn't cost you $50 a month.
+      </p>
+    </section>
+
+    <!-- The dosing problem -->
+    <section>
+      <h2>The Dosing Problem Nobody Talks About</h2>
+      <p>
+        This is where most gummy reviews stop being honest with you. The effective daily
+        dose of creatine monohydrate is <strong>3–5 grams</strong>. That's the dose
+        used in virtually every clinical trial showing the performance and strength benefits
+        people actually care about. Go below that consistently and your muscle creatine
+        stores don't fully saturate — you're getting a fraction of the benefit.
+      </p>
+      <p>
+        Most creatine gummies contain <strong>1 to 2 grams per gummy</strong>. Some contain
+        as little as 750mg. To hit 5g, you'd need to eat 3–5 gummies per sitting.
+      </p>
+      <p>
+        Now look at what that does to the price. A typical creatine gummy product runs
+        $25–30 for 60 gummies. If each gummy is 1.5g and you need 5g per day, you're burning
+        through a little over 3 gummies daily — that's a 20-day supply, not a month. You're
+        paying $1.25 to $1.50 per effective serving. Compare that to a 500-gram tub of ON
+        Creatine Powder at roughly $25, which delivers 100 full 5g servings. That's
+        <strong>$0.25 per serving</strong> — five to six times cheaper for the same daily dose.
+      </p>
+      <p>
+        Some brands have started releasing higher-dose gummies (3g or even 5g per piece)
+        in response to this criticism. Those are a better product, but they're also
+        proportionally more expensive per unit. The math usually doesn't improve much.
+      </p>
+    </section>
+
+    <!-- When gummies make sense -->
+    <section>
+      <h2>When Gummies Actually Make Sense</h2>
+      <p>
+        There are real use cases where gummies pull ahead of powder — they're just more
+        specific than the marketing implies.
+      </p>
+      <p>
+        <strong>If you're terrible at consistency with powder.</strong> Creatine only works
+        if you take it every day. It takes 3–4 weeks of daily dosing to fully saturate your
+        muscles, and missing days extends that timeline. If having a flavored gummy sitting
+        on your desk makes you 10x more likely to actually take it compared to a tub that
+        requires mixing, the convenience premium is worth it. Imperfect daily compliance
+        beats perfect occasional compliance.
+      </p>
+      <p>
+        <strong>Travel and no-kitchen situations.</strong> When you're on the road, staying
+        in a hotel, or don't have reliable access to a shaker bottle and water at the right
+        time, gummies remove every friction point. Pop three and move on. For a two-week
+        trip, throwing a small bag of gummies in your carry-on is genuinely more practical
+        than traveling with powder.
+      </p>
+      <p>
+        <strong>If you hate the texture of creatine in liquid.</strong> Some people find
+        that creatine never fully dissolves, leaves a gritty residue, or tastes chalky
+        even in a full shaker. If that's you and you've tried multiple brands, gummies
+        sidestep the problem completely.
+      </p>
+    </section>
+
+    <!-- When to stick with powder -->
+    <section>
+      <h2>When to Stick With Powder</h2>
+      <p>
+        For most college students training regularly on a budget, powder is the right
+        call for one reason that overrides everything else: the cost difference is
+        enormous and the performance outcome is identical.
+      </p>
+      <p>
+        If you're spending $30–40 a month on creatine gummies when a $25 tub of monohydrate
+        powder would last you 3+ months, that's $70–90 per year in extra supplement spending
+        for zero additional benefit to your actual training. That money could go toward
+        food, a gym membership, or literally anything else that improves your results.
+      </p>
+      <p>
+        Powder also wins on transparency. The serving size is clear, the dose is fixed,
+        and there's no sugar added to make it palatable. You're paying for creatine, not
+        a delivery mechanism.
+      </p>
+      <p>
+        The research that established creatine's effectiveness was done almost entirely
+        with monohydrate powder. When sports nutrition scientists publish safety and
+        efficacy data, this is the form they're talking about. Gummies are newer and
+        less studied — not because they're harmful, but because they haven't been around
+        long enough to accumulate the same research base.
+      </p>
+    </section>
+
+    <!-- Cost breakdown -->
+    <section>
+      <h2>The Real Cost Breakdown</h2>
+      <div class="cost-table-wrap">
+        <table class="cost-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Retail Price</th>
+              <th>Servings</th>
+              <th>Cost per 5g Dose</th>
+              <th>Monthly Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ON Creatine Powder (500g)</td>
+              <td>~$25</td>
+              <td>100 × 5g</td>
+              <td class="winner-cell">$0.25</td>
+              <td>$7.50</td>
+            </tr>
+            <tr>
+              <td>Generic Monohydrate Powder (1kg)</td>
+              <td>~$30</td>
+              <td>200 × 5g</td>
+              <td class="winner-cell">$0.15</td>
+              <td>$4.50</td>
+            </tr>
+            <tr>
+              <td>Creatine Gummies (1–2g each, 60ct)</td>
+              <td>~$28</td>
+              <td>~17 × 5g equiv.</td>
+              <td class="loser-cell">$1.65</td>
+              <td>~$49.50</td>
+            </tr>
+            <tr>
+              <td>High-Dose Gummies (3g each, 60ct)</td>
+              <td>~$32</td>
+              <td>~36 × 5g equiv.</td>
+              <td class="loser-cell">$0.89</td>
+              <td>~$26.70</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Even the best-case gummy scenario (high-dose, bought on sale) runs 3–4x the
+        per-serving cost of powder. Over a year of daily supplementation, that difference
+        compounds to $200–$500 in extra spending for the same muscular outcome.
+      </p>
+    </section>
+
+    <!-- Pros & Cons for powder -->
+    <section>
+      <h2>Creatine Powder: Pros &amp; Cons</h2>
+      <ProsConsList pros={powderPros} cons={powderCons} />
+    </section>
+
+    <!-- Final verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        <strong>Powder wins on every metric that affects your results:</strong> cost,
+        dose accuracy, sugar content, and research backing. If you're a college student
+        training on a budget, there is no financial argument for gummies as your
+        day-to-day creatine source.
+      </p>
+      <p>
+        <strong>Gummies win on convenience</strong> — and that's a real win for specific
+        situations. If you travel frequently, hate mixing supplements, or know from
+        experience that you'll be inconsistent with powder, the extra cost might buy you
+        something that matters: actual daily compliance.
+      </p>
+      <p>
+        The move most people should make: buy powder as your primary source, and keep
+        a small bag of gummies for travel or the weeks when life is chaotic and you need
+        zero-friction dosing. That gets you the best of both without paying gummy prices
+        every day.
+      </p>
+      <p>
+        If you're new to creatine entirely, start with powder. It's what the research
+        is built on, it's what coaches recommend, and you'll know within 4–6 weeks whether
+        it's working for you. Then decide if gummies are worth adding to your rotation.
+      </p>
+
+      <div class="cta-pair">
+        <div class="cta-block">
+          <p class="cta-label">Best Value</p>
+          <AffiliateButton
+            href={powderUrl}
+            label="Buy Creatine Powder on Amazon"
+          />
+        </div>
+        <div class="cta-block">
+          <p class="cta-label">Best Convenience</p>
+          <AffiliateButton
+            href={gummiesUrl}
+            label="Buy Creatine Gummies on Amazon"
+          />
+        </div>
+      </div>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Cost table */
+  .cost-table-wrap {
+    overflow-x: auto;
+    margin: 1.25rem 0;
+  }
+
+  .cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    min-width: 480px;
+  }
+
+  .cost-table thead tr {
+    background: #f1f5f9;
+  }
+
+  .cost-table th {
+    padding: 0.65rem 0.9rem;
+    text-align: left;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #475569;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  .cost-table td {
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+    vertical-align: middle;
+  }
+
+  .cost-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .cost-table tbody tr:hover td {
+    background: #f8fafc;
+  }
+
+  .winner-cell {
+    font-weight: 700;
+    color: #15803d;
+    background: #f0fdf4;
+  }
+
+  .loser-cell {
+    font-weight: 700;
+    color: #b45309;
+    background: #fffbeb;
+  }
+
+  /* Dual CTA */
+  .cta-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .cta-block {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 1rem 0.5rem 0;
+    background: #f8fafc;
+  }
+
+  .cta-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    text-align: center;
+    margin: 0 0 0.25rem;
+  }
+
+  @media (max-width: 520px) {
+    .cta-pair {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
