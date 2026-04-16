@@ -1,0 +1,483 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+
+const title = "Best High Protein Ice Cream for College Students (2025)";
+const description =
+  "Protein ice cream has gotten really good. Here are the best picks for college students who want dessert without wrecking their macros.";
+const pubDate = "2026-04-16";
+const slug = "best-protein-ice-cream-college-students";
+
+const haloUrl       = "https://www.amazon.com/s?k=halo+top+protein+ice+cream&tag=dveverka-20";
+const enlightenedUrl = "https://www.amazon.com/s?k=enlightened+protein+ice+cream&tag=dveverka-20";
+const diyUrl        = "https://www.amazon.com/s?k=protein+ice+cream+powder+mix&tag=dveverka-20";
+
+const haloPros = [
+  "280–360 calories for the entire pint — you can eat the whole thing and still hit your macros, which is not something you can say about regular ice cream",
+  "20–24g of protein per pint from real dairy, not a weird isolate blend that tastes artificial",
+  "Available at virtually every grocery store, Target, Walmart, and most campus convenience stores — no special ordering required",
+  "Flavor range covers the classics (chocolate, vanilla, birthday cake, peanut butter cup) so you're not stuck with one option",
+  "Decent texture for a low-calorie ice cream — not as creamy as Ben & Jerry's, but far better than the chalky frozen protein bars that used to pass as a dessert alternative",
+];
+
+const haloCons = [
+  "Texture suffers if you eat it straight from the freezer — needs 5–10 minutes to soften before scooping or it's icy and dense rather than creamy",
+  "The protein-per-serving numbers on the label are per half-cup serving, not per pint — easy to misread and look more impressive than the total actually is",
+  "At $5–7 per pint, it's two to three times the price of store-brand regular ice cream, which adds up if you're eating it multiple times a week",
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        Cutting season doesn't have to mean giving up ice cream. It means
+        being smarter about which ice cream you eat. The protein ice cream
+        category has come a long way from the chalky frozen blocks that used
+        to exist in the early 2010s — the good options now actually taste like
+        ice cream, cost a reasonable amount, and let you hit your protein
+        numbers without burning your entire day's calories on dessert.
+      </p>
+      <p>
+        Here are the three best picks for college students, whether you're
+        looking for something to grab at the store, want more flavor options,
+        or want to make your own version for even less money.
+      </p>
+    </section>
+
+    <!-- Quick Verdict -->
+    <section>
+      <h2>Quick Verdict</h2>
+      <div class="verdict-box">
+        <div class="picks-grid">
+          <div class="pick-card">
+            <span class="pick-label">Best Overall</span>
+            <p class="pick-name">Halo Top</p>
+            <p class="pick-detail">~24g protein/pint, 280–360 cal, $5–7</p>
+            <a href={haloUrl} class="pick-link" rel="noopener noreferrer sponsored" target="_blank">View on Amazon →</a>
+          </div>
+          <div class="pick-card">
+            <span class="pick-label">Best Flavor Variety</span>
+            <p class="pick-name">Enlightened</p>
+            <p class="pick-detail">~28g protein/pint, 320–380 cal, $5–7</p>
+            <a href={enlightenedUrl} class="pick-link" rel="noopener noreferrer sponsored" target="_blank">View on Amazon →</a>
+          </div>
+          <div class="pick-card">
+            <span class="pick-label">Best DIY Budget</span>
+            <p class="pick-name">Protein Ice Cream Powder</p>
+            <p class="pick-detail">~25g protein/serving, ~$1.50–2.00/batch</p>
+            <a href={diyUrl} class="pick-link" rel="noopener noreferrer sponsored" target="_blank">View on Amazon →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Is Protein Ice Cream Actually Good for You? -->
+    <section>
+      <h2>Is Protein Ice Cream Actually Good for You?</h2>
+      <p>
+        The honest answer: it's a better version of a treat, not a health food.
+        Protein ice cream doesn't replace whole food protein sources. It's not
+        going to move the needle on your gains the way a chicken breast or a
+        protein shake will. What it does is replace a 700-calorie dessert
+        experience with a 300-calorie one that happens to have some protein
+        in it — and that substitution adds up over time when you're trying
+        to maintain a deficit or hit daily protein targets without eating bland food.
+      </p>
+      <p>
+        The protein in most brands comes from skim milk and milk protein
+        concentrates, which are complete proteins with a full amino acid profile.
+        The calories are kept low through a combination of erythritol (a sugar
+        alcohol your body doesn't fully absorb), stevia, and less fat than
+        regular ice cream. Erythritol is generally well-tolerated, but if you
+        eat an entire pint in one sitting — which the marketing practically
+        encourages — some people experience bloating or GI discomfort.
+        Start with half a pint and see how your body responds before going all in.
+      </p>
+      <p>
+        Bottom line: as a replacement for regular ice cream during a cut, or
+        as a late-night snack that doesn't demolish your protein-to-calorie
+        ratio, protein ice cream is a genuinely useful tool. As a daily staple
+        that displaces real food, it's less useful.
+      </p>
+    </section>
+
+    <!-- Halo Top -->
+    <section>
+      <h2>1. Halo Top — Best Overall</h2>
+      <p>
+        Halo Top is the brand that put protein ice cream on the map and, after
+        a decade of competition, it's still the default recommendation. A pint
+        runs 280–360 calories depending on the flavor, with 20–24g of protein
+        across the whole container. That's a meaningful protein contribution
+        from something that tastes like dessert.
+      </p>
+      <p>
+        The texture is the thing most people ask about, and the honest answer
+        is that it's good — for what it is. It's not Ben & Jerry's. It's denser,
+        slightly icier, and the richness of full-fat cream isn't there. But if
+        you let it sit on the counter for 5–10 minutes before eating, it softens
+        to a genuinely enjoyable consistency. Eating it straight out of the
+        freezer is where it disappoints.
+      </p>
+      <p>
+        Flavor range is solid: Birthday Cake, Peanut Butter Cup, Chocolate
+        Mocha Chip, Sea Salt Caramel, and Vanilla Bean are the standouts. The
+        fruit flavors are weaker — the texture shows more with those. Stick
+        to chocolate and peanut butter adjacent flavors for the best experience.
+      </p>
+      <p>
+        Available everywhere — Target, Walmart, Kroger, and most grocery
+        stores carry it. Price is $5–7 per pint, which is real money compared
+        to store-brand ice cream but reasonable for what you're getting.
+      </p>
+      <AffiliateButton href={haloUrl} label="Buy Halo Top on Amazon" />
+    </section>
+
+    <!-- Enlightened -->
+    <section>
+      <h2>2. Enlightened — Best Flavor Variety</h2>
+      <p>
+        Enlightened runs a similar calorie and protein profile to Halo Top —
+        320–380 calories per pint, 28g protein — but consistently wins on
+        flavor variety and, for many people, on texture. The base is slightly
+        creamier than Halo Top, which comes through particularly on their
+        chocolate-forward flavors.
+      </p>
+      <p>
+        Where Enlightened pulls ahead is the flavor lineup. They do seasonal
+        and limited edition flavors more aggressively than Halo Top — things
+        like Milk & Cookies, PB Cookie & Brownie Dough, and Frozen Hot
+        Chocolate that actually deliver on the concept rather than just
+        gesturing at it. If you've tried Halo Top and found the flavor
+        selection boring or the texture disappointing, Enlightened is the
+        next thing to try.
+      </p>
+      <p>
+        Slightly harder to find than Halo Top — most Targets and Whole Foods
+        carry it, Walmart less consistently. Price is comparable at $5–7 per
+        pint. Worth tracking down if flavor variety matters to you and you're
+        eating protein ice cream regularly.
+      </p>
+      <AffiliateButton href={enlightenedUrl} label="Buy Enlightened on Amazon" />
+    </section>
+
+    <!-- DIY -->
+    <section>
+      <h2>3. Protein Ice Cream Powder — Best Budget DIY</h2>
+      <p>
+        If you have a blender and 10 minutes, you can make protein ice cream
+        for $1.50–2.00 per batch using a dedicated protein ice cream powder mix.
+        These are formulated specifically to blend into a smooth, scoopable
+        frozen texture with water or milk — different from just dumping protein
+        powder into a blender, which usually produces a chalky, icy brick.
+      </p>
+      <p>
+        The protein count per serving is comparable to Halo Top (20–25g),
+        the cost per batch is significantly lower, and you can control exactly
+        what goes into it. The trade-off is that it requires a blender, freezing
+        time, and slightly more effort than opening a pint from the freezer. For
+        a student with a dorm mini-fridge and a personal blender, it's a
+        legitimate option. For someone who wants grab-and-go dessert, stick
+        with the store brands.
+      </p>
+      <AffiliateButton href={diyUrl} label="Shop Protein Ice Cream Powder on Amazon" />
+    </section>
+
+    <!-- DIY Recipe -->
+    <section>
+      <h2>DIY Protein Ice Cream Recipe (No Powder Required)</h2>
+      <p>
+        You don't even need a specialty powder to make decent protein ice cream.
+        This version uses ingredients you probably already have:
+      </p>
+      <div class="recipe-box">
+        <h3>Banana Protein Ice Cream</h3>
+        <p class="recipe-meta">~25g protein &nbsp;·&nbsp; ~300 calories &nbsp;·&nbsp; ~$1.00/batch</p>
+        <ul>
+          <li>2 frozen bananas (peel and freeze overnight — the key step most people skip)</li>
+          <li>1 scoop vanilla or chocolate whey protein powder (~25g protein)</li>
+          <li>¼ cup unsweetened almond milk</li>
+          <li>Optional: 1 tbsp peanut butter, handful of frozen berries, or a few chocolate chips</li>
+        </ul>
+        <p><strong>Method:</strong> Add everything to a blender or food processor. Blend on high, stopping to scrape down the sides, until completely smooth. Eat immediately for soft-serve consistency, or freeze for 30–45 minutes for a firmer scoop. Don't freeze overnight — it turns into a solid block. Eat it fresh or lightly frozen.</p>
+        <p>
+          The frozen banana is doing most of the textural work here. When blended
+          from frozen, it creates a naturally creamy, smooth consistency without
+          dairy — this is why the "nice cream" concept works. The protein powder
+          adds structure and protein without significantly changing the texture
+          when blended in with enough liquid.
+        </p>
+      </div>
+    </section>
+
+    <!-- How to Fit Into Macros -->
+    <section>
+      <h2>How to Fit Ice Cream Into Your Macros</h2>
+      <p>
+        The simple approach: treat protein ice cream as part of your daily
+        protein target, not as a free food outside your macros. A full pint of
+        Halo Top at 300 calories and 24g protein counts exactly like any other
+        300-calorie, 24g-protein food in your tracker. It's not a cheat — it's
+        just food with a macro profile that happens to be decent.
+      </p>
+      <p>
+        A few practical strategies that actually work:
+      </p>
+      <p>
+        <strong>Use it as your evening protein source.</strong> If you're
+        consistently short on protein at the end of the day, a pint of protein
+        ice cream at 9pm is a better solution than forcing down another chicken
+        breast. It hits 20–24g protein, satisfies the sweet craving that leads
+        to worse decisions, and keeps you in your calorie range.
+      </p>
+      <p>
+        <strong>Don't eat the whole pint in one sitting every night.</strong>
+        The marketing on these brands basically says "eat the whole pint, it's
+        fine." Technically true from a calorie perspective. Practically, eating
+        a pint of anything sweetened with sugar alcohols every night will
+        eventually cause GI issues for most people, and it's also just not a
+        great relationship with food long-term. Half a pint is a reasonable
+        serving; a full pint as an occasional thing is fine.
+      </p>
+      <p>
+        <strong>During a bulk, it barely moves the needle.</strong> At 300
+        calories per pint, protein ice cream is a rounding error if you're
+        eating 3,000+ calories. Skip the premium brands, eat regular ice cream
+        occasionally, and spend the money on actual food. Protein ice cream
+        is most useful during a cut when every 100 calories matters.
+      </p>
+    </section>
+
+    <!-- Pros & Cons -->
+    <section>
+      <h2>Halo Top: Pros &amp; Cons</h2>
+      <ProsConsList pros={haloPros} cons={haloCons} />
+    </section>
+
+    <!-- Who Should Buy -->
+    <section>
+      <h2>Who Should Buy Protein Ice Cream</h2>
+      <ul>
+        <li>
+          <strong>Students in a calorie deficit who have a sweet tooth.</strong>
+          This is the exact use case protein ice cream was built for. If you're
+          cutting and find yourself raiding the dining hall dessert line at 10pm,
+          having a pint of Halo Top in your mini-fridge is a direct, practical fix.
+        </li>
+        <li>
+          <strong>Anyone who struggles to hit daily protein targets.</strong>
+          If your evenings typically end 20–30g short of your protein goal,
+          protein ice cream solves that in a way that doesn't feel like a chore.
+        </li>
+        <li>
+          <strong>Students who track macros seriously.</strong> Protein ice cream
+          fits cleanly into tracking — known calorie and protein numbers per serving,
+          no ambiguity. It's more compatible with a structured approach than
+          "one scoop of Ben & Jerry's" that turns into three.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Who Should Skip It</h2>
+      <ul>
+        <li>
+          <strong>Students in a bulk who eat 3,000+ calories.</strong> You have
+          room for real ice cream. Buy the good stuff, enjoy it, and spend the
+          $2 difference on protein powder or actual food.
+        </li>
+        <li>
+          <strong>Anyone sensitive to sugar alcohols.</strong> Erythritol is
+          well-tolerated by most people, but a meaningful percentage of the
+          population experiences bloating or GI distress from it, especially
+          in the quantities present in a full pint. If you've had issues with
+          sugar-free products before, test a small portion before committing
+          to a full pint.
+        </li>
+        <li>
+          <strong>Students who don't track macros and eat intuitively.</strong>
+          The health halo around protein ice cream can make it easy to eat more
+          than intended. If you're not tracking and you're eating protein ice
+          cream because it feels like a health food, you might be better served
+          by just having a smaller portion of regular ice cream and moving on.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        Protein ice cream is one of the genuinely useful food swaps for college
+        students who are cutting or maintaining. The gap between "eating ice cream"
+        and "eating Halo Top" is about 400 calories and 20 grams of protein per
+        pint — which, compounded over a semester of late-night study sessions,
+        is the difference between staying on track and not.
+      </p>
+      <p>
+        Halo Top is the right starting point: widely available, solid flavor
+        range, and the macros work. If you want more variety, Enlightened is
+        the upgrade. If you want to save money and have a blender, make the
+        frozen banana version and spend the difference on something else.
+      </p>
+      <p>
+        Just let it sit on the counter for 10 minutes first.
+      </p>
+      <AffiliateButton href={haloUrl} label="Buy Halo Top on Amazon" />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    margin: 0 0 0.25rem;
+    color: #0f172a;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Quick Verdict Box */
+  .verdict-box {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-left: 4px solid #f97316;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 0.75rem;
+  }
+
+  .pick-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    padding: 1rem;
+  }
+
+  .pick-label {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f97316;
+    margin-bottom: 0.4rem;
+  }
+
+  .pick-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.25rem;
+    line-height: 1.3;
+  }
+
+  .pick-detail {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0 0 0.75rem;
+    line-height: 1.4;
+  }
+
+  .pick-link {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #f97316;
+    text-decoration: none;
+  }
+
+  .pick-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Recipe Box */
+  .recipe-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-left: 4px solid #22c55e;
+    border-radius: 0.5rem;
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .recipe-box h3 {
+    color: #15803d;
+    margin-bottom: 0.25rem;
+  }
+
+  .recipe-meta {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #16a34a;
+    margin: 0 0 0.75rem !important;
+  }
+
+  .recipe-box ul {
+    margin: 0.5rem 0 0.75rem;
+  }
+
+  .recipe-box p {
+    color: #166534;
+  }
+
+  @media (max-width: 600px) {
+    .picks-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
