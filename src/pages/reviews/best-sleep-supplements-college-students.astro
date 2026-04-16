@@ -1,0 +1,578 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Sleep Supplements for College Students (2025)";
+const description =
+  "Bad sleep kills your gains and your grades. These are the best sleep supplements for college students — safe, affordable, and actually effective.";
+const pubDate = "2026-04-16";
+const slug = "best-sleep-supplements-college-students";
+
+const melatoninUrl   = "https://www.amazon.com/s?k=melatonin+sleep+supplement&tag=dveverka-20";
+const magGlyUrl      = "https://www.amazon.com/s?k=magnesium+glycinate+sleep&tag=dveverka-20";
+const ashwagandhaUrl = "https://www.amazon.com/s?k=ashwagandha+capsules&tag=dveverka-20";
+const theanineUrl    = "https://www.amazon.com/s?k=l-theanine+supplement&tag=dveverka-20";
+
+const comparisonRows = [
+  {
+    label: "Cost per night",
+    a: "~$0.05–0.10",
+    b: "~$0.15–0.25",
+    c: "~$0.25–0.40",
+    d: "~$0.10–0.20",
+    winner: "a",
+  },
+  {
+    label: "Take before bed",
+    a: "30–60 min",
+    b: "30–60 min",
+    c: "Daily (long-term)",
+    d: "30–60 min",
+    winner: "tie",
+  },
+  {
+    label: "Best for",
+    a: "Delayed sleep onset",
+    b: "Sleep quality, muscle recovery",
+    c: "Chronic stress-driven insomnia",
+    d: "Racing thoughts, anxiety",
+    winner: "tie",
+  },
+  {
+    label: "Side effect risk",
+    a: "Low at correct dose (0.5–1mg)",
+    b: "Very low",
+    c: "Very low",
+    d: "Very low",
+    winner: "tie",
+  },
+];
+
+const magPros = [
+  "Addresses one of the most common root causes of poor sleep quality — magnesium deficiency is widespread among active college students",
+  "Glycine component has independent calming effects on the nervous system, making it more effective for sleep than other magnesium forms",
+  "No grogginess the next morning — relaxes the nervous system without sedating it the way antihistamines do",
+  "Doubles as a recovery supplement: better sleep, reduced muscle cramps, and faster overnight repair in one capsule",
+  "Extremely cheap — a 90-day supply runs $15–25, less than two nights of poor sleep will cost you in lost productivity",
+];
+
+const magCons = [
+  "Takes 2–4 weeks of consistent nightly use before effects become reliably noticeable — not an immediate fix",
+  "High doses can cause loose stools; start at 200mg and titrate up slowly to avoid digestive issues",
+  "Doesn't help much if your sleep problem is primarily about sleep timing or delayed sleep phase rather than sleep quality",
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        It's 3am. You finished a problem set, your roommate's gaming setup is casting
+        blue light across the room, your phone has been face-up next to your pillow for
+        the last hour, and you have an 8am class that you're genuinely not sure you'll
+        wake up for. This is college sleep, and it is, across the board, terrible.
+      </p>
+      <p>
+        Bad sleep compounds in ways that most students only half-recognize. It wrecks
+        your focus, blunts your mood, raises cortisol, impairs muscle recovery, and
+        creates a baseline tiredness that makes everything — studying, training, social
+        energy — harder than it needs to be. The good news is that a few inexpensive,
+        non-prescription supplements address specific sleep problems directly, without
+        the dependency risk of prescription sleep aids or the grogginess of
+        antihistamine-based products. Here are the four worth knowing about.
+      </p>
+    </section>
+
+    <!-- Quick Verdict Box -->
+    <section class="verdict-box">
+      <h2 class="verdict-title">Our Picks at a Glance</h2>
+      <div class="picks-grid">
+        <div class="pick-item">
+          <span class="pick-badge">Best for Falling Asleep</span>
+          <p class="pick-name">Melatonin (0.5–1mg)</p>
+          <p class="pick-detail">~$0.05–0.10/night · Resets sleep timing · Short-term use</p>
+        </div>
+        <div class="pick-item">
+          <span class="pick-badge">Best for Sleep Quality</span>
+          <p class="pick-name">Magnesium Glycinate</p>
+          <p class="pick-detail">~$0.20/night · No grogginess · Recovery benefits</p>
+        </div>
+        <div class="pick-item">
+          <span class="pick-badge">Best for Stress-Driven Sleep</span>
+          <p class="pick-name">Ashwagandha</p>
+          <p class="pick-detail">~$0.30/night · Cortisol reduction · 4–8 week timeline</p>
+        </div>
+        <div class="pick-item">
+          <span class="pick-badge">Best for Racing Mind</span>
+          <p class="pick-name">L-Theanine</p>
+          <p class="pick-detail">~$0.15/night · Calming without sedation · Pairs with melatonin</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Individual reviews -->
+    <section>
+      <h2>1. Melatonin — Best for Falling Asleep</h2>
+      <p>
+        Melatonin is the most widely used sleep supplement and the most widely
+        misunderstood one. It's not a sedative — it doesn't knock you out. It's a
+        hormone your brain produces naturally in response to darkness, signaling
+        that it's time to sleep. Supplementing it does one specific thing well:
+        it shifts your sleep-wake timing. If you've been staying up until 2am all
+        week and suddenly need to fall asleep at 11pm for an 8am exam, a small
+        melatonin dose 30–60 minutes before your target bedtime is the right tool.
+      </p>
+      <p>
+        The dose problem with melatonin is real and worth understanding before you
+        buy. Most products on pharmacy shelves come in 5mg, 10mg, or even 20mg doses.
+        Research consistently shows that <strong>0.5mg to 1mg is the effective dose</strong>
+        for shifting sleep timing — anything above 3mg doesn't produce proportionally
+        better sleep and increases the risk of next-morning grogginess. The 10mg gummies
+        your RA has on their desk are five to twenty times the dose you actually need.
+        Buy the lowest-dose product you can find (many brands now make 0.5mg or 1mg
+        tablets) or break a 3mg tablet in half.
+      </p>
+      <p>
+        Melatonin works best as an occasional tool — for travel, for resetting after
+        a disrupted week, for shifting your sleep schedule before a semester starts.
+        It's not a nightly habit you should build. Your brain's own melatonin production
+        is sensitive, and using supplemental melatonin every night can reduce your
+        natural production over time. Use it when you need it, not as a crutch.
+      </p>
+      <p class="cost-note"><strong>Cost:</strong> ~$0.05–0.10 per night · <strong>Dose:</strong> 0.5–1mg · <strong>When:</strong> 30–60 min before target bedtime</p>
+      <AffiliateButton href={melatoninUrl} label="Buy Melatonin on Amazon" />
+    </section>
+
+    <section>
+      <h2>2. Magnesium Glycinate — Best for Sleep Quality</h2>
+      <p>
+        If your issue isn't falling asleep but staying asleep — or waking up
+        exhausted despite clocking seven hours — magnesium is the more likely
+        solution. Magnesium is involved in regulating the nervous system's transition
+        to rest. It activates GABA receptors (the same receptors that benzodiazepines
+        target, though through a much gentler mechanism), relaxes smooth and skeletal
+        muscle, and is consistently depleted by the combination of physical training,
+        caffeine intake, and poor dietary variety that defines most college students'
+        days.
+      </p>
+      <p>
+        Glycinate is the form to buy. Magnesium glycinate binds magnesium to glycine,
+        an amino acid with its own independent calming effects. The glycine component
+        has been shown in research to lower core body temperature, which is one of the
+        physiological signals associated with sleep onset. The result is a supplement
+        that addresses sleep through two separate pathways: magnesium's nervous system
+        regulation and glycine's temperature and GABA effects.
+      </p>
+      <p>
+        <strong>200–400mg of elemental magnesium</strong> taken 30–60 minutes before
+        bed is the standard protocol. Start at 200mg for the first two weeks to establish
+        tolerance, then increase to 300–400mg if needed. The effects build over two to
+        four weeks — this isn't a same-night fix. The payoff is consistently better
+        sleep quality, fewer nighttime wake-ups, and notably less muscle soreness the
+        morning after hard training sessions.
+      </p>
+      <p class="cost-note"><strong>Cost:</strong> ~$0.15–0.25 per night · <strong>Dose:</strong> 200–400mg elemental magnesium · <strong>When:</strong> 30–60 min before bed with food</p>
+      <AffiliateButton href={magGlyUrl} label="Buy Magnesium Glycinate on Amazon" />
+    </section>
+
+    <section>
+      <h2>3. Ashwagandha — Best for Stress-Driven Sleep Problems</h2>
+      <p>
+        If you're lying awake running through tomorrow's obligations, replaying a
+        conversation from three days ago, or staring at the ceiling with a vague
+        sense of dread that you can't attach to anything specific — that's not a
+        melatonin problem or a magnesium problem. That's a cortisol problem, and
+        ashwagandha is the supplement that addresses it most directly.
+      </p>
+      <p>
+        Ashwagandha is a root extract classified as an adaptogen — a compound that
+        modulates the body's stress response over time. Multiple double-blind trials
+        using KSM-66 or Sensoril extract have found significant reductions in serum
+        cortisol and improved sleep quality scores after 8 weeks of daily use.
+        A 2021 study in <em>PLOS ONE</em> specifically found improvements in sleep
+        onset latency, total sleep time, and self-reported sleep quality in participants
+        taking 300mg of KSM-66 twice daily. The benefits aren't acute — you don't feel
+        ashwagandha the night you take it — but after four to eight weeks of consistent
+        use, the difference in how easily you transition from stress mode to rest mode
+        is meaningful.
+      </p>
+      <p>
+        Buy KSM-66 or Sensoril extract specifically — not generic root powder, which
+        has an unstandardized withanolide content and may do nothing. Take 300mg with
+        dinner and another 300mg before bed, or a single 600mg dose at night depending
+        on the product.
+      </p>
+      <p class="cost-note"><strong>Cost:</strong> ~$0.25–0.40 per night · <strong>Dose:</strong> 300–600mg KSM-66 · <strong>When:</strong> Daily — effects build over 4–8 weeks</p>
+      <AffiliateButton href={ashwagandhaUrl} label="Buy Ashwagandha on Amazon" />
+    </section>
+
+    <section>
+      <h2>4. L-Theanine — Best for a Racing Mind</h2>
+      <p>
+        L-theanine is an amino acid found in green tea that promotes alpha brainwave
+        activity — the relaxed-but-alert mental state associated with meditation and
+        focused calm. It doesn't sedate you. It quiets the mental noise without
+        making you feel foggy or tired before you're ready to sleep. For students
+        whose problem is a brain that won't stop generating thoughts the moment
+        they lie down, L-theanine addresses that specific experience directly.
+      </p>
+      <p>
+        The research at <strong>100–200mg</strong> shows reduced subjective anxiety,
+        improved sleep quality when combined with GABA, and a calming effect on the
+        prefrontal cortex without impairing alertness if you take it earlier in the
+        day. Pre-sleep, the dose tips the balance toward mental quiet without
+        sedation — you'll still be able to read a few pages if you want, you just
+        won't feel wired when you put the book down.
+      </p>
+      <p>
+        L-theanine pairs well with melatonin. Melatonin handles the timing signal;
+        L-theanine handles the mental quieting. Together at low doses (0.5mg
+        melatonin + 100mg L-theanine), they cover both the physiological and
+        cognitive components of falling asleep without the dependency risk of
+        anything stronger. This combination is also why pre-workouts that include
+        both caffeine and L-theanine produce cleaner energy than caffeine alone —
+        the same mechanism works in reverse.
+      </p>
+      <p class="cost-note"><strong>Cost:</strong> ~$0.10–0.20 per night · <strong>Dose:</strong> 100–200mg · <strong>When:</strong> 30–60 min before bed; pairs well with melatonin</p>
+      <AffiliateButton href={theanineUrl} label="Buy L-Theanine on Amazon" />
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Melatonin"
+        nameB="Mag. Glycinate"
+        nameC="Ashwagandha"
+        nameD="L-Theanine"
+        rows={comparisonRows}
+      />
+    </section>
+
+    <!-- What to avoid -->
+    <section>
+      <h2>What to Avoid</h2>
+
+      <h3>ZzzQuil, Benadryl, and Antihistamine Sleep Aids</h3>
+      <p>
+        Diphenhydramine — the active ingredient in ZzzQuil, Unisom, and Benadryl —
+        is an antihistamine that causes drowsiness as a side effect. It works for
+        one or two nights and then stops working as your body builds tolerance in
+        days. Worse, it frequently causes next-morning grogginess (the "antihistamine
+        hangover") that makes the following day worse than if you'd just slept badly
+        naturally. Regular use is associated with cognitive impairment and isn't
+        appropriate as a regular sleep aid.
+      </p>
+
+      <h3>High-Dose Melatonin</h3>
+      <p>
+        The 10mg gummies are too much. The research shows effective sleep timing
+        shifts at 0.5–1mg. High doses don't give you better sleep — they give you
+        groggy mornings and potentially disrupt your natural melatonin production
+        with continued use. If you're currently taking 5–10mg nightly and wondering
+        why you still feel tired, try cutting the dose by 80% before blaming melatonin
+        itself.
+      </p>
+
+      <h3>Prescription Sleep Aids as a Crutch</h3>
+      <p>
+        Zolpidem (Ambien), benzodiazepines, and similar prescription medications
+        have real dependency risks when used regularly in a college context. They
+        also suppress REM and slow-wave sleep in ways that defeat the purpose —
+        you're unconscious but not getting the restorative sleep that actually
+        helps your brain and body recover. These are tools for specific clinical
+        situations, not a response to a noisy dorm and a bad sleep schedule.
+      </p>
+    </section>
+
+    <!-- Sleep hygiene -->
+    <section>
+      <h2>Sleep Hygiene Tips That Actually Work in a Dorm</h2>
+      <p>
+        Supplements help at the margins. Sleep hygiene is the foundation. The two
+        highest-leverage changes most college students can make:
+      </p>
+      <p>
+        <strong>Consistent wake time, not consistent bedtime.</strong> Your body's
+        circadian rhythm is anchored more tightly to when you wake up than when you
+        go to bed. Setting a consistent alarm — even on weekends — and getting up at
+        the same time every day stabilizes your sleep-wake cycle faster than any
+        other behavioral change. The variable bedtime follows naturally once the
+        wake anchor is set.
+      </p>
+      <p>
+        <strong>Phone face-down 30 minutes before sleep.</strong> Not off, not on
+        Do Not Disturb in the other room — just face-down on your desk. The practical
+        barrier of having to reach for it matters more than you'd think. Blue light
+        is only part of the problem; the more damaging variable is the psychological
+        activation of checking something that might demand a response.
+      </p>
+      <p>
+        <strong>Cold room, dark room.</strong> Core body temperature drop is one of
+        the physiological triggers for sleep onset. A room that's 65–68°F produces
+        better sleep than one at 72°F. A sleep mask costs $10 and eliminates the
+        ambient light from your roommate's monitor without requiring negotiation
+        about their schedule.
+      </p>
+      <p>
+        <strong>Caffeine cutoff at 2pm.</strong> Caffeine's half-life is 5–6 hours,
+        meaning half of a 3pm coffee is still in your system at 9pm. The afternoon
+        slump is real and it's partly a crash from morning caffeine — the solution
+        is a consistent sleep schedule, not a 4pm Red Bull that pushes the problem
+        to midnight.
+      </p>
+    </section>
+
+    <!-- How sleep affects muscle growth -->
+    <section>
+      <h2>How Sleep Affects Muscle Growth</h2>
+      <p>
+        Sleep is not rest. It's active biological work, and the specific work done
+        during deep sleep (slow-wave sleep, stages 3 and 4) is directly relevant
+        to training outcomes.
+      </p>
+      <p>
+        Growth hormone secretion peaks during slow-wave sleep — roughly 70% of
+        daily GH release happens in the first few hours after sleep onset. Growth
+        hormone drives muscle protein synthesis, fat mobilization, and tissue
+        repair. Disrupted sleep doesn't just reduce the hours available for recovery;
+        it reduces the hormonal environment that makes recovery possible. Consistently
+        sleeping six hours instead of eight doesn't just leave you tired — it
+        measurably reduces the GH pulse that drives overnight adaptation to training.
+      </p>
+      <p>
+        Muscle protein synthesis also peaks overnight. After a training session,
+        your muscles are in a heightened state of protein synthesis for up to
+        24 hours. A significant portion of that window is spent asleep, and the
+        rate of synthesis during sleep depends on available amino acids (why casein
+        protein before bed matters) and hormonal environment (why sleep quality
+        matters). Cutting either variable short reduces the return on the training
+        you already did.
+      </p>
+      <p>
+        Testosterone follows a similar pattern — testosterone levels peak during
+        sleep and are heavily influenced by sleep duration and quality. A study in
+        the <em>Journal of the American Medical Association</em> found that young
+        men sleeping five hours per night for one week showed a 10–15% reduction
+        in daytime testosterone levels. For a college student in their peak
+        hormonal years trying to build muscle, that's not a trivial number.
+      </p>
+    </section>
+
+    <!-- Pros & Cons -->
+    <section>
+      <h2>Magnesium Glycinate: Pros &amp; Cons</h2>
+      <ProsConsList pros={magPros} cons={magCons} />
+    </section>
+
+    <!-- Who should / shouldn't -->
+    <section>
+      <h2>Who Should Try Sleep Supplements</h2>
+      <ul>
+        <li>
+          <strong>Students training 3+ days a week</strong> who aren't recovering
+          well between sessions. Sleep is the highest-leverage recovery variable
+          available, and improving it costs less than any supplement in your stack.
+        </li>
+        <li>
+          <strong>Anyone with consistent difficulty falling asleep or staying
+          asleep</strong> who hasn't tried magnesium or theanine first. These are
+          genuinely low-risk starting points before anything more aggressive.
+        </li>
+        <li>
+          <strong>Students in high-stress stretches</strong> — finals season,
+          internship application crunch, early-semester overload — where cortisol
+          is the proximate cause of sleep disruption. Ashwagandha addresses
+          the root issue rather than just the symptom.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Who Should Skip Supplements (and Fix the Basics First)</h2>
+      <ul>
+        <li>
+          <strong>Anyone going to bed at 3am and wondering why sleep is hard.</strong>
+          No supplement overcomes a fundamentally broken schedule. Fix the wake time
+          first, then evaluate whether supplementation adds anything.
+        </li>
+        <li>
+          <strong>Anyone relying on melatonin nightly for months.</strong>
+          If you've been taking it every night for more than a few weeks, take a
+          break for two to three weeks and assess your natural sleep without it.
+          Occasional use is fine; daily dependence isn't the right use case.
+        </li>
+        <li>
+          <strong>Anyone with a clinical sleep disorder</strong> — insomnia, sleep
+          apnea, restless leg syndrome, or circadian rhythm disorder. These require
+          medical evaluation and treatment, not supplement optimization. See a doctor.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        The four supplements here are a toolkit, not a protocol. Different sleep
+        problems have different root causes, and matching the supplement to the
+        problem is what makes the difference between something that works and
+        something that sits in your drawer after two weeks.
+      </p>
+      <p>
+        Start with <strong>magnesium glycinate</strong> if you have no idea where
+        to begin — it's the most versatile option, it addresses a genuinely common
+        deficiency, it has no meaningful side effects at standard doses, and it
+        costs almost nothing. Add <strong>L-theanine</strong> if your issue is a
+        brain that won't slow down when you lie down. Use <strong>melatonin</strong>
+        at a low dose when your schedule is disrupted and you need to reset. Build
+        in <strong>ashwagandha</strong> during high-stress periods if you're noticing
+        that exam season correlates with your sleep falling apart.
+      </p>
+      <p>
+        None of these replace a consistent schedule, a dark room, and a phone that
+        goes face-down at midnight. But used in the right context, they're among
+        the highest-return supplements available — and the return shows up in your
+        training, your grades, and your general ability to function like a human being.
+      </p>
+      <AffiliateButton
+        href={magGlyUrl}
+        label="Buy Magnesium Glycinate on Amazon"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    margin: 1.75rem 0 0.5rem;
+    color: #1e293b;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  .cost-note {
+    font-size: 0.82rem;
+    color: #475569;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    padding: 0.6rem 0.9rem;
+    margin: 0.75rem 0 0.5rem;
+    line-height: 1.5;
+  }
+
+  /* Verdict / picks box */
+  .verdict-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #f97316;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f97316;
+    margin: 0 0 1rem;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.875rem;
+  }
+
+  .pick-item {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    padding: 0.75rem 0.9rem;
+  }
+
+  .pick-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: #f97316;
+    color: #fff;
+    padding: 0.15rem 0.45rem;
+    border-radius: 0.2rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .pick-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0.2rem 0 0.25rem;
+  }
+
+  .pick-detail {
+    font-size: 0.78rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.45;
+  }
+
+  @media (max-width: 520px) {
+    .picks-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
