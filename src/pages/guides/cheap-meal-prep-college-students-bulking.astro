@@ -1,0 +1,663 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+
+const title = "Cheap Meal Prep Ideas for College Students Bulking (Under $50/Week)";
+const description =
+  "Build muscle without going broke. Here's exactly how to meal prep a full week of high-protein bulking meals for under $50 as a college student.";
+const pubDate = "2026-04-15";
+const slug = "cheap-meal-prep-college-students-bulking";
+
+const containersUrl = "https://www.amazon.com/s?k=meal+prep+containers+set&tag=dveverka-20";
+const scaleUrl = "https://www.amazon.com/s?k=food+kitchen+scale&tag=dveverka-20";
+const riceCookerUrl = "https://www.amazon.com/s?k=budget+rice+cooker&tag=dveverka-20";
+
+const pros = [
+  "Cuts food cost dramatically — eating the same prepped meals is 60–70% cheaper than buying food daily",
+  "Removes decision fatigue — no figuring out what to eat when you're tired and hungry",
+  "Hitting a calorie surplus consistently becomes mechanical instead of a daily struggle",
+  "Macro tracking becomes simple when the same meals repeat with known numbers",
+  "Two hours on Sunday buys you a full week of meals that require zero thought",
+];
+
+const cons = [
+  "Eating the same meals five days in a row requires tolerance for repetition",
+  "Requires upfront equipment investment (containers, a food scale) that not everyone has",
+  "A bad prep session — overcooked chicken, underseasoned rice — affects every meal that week",
+];
+
+const groceryList = [
+  { item: "Chicken thighs (3 lbs)",         store: "Walmart/Aldi", price: "$5–7" },
+  { item: "Ground beef 80/20 (2 lbs)",       store: "Walmart/Aldi", price: "$7–9" },
+  { item: "Eggs (18-count)",                 store: "Walmart/Aldi", price: "$3–4" },
+  { item: "White rice (5 lb bag)",           store: "Walmart/Aldi", price: "$3–4" },
+  { item: "Sweet potatoes (3 lbs)",          store: "Walmart/Aldi", price: "$3–4" },
+  { item: "Kodiak Waffles (1 box)",          store: "Walmart",      price: "$5–6" },
+  { item: "Premier Protein shakes (4-pack)", store: "Walmart",      price: "$7–8" },
+  { item: "Bananas (bunch)",                 store: "Walmart/Aldi", price: "$1–2" },
+  { item: "Peanut butter (16 oz)",           store: "Walmart/Aldi", price: "$3–4" },
+  { item: "Cottage cheese (24 oz)",          store: "Walmart/Aldi", price: "$3–4" },
+  { item: "Olive oil, salt, garlic powder",  store: "Pantry",       price: "$0" },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/guides/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <section>
+      <p>
+        Eating enough to actually bulk on a college budget sounds impossible until you do
+        the math. Three thousand calories a day from dining hall food runs $15–20 per day.
+        Three thousand calories from a Sunday meal prep runs $7. That gap — over a semester —
+        is the difference between a real bulk and spinning your wheels because you're
+        undereating four days out of seven.
+      </p>
+      <p>
+        This guide covers exactly what to buy, what to cook, how to prep it in two hours,
+        and how to hit 3,000–3,500 calories with 180g+ of protein every day for under $50
+        a week. No complicated recipes, no exotic ingredients, nothing that requires a
+        full kitchen or three hours on a Sunday afternoon.
+      </p>
+    </section>
+
+    <!-- Calorie needs -->
+    <section>
+      <h2>How Many Calories Do You Actually Need to Bulk?</h2>
+      <p>
+        A bulk requires a calorie surplus — eating more than your body burns so it has the
+        raw materials to build muscle. The challenge is finding a surplus that's big enough
+        to drive growth but small enough that you're not gaining more fat than muscle.
+      </p>
+      <p>
+        A simple starting point: <strong>multiply your bodyweight in pounds by 16–18</strong>.
+        A 170 lb college student needs roughly 2,720–3,060 calories per day to be in a
+        meaningful surplus. Aim for the lower end if you tend to gain fat easily; the higher
+        end if you have a fast metabolism and struggle to gain weight at all.
+      </p>
+      <p>
+        For protein, target <strong>0.8–1g per pound of bodyweight</strong>. At 170 lbs
+        that's 136–170g of protein per day. The meal plan below hits 180g+ daily, which
+        gives you a buffer and makes the math forgiving even if one meal is smaller than
+        planned.
+      </p>
+      <p>
+        These are starting numbers, not commandments. If you're not gaining weight after
+        two weeks, add 200 calories. If you're gaining faster than 1 lb per week and noticing
+        more fat than muscle, pull back 200. Adjust based on what the scale actually does.
+      </p>
+    </section>
+
+    <!-- Weekly meal plan -->
+    <section>
+      <h2>Full Weekly Meal Plan (~3,200 Calories, 185g Protein)</h2>
+      <p>
+        The same structure repeats Monday through Friday. Weekends you're on your own — this
+        isn't a religion, it's a system. Five consistent days beats seven inconsistent ones.
+      </p>
+
+      <div class="meal-block">
+        <h3>Breakfast — Eggs + Kodiak Waffles</h3>
+        <div class="meal-macros">
+          <span>~600 cal</span>
+          <span>~40g protein</span>
+          <span>~55g carbs</span>
+        </div>
+        <p>
+          Two Kodiak waffles (toasted from frozen) plus three scrambled eggs. The waffles give
+          you 24g of whole grain protein and slow carbs; the eggs add 18g more and healthy fat.
+          This takes four minutes and requires only a toaster and a pan. Make the eggs fresh each
+          morning — they don't prep well — but the waffles are already done. Add a banana for an
+          extra 100 calories and 27g of carbs if you're training in the morning.
+        </p>
+      </div>
+
+      <div class="meal-block">
+        <h3>Lunch — Ground Beef Rice Bowls</h3>
+        <div class="meal-macros">
+          <span>~850 cal</span>
+          <span>~55g protein</span>
+          <span>~80g carbs</span>
+        </div>
+        <p>
+          1 cup cooked white rice, 5 oz cooked 80/20 ground beef, seasoned with garlic powder,
+          salt, and a little olive oil. That's it. Ground beef is one of the most calorie-dense
+          and protein-dense cheap meats available, and 80/20 hits harder on a bulk than leaner
+          ground beef because the fat content boosts the calorie total without requiring you to
+          eat more volume. Pre-cook a full 2 lb batch on Sunday, portion into containers, and
+          it keeps in the fridge all week.
+        </p>
+      </div>
+
+      <div class="meal-block">
+        <h3>Dinner — Chicken Thighs + Sweet Potato</h3>
+        <div class="meal-macros">
+          <span>~750 cal</span>
+          <span>~55g protein</span>
+          <span>~55g carbs</span>
+        </div>
+        <p>
+          Two bone-in or boneless chicken thighs (baked or air-fried), one medium sweet potato
+          (baked). Chicken thighs are cheaper than breasts, more forgiving to cook, and carry
+          more fat — which helps the calorie count without requiring huge portion sizes. Season
+          with whatever you have: garlic powder, paprika, salt. Prep all thighs and sweet potatoes
+          on Sunday, portion into containers, and reheat in the microwave. This is the dinner
+          that makes the week work.
+        </p>
+      </div>
+
+      <div class="meal-block">
+        <h3>Snacks — Premier Protein + Banana + Peanut Butter</h3>
+        <div class="meal-macros">
+          <span>~550 cal</span>
+          <span>~38g protein</span>
+          <span>~45g carbs</span>
+        </div>
+        <p>
+          One Premier Protein shake (30g protein, 160 cal), one banana (~100 cal), and two
+          tablespoons of peanut butter (~190 cal, 8g protein). This snack combination hits
+          almost 550 calories and nearly 40g of protein with zero preparation. Keep shakes in
+          your fridge, peanut butter in your bag, and bananas on your desk. It's the fallback
+          for when you're between classes and need calories fast.
+        </p>
+      </div>
+
+      <div class="meal-totals">
+        <h3>Daily Totals</h3>
+        <div class="totals-grid">
+          <div><span class="total-label">Calories</span><span class="total-value">~3,200</span></div>
+          <div><span class="total-label">Protein</span><span class="total-value">~188g</span></div>
+          <div><span class="total-label">Carbs</span><span class="total-value">~235g</span></div>
+          <div><span class="total-label">Cost/Day</span><span class="total-value">~$7</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grocery list -->
+    <section>
+      <h2>Full Grocery List With Estimated Costs</h2>
+      <p>
+        Prices are estimates based on Walmart and Aldi. Aldi will usually be cheaper on
+        produce, eggs, and dairy. Walmart wins on brand-name items like Kodiak and Premier
+        Protein.
+      </p>
+      <div class="table-wrap">
+        <table class="grocery-table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Where to Buy</th>
+              <th>Est. Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            {groceryList.map((row) => (
+              <tr>
+                <td>{row.item}</td>
+                <td class="store">{row.store}</td>
+                <td class="price">{row.price}</td>
+              </tr>
+            ))}
+            <tr class="total-row">
+              <td><strong>Weekly Total</strong></td>
+              <td></td>
+              <td class="price"><strong>~$40–52</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The rice, peanut butter, and olive oil last multiple weeks, so your second and third
+        week of this plan will cost less. The protein shakes are the most expensive line item
+        — buying a 12-pack instead of a 4-pack drops the per-shake cost significantly.
+      </p>
+    </section>
+
+    <!-- Sunday prep routine -->
+    <section>
+      <h2>Step-by-Step Sunday Prep Routine (2 Hours)</h2>
+      <p>
+        The goal is to do everything in parallel so no step is waiting on another. Start to
+        finish in under two hours with this sequence.
+      </p>
+
+      <div class="prep-step">
+        <span class="step-num">0:00</span>
+        <div>
+          <strong>Start the rice cooker and preheat the oven to 400°F.</strong> Put 3 cups
+          of dry rice in the cooker with the appropriate water. Season and arrange chicken
+          thighs on a baking sheet. Put sweet potatoes directly on the oven rack.
+        </div>
+      </div>
+      <div class="prep-step">
+        <span class="step-num">0:10</span>
+        <div>
+          <strong>Chicken thighs and sweet potatoes go in the oven.</strong> Chicken thighs
+          take 35–40 minutes at 400°F. Sweet potatoes take 45–60 minutes depending on size.
+          Set a timer and walk away.
+        </div>
+      </div>
+      <div class="prep-step">
+        <span class="step-num">0:15</span>
+        <div>
+          <strong>Brown the ground beef on the stove.</strong> Cook all 2 lbs in a large pan
+          over medium-high heat. Season with garlic powder and salt. Break it up, cook through,
+          drain excess fat. This takes about 15 minutes.
+        </div>
+      </div>
+      <div class="prep-step">
+        <span class="step-num">0:35</span>
+        <div>
+          <strong>Ground beef is done. Rice should be finishing soon.</strong> Let the beef
+          cool on the stove. Check the rice cooker — if it's done, let it rest for 5 minutes
+          before portioning.
+        </div>
+      </div>
+      <div class="prep-step">
+        <span class="step-num">0:50</span>
+        <div>
+          <strong>Pull chicken and sweet potatoes from the oven.</strong> Verify chicken
+          reaches 165°F internal temp. Let everything rest for 5–10 minutes before
+          portioning — hot food in sealed containers builds condensation and turns mushy faster.
+        </div>
+      </div>
+      <div class="prep-step">
+        <span class="step-num">1:05</span>
+        <div>
+          <strong>Portion everything into containers.</strong> Five lunch containers: 1 cup
+          rice + 5 oz ground beef each. Five dinner containers: 2 chicken thighs + 1 sweet
+          potato each. Label with the day if it helps. Stack in the fridge.
+        </div>
+      </div>
+      <div class="prep-step">
+        <span class="step-num">1:30</span>
+        <div>
+          <strong>Done.</strong> Wash the pan and baking sheet while containers cool before
+          sealing. The entire week of lunches and dinners is in the fridge. Breakfast is a
+          toaster and a pan each morning. Snacks require no prep at all.
+        </div>
+      </div>
+    </section>
+
+    <!-- Protein sources ranked -->
+    <section>
+      <h2>Best Cheap Protein Sources Ranked by Cost Per Gram</h2>
+      <p>
+        Not all cheap protein is equal. Here's the honest ranking so you can make smart
+        substitutions if something is out of stock or on sale.
+      </p>
+      <div class="table-wrap">
+        <table class="protein-table">
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Protein per serving</th>
+              <th>Approx. cost</th>
+              <th>Cost per 10g protein</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Eggs (2 large)</td>
+              <td>12g</td>
+              <td>~$0.35</td>
+              <td class="cost-best">~$0.29</td>
+            </tr>
+            <tr>
+              <td>Canned tuna (5 oz)</td>
+              <td>25g</td>
+              <td>~$1.00</td>
+              <td class="cost-best">~$0.40</td>
+            </tr>
+            <tr>
+              <td>Chicken thighs (4 oz cooked)</td>
+              <td>28g</td>
+              <td>~$1.00</td>
+              <td class="cost-good">~$0.36</td>
+            </tr>
+            <tr>
+              <td>Ground beef 80/20 (4 oz cooked)</td>
+              <td>22g</td>
+              <td>~$1.20</td>
+              <td class="cost-good">~$0.55</td>
+            </tr>
+            <tr>
+              <td>Cottage cheese (½ cup)</td>
+              <td>14g</td>
+              <td>~$0.60</td>
+              <td class="cost-good">~$0.43</td>
+            </tr>
+            <tr>
+              <td>Chicken breast (4 oz cooked)</td>
+              <td>35g</td>
+              <td>~$1.75</td>
+              <td class="cost-mid">~$0.50</td>
+            </tr>
+            <tr>
+              <td>Greek yogurt (6 oz)</td>
+              <td>17g</td>
+              <td>~$1.25</td>
+              <td class="cost-mid">~$0.74</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Eggs and canned tuna are the best values in the entire food supply at under $0.40
+        per 10g of protein. Ground beef earns its place on a bulk specifically because the
+        fat content adds calories efficiently — you get more total energy per dollar than
+        leaner sources. Chicken breast is actually worse value than thighs once you account
+        for the higher price and lower calorie density.
+      </p>
+    </section>
+
+    <!-- Pros & Cons -->
+    <section>
+      <h2>Meal Prepping for a Bulk: Pros & Cons</h2>
+      <ProsConsList pros={pros} cons={cons} />
+    </section>
+
+    <!-- Who should do this -->
+    <section>
+      <h2>Who Should Do This</h2>
+      <ul>
+        <li>
+          <strong>Students who are consistently undereating their bulk targets.</strong>
+          If you end most days 300–500 calories short because you ran out of time or didn't
+          have food available, this system solves that problem completely.
+        </li>
+        <li>
+          <strong>Anyone trying to gain muscle on a tight grocery budget.</strong> Under $50
+          a week for 3,200 calories and 185g of protein is difficult to beat from any
+          other food source.
+        </li>
+        <li>
+          <strong>Students with access to even a minimal kitchen.</strong> An oven, a stove,
+          a rice cooker — that's the equipment list. If you have those, you can run this plan.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Who should skip -->
+    <section>
+      <h2>Who Should Skip (or Modify) This</h2>
+      <ul>
+        <li>
+          <strong>Students with no kitchen access at all.</strong> If your dorm situation
+          genuinely has no stove or oven, this plan doesn't work. Focus instead on high-calorie
+          ready-to-eat foods: nut butters, protein shakes, whole milk, trail mix, and whatever
+          the dining hall offers.
+        </li>
+        <li>
+          <strong>People who find food repetition genuinely unsustainable.</strong> Eating
+          the same lunch every day isn't for everyone. If it's going to make you miserable
+          and abandon the plan by Wednesday, rotate two or three different proteins week to
+          week — ground beef one week, canned tuna the next, chicken thighs the third.
+        </li>
+        <li>
+          <strong>Students already eating enough to bulk consistently.</strong> If you're
+          hitting your calories and protein targets without meal prep, the system is already
+          working. Don't add complexity to a process that isn't broken.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        The hardest part of bulking as a college student isn't the training — it's the
+        eating. Getting 3,000+ calories in on a day with 8 AM classes, afternoon labs, and
+        no money for takeout requires a system, not willpower. This is the system.
+      </p>
+      <p>
+        Two hours on Sunday, under $50 at Walmart or Aldi, and you have every lunch and dinner
+        for the week already portioned and ready to microwave. Add a banana and peanut butter
+        at your desk, Kodiak waffles and eggs in the morning, a Premier Protein shake between
+        classes, and hitting your bulk targets becomes something you do automatically instead
+        of something you have to think about every day.
+      </p>
+      <p>
+        Get the containers first. That's the one purchase that makes the system work — food
+        with nowhere to go doesn't get prepped.
+      </p>
+      <AffiliateButton
+        href={containersUrl}
+        label="Buy Meal Prep Containers on Amazon"
+      />
+      <div class="secondary-ctas">
+        <a href={scaleUrl} target="_blank" rel="noopener noreferrer sponsored" class="secondary-link">
+          Food Scale →
+        </a>
+        <a href={riceCookerUrl} target="_blank" rel="noopener noreferrer sponsored" class="secondary-link">
+          Budget Rice Cooker →
+        </a>
+      </div>
+      <p class="disclosure">
+        <small>As an Amazon Associate I earn from qualifying purchases.</small>
+      </p>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    margin: 1.5rem 0 0.4rem;
+    color: #1e293b;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Meal blocks */
+  .meal-block {
+    border-left: 3px solid #e2e8f0;
+    padding: 0.5rem 0 0.5rem 1.25rem;
+    margin: 1.5rem 0;
+  }
+
+  .meal-block h3 {
+    margin-top: 0;
+  }
+
+  .meal-macros {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 0.25rem 0 0.5rem;
+  }
+
+  .meal-macros span {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #fff;
+    background: #0f172a;
+    padding: 0.15rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  /* Daily totals */
+  .meal-totals {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .meal-totals h3 {
+    margin-top: 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+  }
+
+  .totals-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .total-label {
+    display: block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #94a3b8;
+    font-weight: 600;
+  }
+
+  .total-value {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+  }
+
+  /* Tables */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 1rem 0;
+  }
+
+  .grocery-table,
+  .protein-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    min-width: 380px;
+  }
+
+  th {
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 2px solid #e2e8f0;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 0.55rem 0.75rem;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+  }
+
+  .store {
+    color: #64748b;
+    font-size: 0.82rem;
+  }
+
+  .price {
+    font-weight: 700;
+    color: #0f172a;
+    white-space: nowrap;
+  }
+
+  .total-row td {
+    border-top: 2px solid #e2e8f0;
+    border-bottom: none;
+    padding-top: 0.75rem;
+  }
+
+  .cost-best { font-weight: 700; color: #15803d; }
+  .cost-good { font-weight: 700; color: #0891b2; }
+  .cost-mid  { font-weight: 600; color: #64748b; }
+
+  /* Prep steps */
+  .prep-step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.9rem;
+    color: #334155;
+    line-height: 1.6;
+  }
+
+  .step-num {
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #f97316;
+    background: #fff7ed;
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.25rem;
+    min-width: 2.75rem;
+    text-align: center;
+    margin-top: 0.1rem;
+  }
+
+  /* Secondary CTAs */
+  .secondary-ctas {
+    display: flex;
+    gap: 1.25rem;
+    margin: 0.75rem 0 0.25rem;
+    flex-wrap: wrap;
+  }
+
+  .secondary-link {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #0891b2;
+    text-decoration: none;
+  }
+
+  .secondary-link:hover {
+    text-decoration: underline;
+  }
+
+  .disclosure {
+    color: #64748b;
+    font-size: 0.78rem;
+    margin: 0.25rem 0 0;
+  }
+</style>

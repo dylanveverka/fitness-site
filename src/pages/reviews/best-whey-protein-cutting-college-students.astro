@@ -1,0 +1,518 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+
+const title = "Best Whey Protein for Cutting: Top Picks for College Students (2025)";
+const description =
+  "Trying to lean out without losing muscle? These are the best whey proteins for cutting as a college student on a budget.";
+const pubDate = "2026-04-15";
+const slug = "best-whey-protein-cutting-college-students";
+
+const isopureUrl = "https://www.amazon.com/s?k=isopure+zero+carb+protein&tag=dveverka-20";
+const onUrl = "https://www.amazon.com/s?k=optimum+nutrition+gold+standard+whey&tag=dveverka-20";
+const ghostUrl = "https://www.amazon.com/s?k=ghost+whey+protein&tag=dveverka-20";
+
+const pros = [
+  "Zero carbs and zero fat — the cleanest macro profile of any mainstream protein powder",
+  "25g protein for just 100 calories makes hitting targets easy without blowing your calorie budget",
+  "No filler ingredients — pure whey protein isolate with nothing to hide",
+  "Mixes cleanly and doesn't leave the thick, heavy feeling that concentrates do",
+  "Available in flavored and unflavored — versatile enough to cook with or mix into anything",
+];
+
+const cons = [
+  "More expensive than concentrate-based powders — around $1.50–2.00 per serving",
+  "Flavor selection is limited compared to competitors like Ghost or ON",
+  "The price premium is hard to justify if you're not actively cutting — Gold Standard is better value otherwise",
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        You spent all semester grinding through 6 AM lifts and eating in a surplus, and you've
+        got the muscle to show for it. Now it's April, summer is eight weeks away, and the goal
+        shifts: lean out without giving back the progress you worked for. Easier said than done
+        when your protein powder has 10g of carbs per scoop and you're already trying to cut
+        200 calories a day.
+      </p>
+      <p>
+        Protein powder during a cut isn't just about hitting your protein target — it's about
+        doing it with as few extra calories as possible. The wrong choice costs you 100–150
+        unnecessary calories per serving, every single day. The right choice fits into a tight
+        calorie deficit without sacrificing the 0.8–1g per pound of protein your muscles need
+        to hold on to what you built. Here are three picks that actually understand the assignment.
+      </p>
+    </section>
+
+    <!-- Quick Verdict Box -->
+    <div class="verdict-box">
+      <h2>Our Top Picks at a Glance</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-badge">Best for Cutting</span>
+          <p class="pick-name">Isopure Zero Carb</p>
+          <p class="pick-detail">100 cal · 25g protein · 0g carbs</p>
+          <a href={isopureUrl} target="_blank" rel="noopener noreferrer sponsored" class="pick-link">
+            View on Amazon →
+          </a>
+        </div>
+        <div class="pick-card">
+          <span class="pick-badge alt">Best Overall</span>
+          <p class="pick-name">ON Gold Standard</p>
+          <p class="pick-detail">120 cal · 24g protein · 3g carbs</p>
+          <a href={onUrl} target="_blank" rel="noopener noreferrer sponsored" class="pick-link">
+            View on Amazon →
+          </a>
+        </div>
+        <div class="pick-card">
+          <span class="pick-badge taste">Best Taste</span>
+          <p class="pick-name">Ghost Whey</p>
+          <p class="pick-detail">130 cal · 25g protein · 4g carbs</p>
+          <a href={ghostUrl} target="_blank" rel="noopener noreferrer sponsored" class="pick-link">
+            View on Amazon →
+          </a>
+        </div>
+      </div>
+      <p class="disclosure">
+        <small>As an Amazon Associate I earn from qualifying purchases.</small>
+      </p>
+    </div>
+
+    <!-- How much protein when cutting -->
+    <section>
+      <h2>How Much Protein Do You Need When Cutting?</h2>
+      <p>
+        The standard advice for a maintenance or bulk phase is 0.7–0.8g of protein per pound of
+        bodyweight. When you're cutting, that number goes <em>up</em>, not down. Here's why:
+        when you're in a calorie deficit, your body is more likely to pull from muscle tissue for
+        energy. Higher protein intake blunts that process by giving your body a constant amino
+        acid supply to work with.
+      </p>
+      <p>
+        The target to aim for during a cut is <strong>0.8–1g of protein per pound of
+        bodyweight</strong>. For a 170 lb college student, that's 136–170g of protein per day.
+        On a 1,800–2,000 calorie cut, getting that much protein from food alone is genuinely
+        difficult — a protein powder that delivers 25g for 100 calories is one of the most
+        efficient tools you have.
+      </p>
+      <p>
+        You don't need to hit the top of that range perfectly every day. Aim for consistency
+        over exactness: 0.85g per pound most days is far more useful than 1.2g on Monday and
+        0.5g on Thursday.
+      </p>
+    </section>
+
+    <!-- What to avoid -->
+    <section>
+      <h2>What to Avoid in a Cutting Protein Powder</h2>
+
+      <h3>High Carbs and Added Sugar</h3>
+      <p>
+        Some protein powders are essentially protein-flavored meal replacements — they contain
+        5–15g of carbs per serving from maltodextrin, oat flour, or added sugars. On a bulk,
+        that's fine. On a cut, those are wasted calories that displace food you could eat instead.
+        Look for under 5g of carbs per serving, and check the sugar line specifically. Anything
+        over 3g of added sugar is a red flag on a cutting powder.
+      </p>
+
+      <h3>Proprietary Blends</h3>
+      <p>
+        A "proprietary blend" lists a group of protein sources under one total number without
+        telling you how much of each you're getting. The problem: cheaper protein sources like
+        casein, egg albumin, or soy can be padded in to hit the total gram count at lower cost,
+        without you knowing. When you're cutting and every macro counts, you want to know exactly
+        what you're getting per scoop. Stick to powders where whey isolate or whey concentrate
+        appears as the <em>first</em> ingredient.
+      </p>
+
+      <h3>High Calorie Density Without the Protein</h3>
+      <p>
+        Some powders advertise 30g of protein but come in at 200+ calories per serving. Do the
+        math: anything worse than about 4.5 calories per gram of protein is punishing you calorically
+        for the same protein hit. The best cutting powders sit at 4 calories per gram or less.
+      </p>
+    </section>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <div class="product-section">
+        <h3>
+          <span class="badge cut">Best for Cutting</span>
+          Isopure Zero Carb Whey Protein Isolate
+        </h3>
+        <p>
+          Isopure Zero Carb is the bluntest instrument on this list, and that's exactly why it
+          earns the top spot for cutting. The formula is pure whey protein isolate — nothing else.
+          No fillers, no added carbs, no fat, no sugar. Each serving delivers
+          <strong>25g of protein for 100 calories</strong>, which works out to exactly 4 calories
+          per gram of protein. That ratio is among the best in the entire category.
+        </p>
+        <p>
+          <strong>Macros per serving:</strong> 100 calories, 25g protein, 0g carbs, 0g fat. The
+          zero-carb profile isn't a marketing trick — the isolate filtration process removes
+          virtually all carbohydrates and fat that remain in concentrate-based powders. What you're
+          left with is about as close to pure protein as a powder gets.
+        </p>
+        <p>
+          <strong>Taste:</strong> The flavored versions are decent but lean toward subtle — this
+          isn't a powder built around dessert flavors. Dutch Chocolate and Creamy Vanilla are the
+          most consistent performers. The unflavored version is genuinely tasteless, which makes it
+          useful for adding to oatmeal, yogurt, or cooking without changing the flavor profile.
+        </p>
+        <p>
+          <strong>Cost per serving:</strong> Around $1.50–2.00 depending on retailer and size.
+          Higher than Gold Standard, which is the honest trade-off for the purer formula. If you're
+          not actively cutting, the calorie difference between Isopure and Gold Standard is small
+          enough that it's not worth the price premium.
+        </p>
+        <p>
+          <strong>Best for:</strong> Students in an active calorie deficit who want maximum protein
+          per calorie and are willing to pay a bit more for a cleaner formula.
+        </p>
+
+        <h4>Pros & Cons</h4>
+        <ProsConsList pros={pros} cons={cons} />
+        <AffiliateButton href={isopureUrl} label="Buy Isopure Zero Carb on Amazon" />
+      </div>
+
+      <div class="product-section">
+        <h3>
+          <span class="badge overall">Best Overall</span>
+          ON Gold Standard Whey
+        </h3>
+        <p>
+          Gold Standard has been covered in depth elsewhere on this site, but it earns its place
+          on this list too. At 120 calories and 24g protein per serving, the protein-to-calorie
+          ratio is excellent — not quite Isopure-level, but close enough that most people cutting
+          200–300 calories per day won't notice the difference in practice.
+        </p>
+        <p>
+          <strong>Macros per serving:</strong> 120 calories, 24g protein, 3g carbs, 1.5g fat.
+          The 3g of carbs mostly comes from the small amount of lactose remaining after processing.
+          Nothing alarming for a cut.
+        </p>
+        <p>
+          <strong>Why it makes the cutting list:</strong> Third-party Informed Sport certification,
+          whey isolate as the primary ingredient, and the best mixability in its price class. When
+          you're already managing a lot of dietary variables during a cut, having a reliable protein
+          that you know exactly what's in it is valuable. Gold Standard gives you that.
+        </p>
+        <p>
+          <strong>Cost per serving:</strong> Around $0.75–0.85 per serving — significantly cheaper
+          than Isopure. If the 20-calorie difference between the two doesn't matter to you, this is
+          the better value by a clear margin.
+        </p>
+        <p>
+          <strong>Best for:</strong> Students who want a cutting-compatible protein without paying
+          the isolate premium, or who are cutting slowly (small deficit) and don't need to squeeze
+          every calorie.
+        </p>
+      </div>
+
+      <div class="product-section">
+        <h3>
+          <span class="badge taste">Best Taste While Cutting</span>
+          Ghost Whey Protein
+        </h3>
+        <p>
+          Cutting is miserable enough without choking down a protein shake that tastes like
+          chalk. Ghost exists entirely at the intersection of macros that work and flavors that
+          you'll actually look forward to — and it's one of the few brands where that claim
+          holds up across most of the lineup.
+        </p>
+        <p>
+          <strong>Macros per serving:</strong> 130 calories, 25g protein, 4g carbs, 3.5g fat.
+          Not as lean as Isopure, but still a solid protein-to-calorie ratio at just over 5
+          calories per gram of protein. The extra fat and carbs contribute to the richer texture
+          and better taste.
+        </p>
+        <p>
+          <strong>Taste:</strong> Ghost's collaboration flavors — Chips Ahoy!, Nutter Butter,
+          Oreo — are legitimately good and among the best-tasting protein powders available.
+          During a cut when food variety is limited and cravings are higher, a protein shake that
+          actually tastes like a dessert is a quality-of-life factor that's easy to underestimate.
+        </p>
+        <p>
+          <strong>Cost per serving:</strong> Around $1.50–1.75 per serving. On the premium end
+          of the market, but the flavor quality justifies it for people who struggle with
+          consistency during cuts because they hate what they're eating.
+        </p>
+        <p>
+          <strong>Best for:</strong> Students who have struggled to stick to a cut because
+          everything tastes bad, or anyone who wants a protein shake that doubles as a
+          craving-killer.
+        </p>
+      </div>
+    </section>
+
+    <!-- Pros & Cons already inline above for Isopure -->
+
+    <!-- Who Should Buy -->
+    <section>
+      <h2>Who Should Buy a Cutting-Focused Protein</h2>
+      <ul>
+        <li>
+          <strong>Students actively trying to lose fat while preserving muscle.</strong> The
+          difference between a cutting protein (100–120 cal, minimal carbs) and a standard
+          concentrate (140–160 cal, 5–8g carbs) adds up to 400–900 calories per week. Over
+          eight weeks, that's real.
+        </li>
+        <li>
+          <strong>Anyone with a tight daily calorie budget.</strong> If you're eating 1,800
+          calories a day and hitting two protein shakes, the efficiency of those 200 calories
+          matters. Isopure gives you 50g of protein in that window. A cheaper concentrate gives
+          you 40g and uses 40–50 more calories doing it.
+        </li>
+        <li>
+          <strong>People who find cutting unsustainable because they're always hungry.</strong>
+          High-protein, low-calorie shakes are one of the most effective tools for managing
+          hunger during a cut. Protein is the most satiating macronutrient — using it
+          efficiently means you can eat more food overall while staying in deficit.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Who Should Skip -->
+    <section>
+      <h2>Who Should Skip the Premium Isolate</h2>
+      <ul>
+        <li>
+          <strong>Students who are bulking or at maintenance.</strong> The zero-carb, minimal-fat
+          profile is a feature when calories are tight and a non-issue when they're not. Gold
+          Standard at $0.80 per serving does the same job as Isopure at $1.75 when you're not
+          cutting.
+        </li>
+        <li>
+          <strong>Anyone on a very tight supplement budget.</strong> Isopure and Ghost are premium
+          products. If cost is the main constraint, ON Gold Standard is cutting-compatible at a
+          much lower price point — don't pay the isolate premium if it means you can't afford
+          enough powder to hit your protein targets consistently.
+        </li>
+        <li>
+          <strong>People who don't track macros at all.</strong> The calorie savings from a
+          cutting protein are meaningful when you're running tight numbers. If you're eating
+          intuitively and not tracking, the 20-calorie difference between products isn't worth
+          paying double for.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        If you're serious about cutting while holding onto your muscle, protein powder selection
+        actually matters. <strong>Isopure Zero Carb</strong> is the pick for students in an active
+        calorie deficit — 25g of protein for 100 calories, zero carbs, and a formula clean enough
+        that you know exactly what you're putting in your body. It's not cheap, but during an
+        eight-week cut, the daily calorie savings compound into a real difference.
+      </p>
+      <p>
+        If the Isopure price is too steep, Gold Standard is close enough on macros at roughly half
+        the per-serving cost. If taste is the thing that's killed your last two cuts, Ghost is worth
+        the premium — consistency matters more than perfect macros if you can't stick to the plan.
+      </p>
+      <AffiliateButton
+        href={isopureUrl}
+        label="Buy Isopure Zero Carb on Amazon"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    margin: 1.75rem 0 0.5rem;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  h4 {
+    font-size: 1rem;
+    margin: 1.5rem 0 0.5rem;
+    color: #1e293b;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Verdict box */
+  .verdict-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #0284c7;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    margin-top: 0;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #0f172a;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .pick-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    padding: 1rem;
+  }
+
+  .pick-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .pick-badge.alt {
+    background: #dcfce7;
+    color: #15803d;
+  }
+
+  .pick-badge.taste {
+    background: #fef9c3;
+    color: #854d0e;
+  }
+
+  .pick-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin: 0.4rem 0 0.2rem;
+    color: #0f172a;
+    line-height: 1.35;
+  }
+
+  .pick-detail {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0 0 0.5rem;
+  }
+
+  .pick-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0284c7;
+    text-decoration: none;
+  }
+
+  .pick-link:hover {
+    text-decoration: underline;
+  }
+
+  .disclosure {
+    color: #64748b;
+    font-size: 0.78rem;
+    margin: 0.75rem 0 0;
+  }
+
+  /* Product sections */
+  .product-section {
+    border-top: 2px solid #e2e8f0;
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  /* Badges */
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+  }
+
+  .badge.cut {
+    background: #dbeafe;
+    color: #1d4ed8;
+  }
+
+  .badge.overall {
+    background: #dcfce7;
+    color: #15803d;
+  }
+
+  .badge.taste {
+    background: #fef9c3;
+    color: #854d0e;
+  }
+
+  @media (max-width: 600px) {
+    .picks-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

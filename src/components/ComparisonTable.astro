@@ -3,16 +3,26 @@ interface Row {
   label: string;
   a: string;
   b: string;
-  winner?: "a" | "b" | "tie";
+  c?: string;
+  d?: string;
+  winner?: "a" | "b" | "c" | "d" | "tie";
 }
 
 interface Props {
   nameA: string;
   nameB: string;
+  nameC?: string;
+  nameD?: string;
   rows: Row[];
 }
 
-const { nameA, nameB, rows } = Astro.props;
+const { nameA, nameB, nameC, nameD, rows } = Astro.props;
+const cols = [
+  { key: "a", name: nameA,  cls: "a" },
+  { key: "b", name: nameB,  cls: "b" },
+  ...(nameC ? [{ key: "c", name: nameC, cls: "c" }] : []),
+  ...(nameD ? [{ key: "d", name: nameD, cls: "d" }] : []),
+] as const;
 ---
 
 <div class="comparison-wrap">
@@ -20,22 +30,25 @@ const { nameA, nameB, rows } = Astro.props;
     <thead>
       <tr>
         <th class="label-col"></th>
-        <th class="product-col a">{nameA}</th>
-        <th class="product-col b">{nameB}</th>
+        {cols.map((col) => (
+          <th class={`product-col ${col.cls}`}>{col.name}</th>
+        ))}
       </tr>
     </thead>
     <tbody>
       {rows.map((row) => (
         <tr>
           <td class="label">{row.label}</td>
-          <td class={`val ${row.winner === "a" ? "win" : ""}`}>
-            {row.winner === "a" && <span class="win-dot" aria-label="winner" />}
-            {row.a}
-          </td>
-          <td class={`val ${row.winner === "b" ? "win" : ""}`}>
-            {row.winner === "b" && <span class="win-dot" aria-label="winner" />}
-            {row.b}
-          </td>
+          {cols.map((col) => {
+            const val = row[col.key as keyof Row] as string | undefined;
+            const isWinner = row.winner === col.key;
+            return (
+              <td class={`val${isWinner ? " win" : ""}`}>
+                {isWinner && <span class="win-dot" aria-label="winner" />}
+                {val ?? "—"}
+              </td>
+            );
+          })}
         </tr>
       ))}
     </tbody>
@@ -70,25 +83,13 @@ const { nameA, nameB, rows } = Astro.props;
     border-bottom: 2px solid #e2e8f0;
   }
 
-  th.a {
-    background: #eff6ff;
-    color: #1d4ed8;
-    border-bottom-color: #1d4ed8;
-  }
+  th.a { background: #eff6ff; color: #1d4ed8; border-bottom-color: #1d4ed8; }
+  th.b { background: #fefce8; color: #854d0e; border-bottom-color: #ca8a04; }
+  th.c { background: #f0fdf4; color: #15803d; border-bottom-color: #16a34a; }
+  th.d { background: #fdf4ff; color: #7e22ce; border-bottom-color: #9333ea; }
 
-  th.b {
-    background: #fefce8;
-    color: #854d0e;
-    border-bottom-color: #ca8a04;
-  }
-
-  .label-col {
-    width: 38%;
-  }
-
-  .product-col {
-    width: 31%;
-  }
+  .label-col  { width: 28%; }
+  .product-col { width: auto; }
 
   td {
     padding: 0.65rem 1rem;
@@ -103,9 +104,7 @@ const { nameA, nameB, rows } = Astro.props;
     font-size: 0.85rem;
   }
 
-  td.val {
-    color: #1e293b;
-  }
+  td.val { color: #1e293b; }
 
   td.win {
     background: #f0fdf4;
@@ -125,17 +124,9 @@ const { nameA, nameB, rows } = Astro.props;
     top: -1px;
   }
 
-  tbody tr:last-child td {
-    border-bottom: none;
-  }
-
-  tbody tr:hover td {
-    background: #f8fafc;
-  }
-
-  tbody tr:hover td.win {
-    background: #dcfce7;
-  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover td      { background: #f8fafc; }
+  tbody tr:hover td.win  { background: #dcfce7; }
 
   .legend {
     font-size: 0.75rem;

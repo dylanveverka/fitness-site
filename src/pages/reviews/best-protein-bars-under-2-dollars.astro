@@ -1,0 +1,535 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Protein Bars Under $2 (2025) — Cheap Picks That Actually Taste Good";
+const description =
+  "The best protein bars under $2 for college students who want a quick high-protein snack without spending $3-4 per bar.";
+const pubDate = "2026-04-16";
+const slug = "best-protein-bars-under-2-dollars";
+
+const questUrl    = "https://www.amazon.com/s?k=quest+protein+bars&tag=dveverka-20";
+const oneUrl      = "https://www.amazon.com/s?k=one+protein+bars&tag=dveverka-20";
+const pureUrl     = "https://www.amazon.com/s?k=pure+protein+bars&tag=dveverka-20";
+const kirklandUrl = "https://www.amazon.com/s?k=kirkland+protein+bars&tag=dveverka-20";
+
+const tableRows = [
+  {
+    label: "Price per bar (bulk)",
+    a: "~$1.75–2.00",
+    b: "~$1.75–2.00",
+    c: "~$1.20–1.50",
+    d: "~$1.20–1.40",
+    winner: "d",
+  },
+  {
+    label: "Protein per bar",
+    a: "20–21g",
+    b: "20g",
+    c: "20g",
+    d: "21g",
+    winner: "tie",
+  },
+  {
+    label: "Calories",
+    a: "170–210",
+    b: "220–230",
+    c: "180–200",
+    d: "190",
+    winner: "a",
+  },
+  {
+    label: "Sugar",
+    a: "1g",
+    b: "1g",
+    c: "3–5g",
+    d: "8g",
+    winner: "a",
+  },
+  {
+    label: "Best flavor",
+    a: "Chocolate Chip Cookie Dough",
+    b: "Birthday Cake",
+    c: "Chocolate Deluxe",
+    d: "Chocolate Chip Cookie Dough",
+    winner: "b",
+  },
+];
+
+const pros = [
+  "20g+ protein in a wrapper you can eat one-handed between classes — no prep, no dishes",
+  "Only 1g of sugar per bar, making it one of the cleanest macro profiles in the category",
+  "Available at Walmart, Target, Amazon, and most gas stations — genuinely easy to find",
+  "Huge flavor variety (20+) so you're not eating the same thing every day",
+  "Fiber content (14g) adds satiety that most protein bars skip entirely",
+];
+
+const cons = [
+  "Sugar alcohols (erythritol) cause digestive issues for some people — especially if you eat multiple bars in a day",
+  "Texture can be chalky in certain flavors; the soft-baked varieties are significantly better",
+  "At $1.75–2.00 per bar, they're at the top of this price range — Kirkland undercuts them meaningfully",
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <section>
+      <p>
+        The campus convenience store charges $3.50 for a single protein bar. The coffee shop
+        near the gym wants $4. Meanwhile, the same bar — same brand, same flavor, same wrapper
+        — costs $1.75 when you buy a box of 12 on Amazon. That markup is not subtle, and once
+        you see it you can't unsee it.
+      </p>
+      <p>
+        Protein bars are legitimately useful: 20g of protein in your backpack that requires
+        zero refrigeration and zero prep. The problem isn't the product — it's the price when
+        you buy them one at a time at the wrong place. Buy in bulk, buy the right brands, and
+        the same snack drops from a $3.50 impulse buy into a $1.50 staple. Here are the four
+        best options that stay under $2 a bar when bought smart.
+      </p>
+    </section>
+
+    <!-- Quick Verdict Box -->
+    <div class="verdict-box">
+      <h2>Our Top Picks at a Glance</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-badge">Best Overall</span>
+          <p class="pick-name">Quest Bars</p>
+          <p class="pick-detail">20g protein · 1g sugar · ~$1.75–2.00</p>
+          <a href={questUrl} target="_blank" rel="noopener noreferrer sponsored" class="pick-link">
+            View on Amazon →
+          </a>
+        </div>
+        <div class="pick-card">
+          <span class="pick-badge taste">Best Taste</span>
+          <p class="pick-name">ONE Bars</p>
+          <p class="pick-detail">20g protein · 1g sugar · ~$1.75–2.00</p>
+          <a href={oneUrl} target="_blank" rel="noopener noreferrer sponsored" class="pick-link">
+            View on Amazon →
+          </a>
+        </div>
+        <div class="pick-card">
+          <span class="pick-badge budget">Best Budget</span>
+          <p class="pick-name">Pure Protein Bars</p>
+          <p class="pick-detail">20g protein · 3–5g sugar · ~$1.20–1.50</p>
+          <a href={pureUrl} target="_blank" rel="noopener noreferrer sponsored" class="pick-link">
+            View on Amazon →
+          </a>
+        </div>
+        <div class="pick-card">
+          <span class="pick-badge bulk">Best Bulk Value</span>
+          <p class="pick-name">Kirkland Protein Bars</p>
+          <p class="pick-detail">21g protein · 8g sugar · ~$1.20–1.40</p>
+          <a href={kirklandUrl} target="_blank" rel="noopener noreferrer sponsored" class="pick-link">
+            View on Amazon →
+          </a>
+        </div>
+      </div>
+      <p class="disclosure">
+        <small>As an Amazon Associate I earn from qualifying purchases.</small>
+      </p>
+    </div>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <div class="product-section">
+        <h3><span class="badge overall">Best Overall</span> Quest Bars</h3>
+        <p>
+          Quest has been the benchmark protein bar since the early 2010s, and the formula
+          holds up. Each bar delivers <strong>20–21g of protein</strong> at just
+          <strong>170–210 calories</strong> with only <strong>1g of sugar</strong> — that
+          ratio is genuinely hard to beat in a shelf-stable snack. The high fiber content
+          (14g, mostly from soluble corn fiber) adds satiety that most competitors skip.
+        </p>
+        <p>
+          <strong>Best flavors:</strong> Chocolate Chip Cookie Dough and Double Chocolate
+          Chunk are the consistent top performers. The soft-baked line (Chocolate Chip,
+          Peanut Butter) has a noticeably better texture than the original bars and is worth
+          trying if you've written off Quest based on older versions.
+        </p>
+        <p>
+          <strong>The caveat:</strong> erythritol, the sugar alcohol Quest uses, causes
+          digestive discomfort for some people. One bar is usually fine; two in a short
+          window can cause issues for sensitive stomachs. Know your tolerance before committing
+          to a box of 12.
+        </p>
+        <p>
+          <strong>Cost per bar:</strong> $1.75–2.00 in a 12-pack on Amazon or at Walmart.
+          Not the cheapest on this list, but the macro profile justifies the small premium
+          over Pure Protein.
+        </p>
+
+        <h4>Pros & Cons</h4>
+        <ProsConsList pros={pros} cons={cons} />
+        <AffiliateButton href={questUrl} label="Buy Quest Bars on Amazon" />
+      </div>
+
+      <div class="product-section">
+        <h3><span class="badge taste">Best Taste</span> ONE Bars</h3>
+        <p>
+          ONE Bars are the pick for people who've been disappointed by protein bar taste too
+          many times. The texture is softer and more candy-bar-adjacent than Quest, and the
+          flavor execution is more consistent across the lineup. <strong>Birthday Cake</strong>
+          is the flagship for a reason — it tastes like actual birthday cake in a way that
+          sounds like marketing until you try it. Maple Glazed Doughnut and Peanut Butter Pie
+          are close seconds.
+        </p>
+        <p>
+          <strong>Macros per bar:</strong> 220–230 calories, 20g protein, 1g sugar, 10g fat.
+          Slightly higher in calories and fat than Quest, which is the trade-off for the richer
+          texture and taste. Still a clean bar — 1g sugar, whey protein as the primary source,
+          no proprietary blends.
+        </p>
+        <p>
+          <strong>Cost per bar:</strong> $1.75–2.00 in a 12-pack, comparable to Quest.
+          Widely available at Target, Walmart, and Amazon. Flavors go on sale frequently —
+          worth checking Amazon Subscribe & Save if you find one you like.
+        </p>
+        <p>
+          <strong>Best for:</strong> Students who prioritize taste consistency and have
+          struggled to stick to protein bars because most of them taste mediocre.
+        </p>
+      </div>
+
+      <div class="product-section">
+        <h3><span class="badge budget">Best Budget</span> Pure Protein Bars</h3>
+        <p>
+          Pure Protein is the budget play on this list. At <strong>$1.20–1.50 per bar</strong>
+          in a 6-pack from Walmart, it's meaningfully cheaper than Quest or ONE while still
+          hitting 20g of protein. For a student who eats one bar every day, that's $20–30
+          in annual savings versus the premium options — enough to buy an extra tub of creatine.
+        </p>
+        <p>
+          <strong>Macros per bar:</strong> 180–200 calories, 20g protein, 3–5g sugar, 5–6g fat.
+          The slightly higher sugar count (3–5g vs. 1g in Quest and ONE) comes from the coating
+          — Pure Protein bars are chocolate-dipped, which drives the taste and the small sugar bump.
+        </p>
+        <p>
+          <strong>Best flavors:</strong> Chocolate Deluxe and Chocolate Peanut Butter are the
+          most consistent. The texture is denser and chewier than Quest — some people prefer
+          it, some don't. It's worth buying a single bar at a gas station before committing
+          to a multipack.
+        </p>
+        <p>
+          <strong>Best for:</strong> Students focused purely on cost-per-gram of protein who
+          don't need the cleanest possible sugar count.
+        </p>
+      </div>
+
+      <div class="product-section">
+        <h3><span class="badge bulk">Best Bulk Value</span> Kirkland Protein Bars (Costco)</h3>
+        <p>
+          If you have Costco access — or a parent who does — Kirkland protein bars are the
+          best per-bar value on this list. A 20-count box runs around $25–28, putting the
+          per-bar cost at <strong>$1.25–1.40</strong>. The bars themselves are essentially
+          equivalent to Quest in structure: whey protein base, 21g protein, similar calorie
+          profile, similar texture.
+        </p>
+        <p>
+          <strong>Macros per bar:</strong> 190 calories, 21g protein, 8g sugar, 7g fat. The
+          higher sugar (8g vs. 1g in Quest) is the main trade-off. For cutting, that's worth
+          paying attention to. For bulking or maintenance, it's a rounding error.
+        </p>
+        <p>
+          <strong>Best flavors:</strong> Chocolate Chip Cookie Dough and Cookies & Cream are
+          consistently rated the best in the box. The variety pack is worth buying on your
+          first Costco run to identify which ones you'll actually finish.
+        </p>
+        <p>
+          <strong>The catch:</strong> Costco membership or access required. If you're already
+          shopping there, this is a no-brainer. If you'd need to make a special trip, the
+          per-bar savings over Quest or Pure Protein don't justify it.
+        </p>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Quest"
+        nameB="ONE Bar"
+        nameC="Pure Protein"
+        nameD="Kirkland"
+        rows={tableRows}
+      />
+    </section>
+
+    <!-- Where to buy cheapest -->
+    <section>
+      <h2>Where to Buy Them Cheapest</h2>
+      <p>
+        The same bar has a radically different price depending on where you buy it. Here's
+        the hierarchy from cheapest to most expensive:
+      </p>
+      <ul>
+        <li>
+          <strong>Costco (Kirkland bars specifically):</strong> The lowest per-bar price
+          available if you have access. $1.25–1.40 per bar on a 20-count box beats everything.
+        </li>
+        <li>
+          <strong>Amazon Subscribe & Save:</strong> Locks in 5–15% off list price and ships
+          on a schedule so you never run out. For Quest and ONE, this is consistently the
+          cheapest option without a warehouse membership. Set it for monthly delivery and
+          forget about it.
+        </li>
+        <li>
+          <strong>Walmart in-store or online:</strong> Price-matches Amazon on most popular
+          flavors and is available same-day. Good for restocking mid-week without waiting
+          for shipping.
+        </li>
+        <li>
+          <strong>GNC or Vitamin Shoppe sales:</strong> Both run buy-one-get-one or 40%
+          off sales on protein bars regularly. Not worth paying full price, but if you
+          catch a sale, stock up — bars have a long shelf life.
+        </li>
+        <li>
+          <strong>Campus store, gym vending machine, coffee shop:</strong> Avoid entirely
+          unless it's an emergency. You're paying a 50–100% markup for the convenience of
+          not having planned ahead.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Who should buy -->
+    <section>
+      <h2>Who Should Buy Protein Bars</h2>
+      <ul>
+        <li>
+          <strong>Students who consistently miss protein targets between meals.</strong>
+          A bar in your backpack is a 20g protein insurance policy for the days when
+          lunch didn't happen and dinner is three hours away.
+        </li>
+        <li>
+          <strong>Anyone who needs something that travels without refrigeration.</strong>
+          Chicken and rice doesn't fit in a lecture hall. A protein bar does.
+        </li>
+        <li>
+          <strong>People who find liquid protein shakes unappealing.</strong> Some people
+          hate drinking their protein. Chewing it is a legitimate alternative with the
+          same macro result.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Who should skip -->
+    <section>
+      <h2>Who Should Skip Protein Bars</h2>
+      <ul>
+        <li>
+          <strong>Students sensitive to sugar alcohols.</strong> Quest and ONE bars use
+          erythritol. If you're prone to digestive issues, test with one bar before buying
+          a 12-pack. Pure Protein and Kirkland don't use erythritol and are gentler options.
+        </li>
+        <li>
+          <strong>People trying to use bars as full meal replacements.</strong> A 200-calorie
+          bar is a snack, not a meal. If you're skipping lunch and calling a Quest bar adequate,
+          you're underfeeding yourself. Use bars to supplement meals, not substitute them.
+        </li>
+        <li>
+          <strong>Anyone who can just eat real food.</strong> Eggs, cottage cheese, Greek
+          yogurt, and chicken are cheaper per gram of protein than any bar. Bars win on
+          convenience, not on value. If you have food available, eat the food.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        Don't buy protein bars one at a time from the campus store. That's the entire lesson.
+        A box of 12 Quest bars on Amazon costs roughly what three single bars cost at a
+        convenience store, and the macro profile is identical.
+      </p>
+      <p>
+        For most college students, <strong>Quest Bars</strong> are the right default —
+        consistent macros, huge flavor variety, available everywhere, and under $2 a bar
+        when bought in a box. If taste is your priority, ONE Bars are worth the same price.
+        If you're on a tighter budget, Pure Protein gets you the same protein for 30–40
+        cents less per bar. And if someone in your life has a Costco card, the Kirkland bars
+        are the move.
+      </p>
+      <AffiliateButton
+        href={questUrl}
+        label="Buy Quest Bars on Amazon"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    margin: 1.75rem 0 0.5rem;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  h4 {
+    font-size: 1rem;
+    margin: 1.5rem 0 0.5rem;
+    color: #1e293b;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Verdict box */
+  .verdict-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #7c3aed;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    margin-top: 0;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #0f172a;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .pick-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    padding: 1rem;
+  }
+
+  .pick-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: #ede9fe;
+    color: #6d28d9;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .pick-badge.taste  { background: #fef9c3; color: #854d0e; }
+  .pick-badge.budget { background: #dcfce7; color: #15803d; }
+  .pick-badge.bulk   { background: #dbeafe; color: #1d4ed8; }
+
+  .pick-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin: 0.4rem 0 0.2rem;
+    color: #0f172a;
+    line-height: 1.35;
+  }
+
+  .pick-detail {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0 0 0.5rem;
+  }
+
+  .pick-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #7c3aed;
+    text-decoration: none;
+  }
+
+  .pick-link:hover { text-decoration: underline; }
+
+  .disclosure {
+    color: #64748b;
+    font-size: 0.78rem;
+    margin: 0.75rem 0 0;
+  }
+
+  /* Product sections */
+  .product-section {
+    border-top: 2px solid #e2e8f0;
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  /* Badges */
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+  }
+
+  .badge.overall { background: #ede9fe; color: #6d28d9; }
+  .badge.taste   { background: #fef9c3; color: #854d0e; }
+  .badge.budget  { background: #dcfce7; color: #15803d; }
+  .badge.bulk    { background: #dbeafe; color: #1d4ed8; }
+
+  @media (max-width: 500px) {
+    .picks-grid { grid-template-columns: 1fr; }
+  }
+</style>
