@@ -1,0 +1,676 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Barbell for Home Gym Under $300 (2025)";
+const description =
+  "A barbell is the single best piece of equipment you can buy for building strength. Here are the best budget barbells for a home gym under $300.";
+const pubDate = "2026-04-17";
+const slug = "best-barbell-home-gym-under-300";
+
+const rogueUrl  = "https://www.amazon.com/s?k=rogue+ohio+barbell&tag=dveverka-20";
+const capUrl    = "https://www.amazon.com/s?k=cap+barbell+olympic+bar&tag=dveverka-20";
+const titanUrl  = "https://www.amazon.com/s?k=titan+fitness+olympic+barbell&tag=dveverka-20";
+
+const titanPros = [
+  "At ~$200 the Titan hits a quality tier that costs $100+ more from other brands — 190,000 PSI tensile strength, medium-depth knurl, and bronze bushing sleeve rotation all show up on bars priced $250–350 everywhere else, which means the Titan is genuinely underpriced relative to what it delivers",
+  "The knurl pattern is well-executed for general strength training — aggressive enough to grip confidently under a heavy squat or deadlift without being so sharp it tears up your hands during high-rep work or overhead pressing",
+  "Sleeve rotation on the bronze bushings is smooth enough for Olympic lifting movements (cleans, snatches) while still being affordable — needle bearing bars at this price tier tend to have quality-control issues that bronze bushings don't",
+  "Titan offers a legitimate warranty (one year on most bars, lifetime on some models) — not a throwaway budget product where the manufacturer disappears after purchase",
+  "The bar's moderate whip makes it versatile across squat, bench, and deadlift without needing separate specialty bars — useful for home gyms where buying a dedicated squat bar, bench bar, and deadlift bar isn't practical",
+];
+
+const titanCons = [
+  "Titan's quality control is inconsistent between production runs — some bars arrive with smooth, even knurl and straight shafts; others have minor cosmetic issues or slightly uneven knurl depth. The product is generally solid, but it's not the 100% consistency you'd get from Rogue at twice the price.",
+  "The finish (typically bare steel or a basic coating) requires maintenance in humid environments — bare steel barbells rust if left without a light coat of oil in a garage or basement gym with temperature and humidity fluctuation. This isn't unique to Titan, but it's a real ownership consideration.",
+  "Availability fluctuates — Titan occasionally sells out popular models for weeks at a time, and third-party Amazon sellers sometimes list Titan bars at inflated prices. Buying direct from Titan's website when in stock is usually cheaper and more reliable than Amazon.",
+];
+
+const comparisonRows = [
+  { feature: "Price", nameA: "Rogue Ohio Bar", nameB: "CAP Olympic Bar", nameC: "Titan Barbell", valueA: "~$295", valueB: "~$100", valueC: "~$200", winner: "B" },
+  { feature: "Tensile Strength", nameA: "Rogue Ohio Bar", nameB: "CAP Olympic Bar", nameC: "Titan Barbell", valueA: "190,000 PSI", valueB: "~130,000 PSI", valueC: "190,000 PSI", winner: "" },
+  { feature: "Knurl", nameA: "Rogue Ohio Bar", nameB: "CAP Olympic Bar", nameC: "Titan Barbell", valueA: "Medium-aggressive", valueB: "Mild", valueC: "Medium", winner: "A" },
+  { feature: "Sleeve Rotation", nameA: "Rogue Ohio Bar", nameB: "CAP Olympic Bar", nameC: "Titan Barbell", valueA: "Bronze bushings", valueB: "Basic bushings", valueC: "Bronze bushings", winner: "A" },
+  { feature: "Weight Capacity", nameA: "Rogue Ohio Bar", nameB: "CAP Olympic Bar", nameC: "Titan Barbell", valueA: "1,500 lbs", valueB: "~300 lbs", valueC: "1,000+ lbs", winner: "A" },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        If you want to squat, bench, and deadlift heavy, you need a barbell. Not a Smith
+        machine, not a set of dumbbells, not a cable attachment — a barbell. It's the tool
+        that lets you load a movement progressively over years, across the three most
+        productive strength exercises in existence. Nothing else in a home gym covers
+        that ground at anywhere close to the same price-to-result ratio.
+      </p>
+      <p>
+        The problem is that the barbell market ranges from $80 junk that bends under a
+        working set to $800 competition bars built for world-record attempts. Under $300,
+        there are exactly three options worth recommending — and the right one depends on
+        how seriously you're building out your home gym. Here's how to decide without
+        wasting money on the wrong one.
+      </p>
+    </section>
+
+    <!-- Verdict Box -->
+    <div class="verdict-box">
+      <h2>Quick Picks</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-label">Best Overall</span>
+          <a href={rogueUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Rogue Ohio Bar
+          </a>
+          <p>190k PSI tensile strength, medium-aggressive knurl, bronze bushings. The bar serious home gym lifters buy once and keep forever.</p>
+          <span class="pick-price">~$295</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Budget</span>
+          <a href={capUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            CAP Barbell Olympic Bar
+          </a>
+          <p>Gets the job done for beginners under $150. Mild knurl, basic bushings, adequate for learning the movements.</p>
+          <span class="pick-price">~$100</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Value</span>
+          <a href={titanUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Titan Fitness Olympic Barbell
+          </a>
+          <p>190k PSI steel, medium knurl, bronze bushings — Rogue-tier specs at $100 less. The sweet spot for most home gym builders.</p>
+          <span class="pick-price">~$200</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- What makes a good barbell -->
+    <section>
+      <h2>What Makes a Good Barbell?</h2>
+      <p>
+        Most people buying their first bar focus on price. The three specs that actually
+        determine whether a bar is good — or whether it bends, strips your palms, or
+        dumps weight off the sleeves mid-lift — are tensile strength, knurl pattern,
+        and sleeve rotation.
+      </p>
+      <div class="spec-explainer-grid">
+        <div class="spec-explainer-card">
+          <h4>Tensile Strength (PSI)</h4>
+          <p>How much force the steel can handle before permanently bending. Budget bars start around 100,000–130,000 PSI and will visibly flex and eventually stay bent under heavy loads. Quality bars start at 190,000 PSI. If you're planning to deadlift 300+ lbs, tensile strength is not optional — it's the difference between a bar that lasts years and one that becomes a doorstop.</p>
+        </div>
+        <div class="spec-explainer-card">
+          <h4>Knurl Pattern</h4>
+          <p>The crosshatch pattern cut into the shaft that lets you grip the bar. Too mild and the bar slips during heavy pulls and squats. Too aggressive and it strips skin during high-rep work or long sessions. Medium knurl (like the Titan and Rogue Ohio) works across all three powerlifting movements without specializing in any one. Avoid bars described as "smooth" — it means the knurl is minimal or absent.</p>
+        </div>
+        <div class="spec-explainer-card">
+          <h4>Sleeve Rotation</h4>
+          <p>How freely the sleeves (the ends where plates load) spin. Bronze bushings give smooth rotation at low cost — adequate for powerlifting and general strength work. Needle bearings give nearly frictionless rotation — necessary for Olympic weightlifting movements (cleans, snatches) where the bar must spin quickly in your hands. Under $300, bronze bushings are the right call unless Olympic lifting is the primary focus.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Olympic vs standard -->
+    <section>
+      <h2>Olympic vs Standard Barbell — Always Buy Olympic</h2>
+      <p>
+        Standard barbells have 1-inch sleeves. Olympic barbells have 2-inch sleeves. This is
+        the only distinction that matters, and the answer is always Olympic.
+      </p>
+      <div class="bar-type-grid">
+        <div class="bar-type-card bar-standard">
+          <h3>Standard Bar (1-inch sleeves)</h3>
+          <ul>
+            <li>Cheaper — often $30–60 at big-box stores</li>
+            <li>Only compatible with 1-inch hole weight plates</li>
+            <li>Lower weight capacity — typically 200–300 lbs max</li>
+            <li>Not compatible with most home gym equipment (rack j-hooks, plate storage)</li>
+            <li>A dead end — when you outgrow it, none of the plates transfer to a real barbell</li>
+          </ul>
+          <p class="bar-verdict"><strong>Verdict:</strong> Don't buy one. The plates become useless if you ever upgrade.</p>
+        </div>
+        <div class="bar-type-card bar-olympic">
+          <h3>Olympic Bar (2-inch sleeves)</h3>
+          <ul>
+            <li>Compatible with all standard Olympic weight plates (the ones at every gym)</li>
+            <li>Higher weight capacity — quality bars handle 1,000+ lbs</li>
+            <li>Fits all power racks, squat stands, and bench press stations</li>
+            <li>Your plates carry over if you ever upgrade the bar</li>
+            <li>The universal standard — every barbell program is written assuming Olympic equipment</li>
+          </ul>
+          <p class="bar-verdict"><strong>Verdict:</strong> Always buy this. The $40 premium over a standard bar is the most important $40 you'll spend on your home gym.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How much to spend -->
+    <section>
+      <h2>How Much Should You Spend on a Barbell?</h2>
+      <p>
+        It depends on where you are in your training and how seriously you're building
+        the gym. Here's the honest breakdown by stage:
+      </p>
+      <div class="spend-grid">
+        <div class="spend-card">
+          <h4>Beginner (0–12 months lifting)</h4>
+          <p class="spend-range">$80–130 · CAP Olympic Bar</p>
+          <p>You're learning movement patterns, not maxing out. A CAP bar handles the loads you'll lift in year one and teaches you whether barbells belong in your long-term setup. Low financial commitment for high information value.</p>
+        </div>
+        <div class="spend-card">
+          <h4>Intermediate (1–3 years lifting)</h4>
+          <p class="spend-range">$175–225 · Titan Fitness</p>
+          <p>You're lifting real weight now and have confirmed barbell training is a permanent part of your routine. The Titan gives you competition-grade steel at a price that won't require a second job.</p>
+        </div>
+        <div class="spend-card">
+          <h4>Serious / Long-term</h4>
+          <p class="spend-range">$275–300 · Rogue Ohio Bar</p>
+          <p>You've decided this is your gym for the next decade and you want one bar that never needs replacing. The Rogue Ohio is that bar. Buy it once, maintain it, and you're done.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <h3>
+        <a href={rogueUrl} rel="noopener noreferrer sponsored">Rogue Ohio Bar</a>
+        — Best Overall
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Tensile strength:</strong> 190,000 PSI</span>
+        <span class="spec"><strong>Knurl:</strong> Medium-aggressive, dual knurl marks</span>
+        <span class="spec"><strong>Sleeve rotation:</strong> Bronze bushings</span>
+        <span class="spec"><strong>Weight capacity:</strong> 1,500 lbs</span>
+        <span class="spec"><strong>Finish options:</strong> Bare steel, black oxide, e-coat, stainless</span>
+        <span class="spec"><strong>Warranty:</strong> Lifetime shaft, one year sleeves</span>
+      </div>
+      <p>
+        The Rogue Ohio Bar has been the default recommendation for serious home gym
+        lifters for years — not because Rogue has the best marketing, but because the bar
+        delivers exactly what it promises at a price that's high but not unreasonable.
+        The 190,000 PSI tensile strength means it won't bend under loads you'll realistically
+        lift in a home gym. The medium-aggressive knurl is sharp enough to grip confidently
+        in a 500 lb deadlift and manageable enough for high-rep accessory work. The bronze
+        bushing sleeve rotation is smooth, consistent, and durable.
+      </p>
+      <p>
+        The finish choice matters for home gym use: bare steel looks great and feels premium
+        but rusts in humid garages without regular oil maintenance. The black oxide or
+        e-coat finishes add corrosion resistance at modest upcharge and are a better choice
+        for most non-climate-controlled spaces. The lifetime shaft warranty means Rogue
+        stands behind this bar for as long as you own it — something that matters on a
+        product you're planning to keep indefinitely.
+      </p>
+
+      <h3>
+        <a href={capUrl} rel="noopener noreferrer sponsored">CAP Barbell Olympic Bar</a>
+        — Best Budget
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Tensile strength:</strong> ~130,000 PSI</span>
+        <span class="spec"><strong>Knurl:</strong> Mild</span>
+        <span class="spec"><strong>Sleeve rotation:</strong> Basic bushings</span>
+        <span class="spec"><strong>Weight capacity:</strong> ~300 lbs</span>
+        <span class="spec"><strong>Finish:</strong> Chrome or black zinc</span>
+        <span class="spec"><strong>Warranty:</strong> Limited</span>
+      </div>
+      <p>
+        The CAP Olympic bar is the right bar for one specific situation: you're new to
+        barbell training, your current working sets are under 200 lbs, and you want to
+        start without a major investment while you confirm this is actually how you want
+        to train. At those loads and that stage, the CAP handles everything asked of it.
+        The mild knurl won't tear up beginner hands. The 2-inch sleeves are compatible
+        with all Olympic plates. The chrome finish is reasonably corrosion-resistant.
+      </p>
+      <p>
+        Where it breaks down: the ~130,000 PSI tensile strength is adequate for moderate
+        loads but will flex noticeably at 300+ lbs and is a real failure risk if you ever
+        load it to its stated 300 lb capacity regularly. The basic bushing rotation is
+        functional but rough compared to bronze bushings. The mild knurl becomes a grip
+        problem during heavy deadlifts without chalk or straps. For anyone progressing
+        past year one of barbell training, the CAP's limitations become the story.
+        Treat it as a starter bar, not a long-term investment.
+      </p>
+
+      <h3>
+        <a href={titanUrl} rel="noopener noreferrer sponsored">Titan Fitness Olympic Barbell</a>
+        — Best Value
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Tensile strength:</strong> 190,000 PSI</span>
+        <span class="spec"><strong>Knurl:</strong> Medium</span>
+        <span class="spec"><strong>Sleeve rotation:</strong> Bronze bushings</span>
+        <span class="spec"><strong>Weight capacity:</strong> 1,000+ lbs</span>
+        <span class="spec"><strong>Finish:</strong> Black oxide or bare steel</span>
+        <span class="spec"><strong>Warranty:</strong> One year (lifetime on some models)</span>
+      </div>
+      <p>
+        The Titan bar earns the "best value" label because it delivers Rogue-comparable
+        specs at $100 less — 190,000 PSI steel, bronze bushings, medium knurl, and
+        1,000+ lb capacity. For most home gym lifters, those specs are indistinguishable
+        in use from the Ohio Bar. The knurl depth is slightly less aggressive than the
+        Rogue, which some lifters prefer for mixed-use (powerlifting and Olympic movements)
+        and others consider a minor downgrade for heavy pulling.
+      </p>
+      <p>
+        The legitimate Rogue advantages at the extra $100: more consistent quality control,
+        a wider finish selection including stainless steel, and a lifetime shaft warranty.
+        The Titan has more production variance — most bars arrive in excellent condition,
+        but the occasional one has cosmetic issues or minor knurl inconsistencies. If that
+        variance is acceptable (and for most buyers it is), the Titan at $200 is the
+        rational buy. If you want certainty and are building a long-term setup, pay for
+        the Rogue.
+      </p>
+    </section>
+
+    <!-- What weight plates -->
+    <section>
+      <h2>What Weight Plates Do You Need?</h2>
+      <p>
+        A barbell without plates is a 45 lb warm-up bar. Here's a practical starting
+        plate setup for most beginners:
+      </p>
+      <div class="plates-grid">
+        <div class="plates-card">
+          <h4>Minimum Starter Setup</h4>
+          <ul>
+            <li>2x 45 lb plates — for deadlifts and squats at working weight</li>
+            <li>2x 25 lb plates — for bench press starting loads</li>
+            <li>2x 10 lb plates — for incremental loading</li>
+            <li>4x 5 lb plates — for small jumps between sets</li>
+          </ul>
+          <p class="plates-total">Total: ~255 lbs of plates · ~$150–200 for rubber bumpers or $80–120 for iron</p>
+        </div>
+        <div class="plates-card">
+          <h4>Plate Types to Know</h4>
+          <ul>
+            <li><strong>Cast iron:</strong> Cheapest, durable, loud on hard floors — best for garage gyms with rubber mats</li>
+            <li><strong>Rubber bumpers:</strong> Drop-safe, quieter, better for home use — costs more per pound but protects floors and equipment</li>
+            <li><strong>Calibrated competition:</strong> Precise weights, expensive — unnecessary for home gym use</li>
+          </ul>
+          <p class="plates-note">For a home gym on concrete or rubber flooring: cast iron plates are fine. For apartment use or if you plan to drop the bar: rubber bumper plates are worth the premium.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Rogue Ohio Bar"
+        nameB="CAP Olympic Bar"
+        nameC="Titan Barbell"
+        rows={comparisonRows}
+      />
+    </section>
+
+    <!-- Pros/Cons -->
+    <section>
+      <h2>Titan Fitness Olympic Barbell — Pros &amp; Cons</h2>
+      <ProsConsList pros={titanPros} cons={titanCons} />
+    </section>
+
+    <!-- Who should buy / skip -->
+    <section>
+      <h2>Who Should Buy the Titan Barbell</h2>
+      <p>
+        The Titan is for anyone who's past the beginner stage, has confirmed barbell training
+        is their primary strength modality, and wants competition-grade specs without the
+        Rogue price tag. If you're squatting, benching, and deadlifting regularly and your
+        working sets are climbing past 200 lbs, the CAP's limitations are real and the Titan
+        is the right upgrade. It's also the right call for anyone building out a first serious
+        home gym and wants to buy a bar they won't immediately want to replace.
+      </p>
+      <h2>Who Should Skip the Titan</h2>
+      <p>
+        Skip the Titan if you're brand new to barbell training — the CAP at $100 is more
+        appropriate for the loads and commitment level of year one. Also skip it if you want
+        zero quality-control uncertainty and long-term warranty coverage; pay for the Rogue
+        in that case. And skip the Titan (and every other bar in this roundup) if you're
+        primarily doing Olympic weightlifting — cleans and snatches benefit significantly
+        from needle bearing sleeves, which none of these bars have.
+      </p>
+    </section>
+
+    <!-- Final Verdict -->
+    <section class="final-verdict">
+      <h2>Final Verdict</h2>
+      <p>
+        For most people building a home gym: start with the CAP if you're new, move to the
+        Titan once you're committed, and buy the Rogue Ohio Bar when you're ready to stop
+        thinking about it. The Titan at $200 is the sweet spot — 190,000 PSI steel, bronze
+        bushings, and a medium knurl that handles squats, bench, and deadlifts without
+        compromise, at a price that leaves budget for plates, a rack, and everything else
+        a home gym needs. It's not a Rogue, but for the vast majority of home gym lifters
+        pushing sub-400 lb numbers, it performs like one.
+      </p>
+      <AffiliateButton
+        href={titanUrl}
+        text="Check Price on Amazon"
+        subtext="Best Value · 190k PSI Steel · ~$200"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  header h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+    color: #0f172a;
+  }
+
+  .meta {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0 0 2rem;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 1rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  h3 a {
+    color: #f97316;
+    text-decoration: none;
+  }
+
+  h3 a:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    color: #334155;
+    line-height: 1.75;
+    margin: 0 0 1rem;
+  }
+
+  /* Verdict Box */
+  .verdict-box {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    color: #f8fafc;
+    margin-bottom: 1.25rem;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .pick-card {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .pick-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f97316;
+  }
+
+  .pick-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #f8fafc;
+    text-decoration: none;
+    line-height: 1.3;
+  }
+
+  .pick-title:hover {
+    color: #f97316;
+  }
+
+  .pick-card p {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .pick-price {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #4ade80;
+    margin-top: auto;
+  }
+
+  /* Spec Row */
+  .spec-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    background: #f8fafc;
+    border-left: 3px solid #f97316;
+    padding: 0.75rem 1rem;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 1rem;
+  }
+
+  .spec {
+    font-size: 0.82rem;
+    color: #475569;
+  }
+
+  /* Spec Explainer Grid */
+  .spec-explainer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .spec-explainer-card {
+    background: #0f172a;
+    border-radius: 8px;
+    padding: 1.1rem;
+  }
+
+  .spec-explainer-card h4 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #f97316;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .spec-explainer-card p {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Bar Type Grid */
+  .bar-type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .bar-type-card {
+    border-radius: 8px;
+    padding: 1.25rem;
+    border-top: 4px solid transparent;
+  }
+
+  .bar-standard {
+    background: #fef2f2;
+    border-top-color: #ef4444;
+  }
+
+  .bar-olympic {
+    background: #f0fdf4;
+    border-top-color: #22c55e;
+  }
+
+  .bar-type-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.75rem;
+  }
+
+  .bar-type-card ul {
+    margin: 0 0 0.75rem;
+    padding-left: 1.2rem;
+  }
+
+  .bar-type-card li {
+    font-size: 0.85rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+
+  .bar-verdict {
+    font-size: 0.82rem;
+    color: #475569;
+    margin: 0;
+    font-style: italic;
+  }
+
+  /* Spend Grid */
+  .spend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .spend-card {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 1.1rem;
+  }
+
+  .spend-card h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #f97316;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.3rem;
+  }
+
+  .spend-range {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #4ade80;
+    margin: 0 0 0.5rem;
+  }
+
+  .spend-card p:last-child {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Plates Grid */
+  .plates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .plates-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+
+  .plates-card h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.75rem;
+  }
+
+  .plates-card ul {
+    margin: 0 0 0.75rem;
+    padding-left: 1.2rem;
+  }
+
+  .plates-card li {
+    font-size: 0.84rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+
+  .plates-total {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #475569;
+    margin: 0;
+  }
+
+  .plates-note {
+    font-size: 0.78rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Final Verdict */
+  .final-verdict {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+
+  .final-verdict h2 {
+    color: #c2410c;
+  }
+</style>
