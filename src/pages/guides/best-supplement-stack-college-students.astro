@@ -1,0 +1,711 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+
+const title = "Best Supplement Stack for College Students on a Budget (2025)";
+const description =
+  "Stop wasting money on supplements you don't need. Here's the exact supplement stack college students should build — ranked by priority and total monthly cost.";
+const pubDate = "2026-04-17";
+const slug = "best-supplement-stack-college-students";
+
+const creatineUrl  = "https://www.amazon.com/s?k=optimum+nutrition+creatine+monohydrate&tag=dveverka-20";
+const wheyUrl      = "https://www.amazon.com/s?k=optimum+nutrition+gold+standard+whey&tag=dveverka-20";
+const magUrl       = "https://www.amazon.com/s?k=magnesium+glycinate+supplement&tag=dveverka-20";
+const vitDUrl      = "https://www.amazon.com/s?k=vitamin+d3+supplement+5000iu&tag=dveverka-20";
+const fishOilUrl   = "https://www.amazon.com/s?k=omega+3+fish+oil+supplement&tag=dveverka-20";
+const preworkoutUrl = "https://www.amazon.com/s?k=c4+pre+workout+powder&tag=dveverka-20";
+---
+
+<Layout {title} {description} canonicalUrl={`/guides/${slug}`}>
+  <article class="guide">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        The average gym-goer spends $100–150 a month on supplements. A meaningful percentage of
+        that money goes to products with weak evidence, proprietary blends full of underdosed
+        ingredients, and marketing-driven formulas that cost three times what the raw ingredients
+        are worth. College students — already budgeting carefully — are one of the most aggressively
+        targeted demographics in the supplement industry.
+      </p>
+      <p>
+        This guide cuts through it. The stack below is ranked strictly by the strength of evidence
+        and cost-effectiveness. Tier 1 is what you buy first and keep buying. Tier 2 is worth
+        adding once you have room in your budget. Tier 3 is optional. And the last section covers
+        the products that are actively not worth your money — knowing what to skip is just as
+        useful as knowing what to buy.
+      </p>
+    </section>
+
+    <!-- 3-Tier System -->
+    <section>
+      <h2>The 3-Tier Supplement Priority System</h2>
+      <p>
+        Build your stack in order. Don't jump to Tier 2 until Tier 1 is covered. Don't touch Tier
+        3 until you've been consistent with the first two for at least two months.
+      </p>
+
+      <div class="tier-stack">
+
+        <!-- Tier 1 -->
+        <div class="tier-block tier-1">
+          <div class="tier-header">
+            <span class="tier-badge">Tier 1</span>
+            <span class="tier-title">Must-Haves</span>
+            <span class="tier-cost">~$50/month</span>
+          </div>
+          <div class="tier-supplements">
+            <div class="supp-row">
+              <div class="supp-name">
+                <a href={creatineUrl} rel="noopener noreferrer sponsored">Creatine Monohydrate</a>
+              </div>
+              <div class="supp-cost">~$15/month</div>
+              <div class="supp-desc">The most research-backed supplement in fitness, period.</div>
+            </div>
+            <div class="supp-row">
+              <div class="supp-name">
+                <a href={wheyUrl} rel="noopener noreferrer sponsored">Whey Protein</a>
+              </div>
+              <div class="supp-cost">~$35/month</div>
+              <div class="supp-desc">Makes hitting your daily protein target practical.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tier 2 -->
+        <div class="tier-block tier-2">
+          <div class="tier-header">
+            <span class="tier-badge">Tier 2</span>
+            <span class="tier-title">Worth Adding</span>
+            <span class="tier-cost">+$40/month</span>
+          </div>
+          <div class="tier-supplements">
+            <div class="supp-row">
+              <div class="supp-name">
+                <a href={magUrl} rel="noopener noreferrer sponsored">Magnesium Glycinate</a>
+              </div>
+              <div class="supp-cost">~$15/month</div>
+              <div class="supp-desc">Sleep quality, recovery, and stress management.</div>
+            </div>
+            <div class="supp-row">
+              <div class="supp-name">
+                <a href={vitDUrl} rel="noopener noreferrer sponsored">Vitamin D3</a>
+              </div>
+              <div class="supp-cost">~$10/month</div>
+              <div class="supp-desc">Most college students are deficient — especially in winter.</div>
+            </div>
+            <div class="supp-row">
+              <div class="supp-name">
+                <a href={fishOilUrl} rel="noopener noreferrer sponsored">Omega-3 Fish Oil</a>
+              </div>
+              <div class="supp-cost">~$15/month</div>
+              <div class="supp-desc">Inflammation, joint health, and cardiovascular baseline.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="tier-block tier-3">
+          <div class="tier-header">
+            <span class="tier-badge">Tier 3</span>
+            <span class="tier-title">Nice to Have</span>
+            <span class="tier-cost">+$30/month</span>
+          </div>
+          <div class="tier-supplements">
+            <div class="supp-row">
+              <div class="supp-name">
+                <a href={preworkoutUrl} rel="noopener noreferrer sponsored">Pre-Workout (C4)</a>
+              </div>
+              <div class="supp-cost">~$20/month</div>
+              <div class="supp-desc">Mostly caffeine. Useful, but a $0.10 caffeine pill does the same thing.</div>
+            </div>
+            <div class="supp-row">
+              <div class="supp-name">BCAAs</div>
+              <div class="supp-cost">~$20/month</div>
+              <div class="supp-desc">Redundant if you're already hitting your protein target.</div>
+            </div>
+            <div class="supp-row">
+              <div class="supp-name">Casein Protein</div>
+              <div class="supp-cost">~$30/month</div>
+              <div class="supp-desc">Marginally useful as a slow-digesting pre-sleep protein.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Full Breakdowns -->
+    <section>
+      <h2>Full Breakdown: What Each Supplement Does</h2>
+
+      <div class="supp-detail">
+        <h3>
+          <a href={creatineUrl} rel="noopener noreferrer sponsored">Creatine Monohydrate</a>
+          <span class="detail-badge tier-1-badge">Tier 1</span>
+        </h3>
+        <div class="detail-grid">
+          <div><span class="detail-label">What it does</span> Creatine increases phosphocreatine stores in your muscles, which lets you produce more ATP during short bursts of high-intensity effort — an extra rep on a heavy set, a slightly faster sprint, faster recovery between sets. Over months of consistent use, that accumulation of extra work drives meaningful strength and muscle gains. A 2003 meta-analysis in the <em>Journal of Strength and Conditioning Research</em> covering over 200 studies found creatine monohydrate to be the most effective legal supplement for improving high-intensity exercise performance.</div>
+          <div class="detail-stats">
+            <div class="stat"><span class="stat-label">Dose</span><span class="stat-val">3–5g daily</span></div>
+            <div class="stat"><span class="stat-label">When</span><span class="stat-val">Any time — consistency matters more than timing</span></div>
+            <div class="stat"><span class="stat-label">Monthly cost</span><span class="stat-val">~$15</span></div>
+            <div class="stat"><span class="stat-label">Loading phase?</span><span class="stat-val">No — skip it, just take 5g daily</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="supp-detail">
+        <h3>
+          <a href={wheyUrl} rel="noopener noreferrer sponsored">Whey Protein (ON Gold Standard)</a>
+          <span class="detail-badge tier-1-badge">Tier 1</span>
+        </h3>
+        <div class="detail-grid">
+          <div><span class="detail-label">What it does</span> Whey protein is food — specifically, a fast-digesting complete protein derived from milk. Its job in a supplement stack is purely practical: dining hall meals often don't deliver enough protein to support muscle growth or preservation, and eating 150–180g of protein daily from whole food alone is harder than it sounds. A 25g shake fills the gap. Gold Standard Whey specifically is the benchmark for price-to-quality: 24g protein per serving, mixes well, widely available, and priced around $1.00–1.25 per serving when bought in bulk.</div>
+          <div class="detail-stats">
+            <div class="stat"><span class="stat-label">Dose</span><span class="stat-val">1–2 scoops (25–50g protein)</span></div>
+            <div class="stat"><span class="stat-label">When</span><span class="stat-val">Post-workout or anytime protein is low</span></div>
+            <div class="stat"><span class="stat-label">Monthly cost</span><span class="stat-val">~$35 (5lb bag lasts ~6 weeks)</span></div>
+            <div class="stat"><span class="stat-label">Skip if</span><span class="stat-val">Already hitting 0.8g/lb from food</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="supp-detail">
+        <h3>
+          <a href={magUrl} rel="noopener noreferrer sponsored">Magnesium Glycinate</a>
+          <span class="detail-badge tier-2-badge">Tier 2</span>
+        </h3>
+        <div class="detail-grid">
+          <div><span class="detail-label">What it does</span> Magnesium is involved in over 300 enzymatic processes including muscle relaxation, protein synthesis, and sleep regulation. Studies estimate 50–60% of Americans don't meet the daily recommended intake, and college students — who eat irregularly and are under chronic stress — are particularly prone to subclinical deficiency. The glycinate form (as opposed to oxide or citrate) has significantly better absorption and doesn't cause the digestive upset that magnesium is known for. Most people notice improved sleep quality and slightly less muscle soreness within two to three weeks.</div>
+          <div class="detail-stats">
+            <div class="stat"><span class="stat-label">Dose</span><span class="stat-val">300–400mg elemental magnesium</span></div>
+            <div class="stat"><span class="stat-label">When</span><span class="stat-val">Before bed — aids sleep quality</span></div>
+            <div class="stat"><span class="stat-label">Monthly cost</span><span class="stat-val">~$15</span></div>
+            <div class="stat"><span class="stat-label">Form matters?</span><span class="stat-val">Yes — glycinate over oxide or citrate</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="supp-detail">
+        <h3>
+          <a href={vitDUrl} rel="noopener noreferrer sponsored">Vitamin D3</a>
+          <span class="detail-badge tier-2-badge">Tier 2</span>
+        </h3>
+        <div class="detail-grid">
+          <div><span class="detail-label">What it does</span> Vitamin D functions more like a hormone than a vitamin — it regulates hundreds of genes involved in immune function, bone density, mood regulation, and testosterone production. Your body synthesizes it from sunlight exposure, which means college students who spend most of their time indoors (especially in northern climates from October through March) are frequently deficient. A 2011 study in the <em>Archives of Internal Medicine</em> found that 41.6% of U.S. adults were deficient. The D3 form is significantly more bioavailable than D2.</div>
+          <div class="detail-stats">
+            <div class="stat"><span class="stat-label">Dose</span><span class="stat-val">2,000–5,000 IU daily</span></div>
+            <div class="stat"><span class="stat-label">When</span><span class="stat-val">Morning with a meal containing fat</span></div>
+            <div class="stat"><span class="stat-label">Monthly cost</span><span class="stat-val">~$10</span></div>
+            <div class="stat"><span class="stat-label">Best paired with</span><span class="stat-val">Vitamin K2 (aids absorption)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="supp-detail">
+        <h3>
+          <a href={fishOilUrl} rel="noopener noreferrer sponsored">Omega-3 Fish Oil</a>
+          <span class="detail-badge tier-2-badge">Tier 2</span>
+        </h3>
+        <div class="detail-grid">
+          <div><span class="detail-label">What it does</span> Omega-3 fatty acids (EPA and DHA) have one of the strongest evidence bases of any supplement category for reducing systemic inflammation, improving cardiovascular markers, and supporting joint health under training load. They're also one of the most consistently underconsumed nutrients in the average American diet. For a college student lifting 3–4 days per week, fish oil's anti-inflammatory effects mean faster recovery and healthier joints over years of training — an investment in long-term function, not a short-term performance enhancer.</div>
+          <div class="detail-stats">
+            <div class="stat"><span class="stat-label">Dose</span><span class="stat-val">2–3g combined EPA+DHA daily</span></div>
+            <div class="stat"><span class="stat-label">When</span><span class="stat-val">With meals — reduces fishy burps</span></div>
+            <div class="stat"><span class="stat-label">Monthly cost</span><span class="stat-val">~$15</span></div>
+            <div class="stat"><span class="stat-label">Skip if</span><span class="stat-val">You eat fatty fish 3+ times per week</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="supp-detail">
+        <h3>
+          <a href={preworkoutUrl} rel="noopener noreferrer sponsored">Pre-Workout (C4)</a>
+          <span class="detail-badge tier-3-badge">Tier 3</span>
+        </h3>
+        <div class="detail-grid">
+          <div><span class="detail-label">What it does</span> Pre-workout's primary active ingredient is caffeine — typically 150–300mg per serving — along with beta-alanine (causes the tingling), and various other compounds in doses that are usually too low to do much. C4 is one of the better budget options because it doesn't hide its ingredient amounts. The honest take: a 200mg caffeine pill costs $0.10 and produces the same training benefit as a $2.00 pre-workout scoop. Pre-workout is convenient and tastes better, but it's a premium you're paying for packaging and flavoring, not superior performance.</div>
+          <div class="detail-stats">
+            <div class="stat"><span class="stat-label">Dose</span><span class="stat-val">1 scoop (150–200mg caffeine)</span></div>
+            <div class="stat"><span class="stat-label">When</span><span class="stat-val">20–30 min pre-workout, not after 2pm</span></div>
+            <div class="stat"><span class="stat-label">Monthly cost</span><span class="stat-val">~$20 (30 servings)</span></div>
+            <div class="stat"><span class="stat-label">Honest alternative</span><span class="stat-val">Caffeine pill + creatine = same effect</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Monthly cost breakdown -->
+    <section>
+      <h2>Total Monthly Cost Breakdown</h2>
+      <div class="cost-table-wrap">
+        <table class="cost-table">
+          <thead>
+            <tr>
+              <th>Stack</th>
+              <th>Supplements</th>
+              <th>Monthly Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="cost-t1">
+              <td><strong>Tier 1</strong></td>
+              <td>Creatine + Whey Protein</td>
+              <td><strong>~$50</strong></td>
+            </tr>
+            <tr class="cost-t2">
+              <td><strong>Tier 1 + 2</strong></td>
+              <td>+ Magnesium + Vitamin D + Fish Oil</td>
+              <td><strong>~$90</strong></td>
+            </tr>
+            <tr class="cost-t3">
+              <td><strong>Full Stack</strong></td>
+              <td>+ Pre-Workout</td>
+              <td><strong>~$110–120</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The Tier 1 + 2 stack at $90/month covers everything with meaningful evidence behind it.
+        The jump from Tier 2 to Tier 3 adds $20–30 for a pre-workout that's mostly caffeine.
+        Decide if that's worth it to you — for most students, it isn't.
+      </p>
+    </section>
+
+    <!-- What to buy first on $30 -->
+    <section>
+      <h2>What to Buy First If You Only Have $30/Month</h2>
+      <div class="budget-box">
+        <p>
+          Buy creatine. That's it.
+        </p>
+        <p>
+          A 500g tub of creatine monohydrate costs $15–20 and lasts three to four months at 5g per
+          day. You're looking at $5–7 per month for the most studied, most consistently effective
+          supplement available. Nothing else in the fitness industry comes close to that
+          cost-per-result ratio.
+        </p>
+        <p>
+          If you have $30, buy creatine and use the remaining $15 toward food — specifically
+          protein-dense dining hall staples like eggs, cottage cheese, and chicken. Real food
+          outperforms supplements at every price point. Supplements fill gaps in a good diet; they
+          don't replace one.
+        </p>
+        <AffiliateButton
+          href={creatineUrl}
+          text="Start With Creatine — Best ROI in Supplements"
+          subtext="~$15/month · 3–5g Daily · No Loading Phase"
+        />
+      </div>
+    </section>
+
+    <!-- Waste of money -->
+    <section>
+      <h2>Supplements That Are a Complete Waste of Money</h2>
+      <p>
+        The supplement industry is largely unregulated, which means a lot of products are sold
+        based on marketing rather than evidence. These are the ones to skip entirely:
+      </p>
+
+      <div class="waste-grid">
+        <div class="waste-card">
+          <h3>Testosterone Boosters</h3>
+          <p>
+            Every ingredient in these products either has no credible human evidence, is dosed far
+            below the amounts used in the studies that do exist, or affects testosterone levels so
+            marginally that it produces no measurable training benefit. They're marketed
+            aggressively to college-age males and priced at $40–60 per month. Save it.
+          </p>
+        </div>
+        <div class="waste-card">
+          <h3>Fat Burners</h3>
+          <p>
+            Fat burners are primarily caffeine and stimulants in proprietary blends with inflated
+            price tags. The caffeine does slightly increase metabolic rate — but you're paying
+            $40–60/month for an effect you can replicate with a $6 bottle of caffeine pills. The
+            rest of the ingredients (green tea extract, L-carnitine, CLA) have weak or
+            inconsistent evidence at realistic doses.
+          </p>
+        </div>
+        <div class="waste-card">
+          <h3>BCAAs (When You Already Eat Protein)</h3>
+          <p>
+            BCAAs are a subset of amino acids found in any complete protein source. If you're
+            eating enough protein — from food or whey — you're already getting all the BCAAs you
+            need. The only context where standalone BCAAs provide marginal benefit is fasted
+            training, and even then, a small amount of whole food protein before training is
+            more practical and cheaper.
+          </p>
+        </div>
+        <div class="waste-card">
+          <h3>Glutamine</h3>
+          <p>
+            Glutamine is aggressively marketed for muscle recovery and immune support. The problem:
+            glutamine is a non-essential amino acid your body produces on its own, and supplemental
+            glutamine is metabolized in the gut before it reaches muscle tissue in meaningful
+            amounts. Studies consistently show no benefit for strength or hypertrophy in people
+            eating adequate protein.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final section -->
+    <section>
+      <h2>Build the Stack in Order</h2>
+      <p>
+        The right way to approach supplements as a college student is to earn each tier. Start with
+        creatine and protein. Build the habit of taking them consistently. Add Tier 2 once Tier 1
+        is automatic. The students who see results aren't the ones who have the most comprehensive
+        stacks — they're the ones who take the same few things every day and train consistently.
+      </p>
+      <p>
+        Consistency with two supplements beats rotating through six every few months. Pick Tier 1,
+        stick with it, and add from there when your budget and consistency both support it.
+      </p>
+      <AffiliateButton
+        href={creatineUrl}
+        text="Shop ON Creatine Monohydrate"
+        subtext="#1 Priority — Most Evidence, Lowest Cost"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .guide {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-family: system-ui, sans-serif;
+    color: #1e293b;
+    line-height: 1.7;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  h3 a {
+    color: #ea580c;
+    text-decoration: none;
+  }
+
+  h3 a:hover {
+    text-decoration: underline;
+  }
+
+  .meta {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    color: #0f172a;
+  }
+
+  /* Tier Stack */
+  .tier-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.25rem;
+  }
+
+  .tier-block {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid;
+  }
+
+  .tier-1 { border-color: #ea580c; }
+  .tier-2 { border-color: #2563eb; }
+  .tier-3 { border-color: #64748b; }
+
+  .tier-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 1rem;
+    flex-wrap: wrap;
+  }
+
+  .tier-1 .tier-header { background: #fff7ed; }
+  .tier-2 .tier-header { background: #eff6ff; }
+  .tier-3 .tier-header { background: #f8fafc; }
+
+  .tier-badge {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+  }
+
+  .tier-1 .tier-badge { background: #ea580c; color: #fff; }
+  .tier-2 .tier-badge { background: #2563eb; color: #fff; }
+  .tier-3 .tier-badge { background: #64748b; color: #fff; }
+
+  .tier-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #0f172a;
+  }
+
+  .tier-cost {
+    margin-left: auto;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #475569;
+  }
+
+  .tier-supplements {
+    padding: 0.5rem 1rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .supp-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .supp-row:last-child { border-bottom: none; }
+
+  .supp-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #0f172a;
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .supp-name a {
+    color: #ea580c;
+    text-decoration: none;
+  }
+
+  .supp-name a:hover { text-decoration: underline; }
+
+  .supp-cost {
+    grid-row: 1;
+    grid-column: 2;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #475569;
+    white-space: nowrap;
+  }
+
+  .supp-desc {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    font-size: 0.82rem;
+    color: #64748b;
+  }
+
+  /* Supplement detail cards */
+  .supp-detail {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .detail-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.15rem 0.45rem;
+    border-radius: 999px;
+  }
+
+  .tier-1-badge { background: #fff7ed; color: #ea580c; border: 1px solid #fdba74; }
+  .tier-2-badge { background: #eff6ff; color: #2563eb; border: 1px solid #93c5fd; }
+  .tier-3-badge { background: #f8fafc; color: #64748b; border: 1px solid #cbd5e1; }
+
+  .detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .detail-grid { grid-template-columns: 1fr; }
+  }
+
+  .detail-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #94a3b8;
+    margin-bottom: 0.35rem;
+  }
+
+  .detail-grid > div:first-child {
+    font-size: 0.9rem;
+    color: #334155;
+    line-height: 1.65;
+  }
+
+  .detail-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    background: #f8fafc;
+    border-radius: 6px;
+    padding: 0.45rem 0.65rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+  }
+
+  .stat-val {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-top: 0.1rem;
+  }
+
+  /* Cost table */
+  .cost-table-wrap {
+    margin: 1rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+  }
+
+  .cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .cost-table thead tr {
+    background: #0f172a;
+    color: #e2e8f0;
+  }
+
+  .cost-table th {
+    text-align: left;
+    padding: 0.65rem 1rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
+  .cost-table td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: middle;
+  }
+
+  .cost-table tr:last-child td { border-bottom: none; }
+
+  .cost-t1 { background: #fff7ed; }
+  .cost-t2 { background: #eff6ff; }
+  .cost-t3 { background: #f8fafc; }
+
+  /* Budget box */
+  .budget-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .budget-box p {
+    color: #166534;
+    font-size: 0.95rem;
+  }
+
+  /* Waste cards */
+  .waste-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .waste-card {
+    background: #fff1f2;
+    border: 1px solid #fecdd3;
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+  }
+
+  .waste-card h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #9f1239;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .waste-card p {
+    font-size: 0.85rem;
+    color: #4c0519;
+    margin: 0;
+    line-height: 1.55;
+  }
+</style>
