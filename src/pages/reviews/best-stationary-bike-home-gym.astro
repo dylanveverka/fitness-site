@@ -1,0 +1,652 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Stationary Bike for Home Gym Under $800 (2025)";
+const description =
+  "The best stationary bikes for a home gym under $800 — all the cardio benefits of a Peloton without the $2500 price tag and monthly subscription.";
+const pubDate = "2026-04-17";
+const slug = "best-stationary-bike-home-gym";
+
+const schwinnUrl  = "https://www.amazon.com/s?k=schwinn+ic4+indoor+cycling+bike&tag=dveverka-20";
+const sunnyUrl    = "https://www.amazon.com/s?k=sunny+health+fitness+indoor+cycling+bike&tag=dveverka-20";
+const nordicUrl   = "https://www.amazon.com/s?k=nordictrack+s22i+studio+cycle&tag=dveverka-20";
+
+const schwinnPros = [
+  "100 magnetic resistance levels give you finer control over intensity than almost anything in this price range — the difference between level 40 and level 42 is subtle enough to hold a specific target wattage during structured training intervals in a way that 8-level bikes can't approximate",
+  "Dual-sided SPD/toe cage pedals accommodate both cycling shoes and regular sneakers without an adapter purchase — you can clip in for a serious ride or hop on in running shoes for a casual session without changing anything",
+  "Bluetooth connectivity to Peloton, Zwift, Explore the World, and the Schwinn Explore app means you're not locked into one platform — use whichever class or training content motivates you most without being charged for hardware-gated access",
+  "40 lb flywheel delivers a smooth, momentum-based resistance feel that closely mimics an outdoor road bike — lighter flywheels produce a more mechanical, less fluid pedal stroke that experienced cyclists notice immediately",
+  "Dual water bottle holders, a media shelf, and a USB charging port are quality-of-life features that sound minor until you're 30 minutes into a class and want to charge your phone without stopping",
+];
+
+const schwinnCons = [
+  "No built-in display screen — the console shows basic metrics but connecting to Peloton or Zwift requires your own phone or tablet, which you'll need to prop on the media shelf; fine for most people, but NordicTrack's integrated screen is more seamless",
+  "Seat comfort is mediocre out of the box — the standard saddle is narrow and firm in a way that becomes noticeable after 30+ minute sessions; most serious users swap to a gel seat cover ($15–25) or an aftermarket saddle within the first month",
+  "Assembly takes 60–90 minutes and the instructions could be clearer on cable routing and handlebar alignment — not difficult, but plan an afternoon rather than a quick 20-minute setup",
+];
+
+const rows = [
+  { label: "Price",             a: "~$600",         b: "~$350",         c: "~$800",         winner: "b" },
+  { label: "Resistance levels", a: "100 magnetic",  b: "49 magnetic",   c: "24 + incline",  winner: "a" },
+  { label: "Flywheel",          a: "40 lbs",        b: "44 lbs",        c: "Not disclosed", winner: "a" },
+  { label: "Connectivity",      a: "Bluetooth/ANT+",b: "Bluetooth",     c: "iFit + ANT+",   winner: "c" },
+  { label: "Noise level",       a: "Very quiet",    b: "Quiet",         c: "Very quiet",    winner: "tie" },
+  { label: "Max user weight",   a: "330 lbs",       b: "275 lbs",       c: "350 lbs",       winner: "c" },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        Peloton's pitch is straightforward: pay $2,500 for the bike, then $44/month for the
+        content, and you get a world-class indoor cycling experience. The pitch works — Peloton
+        has millions of subscribers and genuinely good instructors. What they don't tell you is
+        that you can get the same instructor-led cycling classes on a $600 Schwinn IC4, a
+        $350 Sunny Health bike, or almost any Bluetooth-enabled stationary bike made in the
+        last four years.
+      </p>
+      <p>
+        The hardware is a commodity at this point. The classes — Peloton, Zwift, Beachbody,
+        Apple Fitness+ — run on your phone or tablet through the bike's Bluetooth connection.
+        You don't need a $2,500 bike with a built-in screen to access them. The three picks
+        below deliver serious indoor cycling at prices that leave room in your budget for, say,
+        a barbell and plates.
+      </p>
+    </section>
+
+    <!-- Verdict Box -->
+    <div class="verdict-box">
+      <h2>Quick Picks</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-label">Best Overall</span>
+          <a href={schwinnUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Schwinn IC4
+          </a>
+          <p>100 resistance levels, 40 lb flywheel, Peloton/Zwift compatible. The closest thing to a Peloton at $600.</p>
+          <span class="pick-price">~$600</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Budget</span>
+          <a href={sunnyUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Sunny Health &amp; Fitness Pro II
+          </a>
+          <p>49 resistance levels, 44 lb flywheel, Bluetooth, 275 lb capacity. Real indoor cycling at half the price.</p>
+          <span class="pick-price">~$350</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Premium</span>
+          <a href={nordicUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            NordicTrack S22i
+          </a>
+          <p>22" touchscreen, iFit, -10% to +20% incline/decline, ANT+ connectivity. The full connected experience under $1,000.</p>
+          <span class="pick-price">~$800</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Peloton comparison -->
+    <section>
+      <h2>Peloton vs Budget Stationary Bike — Is the Price Worth It?</h2>
+      <p>
+        Over three years, a Peloton costs roughly $4,100 ($2,500 hardware + $44/month × 36
+        months). A Schwinn IC4 with a Peloton app subscription over the same period costs about
+        $2,184 ($600 hardware + $44/month × 36 months). The workout experience — same instructors,
+        same classes, same music — is identical. The only difference is the screen: Peloton's
+        is built-in and big; the Schwinn's requires your own device.
+      </p>
+      <div class="cost-comparison">
+        <div class="cost-col cost-peloton">
+          <h3>Peloton (3 years)</h3>
+          <div class="cost-line"><span>Hardware</span><strong>$2,500</strong></div>
+          <div class="cost-line"><span>Subscription (36 mo)</span><strong>$1,584</strong></div>
+          <div class="cost-line cost-total"><span>Total</span><strong>$4,084</strong></div>
+        </div>
+        <div class="cost-col cost-schwinn">
+          <h3>Schwinn IC4 + Peloton App (3 years)</h3>
+          <div class="cost-line"><span>Hardware</span><strong>$600</strong></div>
+          <div class="cost-line"><span>Subscription (36 mo)</span><strong>$1,584</strong></div>
+          <div class="cost-line cost-total"><span>Total</span><strong>$2,184</strong></div>
+        </div>
+      </div>
+      <p>
+        You save ~$1,900 over three years for the same content. That $1,900 buys a power rack,
+        a barbell, and 200 pounds of plates. The Peloton is a premium product worth buying for
+        people who want the integrated experience and have the budget. It is not necessary for
+        the cycling workout itself.
+      </p>
+    </section>
+
+    <!-- Magnetic vs friction -->
+    <section>
+      <h2>Magnetic vs Friction Resistance — Which Is Better?</h2>
+      <div class="resistance-grid">
+        <div class="resistance-card res-magnetic">
+          <h3>Magnetic Resistance</h3>
+          <p>
+            Magnets create resistance without physical contact against the flywheel. The result:
+            near-silent operation, smooth resistance changes, and no brake pads to wear or
+            replace. All three picks here use magnetic resistance. It's the standard for any
+            indoor bike worth recommending — the contact-free mechanism lasts significantly
+            longer under heavy daily use and doesn't produce noise or vibration from pad wear.
+          </p>
+          <div class="res-verdict"><strong>Choose this.</strong> All three picks use magnetic resistance.</div>
+        </div>
+        <div class="resistance-card res-friction">
+          <h3>Friction (Felt Pad) Resistance</h3>
+          <p>
+            A felt pad presses against the flywheel to create resistance. It works, but the
+            pad wears down and needs replacement every 6–18 months (typically $20–40). More
+            importantly, friction resistance bikes are louder — the pad-on-flywheel contact
+            generates a persistent hum and vibration that compounds over time as the pad wears
+            unevenly. Common in sub-$200 bikes; avoid if possible.
+          </p>
+          <div class="res-verdict res-avoid"><strong>Avoid.</strong> Common on cheap bikes under $200.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Peloton app on non-Peloton -->
+    <section>
+      <h2>Can You Use the Peloton App on a Non-Peloton Bike?</h2>
+      <p>
+        Yes — and this is the most important thing to understand before buying any stationary
+        bike. The Peloton app ($12.99/month for the digital-only tier) gives you access to the
+        full class library: live and on-demand rides, scenic rides, bootcamps, strength, yoga,
+        and meditation. The only thing you lose without a Peloton hardware device is the live
+        leaderboard, which tracks your output relative to other riders in a class in real time.
+      </p>
+      <p>
+        The Schwinn IC4 is Peloton-compatible because it transmits cadence and resistance data
+        via Bluetooth and ANT+ to the Peloton app in the format the app expects. You prop
+        your phone or tablet on the media shelf, open the Peloton app, and the metrics display
+        on screen as if you're on the real hardware. The leaderboard and some performance
+        metrics are limited, but the class content and instructor experience are identical.
+      </p>
+      <div class="app-list">
+        <p><strong>Apps that work on the Schwinn IC4 and similar Bluetooth bikes:</strong></p>
+        <ul>
+          <li>Peloton app ($12.99/month digital tier)</li>
+          <li>Zwift ($19.99/month) — full virtual cycling world with power-based training</li>
+          <li>Sufferfest / Wahoo SYSTM ($14.99/month)</li>
+          <li>Apple Fitness+ ($9.99/month, works via phone display)</li>
+          <li>Schwinn Explore the World (free with IC4)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Calories section -->
+    <section>
+      <h2>How Many Calories Does a Stationary Bike Burn?</h2>
+      <div class="calorie-table-wrap">
+        <table class="calorie-table">
+          <thead>
+            <tr><th>Intensity</th><th>150 lb person</th><th>185 lb person</th><th>Comparable to</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Light (easy pedaling)</td>
+              <td>~240 cal/hr</td>
+              <td>~292 cal/hr</td>
+              <td>Casual walking pace</td>
+            </tr>
+            <tr>
+              <td>Moderate (steady effort)</td>
+              <td>~420 cal/hr</td>
+              <td>~520 cal/hr</td>
+              <td>Running at ~5 mph</td>
+            </tr>
+            <tr>
+              <td>Vigorous (spinning class pace)</td>
+              <td>~600 cal/hr</td>
+              <td>~740 cal/hr</td>
+              <td>Running at ~8 mph</td>
+            </tr>
+            <tr>
+              <td>High intensity intervals</td>
+              <td>~700–800 cal/hr</td>
+              <td>~860–980 cal/hr</td>
+              <td>Competitive rowing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        A 45-minute moderate-to-vigorous spin class burns roughly 350–500 calories for most
+        people — comparable to a 5-mile run with significantly less joint impact. The zero-impact
+        nature of cycling makes it sustainable for daily cardio use in a way that high-frequency
+        running isn't for most beginners.
+      </p>
+    </section>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <h3>
+        <a href={schwinnUrl} rel="noopener noreferrer sponsored">Schwinn IC4</a>
+        — Best Overall
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Resistance:</strong> 100-level magnetic</span>
+        <span class="spec"><strong>Flywheel:</strong> 40 lbs</span>
+        <span class="spec"><strong>Connectivity:</strong> Bluetooth + ANT+</span>
+        <span class="spec"><strong>Max weight:</strong> 330 lbs</span>
+      </div>
+      <p>
+        The Schwinn IC4 is the go-to recommendation because it maximizes the things that
+        actually determine your workout quality — resistance granularity, flywheel weight,
+        and connectivity — without charging for a screen you don't need. The 100 magnetic
+        resistance levels let you dial in target intensity with precision that 8- or 20-level
+        bikes can't offer. Zwift and Peloton users who care about hitting specific watt targets
+        during structured training will feel the difference immediately.
+      </p>
+      <p>
+        The 40-pound flywheel produces a smooth, road-bike-like pedal stroke. Combined with
+        dual-sided SPD/toe cage pedals, it's the most authentic indoor cycling experience
+        available under $1,000 without a connected screen. Bluetooth and ANT+ connectivity
+        means it talks to every major training platform simultaneously — your Garmin watch,
+        your Peloton app, and a Zwift session can all receive data at the same time.
+      </p>
+      <p>
+        The console shows cadence, time, distance, calories, and heart rate (with a compatible
+        chest strap), but it's not a touch screen — bring your own tablet for the full class
+        experience. The media shelf fits most iPads and phones in landscape orientation.
+      </p>
+
+      <h3>
+        <a href={sunnyUrl} rel="noopener noreferrer sponsored">Sunny Health &amp; Fitness Pro II</a>
+        — Best Budget
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Resistance:</strong> 49-level magnetic</span>
+        <span class="spec"><strong>Flywheel:</strong> 44 lbs</span>
+        <span class="spec"><strong>Connectivity:</strong> Bluetooth</span>
+        <span class="spec"><strong>Max weight:</strong> 275 lbs</span>
+      </div>
+      <p>
+        Sunny Health & Fitness has been making budget cycling equipment for long enough to get
+        the fundamentals right, and the Pro II shows it. The 44-pound flywheel is actually
+        heavier than the Schwinn's, which produces an equivalently smooth pedal stroke. The
+        49 magnetic resistance levels cover the full range of useful intensity. At $350 it
+        delivers roughly 85% of the Schwinn IC4's core performance for just over half the price.
+      </p>
+      <p>
+        The gap versus the Schwinn is mostly in the details: fewer resistance steps (49 vs 100),
+        slightly lower max user weight (275 vs 330 lbs), and Bluetooth without ANT+ (fine for
+        most apps, a limitation for some advanced cycling computers). The adjustability is solid
+        — 4-way seat and 2-way handlebar positioning accommodates a wide range of riders.
+      </p>
+      <p>
+        For a student who wants a capable indoor cycling bike and doesn't need the finer
+        resistance granularity of the Schwinn, this is the pick. The $250 you save buys a lot
+        of other gym equipment.
+      </p>
+
+      <h3>
+        <a href={nordicUrl} rel="noopener noreferrer sponsored">NordicTrack S22i</a>
+        — Best Premium
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Resistance:</strong> 24-level magnetic + auto-adjust</span>
+        <span class="spec"><strong>Flywheel:</strong> Not disclosed (heavy)</span>
+        <span class="spec"><strong>Connectivity:</strong> iFit built-in + ANT+</span>
+        <span class="spec"><strong>Max weight:</strong> 350 lbs</span>
+      </div>
+      <p>
+        The NordicTrack S22i's defining feature is the 22-inch rotating touchscreen and incline/
+        decline capability — something no other bike at this price offers. The -10% to +20%
+        incline range lets iFit instructors automatically adjust the bike's resistance and angle
+        during rides, mimicking the terrain of real outdoor courses. Riding a simulated Tour de
+        France stage with automatic incline changes is a genuinely different experience from a
+        flat-resistance bike at any price.
+      </p>
+      <p>
+        The catch is the iFit subscription ($39/month). Without it, the 22-inch screen runs
+        limited content and the bike's auto-adjustment features are largely locked. It's a
+        Peloton-style content-hardware bundle — the hardware is priced assuming you'll subscribe.
+        Over two years that's an additional $936 on top of the $800 hardware cost.
+      </p>
+      <p>
+        Buy it if the integrated screen and auto-incline are what will keep you using it
+        consistently. If you're content propping your own tablet on a media shelf, the
+        Schwinn IC4 delivers the same cycling workout for $200 less before subscriptions.
+      </p>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Schwinn IC4"
+        nameB="Sunny Pro II"
+        nameC="NordicTrack S22i"
+        rows={rows}
+      />
+    </section>
+
+    <!-- ProsConsList -->
+    <ProsConsList pros={schwinnPros} cons={schwinnCons} productName="Schwinn IC4" />
+
+    <!-- Who should buy -->
+    <section>
+      <h2>Who Should Buy the Schwinn IC4</h2>
+      <ul>
+        <li>Anyone who wants Peloton-class content without Peloton hardware pricing — the IC4's Peloton app compatibility delivers the full instructor-led experience for the $12.99/month digital tier</li>
+        <li>Cyclists or triathletes who train with Zwift or ANT+ cycling computers — the dual Bluetooth/ANT+ output connects to every major training platform simultaneously</li>
+        <li>Home gym builders who want a quiet, low-impact cardio option alongside lifting equipment — the magnetic resistance is near-silent and the zero-impact cycling is easy on joints after heavy training days</li>
+      </ul>
+
+      <h2>Who Should Skip It</h2>
+      <ul>
+        <li>Budget-first buyers who primarily want casual cardio — the Sunny Health Pro II at $350 handles general fitness cycling at $250 less; the IC4's 100 resistance levels matter most for structured training</li>
+        <li>Anyone who wants a fully integrated screen experience without managing a separate tablet — the NordicTrack S22i's built-in touchscreen and auto-incline are worth the $200 premium if the seamless experience is what keeps you consistent</li>
+        <li>Very tall riders (6'4"+) — the seat post and handlebar range on the IC4, while adjustable, may not accommodate the full extension needed for longer-legged athletes without a position compromise</li>
+      </ul>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        The Schwinn IC4 is the stationary bike most home gym builders should buy. It delivers
+        a genuine indoor cycling experience — heavy flywheel, fine resistance control, full
+        platform compatibility — without paying for a screen you can replace with the tablet
+        already sitting on your desk. The three-year cost savings over Peloton hardware is
+        enough to build out the rest of a home gym.
+      </p>
+      <p>
+        If budget is the binding constraint, the Sunny Health Pro II gets you 85% of the
+        experience for 60% of the price. If the integrated touchscreen and auto-incline are
+        what make you actually use the bike, the NordicTrack S22i is worth the premium —
+        just factor in the iFit subscription before committing.
+      </p>
+      <AffiliateButton
+        href={schwinnUrl}
+        text="Check Schwinn IC4 on Amazon"
+        subtext="Best Overall · 100 Resistance Levels · Peloton Compatible"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-family: system-ui, sans-serif;
+    color: #1e293b;
+    line-height: 1.7;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1.75rem;
+    margin-bottom: 0.4rem;
+    color: #1e293b;
+  }
+
+  h3 a { color: #ea580c; text-decoration: none; }
+  h3 a:hover { text-decoration: underline; }
+
+  .meta { font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem; }
+
+  p { margin-bottom: 1rem; }
+
+  ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+
+  li { margin-bottom: 0.5rem; }
+
+  strong { color: #0f172a; }
+
+  /* Verdict box */
+  .verdict-box {
+    background: #fff7ed;
+    border: 2px solid #ea580c;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 { margin-top: 0; color: #ea580c; font-size: 1.2rem; }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .pick-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #fed7aa;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .pick-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ea580c;
+  }
+
+  .pick-title {
+    font-weight: 700;
+    color: #0f172a;
+    text-decoration: none;
+    font-size: 0.93rem;
+    line-height: 1.3;
+  }
+
+  .pick-title:hover { color: #ea580c; }
+
+  .pick-card p { font-size: 0.82rem; color: #475569; margin: 0; flex: 1; }
+
+  .pick-price { font-size: 0.85rem; font-weight: 700; color: #0f172a; }
+
+  /* Cost comparison */
+  .cost-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  @media (max-width: 520px) { .cost-comparison { grid-template-columns: 1fr; } }
+
+  .cost-col {
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    border: 1px solid;
+  }
+
+  .cost-peloton { background: #fff1f2; border-color: #fecdd3; }
+  .cost-schwinn { background: #f0fdf4; border-color: #bbf7d0; }
+
+  .cost-col h3 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin: 0 0 0.65rem 0;
+  }
+
+  .cost-peloton h3 { color: #9f1239; }
+  .cost-schwinn h3 { color: #166534; }
+
+  .cost-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid;
+    color: #334155;
+  }
+
+  .cost-peloton .cost-line { border-color: #fecdd3; }
+  .cost-schwinn .cost-line { border-color: #bbf7d0; }
+
+  .cost-total {
+    font-weight: 700;
+    border-bottom: none;
+    margin-top: 0.2rem;
+    padding-top: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .cost-peloton .cost-total { color: #9f1239; border-top: 1px solid #fca5a5; }
+  .cost-schwinn .cost-total { color: #166534; border-top: 1px solid #86efac; }
+
+  /* Magnetic vs friction */
+  .resistance-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 520px) { .resistance-grid { grid-template-columns: 1fr; } }
+
+  .resistance-card {
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .res-magnetic { background: #eff6ff; border-color: #bfdbfe; }
+  .res-friction  { background: #f8fafc; border-color: #e2e8f0; }
+
+  .resistance-card h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .res-magnetic h3 { color: #1d4ed8; }
+  .res-friction  h3 { color: #334155; }
+
+  .resistance-card > p {
+    font-size: 0.83rem;
+    line-height: 1.55;
+    flex: 1;
+    margin: 0;
+  }
+
+  .res-magnetic > p { color: #1e3a8a; }
+  .res-friction  > p { color: #475569; }
+
+  .res-verdict {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.35rem 0.6rem;
+    border-radius: 5px;
+  }
+
+  .res-magnetic .res-verdict { background: #bfdbfe; color: #1e3a8a; }
+  .res-friction  .res-verdict { background: #fee2e2; color: #991b1b; }
+
+  /* App list */
+  .app-list {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #ea580c;
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    margin: 1rem 0;
+  }
+
+  .app-list p {
+    font-size: 0.88rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .app-list ul { margin: 0; padding-left: 1.3rem; }
+
+  .app-list li {
+    font-size: 0.85rem;
+    color: #334155;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Calorie table */
+  .calorie-table-wrap {
+    margin: 1rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+  }
+
+  .calorie-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.87rem;
+  }
+
+  .calorie-table thead tr { background: #0f172a; color: #e2e8f0; }
+
+  .calorie-table th {
+    text-align: left;
+    padding: 0.6rem 1rem;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
+  .calorie-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+    vertical-align: top;
+  }
+
+  .calorie-table td:first-child { font-weight: 700; color: #0f172a; }
+  .calorie-table tr:last-child td { border-bottom: none; }
+  .calorie-table tr:nth-child(even) { background: #f8fafc; }
+
+  /* Spec row */
+  .spec-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+    margin: 0.2rem 0 0.75rem;
+  }
+
+  .spec { font-size: 0.83rem; color: #475569; }
+</style>
