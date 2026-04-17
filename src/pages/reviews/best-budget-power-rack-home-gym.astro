@@ -1,0 +1,719 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Budget Power Rack for Home Gym Under $500 (2025)";
+const description =
+  "A power rack is the most important piece of home gym equipment you can buy. Here are the best budget options under $500 for serious lifters who want to train at home.";
+const pubDate = "2026-04-17";
+const slug = "best-budget-power-rack-home-gym";
+
+const rogueUrl  = "https://www.amazon.com/s?k=rogue+squat+stand+home+gym&tag=dveverka-20";
+const repUrl    = "https://www.amazon.com/s?k=rep+fitness+power+rack+PR-1000&tag=dveverka-20";
+const titanUrl  = "https://www.amazon.com/s?k=titan+fitness+T2+power+rack&tag=dveverka-20";
+
+const repPros = [
+  "700lb weight capacity is more than enough for any intermediate or advanced home gym lifter — even competitive powerlifters rarely squat or bench more than 500lb, and the structural margin above that gives you confidence the rack will never be the limiting factor",
+  "11-gauge steel throughout the uprights and base is meaningfully thicker than the 14-gauge steel used in entry-level racks — the difference is tangible when you grab the uprights, and it matters for long-term frame integrity under repeated heavy loading",
+  "Full cage design with front and rear uprights means you can squat, bench, and overhead press with safety bars catching a failed rep — something a squat stand can't offer, which is the most important safety consideration for solo lifters training without a spotter",
+  "Included J-hooks, safety bars, and pull-up bar cover the core use cases out of the box — you don't need to immediately buy $100 worth of accessories to make the rack functional for squatting and benching",
+  "Westside hole spacing (1-inch in the bench zone, 2-inch outside it) allows precise J-hook and safety bar positioning — this sounds like a spec detail but it meaningfully affects how well the rack fits your proportions for squatting and benching",
+];
+
+const repCons = [
+  "Assembly takes 2–3 hours and requires two people for certain steps — the rack ships in multiple boxes and the uprights need to be held plumb while bolts are tightened, which is genuinely difficult to manage alone",
+  "No lat pulldown or cable attachment compatibility in the base model — the PR-1000 is a clean, functional cage but it's not a home gym system; cable work requires buying Rep's separate cable attachment or a different setup entirely",
+  "Powder coat finish is adequate but not exceptional — fine for garage use, but the coating is thinner than what Rogue applies, and heavy bar scraping on J-hooks will eventually chip it; touchup paint solves this but it's a minor ongoing maintenance consideration",
+];
+
+const rows = [
+  { label: "Price",           a: "~$395",         b: "~$350",          c: "~$500",         winner: "b" },
+  { label: "Weight capacity", a: "1,000 lb",       b: "700 lb",         c: "1,000 lb",      winner: "tie" },
+  { label: "Footprint",       a: "24\" × 48\"",    b: "48\" × 24\"",    c: "48\" × 24\"",   winner: "a" },
+  { label: "Steel gauge",     a: "11-gauge",       b: "11-gauge",       c: "11-gauge",      winner: "tie" },
+  { label: "Type",            a: "Squat stand",    b: "Full cage",      c: "Full cage",     winner: "tie" },
+  { label: "Pull-up bar",     a: "Yes",            b: "Yes",            c: "Yes",           winner: "tie" },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        If you're building a home gym and you lift seriously, a power rack is the single most
+        important purchase you'll make. Everything else — the barbell, the plates, the bench — is
+        secondary to having a structure that lets you squat and bench heavy without a spotter. A
+        rack is what separates a real home gym from a collection of equipment.
+      </p>
+      <p>
+        The good news is you don't need to spend $1,000 on a Rogue Monster rack to train
+        effectively at home. The three picks below are under $500, made from 11-gauge steel, and
+        built to handle loads most home gym lifters will never reach. The differences between them
+        come down to footprint, cage design, and how much you need in the box versus how much
+        you're willing to buy separately.
+      </p>
+    </section>
+
+    <!-- Verdict Box -->
+    <div class="verdict-box">
+      <h2>Quick Picks</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-label">Best Overall</span>
+          <a href={rogueUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Rogue SML-1 Squat Stand
+          </a>
+          <p>1,000lb capacity, 11-gauge steel, minimal footprint. Rogue quality at a non-Rogue price.</p>
+          <span class="pick-price">~$395</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Value Full Rack</span>
+          <a href={repUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Rep Fitness PR-1000
+          </a>
+          <p>Full cage with safety bars, 700lb capacity, Westside spacing. Best bang for buck in a complete rack.</p>
+          <span class="pick-price">~$350</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Heavy Duty Budget</span>
+          <a href={titanUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Titan Fitness T-2
+          </a>
+          <p>1,000lb capacity, full cage, add-on compatible. The most upgrade-friendly rack at this price.</p>
+          <span class="pick-price">~$500</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Power rack vs squat stand -->
+    <section>
+      <h2>Power Rack vs Squat Stand — Which Should Beginners Get?</h2>
+      <p>
+        This is the first decision to make before buying anything, and it comes down to one
+        question: will you ever train alone without a spotter?
+      </p>
+      <div class="comparison-block">
+        <div class="comp-col comp-col-green">
+          <h3>Full Power Rack</h3>
+          <p class="comp-sub">Four uprights, front and rear safeties</p>
+          <ul>
+            <li>Catch failed squats and bench presses independently</li>
+            <li>More stable under heavy load</li>
+            <li>Larger footprint (typically 4×4 feet of floor space)</li>
+            <li>Better for heavy lifters training solo</li>
+            <li>Rep PR-1000 and Titan T-2 are full cages</li>
+          </ul>
+        </div>
+        <div class="comp-col comp-col-slate">
+          <h3>Squat Stand</h3>
+          <p class="comp-sub">Two uprights, spotter arms optional</p>
+          <ul>
+            <li>Smaller footprint — works in tighter spaces</li>
+            <li>More versatile positioning for some exercises</li>
+            <li>Requires spotter arms for safe solo training</li>
+            <li>Better for garage gyms where space is the constraint</li>
+            <li>Rogue SML-1 is a squat stand</li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        For most beginners building a first home gym: get a full cage. The safety margin of having
+        four uprights and fixed safety bars matters when you're learning to squat and bench and
+        will inevitably face a failed rep. The Rogue SML-1 is excellent, but you're responsible for
+        your own safety margins with a stand in a way you aren't with a cage.
+      </p>
+    </section>
+
+    <!-- Weight capacity -->
+    <section>
+      <h2>What Weight Capacity Do You Actually Need?</h2>
+      <p>
+        Rack weight capacity numbers are often inflated by manufacturers, but they give you a
+        useful signal about the structural engineering involved. Here's how to think about it:
+      </p>
+      <div class="capacity-table-wrap">
+        <table class="capacity-table">
+          <thead>
+            <tr>
+              <th>Lifting Level</th>
+              <th>Typical Max Squat</th>
+              <th>Typical Max Bench</th>
+              <th>Rack Capacity Needed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Beginner (0–1 yr)</td>
+              <td>135–225 lb</td>
+              <td>95–155 lb</td>
+              <td>500 lb is more than enough</td>
+            </tr>
+            <tr>
+              <td>Intermediate (1–3 yr)</td>
+              <td>225–365 lb</td>
+              <td>155–265 lb</td>
+              <td>500–700 lb covers you</td>
+            </tr>
+            <tr>
+              <td>Advanced (3+ yr)</td>
+              <td>365–500 lb</td>
+              <td>265–365 lb</td>
+              <td>700–1,000 lb for confidence margin</td>
+            </tr>
+            <tr>
+              <td>Competitive Powerlifter</td>
+              <td>500 lb+</td>
+              <td>365 lb+</td>
+              <td>1,000 lb+ rack, professional equipment</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        All three racks here are rated at 700–1,000 lb. For the vast majority of home gym lifters,
+        that's overkill in the best way — you'll never stress the structural limits. The number to
+        care about more than capacity is steel gauge: 11-gauge is meaningfully thicker and more
+        rigid than the 14-gauge used in discount racks, and that difference shows up in feel and
+        long-term durability.
+      </p>
+    </section>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <h3>
+        <a href={rogueUrl} rel="noopener noreferrer sponsored">Rogue SML-1 Squat Stand</a>
+        — Best Overall
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Capacity:</strong> 1,000 lb</span>
+        <span class="spec"><strong>Steel:</strong> 11-gauge</span>
+        <span class="spec"><strong>Type:</strong> Squat stand (2 uprights)</span>
+        <span class="spec"><strong>Footprint:</strong> ~24 × 48"</span>
+      </div>
+      <p>
+        Rogue is the standard against which every other home gym manufacturer is measured, and the
+        SML-1 is their entry point for squat stand pricing. It's not a full cage — two uprights
+        with bolt-on spotter arms — but the construction quality is categorically better than
+        everything else at this price. The uprights are 3×3 inch 11-gauge steel, the welds are
+        clean, and the hardware fits precisely. When you grab an SML-1 and then grab a discount rack,
+        the difference is immediately apparent.
+      </p>
+      <p>
+        The 1,000lb capacity is academic for home gym use, but it reflects the engineering margin
+        built into the frame. The SML-1 isn't going anywhere regardless of how hard you train. The
+        footprint is the smallest of the three picks — the two-upright design takes up less floor
+        space than a full cage, which matters in a spare bedroom or smaller garage.
+      </p>
+      <p>
+        The caveat is that it's a squat stand, not a cage. Spotter arms add safety for solo
+        training but require proper setup and positioning discipline that a full cage doesn't
+        demand. If you're disciplined about safety, it's not a problem. If you're new to solo heavy
+        lifting, the full-cage options below are more forgiving.
+      </p>
+
+      <h3>
+        <a href={repUrl} rel="noopener noreferrer sponsored">Rep Fitness PR-1000</a>
+        — Best Value Full Rack
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Capacity:</strong> 700 lb</span>
+        <span class="spec"><strong>Steel:</strong> 11-gauge</span>
+        <span class="spec"><strong>Type:</strong> Full cage (4 uprights)</span>
+        <span class="spec"><strong>Footprint:</strong> ~48 × 24"</span>
+      </div>
+      <p>
+        The Rep Fitness PR-1000 is the answer to the question "what's the best full power cage for
+        someone who doesn't want to spend $500?" At around $350, it's the cheapest full cage on
+        this list and it doesn't cut corners where they matter. The 11-gauge steel frame, Westside
+        hole spacing, and included pull-up bar put it in the same functional category as racks that
+        cost twice as much.
+      </p>
+      <p>
+        The Westside hole spacing deserves specific mention. Most budget racks use 2-inch hole
+        spacing throughout, which means you're often one hole too high or too low for your ideal
+        bench press or squat position. The PR-1000 uses 1-inch spacing in the bench zone — the
+        range where precise J-hook height matters most — and 2-inch spacing above and below.
+        For a budget rack, this is an unusual attention to detail.
+      </p>
+      <p>
+        Assembly is the main friction point. Count on 2–3 hours with a partner. The hardware fits
+        well and the instructions are clear, but aligning four uprights and getting everything
+        square before final tightening is genuinely easier with two sets of hands.
+      </p>
+
+      <h3>
+        <a href={titanUrl} rel="noopener noreferrer sponsored">Titan Fitness T-2</a>
+        — Best Heavy Duty Budget
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Capacity:</strong> 1,000 lb</span>
+        <span class="spec"><strong>Steel:</strong> 11-gauge</span>
+        <span class="spec"><strong>Type:</strong> Full cage (4 uprights)</span>
+        <span class="spec"><strong>Footprint:</strong> ~48 × 24"</span>
+      </div>
+      <p>
+        Titan Fitness built its reputation on producing commercial-quality rack features at
+        budget-rack prices, and the T-2 is the clearest expression of that. At around $500 it sits
+        at the top of this price range, but the 1,000lb rated capacity, full cage design, and
+        extensive add-on compatibility make it the most upgrade-friendly option here.
+      </p>
+      <p>
+        The T-2's real advantage over the Rep PR-1000 is the Titan accessory ecosystem. Lat
+        pulldown attachments, cable systems, band pegs, dip bars, and monolift attachments are all
+        available and designed to bolt directly onto the T-2's uprights. If you're planning to
+        build out your home gym over two to three years, the T-2 is the platform that grows with
+        you without requiring a new rack.
+      </p>
+      <p>
+        The 2-inch hole spacing throughout (no Westside spacing) is the one meaningful spec
+        disadvantage compared to the Rep. For most lifters it's a non-issue; for shorter or taller
+        athletes who need precise bench and squat positioning, it's worth noting.
+      </p>
+    </section>
+
+    <!-- Accessories -->
+    <section>
+      <h2>What Accessories Do You Need to Buy Separately?</h2>
+      <p>
+        None of these racks include a barbell, plates, or bench. Budget for these alongside the
+        rack purchase:
+      </p>
+      <div class="accessory-grid">
+        <div class="accessory-card">
+          <h3>Barbell</h3>
+          <p>
+            A standard 45lb Olympic barbell runs $150–250 for a quality option. Rogue's Ohio Bar
+            and Rep's Colorado Bar are the budget standards. Don't cheap out here — a poor barbell
+            flexes unpredictably under load and wears faster.
+          </p>
+          <span class="accessory-cost">Budget: $150–250</span>
+        </div>
+        <div class="accessory-card">
+          <h3>Weight Plates</h3>
+          <p>
+            A beginner starter set (245lb total: two 45s, two 35s, two 25s, two 10s, two 5s) runs
+            $200–350 depending on whether you buy bumper plates (rubber, floor-safe) or iron.
+            Iron is cheaper; bumpers are kinder to flooring.
+          </p>
+          <span class="accessory-cost">Budget: $200–350</span>
+        </div>
+        <div class="accessory-card">
+          <h3>Flat Bench</h3>
+          <p>
+            A solid flat bench for pressing starts around $100. An adjustable bench (flat,
+            incline, decline) runs $150–250. Rep Fitness and Titan both make benches designed to
+            fit their own racks without modification.
+          </p>
+          <span class="accessory-cost">Budget: $100–250</span>
+        </div>
+        <div class="accessory-card">
+          <h3>Flooring</h3>
+          <p>
+            Rubber horse stall mats (4×6 ft, ¾-inch thick) are the standard for home gym
+            flooring at around $50 per mat. Two mats cover a rack footprint. They protect your
+            floor, reduce noise, and make the space feel like a gym.
+          </p>
+          <span class="accessory-cost">Budget: $100–150 (2 mats)</span>
+        </div>
+      </div>
+      <p>
+        Total additional budget for a fully functional setup: <strong>$550–1,000</strong> on top
+        of the rack. A complete home gym — rack, barbell, plates, bench, and flooring — runs
+        $900–1,500 at the budget end. That's less than two years of a commercial gym membership
+        in most college towns.
+      </p>
+    </section>
+
+    <!-- Space requirements -->
+    <section>
+      <h2>How Much Space Does a Power Rack Need?</h2>
+      <p>
+        The rack footprint is only part of the equation. You need clearance around it to actually
+        train safely:
+      </p>
+      <div class="space-table-wrap">
+        <table class="space-table">
+          <thead>
+            <tr><th>Dimension</th><th>Minimum</th><th>Comfortable</th><th>Why It Matters</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ceiling height</td>
+              <td>8 ft</td>
+              <td>9–10 ft</td>
+              <td>Overhead press clears the pull-up bar; bar path on squats needs headroom</td>
+            </tr>
+            <tr>
+              <td>Width clearance</td>
+              <td>8 ft</td>
+              <td>10 ft</td>
+              <td>Olympic bar (7 ft) plus loading space on both ends</td>
+            </tr>
+            <tr>
+              <td>Depth clearance</td>
+              <td>6 ft</td>
+              <td>8 ft</td>
+              <td>Step-out on squats; bench press setup in front of rack</td>
+            </tr>
+            <tr>
+              <td>Total floor area</td>
+              <td>~50 sq ft</td>
+              <td>~80 sq ft</td>
+              <td>Rack footprint plus surrounding movement space</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        An 8×10 foot dedicated space is the practical minimum for a rack + bench setup. A
+        one-car garage bay (roughly 10×20 ft) is comfortable. Measure your ceiling first — an
+        8-foot ceiling with a rack that has a 7.5-foot pull-up bar leaves 6 inches of clearance
+        overhead, which works for pull-ups but eliminates standing overhead press from inside
+        the rack.
+      </p>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Rogue SML-1"
+        nameB="Rep PR-1000"
+        nameC="Titan T-2"
+        rows={rows}
+      />
+    </section>
+
+    <!-- ProsConsList -->
+    <ProsConsList pros={repPros} cons={repCons} productName="Rep Fitness PR-1000" />
+
+    <!-- Who should buy -->
+    <section>
+      <h2>Who Should Buy the Rep Fitness PR-1000</h2>
+      <ul>
+        <li>First-time home gym builders who want a complete cage with safety bars for solo training — the full four-upright design is more forgiving for beginners than a squat stand</li>
+        <li>Intermediate lifters whose max squat and bench are under 500lb — 700lb capacity has a comfortable safety margin and the 11-gauge steel feels as solid as anything in this category</li>
+        <li>Budget-conscious builders who want to allocate the remaining money toward a better barbell or more plates — at $350, the PR-1000 leaves room in a $900 starter budget for quality accessories</li>
+      </ul>
+
+      <h2>Who Should Skip It</h2>
+      <ul>
+        <li>Strong lifters squatting 400lb+ who want maximum structural confidence — the Titan T-2's 1,000lb capacity and heavier-duty hardware offer a larger margin for serious loads</li>
+        <li>Lifters who plan to add a cable system, lat pulldown, or specialty attachments — the PR-1000 has limited accessory compatibility compared to Titan's ecosystem</li>
+        <li>Anyone with space constraints under 50 square feet — if the footprint is the binding constraint, the Rogue SML-1's smaller stand profile may be the only option that fits</li>
+      </ul>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        For a first home gym power rack, the Rep Fitness PR-1000 is the clearest recommendation.
+        A full cage at $350 with 11-gauge steel, Westside hole spacing, and everything you need
+        to squat and bench safely without a spotter — it's hard to justify spending more until
+        you've outgrown it, and most home gym lifters never will.
+      </p>
+      <p>
+        If Rogue quality matters to you and you're disciplined about squat stand safety, the
+        SML-1 is the better-built piece of equipment. If you're planning a long-term build and
+        want accessory compatibility, start with the Titan T-2. But for a student or young adult
+        putting together their first serious home gym on a real budget, the Rep PR-1000 is where
+        to start.
+      </p>
+      <AffiliateButton
+        href={repUrl}
+        text="Check Rep Fitness PR-1000 on Amazon"
+        subtext="Best Value Full Cage · 700 lb · 11-Gauge Steel"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-family: system-ui, sans-serif;
+    color: #1e293b;
+    line-height: 1.7;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1.75rem;
+    margin-bottom: 0.4rem;
+    color: #1e293b;
+  }
+
+  h3 a {
+    color: #ea580c;
+    text-decoration: none;
+  }
+
+  h3 a:hover { text-decoration: underline; }
+
+  .meta {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  p { margin-bottom: 1rem; }
+
+  ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  li { margin-bottom: 0.5rem; }
+
+  strong { color: #0f172a; }
+
+  /* Verdict box */
+  .verdict-box {
+    background: #fff7ed;
+    border: 2px solid #ea580c;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    margin-top: 0;
+    color: #ea580c;
+    font-size: 1.2rem;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .pick-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #fed7aa;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .pick-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ea580c;
+  }
+
+  .pick-title {
+    font-weight: 700;
+    color: #0f172a;
+    text-decoration: none;
+    font-size: 0.93rem;
+    line-height: 1.3;
+  }
+
+  .pick-title:hover { color: #ea580c; }
+
+  .pick-card p {
+    font-size: 0.82rem;
+    color: #475569;
+    margin: 0;
+    flex: 1;
+  }
+
+  .pick-price {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  /* Rack vs stand comparison */
+  .comparison-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  @media (max-width: 540px) {
+    .comparison-block { grid-template-columns: 1fr; }
+  }
+
+  .comp-col {
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    border: 1px solid;
+  }
+
+  .comp-col-green { background: #f0fdf4; border-color: #bbf7d0; }
+  .comp-col-slate { background: #f8fafc; border-color: #e2e8f0; }
+
+  .comp-col h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 0 0 0.15rem 0;
+  }
+
+  .comp-col-green h3 { color: #166534; }
+  .comp-col-slate h3 { color: #334155; }
+
+  .comp-sub {
+    font-size: 0.78rem;
+    color: #64748b;
+    margin: 0 0 0.6rem 0;
+    font-style: italic;
+  }
+
+  .comp-col ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .comp-col li {
+    font-size: 0.84rem;
+    color: #334155;
+    margin-bottom: 0.35rem;
+  }
+
+  /* Spec row */
+  .spec-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+    margin: 0.2rem 0 0.75rem;
+  }
+
+  .spec {
+    font-size: 0.83rem;
+    color: #475569;
+  }
+
+  /* Capacity table */
+  .capacity-table-wrap,
+  .space-table-wrap {
+    margin: 1rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+  }
+
+  .capacity-table,
+  .space-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+
+  .capacity-table thead tr,
+  .space-table thead tr {
+    background: #0f172a;
+    color: #e2e8f0;
+  }
+
+  .capacity-table th,
+  .space-table th {
+    text-align: left;
+    padding: 0.6rem 1rem;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
+  .capacity-table td,
+  .space-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+    vertical-align: top;
+  }
+
+  .capacity-table td:first-child,
+  .space-table td:first-child {
+    font-weight: 700;
+    color: #0f172a;
+    white-space: nowrap;
+  }
+
+  .capacity-table tr:last-child td,
+  .space-table tr:last-child td { border-bottom: none; }
+
+  .capacity-table tr:nth-child(even),
+  .space-table tr:nth-child(even) { background: #f8fafc; }
+
+  /* Accessory grid */
+  .accessory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .accessory-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #ea580c;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .accessory-card h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+  }
+
+  .accessory-card p {
+    font-size: 0.83rem;
+    color: #475569;
+    margin: 0;
+    flex: 1;
+    line-height: 1.5;
+  }
+
+  .accessory-cost {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #ea580c;
+    margin-top: 0.25rem;
+  }
+</style>
