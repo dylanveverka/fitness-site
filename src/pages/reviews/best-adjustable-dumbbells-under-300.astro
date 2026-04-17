@@ -1,0 +1,697 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Adjustable Dumbbells Under $300 (2025) — Home Gym Picks";
+const description =
+  "Adjustable dumbbells replace an entire dumbbell rack in one compact set. Here are the best picks under $300 for anyone building a serious home gym.";
+const pubDate = "2026-04-17";
+const slug = "best-adjustable-dumbbells-under-300";
+
+const bowflexUrl     = "https://www.amazon.com/s?k=bowflex+selecttech+552+adjustable+dumbbells&tag=dveverka-20";
+const powerblockUrl  = "https://www.amazon.com/s?k=powerblock+elite+adjustable+dumbbells&tag=dveverka-20";
+const nordictrackUrl = "https://www.amazon.com/s?k=nordictrack+select+a+weight+dumbbells&tag=dveverka-20";
+
+const bowflexPros = [
+  "5–52.5lb range in a single dumbbell covers the vast majority of exercises for most people — you can do light lateral raises at 10lb and loaded goblet squats at 52.5lb without touching a second piece of equipment",
+  "Dial adjustment mechanism takes 3–5 seconds per dumbbell — fast enough that you can change weights between sets without breaking the flow of a circuit or superset",
+  "Compact footprint replaces 15 pairs of fixed dumbbells — in an apartment or dorm-adjacent home gym where floor space is the primary constraint, this matters more than almost any spec comparison",
+  "2-year warranty is industry standard and Bowflex customer service is responsive — when a plastic component eventually wears, replacement parts are available and the company actually honors the coverage",
+  "15 weight settings including half-pound increments at the low end (5, 7.5, 10lb) make it usable for light accessory work and rehabilitation movements that heavier-starting adjustable sets can't accommodate",
+];
+
+const bowflexCons = [
+  "Plastic dial mechanism is the durability weak point — it works reliably for years of normal home use, but the selector can crack if the dumbbell is dropped from height or treated roughly, and repairs require replacement parts",
+  "Bulky handle profile is longer and thicker than a standard fixed dumbbell — this creates awkwardness on certain exercises (close-grip pressing, dumbbell rows with neutral grip) where a shorter handle would allow better positioning",
+  "At the ~$300 price point it's the most expensive option here — the NordicTrack gets you to 55lb for $100 less, which matters if budget is genuinely tight and you don't need the half-pound increments",
+];
+
+const rows = [
+  { label: "Price",            a: "~$300",        b: "~$250",       c: "~$200",        winner: "c" },
+  { label: "Weight range",     a: "5–52.5 lb",    b: "5–50 lb",     c: "10–55 lb",     winner: "a" },
+  { label: "Increments",       a: "2.5–5 lb",     b: "2.5–10 lb",   c: "5 lb",         winner: "a" },
+  { label: "Adjustment time",  a: "3–5 sec",      b: "3–5 sec",     c: "5–8 sec",      winner: "tie" },
+  { label: "Adjustment type",  a: "Dial",         b: "Pin/block",   c: "Dial",         winner: "tie" },
+  { label: "Warranty",         a: "2 years",      b: "1 year",      c: "2 years",      winner: "tie" },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        A full commercial dumbbell rack — 5lb to 100lb in 5lb increments — runs $1,000–2,000 and
+        takes up eight feet of wall space. That's not a home gym; that's a commitment most
+        apartments and college spaces can't make. Adjustable dumbbells solve both problems: one
+        pair, one footprint, $200–300, and you have access to 15+ different weight settings
+        without moving anything.
+      </p>
+      <p>
+        The three picks below cover the range from budget-conscious to the best dial-mechanism set
+        available under $300. All three replace a rack's worth of fixed dumbbells. The differences
+        come down to adjustment speed, increment granularity, and how much you're willing to spend
+        for a more refined experience.
+      </p>
+    </section>
+
+    <!-- Verdict Box -->
+    <div class="verdict-box">
+      <h2>Quick Picks</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-label">Best Overall</span>
+          <a href={bowflexUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Bowflex SelectTech 552
+          </a>
+          <p>5–52.5lb, dial mechanism, 15 settings. The benchmark for home gym adjustable dumbbells.</p>
+          <span class="pick-price">~$300</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best for Heavy Lifters</span>
+          <a href={powerblockUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            PowerBlock Elite
+          </a>
+          <p>5–50lb, pin-selector block design, extremely durable. Built to last decades.</p>
+          <span class="pick-price">~$250</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Budget</span>
+          <a href={nordictrackUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            NordicTrack Select-A-Weight
+          </a>
+          <p>10–55lb, dial adjustment, 5lb increments. Highest weight ceiling at the lowest price.</p>
+          <span class="pick-price">~$200</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Are they worth it? -->
+    <section>
+      <h2>Are Adjustable Dumbbells Worth It vs Fixed?</h2>
+      <p>
+        For a dedicated commercial gym or a large garage gym with unlimited floor space, a fixed
+        dumbbell rack gives you faster access and a more natural feel. For everyone else — apartment
+        dwellers, college students with a spare bedroom gym, anyone working with limited square
+        footage — adjustable dumbbells are the obvious choice.
+      </p>
+      <div class="comparison-block">
+        <div class="comp-col">
+          <h3 class="comp-head comp-green">Adjustable Dumbbells Win When</h3>
+          <ul>
+            <li>Space is limited — one tray replaces 15+ pairs</li>
+            <li>Budget is under $300 — you'd spend that on 4–5 pairs of fixed weights</li>
+            <li>You train alone — adjustment time only matters in shared gym settings</li>
+            <li>You're building out a home gym incrementally</li>
+          </ul>
+        </div>
+        <div class="comp-col">
+          <h3 class="comp-head comp-slate">Fixed Dumbbells Win When</h3>
+          <ul>
+            <li>Multiple people train simultaneously and need the same weight</li>
+            <li>You're doing circuits with rapid weight changes between exercises</li>
+            <li>You need weights above 52.5lb regularly</li>
+            <li>You prefer the feel of a standard dumbbell handle</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- What weight range -->
+    <section>
+      <h2>What Weight Range Do You Actually Need?</h2>
+      <p>
+        For most people, <strong>5–52.5lb covers 95% of exercises</strong> across an entire
+        training career. Here's a rough breakdown of where different weight ranges land:
+      </p>
+      <div class="weight-table-wrap">
+        <table class="weight-table">
+          <thead>
+            <tr><th>Weight Range</th><th>Common Exercises</th><th>Who Needs This</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5–15 lb</td>
+              <td>Lateral raises, face pulls, rotator cuff work</td>
+              <td>Everyone — even strong lifters use light weights here</td>
+            </tr>
+            <tr>
+              <td>20–35 lb</td>
+              <td>Curls, tricep work, rows, chest flyes</td>
+              <td>Beginner to intermediate lifters for most upper body work</td>
+            </tr>
+            <tr>
+              <td>35–52.5 lb</td>
+              <td>Goblet squats, Romanian deadlifts, heavy rows, pressing</td>
+              <td>Intermediate lifters who've been training 6–18 months</td>
+            </tr>
+            <tr>
+              <td>52.5 lb+</td>
+              <td>Heavy dumbbell bench, farmer carries, split squats</td>
+              <td>Advanced lifters — most people don't reach this within the first year</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        If you're a beginner, a 5–52.5lb set will last you two to three years of consistent
+        training before you need anything heavier for lower body work. Upper body exercises rarely
+        exceed 50lb even for experienced lifters.
+      </p>
+    </section>
+
+    <!-- Dial vs pin vs block -->
+    <section>
+      <h2>Dial vs Pin vs Block Adjustment — Which Is Fastest?</h2>
+      <div class="mechanism-grid">
+        <div class="mechanism-card">
+          <h3>Dial (Bowflex, NordicTrack)</h3>
+          <p>
+            Rotate a dial at each end of the dumbbell to select weight. Takes 3–5 seconds per
+            dumbbell. The most intuitive mechanism — you can see and feel the selected weight
+            clearly. The plastic dial is the one component most likely to wear over time.
+            <strong>Best for:</strong> most home gym users, especially beginners.
+          </p>
+        </div>
+        <div class="mechanism-card">
+          <h3>Pin/Block (PowerBlock)</h3>
+          <p>
+            Pull a pin out, slide it to the desired weight selector on the block housing, push it
+            back in. Also 3–5 seconds. The all-metal construction means no plastic parts to crack.
+            The block shape feels different from a standard dumbbell, which some people find
+            awkward on overhead movements.
+            <strong>Best for:</strong> heavy users who prioritize durability over aesthetics.
+          </p>
+        </div>
+        <div class="mechanism-card">
+          <h3>Plate-Loading (not covered here)</h3>
+          <p>
+            Screw-collar style where you manually add and remove plates. Takes 30–60 seconds per
+            adjustment — too slow for anything resembling normal training. Only worth considering
+            for absolute budget minimums where cost outweighs convenience entirely.
+            <strong>Best for:</strong> nobody who trains regularly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <h3>
+        <a href={bowflexUrl} rel="noopener noreferrer sponsored">Bowflex SelectTech 552</a>
+        — Best Overall
+      </h3>
+      <p>
+        The Bowflex 552 has been the standard recommendation for home gym adjustable dumbbells for
+        over a decade because it nails the things that matter most: weight range, adjustment speed,
+        and increments. The 5–52.5lb range with 2.5lb steps at the low end means you can use it
+        for everything from physical therapy movements to loaded compound exercises.
+      </p>
+      <p>
+        The dial mechanism is satisfying to use — turn to your weight, lift the dumbbell out of
+        the tray, and the unused plates stay behind. The whole process takes about four seconds per
+        dumbbell. Changing from 25lb to 30lb between sets is genuinely fast enough that it doesn't
+        disrupt workout flow.
+      </p>
+      <p>
+        The one real caveat is build quality. The dials and selector mechanism are plastic, and
+        while they hold up fine under normal home use, they're not indestructible. Don't drop
+        these from waist height; don't leave them outside in moisture; don't let them slam against
+        a hard floor repeatedly. Treat them like gym equipment and they'll last for years.
+      </p>
+      <p>
+        At ~$300, they're the most expensive pick here but they're frequently on sale. If you can
+        catch them at $250–270, there's no question on value.
+      </p>
+
+      <h3>
+        <a href={powerblockUrl} rel="noopener noreferrer sponsored">PowerBlock Elite</a>
+        — Best for Heavy Lifters
+      </h3>
+      <p>
+        PowerBlock has been making adjustable dumbbells since 1991, and the Elite series shows it.
+        The construction is all-metal with urethane-coated weight blocks — nothing plastic to
+        break, nothing that feels like a consumer product. These feel like commercial gym equipment
+        because they essentially are.
+      </p>
+      <p>
+        The block shape is the biggest adjustment from standard dumbbells. The weight plates
+        stack inside a rectangular housing rather than a traditional oval, which changes the center
+        of gravity slightly on overhead movements and dumbbell flyes. Most people adapt within a
+        week; some never love it. If you have access to try them before buying, do it.
+      </p>
+      <p>
+        The pin selector is fast and totally reliable — pull it out, move it, push it back. No
+        dials to crack, no mechanisms to jam. PowerBlock also offers add-on kits that extend the
+        weight range to 70lb or 90lb for an additional purchase, which is useful if you know
+        you'll eventually outgrow 50lb.
+      </p>
+      <p>
+        At ~$250 they undercut the Bowflex by $50 with comparable performance. The tradeoff is
+        the block shape and slightly coarser weight increments (no 2.5lb steps).
+      </p>
+
+      <h3>
+        <a href={nordictrackUrl} rel="noopener noreferrer sponsored">NordicTrack Select-A-Weight</a>
+        — Best Budget
+      </h3>
+      <p>
+        NordicTrack's Select-A-Weight sets offer the highest weight ceiling in this price range —
+        10–55lb — for around $200. The dial mechanism is similar to Bowflex's and adjustment takes
+        roughly the same amount of time. The increments are 5lb throughout (no 2.5lb steps), which
+        matters mostly at the lighter end where finer adjustments are useful for isolation work.
+      </p>
+      <p>
+        The 10lb starting weight is a minor limitation if you need very light loads for shoulder
+        health work, but for general strength training it's fine. Build quality is solid for the
+        price, if a step below Bowflex on fit and finish.
+      </p>
+      <p>
+        If your budget is firm at $200 or you don't need the half-pound increments, this is the
+        pick. You get more weight ceiling than the Bowflex for $100 less — a legitimate tradeoff
+        depending on what matters to you.
+      </p>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Bowflex 552"
+        nameB="PowerBlock Elite"
+        nameC="NordicTrack SAW"
+        rows={rows}
+      />
+    </section>
+
+    <!-- Workout -->
+    <section>
+      <h2>Sample Full Body Workout — One Pair of Adjustable Dumbbells</h2>
+      <p>
+        Three days per week. Rest 60–90 seconds between sets. Adjust weight per exercise — that's
+        the whole point.
+      </p>
+      <div class="workout-block">
+        <div class="workout-header">
+          <span class="session-label">Full Body · 3x/week</span>
+          <span class="session-detail">~35–40 min &nbsp;·&nbsp; 4 exercises per section</span>
+        </div>
+
+        <p class="section-label">Push</p>
+        <table class="workout-table">
+          <thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>Suggested Weight</th></tr></thead>
+          <tbody>
+            <tr><td>Dumbbell Floor Press</td><td>4</td><td>8–10</td><td>35–52.5 lb</td></tr>
+            <tr><td>Dumbbell Shoulder Press</td><td>3</td><td>10–12</td><td>25–40 lb</td></tr>
+            <tr><td>Lateral Raise</td><td>3</td><td>12–15</td><td>10–20 lb</td></tr>
+          </tbody>
+        </table>
+
+        <p class="section-label">Pull</p>
+        <table class="workout-table">
+          <thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>Suggested Weight</th></tr></thead>
+          <tbody>
+            <tr><td>Dumbbell Row (each side)</td><td>4</td><td>10–12</td><td>35–52.5 lb</td></tr>
+            <tr><td>Dumbbell Curl</td><td>3</td><td>10–12</td><td>20–30 lb</td></tr>
+            <tr><td>Dumbbell Pullover</td><td>3</td><td>12</td><td>25–35 lb</td></tr>
+          </tbody>
+        </table>
+
+        <p class="section-label">Legs &amp; Core</p>
+        <table class="workout-table">
+          <thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>Suggested Weight</th></tr></thead>
+          <tbody>
+            <tr><td>Goblet Squat</td><td>4</td><td>10–12</td><td>35–52.5 lb</td></tr>
+            <tr><td>Romanian Deadlift</td><td>3</td><td>10–12</td><td>40–52.5 lb</td></tr>
+            <tr><td>Reverse Lunge (each leg)</td><td>3</td><td>10</td><td>25–35 lb</td></tr>
+            <tr><td>Farmer Carry (50 ft)</td><td>3</td><td>3 trips</td><td>40–52.5 lb</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ProsConsList -->
+    <ProsConsList pros={bowflexPros} cons={bowflexCons} productName="Bowflex SelectTech 552" />
+
+    <!-- Who should buy -->
+    <section>
+      <h2>Who Should Buy the Bowflex 552</h2>
+      <ul>
+        <li>Anyone building a home gym in limited space — the tray footprint is roughly 18 × 10 inches per dumbbell, smaller than any fixed dumbbell rack</li>
+        <li>Intermediate lifters who need both light (10lb) for shoulder work and heavy (50lb+) for compound movements from the same set</li>
+        <li>Anyone who values a traditional dumbbell shape and feel over the block design of PowerBlock — the 552 handles like a normal dumbbell</li>
+      </ul>
+
+      <h2>Who Should Skip It</h2>
+      <ul>
+        <li>Budget-first buyers — the NordicTrack gets you to 55lb for $100 less with a comparable dial mechanism; if you don't need 2.5lb increments, it's the better value</li>
+        <li>Heavy lifters who regularly press or row above 52.5lb — you'll outgrow the weight ceiling and need either a PowerBlock add-on kit or a different set</li>
+        <li>Anyone in a shared gym environment with multiple users — the adjustment time, while fast, is still too slow for true back-to-back use by different people</li>
+      </ul>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        For most people building a home gym on a budget, the Bowflex SelectTech 552 is the right
+        answer. The 5–52.5lb range is genuinely enough for years of serious training, the dial
+        mechanism is fast and intuitive, and the compact footprint solves the space problem that
+        makes fixed dumbbells impractical for most living situations.
+      </p>
+      <p>
+        If you're on a tighter budget and can live with 5lb increments, the NordicTrack gets you
+        there for $100 less. If durability is your top priority and you don't mind the block shape,
+        PowerBlock will outlast both. But for the combination of feel, range, speed, and
+        value, the 552 has been the default recommendation for a reason.
+      </p>
+      <AffiliateButton
+        href={bowflexUrl}
+        text="Check Bowflex SelectTech 552 on Amazon"
+        subtext="Best Overall · 5–52.5 lb · Dial Adjustment"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-family: system-ui, sans-serif;
+    color: #1e293b;
+    line-height: 1.7;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+  }
+
+  h3 a {
+    color: #ea580c;
+    text-decoration: none;
+  }
+
+  h3 a:hover { text-decoration: underline; }
+
+  .meta {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  p { margin-bottom: 1rem; }
+
+  ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  li { margin-bottom: 0.5rem; }
+
+  strong { color: #0f172a; }
+
+  /* Verdict box */
+  .verdict-box {
+    background: #fff7ed;
+    border: 2px solid #ea580c;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    margin-top: 0;
+    color: #ea580c;
+    font-size: 1.2rem;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .pick-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #fed7aa;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .pick-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ea580c;
+  }
+
+  .pick-title {
+    font-weight: 700;
+    color: #0f172a;
+    text-decoration: none;
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+
+  .pick-title:hover { color: #ea580c; }
+
+  .pick-card p {
+    font-size: 0.83rem;
+    color: #475569;
+    margin: 0;
+    flex: 1;
+  }
+
+  .pick-price {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 0.25rem;
+  }
+
+  /* Fixed vs adjustable comparison */
+  .comparison-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 560px) {
+    .comparison-block { grid-template-columns: 1fr; }
+  }
+
+  .comp-col {
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    border: 1px solid;
+  }
+
+  .comp-col:first-child { background: #f0fdf4; border-color: #bbf7d0; }
+  .comp-col:last-child  { background: #f8fafc; border-color: #e2e8f0; }
+
+  .comp-head {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin: 0 0 0.6rem 0;
+    display: block;
+  }
+
+  .comp-green { color: #166534; }
+  .comp-slate { color: #334155; }
+
+  .comp-col ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .comp-col li {
+    font-size: 0.85rem;
+    color: #334155;
+    margin-bottom: 0.35rem;
+  }
+
+  /* Weight range table */
+  .weight-table-wrap {
+    margin: 1rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+  }
+
+  .weight-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+
+  .weight-table thead tr {
+    background: #0f172a;
+    color: #e2e8f0;
+  }
+
+  .weight-table th {
+    text-align: left;
+    padding: 0.6rem 1rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
+  .weight-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: top;
+    color: #334155;
+  }
+
+  .weight-table td:first-child {
+    font-weight: 700;
+    color: #0f172a;
+    white-space: nowrap;
+  }
+
+  .weight-table tr:last-child td { border-bottom: none; }
+  .weight-table tr:nth-child(even) { background: #f8fafc; }
+
+  /* Mechanism cards */
+  .mechanism-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .mechanism-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #ea580c;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .mechanism-card h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.4rem 0;
+  }
+
+  .mechanism-card p {
+    font-size: 0.84rem;
+    color: #475569;
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  /* Workout block */
+  .workout-block {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+    color: #e2e8f0;
+  }
+
+  .workout-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .session-label {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #ea580c;
+  }
+
+  .session-detail {
+    font-size: 0.83rem;
+    color: #94a3b8;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #ea580c;
+    margin: 1.25rem 0 0.4rem 0;
+  }
+
+  .workout-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .workout-table thead tr {
+    border-bottom: 1px solid #334155;
+  }
+
+  .workout-table th {
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    padding: 0.35rem 0.5rem;
+  }
+
+  .workout-table td {
+    padding: 0.5rem 0.5rem;
+    border-bottom: 1px solid #1e293b;
+    color: #cbd5e1;
+    vertical-align: top;
+  }
+
+  .workout-table td:first-child {
+    font-weight: 600;
+    color: #f1f5f9;
+  }
+
+  .workout-table tr:last-child td { border-bottom: none; }
+</style>
