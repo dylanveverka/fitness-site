@@ -1,0 +1,536 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+
+const title = "How to Stay Fit During Finals Week (College Student Guide)";
+const description =
+  "Finals week destroys most students' fitness routines. Here's how to keep your gains, manage stress, and stay healthy during the most brutal week of the semester.";
+const pubDate = "2026-04-16";
+const slug = "how-to-stay-fit-finals-week-college";
+
+const ashwagandhaUrl = "https://www.amazon.com/s?k=ashwagandha+capsules&tag=dveverka-20";
+const magnesiumUrl   = "https://www.amazon.com/s?k=magnesium+glycinate+supplement&tag=dveverka-20";
+const questBarUrl    = "https://www.amazon.com/s?k=quest+protein+bars&tag=dveverka-20";
+---
+
+<Layout {title} {description} canonicalUrl={`/guides/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        Every semester the same thing happens. You've been consistent for
+        months — going to the gym three or four times a week, eating
+        reasonably well, keeping your protein up. Then finals hit and in
+        the span of about five days the whole thing falls apart. The gym
+        stops happening, you're eating dining hall garbage at midnight,
+        you're sleeping five hours and waking up more tired than when you
+        went to bed, and by the time you're done with your last exam you
+        feel worse physically than you have all semester.
+      </p>
+      <p>
+        The good news: you don't need to maintain your full training
+        schedule during finals. You need to do the minimum that keeps
+        you from losing what you've built and makes the week itself more
+        manageable. That's a much lower bar than people think, and the
+        strategies for hitting it are simple enough to actually execute
+        when your schedule is already maxed out.
+      </p>
+    </section>
+
+    <!-- Why Finals Destroys Your Fitness -->
+    <section>
+      <h2>Why Finals Week Destroys Your Fitness</h2>
+      <p>
+        It's not one thing — it's four things happening simultaneously
+        that compound each other.
+      </p>
+      <p>
+        <strong>Elevated cortisol from chronic stress.</strong> Academic
+        stress is physiologically real. Chronic psychological stress raises
+        cortisol, which in elevated sustained doses increases muscle protein
+        breakdown, reduces testosterone, impairs sleep quality, and increases
+        fat storage — particularly around the midsection. A week of high
+        cortisol from finals stress won't undo months of training, but it
+        creates a catabolic environment that amplifies every other problem on
+        this list.
+      </p>
+      <p>
+        <strong>Sleep deprivation.</strong> A 2011 study in the <em>Annals
+        of Internal Medicine</em> found that reducing sleep from 8.5 to
+        5.5 hours per night while in a calorie deficit increased the
+        proportion of muscle lost versus fat by 55%. You lose more muscle
+        and less fat when you sleep badly. For a student cutting or
+        maintaining, sleep-deprived finals week is actively working against
+        months of body composition progress.
+      </p>
+      <p>
+        <strong>Diet regression.</strong> When cognitive load is high and
+        time is short, food decisions default to what's fast and available
+        — which in a college environment means dining hall carb loading,
+        vending machine runs, and skipping meals entirely followed by
+        overeating. Protein intake drops, calories become erratic, and
+        the structured eating that supports training goes out the window.
+      </p>
+      <p>
+        <strong>Skipped training.</strong> The gym feels impossible to
+        justify when you have a cumulative exam in 14 hours and haven't
+        finished the material. What students underestimate is that even
+        one 30-minute workout mid-week produces measurable cognitive
+        benefits — improved focus, reduced anxiety, better sleep quality
+        that night — that more studying time in the library won't replicate.
+      </p>
+    </section>
+
+    <!-- Minimum Effective Dose -->
+    <section>
+      <h2>The Minimum Effective Dose Workout Plan for Finals Week</h2>
+      <p>
+        The research on maintenance versus building is clear: you need
+        significantly less volume to maintain muscle than you do to build it.
+        A 2011 study in the <em>Journal of Strength and Conditioning Research</em>
+        found that trained athletes maintained strength and muscle mass for
+        up to 12 weeks on one third of their normal training volume —
+        provided intensity stayed high. For a student going from four sessions
+        per week to two, the muscle retention math is strongly in your favor.
+      </p>
+      <p>
+        <strong>Two 30-minute full body sessions per week is enough to
+        maintain everything you've built</strong> during a finals period.
+        That's it. Two sessions. Schedule them like exams — put them in
+        your calendar as non-negotiable blocks — and don't negotiate them
+        away to study time that would have been marginally productive anyway.
+      </p>
+
+      <div class="workout-box">
+        <h3>Finals Week Full Body Session (30 Minutes)</h3>
+        <p class="workout-note">Do this twice a week — Monday/Thursday or Tuesday/Friday works well. Keep rest periods tight at 60–90 seconds. The goal is stimulus, not volume.</p>
+        <div class="exercise-table">
+          <div class="exercise-header">
+            <span>Exercise</span>
+            <span>Sets × Reps</span>
+            <span>Notes</span>
+          </div>
+          <div class="exercise-row">
+            <span>Barbell Squat or Goblet Squat</span>
+            <span>3 × 5</span>
+            <span>Heavy — use working weight from normal training</span>
+          </div>
+          <div class="exercise-row">
+            <span>Bench Press or Push-Ups</span>
+            <span>3 × 5–8</span>
+            <span>Heavy if bench available; push-ups to near failure otherwise</span>
+          </div>
+          <div class="exercise-row">
+            <span>Barbell Row or Dumbbell Row</span>
+            <span>3 × 6–8</span>
+            <span>Controlled tempo — don't rush the reps</span>
+          </div>
+          <div class="exercise-row">
+            <span>Romanian Deadlift</span>
+            <span>2 × 8</span>
+            <span>Moderate weight, focus on the hinge</span>
+          </div>
+          <div class="exercise-row">
+            <span>Pull-Ups or Lat Pulldown</span>
+            <span>2 × max / 3 × 8</span>
+            <span>Bodyweight to failure or cable machine</span>
+          </div>
+        </div>
+        <p class="workout-note">Total time including warm-up: 25–35 minutes. No accessories, no isolation work, no cardio added. Just the compound movements at working intensity.</p>
+      </div>
+    </section>
+
+    <!-- Eating Well During Finals -->
+    <section>
+      <h2>How to Eat Well During Finals Without Meal Prepping</h2>
+      <p>
+        You're not going to meal prep during finals. Accept that and build
+        a strategy around what's actually available.
+      </p>
+      <p>
+        <strong>Dining hall protein anchoring.</strong> Every dining hall
+        has protein sources available at most meal periods — rotisserie
+        chicken, eggs, Greek yogurt, deli meat, cottage cheese. Build
+        every plate around one of those first, then add whatever carbs and
+        vegetables are available. You don't need a perfect meal; you need
+        adequate protein three times a day. A dining hall plate of chicken,
+        a scoop of rice, and some vegetables is 35–40g protein and takes
+        the same time as a plate of pasta and bread that delivers 8g.
+      </p>
+      <p>
+        <strong>Keep these in your dorm.</strong> The decisions that wreck
+        finals week nutrition happen at 11pm when you're hungry and tired
+        and the only available option is a vending machine. Remove that
+        scenario by keeping a short list of shelf-stable, high-protein
+        options at your desk:
+      </p>
+      <ul>
+        <li>Protein bars (Quest or similar — 20g+ protein, no refrigeration)</li>
+        <li>Canned tuna or chicken pouches (~25g protein, $1.50 each)</li>
+        <li>Individual peanut butter packets + a bag of rice cakes</li>
+        <li>Protein powder and a shaker — a shake takes 90 seconds</li>
+        <li>A bag of mixed nuts for calorie-dense snacking without planning</li>
+      </ul>
+      <AffiliateButton href={questBarUrl} label="Stock Up on Quest Protein Bars on Amazon" />
+      <p>
+        <strong>The 80% rule.</strong> Your diet during finals doesn't need
+        to be optimal — it needs to be adequate. Hit roughly 80% of your
+        normal protein intake, don't skip meals entirely, and avoid the
+        late-night dining hall binge that follows skipping dinner. That's
+        a low enough bar to clear even during exam crunch without requiring
+        active dietary effort.
+      </p>
+    </section>
+
+    <!-- Supplements That Help -->
+    <section>
+      <h2>Supplements That Actually Help During Finals</h2>
+
+      <div class="supp-card">
+        <div class="supp-header">
+          <h3>Ashwagandha — For Cortisol and Stress</h3>
+        </div>
+        <p>
+          If there's one supplement specifically suited to finals week, it's
+          ashwagandha. A 2012 study in the <em>Indian Journal of Psychological
+          Medicine</em> found KSM-66 ashwagandha reduced serum cortisol by
+          27.9% and significantly lowered perceived stress scores compared
+          to placebo over 60 days. The mechanism — adaptogenic modulation
+          of the HPA axis — is well-documented enough to take seriously.
+          At 300–600mg daily of a standardized extract, the cortisol reduction
+          during a high-stress period like finals is real and noticeable within
+          2–4 weeks of consistent use. Start it before finals, not during.
+        </p>
+        <AffiliateButton href={ashwagandhaUrl} label="Buy Ashwagandha on Amazon" />
+      </div>
+
+      <div class="supp-card">
+        <div class="supp-header">
+          <h3>Magnesium Glycinate — For Sleep Quality</h3>
+        </div>
+        <p>
+          Magnesium is involved in the regulation of GABA receptors, which
+          are the primary inhibitory neurotransmitter system responsible for
+          calming neural activity before sleep. Students who are deficient
+          in magnesium — which is over 50% of Americans — experience lower
+          sleep quality, more difficulty falling asleep, and shallower
+          sleep stages. 200–400mg of magnesium glycinate taken 30–60 minutes
+          before bed improves sleep onset and quality without the grogginess
+          of melatonin the next morning. During finals week when sleep is
+          already compromised, this is one of the highest-leverage interventions
+          available.
+        </p>
+        <AffiliateButton href={magnesiumUrl} label="Buy Magnesium Glycinate on Amazon" />
+      </div>
+    </section>
+
+    <!-- Caffeine Strategy -->
+    <section>
+      <h2>How to Use Caffeine Strategically During Finals</h2>
+      <p>
+        Caffeine is the most useful cognitive tool available during finals
+        week and also the most commonly misused. The problem isn't caffeine
+        — it's the pattern of consumption that most students fall into:
+        late morning coffee, afternoon energy drink, late-night pre-workout
+        to power through studying, then lying awake at 2am wondering why
+        they can't sleep.
+      </p>
+      <p>
+        <strong>The hard cutoff rule: no caffeine after 2pm.</strong>
+        Caffeine's half-life is 5–6 hours, which means 200mg at 3pm is
+        still 100mg active in your system at 9pm. Even if you fall asleep,
+        caffeine in your system during sleep reduces slow-wave and REM sleep
+        — the restorative stages where memory consolidation happens. You're
+        literally reducing your ability to retain what you studied by using
+        caffeine too late to study more.
+      </p>
+      <p>
+        <strong>Front-load your caffeine.</strong> One 200mg dose at 8am
+        and one at 12pm gives you peak cognitive function through your most
+        productive study hours without pushing into the evening. Total daily
+        intake of 200–400mg is within the range shown to improve memory,
+        attention, and processing speed. Above 400mg, the anxiety and
+        jitteriness start to cost you more than the alertness gains.
+      </p>
+      <p>
+        <strong>Use strategic caffeine-free days.</strong> If you've been
+        consuming caffeine daily for more than two weeks, tolerance has
+        built significantly. Taking one day off — ideally a lower-stakes
+        study day, not the night before an exam — partially resets tolerance
+        and makes the next dose more effective. Plan this deliberately rather
+        than accidentally going without and suffering a withdrawal headache
+        during an exam.
+      </p>
+    </section>
+
+    <!-- Sleep Section -->
+    <section>
+      <h2>Sleep Is More Important Than One More Hour of Studying</h2>
+      <p>
+        This is the section students skip because it conflicts with what
+        feels productive at 1am. Here's the evidence that makes the case:
+      </p>
+      <p>
+        A 2003 study at Harvard Medical School found that students who slept
+        after learning new material showed 20–30% better retention than
+        students who stayed awake. Sleep is when the hippocampus transfers
+        learned material to long-term cortical storage — the process literally
+        cannot happen while you're awake. Studying for an extra hour at the
+        cost of one hour of sleep is a net negative for exam performance in
+        most cases.
+      </p>
+      <p>
+        The practical target during finals: <strong>7 hours minimum,
+        7.5 preferably.</strong> Not 5 hours plus a nap, not 6 hours
+        "but I'll sleep in after the exam." Seven hours of sleep the night
+        before an exam does more for your performance than the marginal
+        studying time you'd get between midnight and 2am after your brain
+        has already been working for 16 hours.
+      </p>
+      <p>
+        <strong>The 20-minute nap as a legitimate tool.</strong> A 20-minute
+        nap taken mid-afternoon (not after 3pm) restores alertness and
+        working memory without entering deep sleep, which causes grogginess.
+        NASA research on pilots found 26-minute naps improved performance
+        by 34% and alertness by 100%. If you have an afternoon exam block,
+        a nap after lunch and before an evening session is a better use of
+        that time than grinding through the afternoon fog.
+      </p>
+      <p>
+        <strong>Wind-down protocol for nights before exams.</strong> Screen
+        off 30 minutes before bed. Magnesium glycinate 30–60 minutes before
+        sleep. Keep the room cool (65–68°F if possible). Don't review notes
+        in bed — your brain needs to associate the bed with sleep, not stress.
+        If anxiety is keeping you awake, a few minutes of slow breathing
+        (4-second inhale, 6-second exhale) activates the parasympathetic
+        nervous system and reduces the cortisol spike that makes racing
+        thoughts hard to stop.
+      </p>
+    </section>
+
+    <!-- Finals Week Summary -->
+    <section>
+      <h2>The Finals Week Plan in One Place</h2>
+      <div class="summary-box">
+        <div class="summary-grid">
+          <div class="summary-card">
+            <h3>Training</h3>
+            <p>2 × 30-min full body sessions. Heavy compound movements only. Schedule them in your calendar and treat them like exams.</p>
+          </div>
+          <div class="summary-card">
+            <h3>Nutrition</h3>
+            <p>Hit 80% of normal protein. Anchor dining hall plates around chicken, eggs, or Greek yogurt. Keep protein bars and tuna pouches at your desk for late nights.</p>
+          </div>
+          <div class="summary-card">
+            <h3>Supplements</h3>
+            <p>Ashwagandha daily (start before finals). Magnesium glycinate 200–400mg before bed. Caffeine front-loaded before 2pm only.</p>
+          </div>
+          <div class="summary-card">
+            <h3>Sleep</h3>
+            <p>7 hours minimum. Hard cutoff on caffeine at 2pm. 20-minute nap mid-afternoon if needed. Screens off 30 minutes before bed.</p>
+          </div>
+        </div>
+      </div>
+      <p>
+        The students who come out of finals week in the same physical
+        condition they went in are not the ones who maintained a perfect
+        training schedule — they're the ones who maintained a minimum viable
+        routine across all four categories simultaneously. None of it is
+        complicated. All of it requires treating your body as part of exam
+        performance rather than a casualty of it.
+      </p>
+      <AffiliateButton href={ashwagandhaUrl} label="Buy Ashwagandha on Amazon" />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.5rem;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    line-height: 1.75;
+    color: #334155;
+    margin: 0.5rem 0 1rem;
+  }
+
+  li {
+    margin-bottom: 0.4rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Workout Box */
+  .workout-box {
+    background: #0f172a;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+    color: #f8fafc;
+  }
+
+  .workout-box h3 {
+    color: #f97316;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .workout-note {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin: 0.5rem 0 1rem !important;
+    line-height: 1.6;
+  }
+
+  .exercise-table {
+    border: 1px solid #1e293b;
+    border-radius: 0.375rem;
+    overflow: hidden;
+    margin: 0.75rem 0;
+  }
+
+  .exercise-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 0.5rem;
+    background: #1e293b;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #64748b;
+  }
+
+  .exercise-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 0.5rem;
+    padding: 0.65rem 0.75rem;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    border-top: 1px solid #1e293b;
+    line-height: 1.4;
+  }
+
+  .exercise-row:nth-child(even) {
+    background: #0d1424;
+  }
+
+  /* Supplement Cards */
+  .supp-card {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-left: 4px solid #f97316;
+    border-radius: 0.5rem;
+    padding: 1.25rem 1.5rem;
+    margin: 1.25rem 0;
+  }
+
+  .supp-header {
+    margin-bottom: 0.5rem;
+  }
+
+  .supp-card h3 {
+    color: #c2410c;
+    margin: 0;
+  }
+
+  .supp-card p {
+    color: #7c2d12;
+    margin: 0.5rem 0;
+  }
+
+  /* Summary Box */
+  .summary-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1rem 0 1.5rem;
+  }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .summary-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    padding: 1rem;
+  }
+
+  .summary-card h3 {
+    font-size: 0.9rem;
+    color: #f97316;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .summary-card p {
+    font-size: 0.85rem;
+    color: #475569;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 600px) {
+    .exercise-header,
+    .exercise-row {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .exercise-header span:last-child,
+    .exercise-row span:last-child {
+      display: none;
+    }
+
+    .summary-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
