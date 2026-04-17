@@ -1,0 +1,769 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Weight Plates for Home Gym on a Budget (2025)";
+const description =
+  "Weight plates are the most important purchase for a home gym barbell setup. Here are the best budget picks ranked by price per pound, quality, and durability.";
+const pubDate = "2026-04-17";
+const slug = "best-weight-plates-home-gym-budget";
+
+const rogueUrl  = "https://www.amazon.com/s?k=rogue+bumper+plates+weight&tag=dveverka-20";
+const capUrl    = "https://www.amazon.com/s?k=cap+barbell+olympic+weight+plates&tag=dveverka-20";
+const titanUrl  = "https://www.amazon.com/s?k=titan+fitness+bumper+plates&tag=dveverka-20";
+
+const capPros = [
+  "At $0.70–1.00 per pound, CAP iron plates are the cheapest way to put real weight on a barbell — a full 300 lb starter set runs $200–280 new, less than half the cost of an equivalent bumper plate setup, and used CAP plates on Facebook Marketplace often go for $0.30–0.50/lb",
+  "Cast iron durability is essentially infinite for gym use — these plates don't crack, chip, or degrade from normal lifting. A set of CAP iron plates bought today will still be functional in 20 years with zero maintenance other than occasional rust wipe-down",
+  "2-inch Olympic holes fit every standard barbell, power rack, and plate storage peg — no compatibility issues with any equipment you're likely to buy for a home gym setup",
+  "Available in every standard weight increment from 2.5 lbs to 45 lbs, making it easy to build out a full plate collection incrementally as budget allows rather than needing to buy a complete set upfront",
+  "Low profile compared to bumper plates — iron plates are thinner for their weight, so you can load more total weight on a standard 7-foot barbell before running out of sleeve length",
+];
+
+const capCons = [
+  "Iron plates are loud on hard floors — dropping or setting them down on concrete or tile without rubber mats creates significant noise and floor damage. They require a rubber mat underneath and a conscious set-down rather than a drop, which matters for home gym situations with downstairs neighbors or apartment settings",
+  "Rust is a real issue in humid environments — bare cast iron oxidizes visibly in garages or basements with temperature swings and moisture. Not structurally damaging, but ugly and transfers rust residue to hands and clothing. Budget for a rubber mat and occasional light oiling if your gym space isn't climate-controlled",
+  "The hole tolerances on budget cast iron plates are often slightly looser than premium plates, meaning there's a small amount of play on the sleeve that creates a subtle rattling or shifting during lifts. Not a safety issue, but noticeable on lighter loads where the plates aren't under constant tension",
+];
+
+const comparisonRows = [
+  { feature: "Price per lb", nameA: "Rogue Bumpers", nameB: "CAP Iron", nameC: "Titan Bumpers", valueA: "~$1.50–2.00", valueB: "~$0.70–1.00", valueC: "~$1.20", winner: "B" },
+  { feature: "Material", nameA: "Rogue Bumpers", nameB: "CAP Iron", nameC: "Titan Bumpers", valueA: "Virgin rubber", valueB: "Cast iron", valueC: "Rubber / crumb", winner: "" },
+  { feature: "Drop Safe", nameA: "Rogue Bumpers", nameB: "CAP Iron", nameC: "Titan Bumpers", valueA: "Yes", valueB: "No", valueC: "Yes", winner: "" },
+  { feature: "Durability", nameA: "Rogue Bumpers", nameB: "CAP Iron", nameC: "Titan Bumpers", valueA: "Excellent", valueB: "Excellent", valueC: "Good", winner: "" },
+  { feature: "Best For", nameA: "Rogue Bumpers", nameB: "CAP Iron", nameC: "Titan Bumpers", valueA: "Olympic lifts, home floors", valueB: "Powerlifting, budget builds", valueC: "General strength, value", winner: "" },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        Weight plates are sold by the pound, and buying the wrong ones is one of the most
+        expensive mistakes you can make building a home gym. A 300 lb set of bumper plates
+        at the wrong price point costs $500+. The same 300 lbs in cast iron runs $200. The
+        difference isn't quality — it's whether you need to drop the bar, and most people
+        don't. Knowing exactly what you're buying before you spend is worth the ten minutes.
+      </p>
+      <p>
+        There are three options worth recommending under $2 per pound: Rogue rubber bumpers
+        for drop-safe setups, CAP iron plates for pure value, and Titan bumpers as a
+        middle-ground option. Here's the breakdown on all three — and why Facebook Marketplace
+        might be the best plate store you've never thought of.
+      </p>
+    </section>
+
+    <!-- Verdict Box -->
+    <div class="verdict-box">
+      <h2>Quick Picks</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-label">Best Overall</span>
+          <a href={rogueUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Rogue Rubber Bumper Plates
+          </a>
+          <p>Virgin rubber, drop-safe, consistent weight tolerance. The long-term buy for any home gym with floors worth protecting.</p>
+          <span class="pick-price">~$1.50–2.00/lb</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Budget</span>
+          <a href={capUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            CAP Barbell Olympic Plates
+          </a>
+          <p>Cast iron, $0.70–1.00/lb, infinite durability. The cheapest path to a full plate set that won't fail on you.</p>
+          <span class="pick-price">~$0.70–1.00/lb</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Value Bumper</span>
+          <a href={titanUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Titan Fitness Bumper Plates
+          </a>
+          <p>Drop-safe rubber at ~$1.20/lb — the bump-plate sweet spot between CAP iron and Rogue premium.</p>
+          <span class="pick-price">~$1.20/lb</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bumper vs iron -->
+    <section>
+      <h2>Bumper Plates vs Iron Plates — Which Should Beginners Get?</h2>
+      <p>
+        This is the most important decision in plate buying and the one most guides
+        overcomplicate. The answer comes down to one question: will you ever drop the bar?
+      </p>
+      <div class="plate-type-grid">
+        <div class="plate-type-card plate-bumper">
+          <h3>Bumper Plates (Rubber)</h3>
+          <p class="plate-type-price">Rogue / Titan · ~$1.20–2.00/lb</p>
+          <ul>
+            <li>Designed to be dropped from any height — the rubber absorbs impact without cracking</li>
+            <li>Protects floors, equipment, and the barbell from drop damage</li>
+            <li>Quieter than iron — better for apartments, shared spaces, early mornings</li>
+            <li>Thicker per pound — you can load less total weight before running out of sleeve space</li>
+            <li>Required for Olympic weightlifting (cleans, snatches, jerks) where missing a lift means dropping the bar</li>
+          </ul>
+          <p class="plate-type-verdict"><strong>Get bumpers if:</strong> You're doing Olympic lifts, training on unprotected floors, or sharing a space where drop noise matters</p>
+        </div>
+        <div class="plate-type-card plate-iron">
+          <h3>Iron Plates (Cast Iron)</h3>
+          <p class="plate-type-price">CAP Barbell · ~$0.70–1.00/lb</p>
+          <ul>
+            <li>Cheapest per pound — a full 300 lb set costs roughly half the equivalent in bumpers</li>
+            <li>Thinner profile — loads more weight on the same sleeve length</li>
+            <li>Not drop-safe — hitting concrete cracks plates, damages floors, and is very loud</li>
+            <li>Requires rubber mats beneath for floor protection during set-downs</li>
+            <li>Better for powerlifting-style training where controlled set-downs are the standard</li>
+          </ul>
+          <p class="plate-type-verdict"><strong>Get iron if:</strong> You're doing squat / bench / deadlift and will always set the bar down (not drop it), and budget is the primary constraint</p>
+        </div>
+      </div>
+      <p>
+        For most beginners doing a basic barbell program (squat, bench, deadlift): iron plates
+        are fine. You don't need to drop the bar for any of those movements. Buy iron, add a
+        rubber mat, and spend the savings on more weight.
+      </p>
+    </section>
+
+    <!-- How much weight to start -->
+    <section>
+      <h2>How Much Weight Do You Actually Need to Start?</h2>
+      <p>
+        The classic mistake is buying too little and ordering more plates three weeks later
+        (paying shipping twice) or buying so much that half the set sits unused for a year.
+        Here's a practical starter setup for most beginners:
+      </p>
+      <div class="starter-grid">
+        <div class="starter-card">
+          <h4>Minimum Viable Setup (~200 lbs)</h4>
+          <ul>
+            <li>2x 45 lb plates</li>
+            <li>2x 25 lb plates</li>
+            <li>2x 10 lb plates</li>
+            <li>2x 5 lb plates</li>
+            <li>2x 2.5 lb plates</li>
+          </ul>
+          <p class="starter-cost">~$140–180 in iron · ~$240–280 in bumpers</p>
+          <p>Covers most beginner working sets for squat, bench, and deadlift in the first 6 months.</p>
+        </div>
+        <div class="starter-card">
+          <h4>Recommended Starter Setup (~300 lbs)</h4>
+          <ul>
+            <li>4x 45 lb plates</li>
+            <li>2x 25 lb plates</li>
+            <li>2x 10 lb plates</li>
+            <li>4x 5 lb plates</li>
+            <li>2x 2.5 lb plates</li>
+          </ul>
+          <p class="starter-cost">~$200–260 in iron · ~$360–420 in bumpers</p>
+          <p>Covers 12–18 months of beginner progression without needing to add plates mid-program. Worth the extra $50–70 over the minimum setup.</p>
+        </div>
+        <div class="starter-card">
+          <h4>Intermediate Setup (~400 lbs)</h4>
+          <ul>
+            <li>6x 45 lb plates</li>
+            <li>2x 35 lb plates</li>
+            <li>2x 25 lb plates</li>
+            <li>2x 10 lb plates</li>
+            <li>4x 5 lb plates</li>
+            <li>2x 2.5 lb plates</li>
+          </ul>
+          <p class="starter-cost">~$300–380 in iron · $500+ in bumpers</p>
+          <p>For lifters already doing 200+ lb squats who want room to grow without future purchases. At this point, iron plates are strongly preferred on cost grounds.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <h3>
+        <a href={rogueUrl} rel="noopener noreferrer sponsored">Rogue Rubber Bumper Plates</a>
+        — Best Overall
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Material:</strong> Virgin rubber</span>
+        <span class="spec"><strong>Price/lb:</strong> ~$1.50–2.00</span>
+        <span class="spec"><strong>Drop safe:</strong> Yes</span>
+        <span class="spec"><strong>Hole tolerance:</strong> Tight (±1%)</span>
+        <span class="spec"><strong>Durability:</strong> Excellent</span>
+      </div>
+      <p>
+        Rogue bumper plates are made from virgin rubber — not recycled crumb rubber — which
+        means they hold their shape over years of drops, don't develop flat spots, and have
+        consistent rebound that doesn't send the bar careening sideways on a miss. The weight
+        tolerance is within ±1% of stated weight, which matters less for general training
+        and more if you ever compete or want to track actual loads precisely.
+      </p>
+      <p>
+        The price reflects the quality. At $1.50–2.00 per pound, a 300 lb set costs $450–600 —
+        more than double the equivalent in CAP iron. For most beginner home gym setups doing
+        squat, bench, and deadlift, that premium isn't necessary. It becomes worth it if you're
+        doing Olympic lifts (where dropping is unavoidable), if your gym floor isn't protected
+        by rubber mats, or if you're building a setup you intend to use for a decade and want
+        plates that won't degrade.
+      </p>
+
+      <h3>
+        <a href={capUrl} rel="noopener noreferrer sponsored">CAP Barbell Olympic Plates</a>
+        — Best Budget
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Material:</strong> Cast iron</span>
+        <span class="spec"><strong>Price/lb:</strong> ~$0.70–1.00</span>
+        <span class="spec"><strong>Drop safe:</strong> No</span>
+        <span class="spec"><strong>Hole tolerance:</strong> 2-inch standard</span>
+        <span class="spec"><strong>Durability:</strong> Excellent (with proper use)</span>
+      </div>
+      <p>
+        If you're doing a barbell strength program — squat, bench press, deadlift, overhead
+        press — and you're going to set the bar down (not drop it), buy the CAP iron plates.
+        They're half the price of bumpers, they last forever, and they don't limit how much
+        weight you can fit on the sleeve. A 300 lb iron plate set runs $200–260 new and
+        $100–150 used. Nothing else comes close on pure value.
+      </p>
+      <p>
+        The requirements: a rubber floor mat under your lifting area to absorb the noise
+        and protect the floor on set-downs, and some basic rust management if your space
+        has humidity swings. A light coat of WD-40 or 3-in-1 oil every few months keeps
+        cast iron plates looking clean and prevents surface rust from transferring to your
+        hands. Those two things addressed, there's no practical reason to pay more for
+        plates if you're doing powerlifting-style movements.
+      </p>
+
+      <h3>
+        <a href={titanUrl} rel="noopener noreferrer sponsored">Titan Fitness Bumper Plates</a>
+        — Best Value Bumper
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Material:</strong> Crumb rubber</span>
+        <span class="spec"><strong>Price/lb:</strong> ~$1.20</span>
+        <span class="spec"><strong>Drop safe:</strong> Yes</span>
+        <span class="spec"><strong>Hole tolerance:</strong> Standard</span>
+        <span class="spec"><strong>Durability:</strong> Good</span>
+      </div>
+      <p>
+        The Titan bumpers split the difference between CAP iron and Rogue rubber — drop-safe
+        construction at a price closer to iron than premium bumpers. The crumb rubber
+        construction is less refined than Rogue's virgin rubber (slightly more bounce
+        variability, develops minor surface wear faster) but functionally adequate for
+        general strength training and lighter Olympic lifting. At ~$1.20 per pound, a
+        300 lb set runs around $360 — meaningfully cheaper than Rogue while still protecting
+        floors and allowing drops.
+      </p>
+      <p>
+        The right call for anyone who needs drop-safety but doesn't want to pay Rogue
+        prices — a garage gym with a plywood platform, a basement with concrete floors,
+        or anyone doing moderate Olympic lifting where drops happen occasionally but
+        not every set. The quality control is generally good; occasional cosmetic
+        inconsistencies between plates are the most common complaint rather than
+        functional issues.
+      </p>
+    </section>
+
+    <!-- Price guide -->
+    <section>
+      <h2>What's a Good Price Per Pound for Weight Plates?</h2>
+      <div class="price-grid">
+        <div class="price-card price-excellent">
+          <h4>Excellent Deal</h4>
+          <p class="price-iron">Iron: under $0.60/lb</p>
+          <p class="price-bumper">Bumpers: under $0.90/lb</p>
+          <p>Used market pricing. If you see iron at this price on Facebook Marketplace, buy immediately — it won't last.</p>
+        </div>
+        <div class="price-card price-good">
+          <h4>Good Price</h4>
+          <p class="price-iron">Iron: $0.70–1.00/lb</p>
+          <p class="price-bumper">Bumpers: $1.00–1.40/lb</p>
+          <p>Standard retail pricing for budget brands (CAP, Titan). Buy new if used inventory in your area is thin.</p>
+        </div>
+        <div class="price-card price-fair">
+          <h4>Fair but Not a Deal</h4>
+          <p class="price-iron">Iron: $1.00–1.50/lb</p>
+          <p class="price-bumper">Bumpers: $1.50–2.00/lb</p>
+          <p>Premium brand pricing (Rogue, Rep Fitness). Justified if quality and warranty matter — not justified for budget builds.</p>
+        </div>
+        <div class="price-card price-avoid">
+          <h4>Overpriced — Skip</h4>
+          <p class="price-iron">Iron: over $1.50/lb</p>
+          <p class="price-bumper">Bumpers: over $2.00/lb</p>
+          <p>You're paying for branding or scarcity. Wait for a sale or check the used market — plates at this price are never worth it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Where to buy cheapest -->
+    <section>
+      <h2>Where to Buy Weight Plates Cheapest</h2>
+      <p>
+        New plates at retail are rarely the best option. Weight plates are one of the few
+        fitness purchases where the used market is reliably better — plates don't wear out,
+        they don't lose function, and people who quit the gym have no use for 300 lbs of
+        iron sitting in their garage.
+      </p>
+      <div class="source-grid">
+        <div class="source-card source-best">
+          <h4>Facebook Marketplace</h4>
+          <p class="source-tag">Best overall</p>
+          <p>Search "weight plates" or "Olympic plates" filtered to within 25 miles. Expect $0.25–0.60/lb for cast iron in good condition. Show up with cash, load the car yourself. Check listings daily — good plate sets move fast.</p>
+        </div>
+        <div class="source-card source-good">
+          <h4>Craigslist</h4>
+          <p class="source-tag">Good backup</p>
+          <p>Less active than Facebook Marketplace in most cities but still worth checking. Same price range. Search "barbell plates," "weight set," and "home gym" to catch full equipment lots that include plates as part of a larger sale.</p>
+        </div>
+        <div class="source-card source-ok">
+          <h4>Local Gym Liquidations</h4>
+          <p class="source-tag">Occasional goldmine</p>
+          <p>Commercial gyms upgrade or close every year. When they do, they sell floor equipment in bulk. Follow local gym Facebook groups, check Craigslist for "gym equipment lot," and watch for commercial fitness equipment auctions in your area.</p>
+        </div>
+        <div class="source-card source-retail">
+          <h4>Amazon / Dick's Sporting Goods</h4>
+          <p class="source-tag">When used market is dry</p>
+          <p>Buy new when used inventory in your area is thin or you need a specific weight you can't find locally. Set an Amazon price alert — CAP and Titan plates go on sale 20–30% off several times per year, usually around major holidays.</p>
+        </div>
+      </div>
+      <div class="callout-box">
+        <strong>The used plate rule:</strong> Iron plates in good condition (no cracks, not badly pitted with rust) at under $0.75/lb are always worth buying. They're the same plates as new ones — cast iron doesn't wear out from gym use.
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Rogue Bumpers"
+        nameB="CAP Iron"
+        nameC="Titan Bumpers"
+        rows={comparisonRows}
+      />
+    </section>
+
+    <!-- Pros/Cons -->
+    <section>
+      <h2>CAP Barbell Olympic Plates — Pros &amp; Cons</h2>
+      <ProsConsList pros={capPros} cons={capCons} />
+    </section>
+
+    <!-- Who should buy / skip -->
+    <section>
+      <h2>Who Should Buy CAP Iron Plates</h2>
+      <p>
+        The CAP iron plates are right for anyone building a barbell setup on a budget who
+        plans to squat, bench, and deadlift — the three movements where you set the bar down
+        rather than drop it. They're the cheapest path to a full plate set, they last
+        indefinitely, and the money saved over bumper plates buys real equipment upgrades
+        (better bar, rack, bench). For a first home gym setup on a budget, there's no better
+        value in weight plates.
+      </p>
+      <h2>Who Should Skip CAP Iron Plates</h2>
+      <p>
+        Skip them if you're doing Olympic lifting — cleans, snatches, and jerks require
+        dropping the bar, and iron plates on concrete will crack, damage the floor, and
+        make enormous noise. Also skip them if your gym space is an apartment with downstairs
+        neighbors — the noise and floor-impact from iron plate set-downs is genuinely
+        disruptive in shared-wall living situations where bumpers' quieter rebound matters.
+        And skip them if you have a finished floor you care about — rubber mats solve most
+        of this, but bumper plates are simply the safer choice.
+      </p>
+    </section>
+
+    <!-- Final Verdict -->
+    <section class="final-verdict">
+      <h2>Final Verdict</h2>
+      <p>
+        For most home gym builders doing basic barbell strength training: buy CAP iron plates
+        and add a rubber mat. Check Facebook Marketplace first — you'll often find a full
+        plate set at $0.40–0.60/lb, which makes the decision even easier. If you need
+        drop-safety for Olympic lifting or floor protection, the Titan bumpers at $1.20/lb
+        are the right middle ground. If you want plates that will last 20 years with zero
+        compromise, the Rogue bumpers are worth the premium. But for the majority of people
+        building their first home gym: iron plates, rubber mat, money saved.
+      </p>
+      <AffiliateButton
+        href={capUrl}
+        text="Check Price on Amazon"
+        subtext="Best Budget · Cast Iron · ~$0.70–1.00/lb"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  header h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+    color: #0f172a;
+  }
+
+  .meta {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0 0 2rem;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 1rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  h3 a {
+    color: #f97316;
+    text-decoration: none;
+  }
+
+  h3 a:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    color: #334155;
+    line-height: 1.75;
+    margin: 0 0 1rem;
+  }
+
+  /* Verdict Box */
+  .verdict-box {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    color: #f8fafc;
+    margin-bottom: 1.25rem;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .pick-card {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .pick-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f97316;
+  }
+
+  .pick-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #f8fafc;
+    text-decoration: none;
+    line-height: 1.3;
+  }
+
+  .pick-title:hover {
+    color: #f97316;
+  }
+
+  .pick-card p {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .pick-price {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #4ade80;
+    margin-top: auto;
+  }
+
+  /* Spec Row */
+  .spec-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    background: #f8fafc;
+    border-left: 3px solid #f97316;
+    padding: 0.75rem 1rem;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 1rem;
+  }
+
+  .spec {
+    font-size: 0.82rem;
+    color: #475569;
+  }
+
+  /* Plate Type Grid */
+  .plate-type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .plate-type-card {
+    border-radius: 8px;
+    padding: 1.25rem;
+    border-top: 4px solid transparent;
+  }
+
+  .plate-bumper {
+    background: #f0fdf4;
+    border-top-color: #22c55e;
+  }
+
+  .plate-iron {
+    background: #fafaf9;
+    border-top-color: #78716c;
+  }
+
+  .plate-type-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.2rem;
+  }
+
+  .plate-type-price {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+  }
+
+  .plate-type-card ul {
+    margin: 0 0 0.75rem;
+    padding-left: 1.2rem;
+  }
+
+  .plate-type-card li {
+    font-size: 0.85rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+
+  .plate-type-verdict {
+    font-size: 0.82rem;
+    color: #475569;
+    margin: 0;
+  }
+
+  /* Starter Sets Grid */
+  .starter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .starter-card {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 1.1rem;
+  }
+
+  .starter-card h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #f97316;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.6rem;
+  }
+
+  .starter-card ul {
+    margin: 0 0 0.6rem;
+    padding-left: 1.2rem;
+  }
+
+  .starter-card li {
+    font-size: 0.82rem;
+    color: #e2e8f0;
+    line-height: 1.6;
+    margin-bottom: 0.1rem;
+  }
+
+  .starter-cost {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #4ade80;
+    margin: 0 0 0.4rem;
+  }
+
+  .starter-card p:last-child {
+    font-size: 0.79rem;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Price Guide Grid */
+  .price-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .price-card {
+    border-radius: 8px;
+    padding: 1rem;
+    border-top: 4px solid transparent;
+  }
+
+  .price-excellent {
+    background: #f0fdf4;
+    border-top-color: #16a34a;
+  }
+
+  .price-good {
+    background: #f0fdf4;
+    border-top-color: #4ade80;
+  }
+
+  .price-fair {
+    background: #fefce8;
+    border-top-color: #eab308;
+  }
+
+  .price-avoid {
+    background: #fef2f2;
+    border-top-color: #ef4444;
+  }
+
+  .price-card h4 {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.4rem;
+  }
+
+  .price-iron {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #334155;
+    margin: 0 0 0.1rem;
+  }
+
+  .price-bumper {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #475569;
+    margin: 0 0 0.5rem;
+  }
+
+  .price-card p:last-child {
+    font-size: 0.78rem;
+    color: #64748b;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Source Grid */
+  .source-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .source-card {
+    background: #0f172a;
+    border-radius: 8px;
+    padding: 1.1rem;
+  }
+
+  .source-card h4 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #f97316;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.25rem;
+  }
+
+  .source-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #4ade80;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .source-best .source-tag { color: #4ade80; }
+  .source-good .source-tag { color: #a3e635; }
+  .source-ok .source-tag   { color: #facc15; }
+  .source-retail .source-tag { color: #94a3b8; }
+
+  .source-card p:last-child {
+    font-size: 0.81rem;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Callout Box */
+  .callout-box {
+    background: #fefce8;
+    border: 1px solid #fde047;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    font-size: 0.88rem;
+    color: #713f12;
+    line-height: 1.65;
+    margin-top: 1rem;
+  }
+
+  /* Final Verdict */
+  .final-verdict {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+
+  .final-verdict h2 {
+    color: #c2410c;
+  }
+</style>
