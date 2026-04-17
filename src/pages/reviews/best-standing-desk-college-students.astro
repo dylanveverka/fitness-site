@@ -1,0 +1,775 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Standing Desk for College Students Under $300 (2025)";
+const description =
+  "Sitting all day between classes and studying destroys your posture and energy. Here are the best affordable standing desks for college students and dorm rooms.";
+const pubDate = "2026-04-17";
+const slug = "best-standing-desk-college-students";
+
+const flexispotUrl = "https://www.amazon.com/s?k=flexispot+e2+electric+standing+desk&tag=dveverka-20";
+const shwUrl       = "https://www.amazon.com/s?k=SHW+electric+height+adjustable+standing+desk&tag=dveverka-20";
+const vivoUrl      = "https://www.amazon.com/s?k=vivo+desk+converter+standing&tag=dveverka-20";
+
+const flexispotPros = [
+  "The dual-motor system is the primary reason the Flexispot E2 earns the best-overall slot — two motors mean the desk rises and lowers smoothly under load without the wobble or binding that single-motor frames show when the desktop has a monitor arm, books, and a laptop on it simultaneously. The difference is noticeable every time you adjust.",
+  "Four memory presets eliminate the friction that kills standing desk habits — you press one button and the desk moves to your exact standing height without adjusting manually each time. That one-button transition is the difference between switching positions 10 times a day and switching twice.",
+  "The 48x24 or 60x24 desktop options give meaningful workspace for a student setup — monitor, laptop, books, water bottle, and still room to write. The 48-inch option fits most apartment bedrooms without overwhelming the space.",
+  "Build quality at $250 exceeds what the price suggests — the steel frame has minimal flex, the crossbar adds lateral stability, and the motor runs quietly enough to use in a shared apartment without bothering roommates during position adjustments.",
+  "Anti-collision technology stops the motor if the desk encounters resistance on the way down — meaning it won't crush a cat, a backpack, or a pair of headphones left under the desk if you hit the lower preset without checking first.",
+];
+
+const flexispotCons = [
+  "Assembly takes 45–60 minutes and requires two people for the leg-to-frame attachment step — the frame components are heavy steel and holding them in alignment while driving screws is a two-person job. Students who move frequently and reassemble repeatedly will find this a recurring friction point.",
+  "At $250 it's the most expensive pick in this roundup and requires more floor space than a converter — students in small dorm rooms where every square foot is contested may find the full standing desk footprint genuinely impractical regardless of quality.",
+  "The control panel is functional but basic — the digital display shows height in inches or centimeters and the four memory buttons work reliably, but there's no app integration, no sit/stand reminder timer, and no usage tracking that higher-end desks (Uplift, Autonomous) offer at significantly higher price points.",
+];
+
+const comparisonRows = [
+  { feature: "Price", nameA: "Flexispot E2", nameB: "SHW Desk", nameC: "VIVO Converter", valueA: "~$250", valueB: "~$180", valueC: "~$80", winner: "C" },
+  { feature: "Height Range", nameA: "Flexispot E2", nameB: "SHW Desk", nameC: "VIVO Converter", valueA: "28–48 inches", valueB: "28–45 inches", valueC: "+12 inches from desk", winner: "A" },
+  { feature: "Motor", nameA: "Flexispot E2", nameB: "SHW Desk", nameC: "VIVO Converter", valueA: "Dual motor", valueB: "Single motor", valueC: "Manual (pneumatic)", winner: "A" },
+  { feature: "Desktop Size", nameA: "Flexispot E2", nameB: "SHW Desk", nameC: "VIVO Converter", valueA: "48x24 or 60x24 in", valueB: "48x24 in", valueC: "36x22 in work surface", winner: "A" },
+  { feature: "Memory Presets", nameA: "Flexispot E2", nameB: "SHW Desk", nameC: "VIVO Converter", valueA: "4 presets", valueB: "3 presets", valueC: "None", winner: "A" },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        The average college student sits for 8–10 hours a day between lectures, study
+        sessions, and screen time. That sedentary load compounds over four years into
+        chronic back pain, forward head posture, and the kind of mid-afternoon energy
+        crash that no amount of coffee fully fixes. A standing desk doesn't solve all
+        of that — but it breaks up the sitting, keeps your spine in better alignment
+        during study sessions, and gives you a physical way to reset your focus when
+        you've been staring at the same paragraph for 40 minutes.
+      </p>
+      <p>
+        Under $300, there are three legitimate options: a full electric standing desk
+        for apartments, a budget electric desk for students who want the same functionality
+        for less, and a desk converter for dorm rooms where replacing the furniture
+        entirely isn't possible. Here's how to pick the right one.
+      </p>
+    </section>
+
+    <!-- Verdict Box -->
+    <div class="verdict-box">
+      <h2>Quick Picks</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-label">Best Overall</span>
+          <a href={flexispotUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Flexispot E2 Electric
+          </a>
+          <p>Dual motor, 4 memory presets, 48–60 inch desktop, anti-collision. The best under $300 for apartments.</p>
+          <span class="pick-price">~$250</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Budget</span>
+          <a href={shwUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            SHW Height Adjustable Desk
+          </a>
+          <p>Single motor, 3 memory presets, 48x24 inch desktop. Solid electric desk at $70 less than the Flexispot.</p>
+          <span class="pick-price">~$180</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best for Dorms</span>
+          <a href={vivoUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            VIVO Desk Converter
+          </a>
+          <p>Sits on top of your existing desk, no floor space needed, rises 12 inches. The dorm-friendly standing solution.</p>
+          <span class="pick-price">~$80</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Do standing desks help -->
+    <section>
+      <h2>Do Standing Desks Actually Help?</h2>
+      <p>
+        Yes — with realistic expectations. A standing desk won't undo a sedentary lifestyle
+        or replace exercise, but the research on reducing prolonged sitting is consistent:
+        breaking up seated time improves posture, reduces lower back pain, and prevents the
+        focus degradation that comes from sitting in the same position for 3+ hour blocks.
+      </p>
+      <div class="benefit-grid">
+        <div class="benefit-card">
+          <h4>Posture</h4>
+          <p>Alternating between sitting and standing reduces the forward head and rounded shoulder posture that develops from sustained laptop use. Standing naturally cues a more upright spine position — not a fix, but a meaningful preventive measure over four years of study habits.</p>
+        </div>
+        <div class="benefit-card">
+          <h4>Back Pain</h4>
+          <p>Sustained sitting loads the lumbar spine at a higher compressive force than standing. Students with existing lower back discomfort from long study sessions consistently report improvement when they break up sitting time with 20–30 minute standing intervals.</p>
+        </div>
+        <div class="benefit-card">
+          <h4>Energy and Focus</h4>
+          <p>Standing slightly increases blood flow and metabolic rate compared to sitting. The practical effect: less of the mid-afternoon energy slump that makes studying after 3pm feel like a fight. Switching to standing when focus starts dropping is a reliable reset for many students.</p>
+        </div>
+        <div class="benefit-card">
+          <h4>What It Won't Do</h4>
+          <p>A standing desk won't burn significant extra calories (the difference is roughly 8–10 calories per hour vs sitting), won't replace exercise, and won't fix back pain caused by weak core muscles or poor ergonomics at the seated position. It's a complement to good habits, not a substitute.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Electric vs manual -->
+    <section>
+      <h2>Electric vs Manual Crank Standing Desk</h2>
+      <div class="type-grid">
+        <div class="type-card type-electric">
+          <h3>Electric (Motorized)</h3>
+          <p class="type-price">SHW / Flexispot E2 · ~$180–250</p>
+          <ul>
+            <li>One-button height adjustment — desk moves to saved preset in 15–20 seconds</li>
+            <li>Memory presets eliminate manual readjustment every session</li>
+            <li>Low friction means you actually switch positions throughout the day</li>
+            <li>Smooth under load — motor handles a full monitor setup without straining</li>
+            <li>Higher upfront cost than manual but worth it for daily use</li>
+          </ul>
+          <p class="type-verdict"><strong>Best for:</strong> Anyone who plans to use the standing function daily. The ease of adjustment is what makes the habit stick.</p>
+        </div>
+        <div class="type-card type-manual">
+          <h3>Manual Crank</h3>
+          <p class="type-price">Various brands · ~$100–160</p>
+          <ul>
+            <li>Lower purchase price — typically $80–100 cheaper than electric equivalents</li>
+            <li>Cranking 30+ rotations to change height creates real friction against switching positions</li>
+            <li>Most manual crank desk owners report using the standing function less than expected</li>
+            <li>No presets — you eyeball the height every time and it's rarely exactly right</li>
+            <li>No motor to fail or replace — mechanically simpler long-term</li>
+          </ul>
+          <p class="type-verdict"><strong>Best for:</strong> Students who set one height and leave it there for weeks at a time — not for students who want to switch throughout the day.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Converter vs full desk -->
+    <section>
+      <h2>Standing Desk Converter vs Full Standing Desk</h2>
+      <p>
+        This is the most important decision for college students and it comes down to
+        your living situation — specifically whether you're in a dorm or an apartment.
+      </p>
+      <div class="setup-grid">
+        <div class="setup-card setup-converter">
+          <h3>Desk Converter (VIVO)</h3>
+          <p class="setup-price">~$80 · Best for dorms</p>
+          <ul>
+            <li>Sits on top of your existing desk — no furniture replacement needed</li>
+            <li>Works in dorm rooms where you can't swap out the provided furniture</li>
+            <li>Portable — moves with you, stores in a closet when not in use</li>
+            <li>Smaller work surface (~36x22 inches) — fits a laptop or monitor, not both with room to spare</li>
+            <li>No floor footprint change — doesn't affect room layout</li>
+          </ul>
+          <p class="setup-verdict"><strong>Get this if:</strong> You're in a dorm with provided furniture you can't remove, or if you want to try standing desk use before committing to a full desk.</p>
+        </div>
+        <div class="setup-card setup-full">
+          <h3>Full Electric Desk (Flexispot / SHW)</h3>
+          <p class="setup-price">~$180–250 · Best for apartments</p>
+          <ul>
+            <li>Replaces your existing desk entirely — cleaner setup, more surface area</li>
+            <li>Full desktop (48x24 inches) handles a dual monitor setup, books, and peripherals</li>
+            <li>Better ergonomics — keyboard and monitor both adjust together at the right height</li>
+            <li>Requires floor space and the ability to place your own furniture</li>
+            <li>Larger upfront investment but a better long-term setup</li>
+          </ul>
+          <p class="setup-verdict"><strong>Get this if:</strong> You're in an apartment or house where you control the furniture, and you study at a desk for 3+ hours daily.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <h3>
+        <a href={flexispotUrl} rel="noopener noreferrer sponsored">Flexispot E2 Electric Standing Desk</a>
+        — Best Overall
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Height range:</strong> 28–48 inches</span>
+        <span class="spec"><strong>Motor:</strong> Dual</span>
+        <span class="spec"><strong>Desktop:</strong> 48x24 or 60x24 inches</span>
+        <span class="spec"><strong>Weight capacity:</strong> 154 lbs</span>
+        <span class="spec"><strong>Presets:</strong> 4</span>
+        <span class="spec"><strong>Anti-collision:</strong> Yes</span>
+      </div>
+      <p>
+        The Flexispot E2 is the standing desk most apartment-dwelling college students
+        should buy. The dual-motor system is the headline spec — two motors means the
+        frame lifts evenly under a fully loaded desktop without twisting or binding,
+        which is the failure mode that makes cheaper single-motor desks feel unstable
+        at standing height. The 28–48 inch height range covers users from 5'1" to 6'4"
+        comfortably at both sitting and standing ergonomic positions.
+      </p>
+      <p>
+        Four memory presets are more useful than they sound. Setting one button to your
+        seated height and another to standing means switching positions is a single
+        button press — no adjusting, no guessing, just press and wait 15 seconds. That
+        frictionless transition is what separates standing desks people actually use from
+        standing desks that stay at one height. The anti-collision safety feature is a
+        genuine quality-of-life addition for students with pets, cable clutter, or the
+        habit of leaving things under the desk.
+      </p>
+
+      <h3>
+        <a href={shwUrl} rel="noopener noreferrer sponsored">SHW Electric Height Adjustable Desk</a>
+        — Best Budget
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Height range:</strong> 28–45 inches</span>
+        <span class="spec"><strong>Motor:</strong> Single</span>
+        <span class="spec"><strong>Desktop:</strong> 48x24 inches</span>
+        <span class="spec"><strong>Weight capacity:</strong> 110 lbs</span>
+        <span class="spec"><strong>Presets:</strong> 3</span>
+        <span class="spec"><strong>Anti-collision:</strong> No</span>
+      </div>
+      <p>
+        The SHW desk delivers the core standing desk functionality — electric adjustment,
+        memory presets, adequate height range — at $70 less than the Flexispot. For
+        students with a single monitor setup and a lighter desktop load, the single
+        motor and 110 lb weight capacity are sufficient. The 3 presets cover sitting,
+        standing, and one intermediate position, which is enough for most use cases.
+      </p>
+      <p>
+        The tradeoffs versus the Flexispot are real but not disqualifying at $180: the
+        single motor shows more flex under heavy loads, the 45-inch max height is lower
+        than the Flexispot's 48 inches (a limitation for users above 6'1" at standing
+        ergonomic height), and there's no anti-collision safety. For a student setup
+        with a laptop, a single external monitor, and a keyboard — the SHW handles it
+        cleanly and saves $70 that buys a quality anti-fatigue mat and a monitor arm.
+      </p>
+
+      <h3>
+        <a href={vivoUrl} rel="noopener noreferrer sponsored">VIVO Desk Converter</a>
+        — Best for Dorms
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Rise height:</strong> +12 inches from desk surface</span>
+        <span class="spec"><strong>Mechanism:</strong> Pneumatic (manual)</span>
+        <span class="spec"><strong>Work surface:</strong> ~36x22 inches</span>
+        <span class="spec"><strong>Weight capacity:</strong> 35 lbs</span>
+        <span class="spec"><strong>Presets:</strong> Infinite (height lock)</span>
+        <span class="spec"><strong>Assembly:</strong> Minimal</span>
+      </div>
+      <p>
+        The VIVO converter solves the dorm room problem directly: you can't replace the
+        furniture, but you can put something on top of it. The pneumatic (gas spring)
+        mechanism lifts the work surface smoothly with one hand and locks at any height
+        in the 0–12 inch range above your desk. It takes about 60 seconds to assemble
+        out of the box and sits stable on any standard dorm desk surface.
+      </p>
+      <p>
+        The work surface comfortably fits a laptop or a single external monitor — not
+        both simultaneously at usable ergonomic positions. For students whose primary
+        setup is a 13–15 inch laptop and a keyboard, that's sufficient. For a dual
+        monitor or laptop-plus-external-monitor setup, the surface area becomes a
+        constraint. At $80 it's the lowest commitment way to get standing desk
+        functionality, and it moves with you to a new room or apartment without
+        reassembly headaches.
+      </p>
+    </section>
+
+    <!-- How long to stand -->
+    <section>
+      <h2>How Long Should You Stand vs Sit?</h2>
+      <p>
+        The research-supported recommendation is roughly 20–30 minutes of standing
+        per hour of work — not standing all day, which causes its own problems
+        (lower back fatigue, varicose veins, reduced focus for detail-oriented tasks).
+        The goal is alternation, not replacement.
+      </p>
+      <div class="ratio-grid">
+        <div class="ratio-card ratio-good">
+          <h4>Optimal Pattern</h4>
+          <p class="ratio-label">20–30 min standing / 30–40 min sitting</p>
+          <p>The CDC and ergonomics research both point toward this range. Enough standing to reduce sedentary load and keep blood flowing, enough sitting to maintain focus for writing, reading, and detail work.</p>
+        </div>
+        <div class="ratio-card ratio-ok">
+          <h4>Good Enough Pattern</h4>
+          <p class="ratio-label">Stand once per 60–90 min block</p>
+          <p>If you're not ready for frequent switching, even one standing interval per study session breaks up sedentary time enough to reduce lower back accumulation. Something is better than nothing.</p>
+        </div>
+        <div class="ratio-card ratio-avoid">
+          <h4>Avoid: Standing All Day</h4>
+          <p class="ratio-label">8+ hours standing continuously</p>
+          <p>Standing all day causes fatigue, leg swelling, and lower back stress of its own. The goal is movement and alternation — a standing desk is a sit-stand desk, not a replacement for sitting entirely.</p>
+        </div>
+      </div>
+      <p>
+        Practical tip: set a phone timer for 30 minutes when you sit down. When it goes
+        off, switch to standing. When you start feeling fatigue in your legs (usually
+        20–30 minutes), sit back down. That's the cycle.
+      </p>
+    </section>
+
+    <!-- Accessories -->
+    <section>
+      <h2>Best Standing Desk Accessories</h2>
+      <p>
+        Two accessories make a real difference for daily standing desk use. Everything
+        else is optional.
+      </p>
+      <div class="accessory-grid">
+        <div class="accessory-card">
+          <h4>Anti-Fatigue Mat</h4>
+          <p class="accessory-price">~$25–60</p>
+          <p>Standing on a hard floor for 20–30 minutes causes leg and lower back fatigue faster than standing on a cushioned mat. An anti-fatigue mat with contoured surface terrain (slight bumps and edges that encourage micro-movements) extends comfortable standing time significantly. The Topo by Ergodriven ($65) is the gold standard. A basic flat gel mat from Amazon at $25–30 does the job for most students.</p>
+        </div>
+        <div class="accessory-card">
+          <h4>Monitor Arm</h4>
+          <p class="accessory-price">~$25–50</p>
+          <p>A monitor arm keeps your screen at eye level at both sitting and standing height — which a fixed monitor stand can't do across a 20-inch height range. Without one, you'll have your monitor at sitting height while standing (neck bent down) or standing height while sitting (neck craned up). A basic single-arm mount from Amazon at $25–35 solves this completely and frees up desk surface space as a bonus.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Flexispot E2"
+        nameB="SHW Desk"
+        nameC="VIVO Converter"
+        rows={comparisonRows}
+      />
+    </section>
+
+    <!-- Pros/Cons -->
+    <section>
+      <h2>Flexispot E2 — Pros &amp; Cons</h2>
+      <ProsConsList pros={flexispotPros} cons={flexispotCons} />
+    </section>
+
+    <!-- Who should buy / skip -->
+    <section>
+      <h2>Who Should Buy the Flexispot E2</h2>
+      <p>
+        The Flexispot E2 is for college students in apartments or houses who spend 3+
+        hours daily at a desk and want a setup they'll keep for the next few years. If
+        you're already dealing with lower back discomfort from long study sessions, the
+        dual-motor frame, four presets, and 48-inch desktop make this the standing desk
+        you set up once and use daily without frustration. It's also the right buy if
+        you're doing a full desk setup with a monitor arm and external peripherals —
+        the weight capacity and surface area handle it where budget alternatives don't.
+      </p>
+      <h2>Who Should Skip the Flexispot E2</h2>
+      <p>
+        Skip it if you're in a dorm where you can't replace the provided furniture —
+        the VIVO converter is the right tool for that situation at $170 less. Also skip
+        it if you're moving frequently and dread reassembly; the steel frame is heavy
+        and the two-person assembly requirement becomes a real burden after the second
+        or third move. And skip it if budget is the hard constraint — the SHW desk at
+        $180 covers 80% of the Flexispot's functionality at $70 less.
+      </p>
+    </section>
+
+    <!-- Final Verdict -->
+    <section class="final-verdict">
+      <h2>Final Verdict</h2>
+      <p>
+        If you're in an apartment and study at a desk for hours every day, the Flexispot
+        E2 at $250 is worth it — the dual motor, four presets, and build quality put it
+        in a different tier than budget alternatives, and the daily-use habit it enables
+        has real long-term posture and energy benefits. If the $250 is too much, the SHW
+        at $180 delivers the same core functionality with minor spec compromises. And if
+        you're in a dorm where furniture replacement isn't an option, the VIVO converter
+        at $80 gets you standing desk functionality without changing your room layout.
+        Add an anti-fatigue mat regardless of which you choose — it's the $25 purchase
+        that makes the whole setup sustainable.
+      </p>
+      <AffiliateButton
+        href={flexispotUrl}
+        text="Check Price on Amazon"
+        subtext="Best Overall · Dual Motor · 4 Presets · ~$250"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  header h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+    color: #0f172a;
+  }
+
+  .meta {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0 0 2rem;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 1rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  h3 a {
+    color: #f97316;
+    text-decoration: none;
+  }
+
+  h3 a:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    color: #334155;
+    line-height: 1.75;
+    margin: 0 0 1rem;
+  }
+
+  /* Verdict Box */
+  .verdict-box {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    color: #f8fafc;
+    margin-bottom: 1.25rem;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .pick-card {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .pick-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f97316;
+  }
+
+  .pick-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #f8fafc;
+    text-decoration: none;
+    line-height: 1.3;
+  }
+
+  .pick-title:hover {
+    color: #f97316;
+  }
+
+  .pick-card p {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .pick-price {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #4ade80;
+    margin-top: auto;
+  }
+
+  /* Spec Row */
+  .spec-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    background: #f8fafc;
+    border-left: 3px solid #f97316;
+    padding: 0.75rem 1rem;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 1rem;
+  }
+
+  .spec {
+    font-size: 0.82rem;
+    color: #475569;
+  }
+
+  /* Benefit Grid */
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .benefit-card {
+    background: #0f172a;
+    border-radius: 8px;
+    padding: 1.1rem;
+  }
+
+  .benefit-card h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #f97316;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.5rem;
+  }
+
+  .benefit-card p {
+    font-size: 0.81rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Type Grid (electric vs manual) */
+  .type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .type-card {
+    border-radius: 8px;
+    padding: 1.25rem;
+    border-top: 4px solid transparent;
+  }
+
+  .type-electric {
+    background: #f0fdf4;
+    border-top-color: #22c55e;
+  }
+
+  .type-manual {
+    background: #fafaf9;
+    border-top-color: #78716c;
+  }
+
+  .type-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.2rem;
+  }
+
+  .type-price {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+  }
+
+  .type-card ul {
+    margin: 0 0 0.75rem;
+    padding-left: 1.2rem;
+  }
+
+  .type-card li {
+    font-size: 0.85rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+
+  .type-verdict {
+    font-size: 0.82rem;
+    color: #475569;
+    margin: 0;
+  }
+
+  /* Setup Grid (converter vs full) */
+  .setup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .setup-card {
+    border-radius: 8px;
+    padding: 1.25rem;
+    border-top: 4px solid transparent;
+  }
+
+  .setup-converter {
+    background: #eff6ff;
+    border-top-color: #3b82f6;
+  }
+
+  .setup-full {
+    background: #fff7ed;
+    border-top-color: #f97316;
+  }
+
+  .setup-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.2rem;
+  }
+
+  .setup-price {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+  }
+
+  .setup-card ul {
+    margin: 0 0 0.75rem;
+    padding-left: 1.2rem;
+  }
+
+  .setup-card li {
+    font-size: 0.85rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+
+  .setup-verdict {
+    font-size: 0.82rem;
+    color: #475569;
+    margin: 0;
+  }
+
+  /* Ratio Grid */
+  .ratio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .ratio-card {
+    border-radius: 8px;
+    padding: 1.1rem;
+    border-top: 3px solid transparent;
+  }
+
+  .ratio-good {
+    background: #f0fdf4;
+    border-top-color: #22c55e;
+  }
+
+  .ratio-ok {
+    background: #fefce8;
+    border-top-color: #eab308;
+  }
+
+  .ratio-avoid {
+    background: #fef2f2;
+    border-top-color: #ef4444;
+  }
+
+  .ratio-card h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.25rem;
+  }
+
+  .ratio-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #475569;
+    margin: 0 0 0.5rem;
+  }
+
+  .ratio-card p:last-child {
+    font-size: 0.82rem;
+    color: #475569;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Accessory Grid */
+  .accessory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .accessory-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+
+  .accessory-card h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.2rem;
+  }
+
+  .accessory-price {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #64748b;
+    margin: 0 0 0.6rem;
+  }
+
+  .accessory-card p:last-child {
+    font-size: 0.83rem;
+    color: #475569;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* Final Verdict */
+  .final-verdict {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+
+  .final-verdict h2 {
+    color: #c2410c;
+  }
+</style>
