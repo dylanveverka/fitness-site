@@ -1,0 +1,737 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Home Gym Flooring for Lifting Weights (2025)";
+const description =
+  "The right flooring protects your floor, reduces noise, and makes lifting safer. Here are the best home gym flooring options for every budget.";
+const pubDate = "2026-04-17";
+const slug = "best-home-gym-flooring-lifting";
+
+const puzzleUrl  = "https://www.amazon.com/s?k=rubber+gym+floor+tiles+puzzle+mat&tag=dveverka-20";
+const rolledUrl  = "https://www.amazon.com/s?k=rolled+rubber+gym+flooring&tag=dveverka-20";
+const matUrl     = "https://www.amazon.com/s?k=amazon+basics+exercise+mat+thick&tag=dveverka-20";
+
+const puzzlePros = [
+  "Interlocking tile design installs without adhesive or tools in under 20 minutes — lay them out, press the edges together, and they stay in place under normal lifting loads without shifting or separating between sessions",
+  "Modular coverage means you buy exactly what you need — a 4×6 foot rack footprint needs 6 tiles; a 10×10 foot full gym setup scales up proportionally without wasted material or complicated cuts",
+  "3/8-inch thickness handles everyday gym use including dumbbell drops, kettlebell swings, and cardio equipment weight load without bottoming out or cracking at the tile joints",
+  "Portable and removable without leaving marks — at the end of a lease or when moving out, they pull apart and come with you, which matters significantly for renters compared to adhesive-backed flooring",
+  "At roughly $1.00–1.50 per square foot they're the most accessible starting floor for a first home gym — covering a 10×10 space costs $100–150, compared to $200+ for the same coverage in rolled rubber",
+];
+
+const puzzleCons = [
+  "Tile joints can lift slightly at the edges over time, particularly in high-traffic zones under a barbell or rack — the seams are the weakest structural point and may require occasional repositioning after heavy use",
+  "3/8-inch thickness is on the thin side for heavy barbell drops — a missed Olympic lift or aggressive deadlift drop from knee height will feel the impact through the tile into the floor beneath; 3/4-inch tiles are a better call for that specific use",
+  "Foam-core construction (as opposed to solid rubber) compresses more under heavy equipment weight and doesn't last as long under sustained point loads from rack feet — rubber horsemats outperform them for permanent heavy equipment placement",
+];
+
+const rows = [
+  { label: "Price per sq ft",  a: "~$1.00–1.50",   b: "~$1.50–2.50",   c: "~$0.50–0.75",   winner: "c" },
+  { label: "Thickness",        a: "3/8 inch",       b: "3/8–3/4 inch",  c: "1/4–3/8 inch",  winner: "b" },
+  { label: "Material",         a: "EVA foam/rubber", b: "Vulcanized rubber", c: "EVA foam",  winner: "b" },
+  { label: "Installation",     a: "Interlocking",   b: "Roll out",       c: "Lay flat",      winner: "tie" },
+  { label: "Noise reduction",  a: "Good",           b: "Excellent",      c: "Moderate",      winner: "b" },
+  { label: "Best for",         a: "Most home gyms", b: "Garage/serious", c: "Yoga/light use",winner: "tie" },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        A single dropped dumbbell on hardwood can dent or crack the floor. A barbell set down
+        without control on tile can chip the finish or crack the tile entirely. A rack sitting
+        directly on carpet shifts slightly under every heavy rep, which compounds into wobbly
+        setups and worn flooring over time. The cost of repairing any of these — especially in
+        a rented apartment — is several times what a set of rubber mats costs.
+      </p>
+      <p>
+        Gym flooring is not glamorous. It doesn't improve your squat. But it protects your
+        security deposit, keeps your equipment stable, reduces impact noise for neighbors below,
+        and makes the space feel like a place where you actually want to train. The three options
+        below cover every budget from $25 to $150+ and every use case from yoga mat to serious
+        lifting platform.
+      </p>
+    </section>
+
+    <!-- Verdict Box -->
+    <div class="verdict-box">
+      <h2>Quick Picks</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-label">Best Overall</span>
+          <a href={puzzleUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            BalanceFrom Puzzle Mat Tiles
+          </a>
+          <p>Interlocking 3/8" EVA tiles, ~$1.00–1.50/sq ft, portable, no tools needed. Best starting floor for most home gyms.</p>
+          <span class="pick-price">~$50 for 24 sq ft</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Premium</span>
+          <a href={rolledUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Rolled Rubber Gym Flooring
+          </a>
+          <p>Vulcanized rubber, 3/4" available, seamless coverage, superior noise reduction. The permanent garage gym floor.</p>
+          <span class="pick-price">~$150 for 50 sq ft</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Budget</span>
+          <a href={matUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Amazon Basics Exercise Mat
+          </a>
+          <p>1/4–3/8" EVA foam, ~$25, lightweight and portable. Fine for bodyweight and yoga — not for dropping weights.</p>
+          <span class="pick-price">~$25</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why flooring matters -->
+    <section>
+      <h2>Why Home Gym Flooring Actually Matters</h2>
+      <div class="reason-grid">
+        <div class="reason-card">
+          <h3>Floor Protection</h3>
+          <p>
+            Hardwood, laminate, and tile are all damaged by repeated impact from weights —
+            even from light dumbbells set down without full control. In a rented apartment or
+            a home you own, this is a direct financial concern. Rubber flooring absorbs and
+            distributes impact before it reaches the substrate.
+          </p>
+        </div>
+        <div class="reason-card">
+          <h3>Noise and Vibration</h3>
+          <p>
+            Impact from jumping, dropping weights, and cardio machines transmits through
+            floors into the structure of a building and into the unit below. Rubber flooring
+            dramatically reduces this transmission — the difference between a neighbor
+            complaint and a non-issue is often just the flooring layer.
+          </p>
+        </div>
+        <div class="reason-card">
+          <h3>Equipment Stability</h3>
+          <p>
+            Rubber-soled shoes on rubber flooring create consistent, non-slip contact. A rack
+            or bench on rubber doesn't slide under load. On smooth hardwood or tile, equipment
+            shifts subtly with every rep — rubber stops that.
+          </p>
+        </div>
+        <div class="reason-card">
+          <h3>Joint Comfort</h3>
+          <p>
+            Standing on concrete or thin tile for an hour of lifting is noticeably harder on
+            your knees, hips, and lower back than standing on a cushioned rubber surface.
+            This compounds over years of training and is a legitimate ergonomic consideration,
+            not just comfort.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rubber types -->
+    <section>
+      <h2>Rubber Tiles vs Rolled Rubber vs Foam Mats</h2>
+      <div class="type-table-wrap">
+        <table class="type-table">
+          <thead>
+            <tr><th>Type</th><th>Best For</th><th>Limitations</th><th>Price Range</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Interlocking tiles</td>
+              <td>Most home gyms — portable, modular, easy to install</td>
+              <td>Seams can lift; foam-core wears faster than solid rubber</td>
+              <td>$1.00–1.50/sq ft</td>
+            </tr>
+            <tr>
+              <td>Rolled rubber</td>
+              <td>Garage gyms, serious lifting, permanent setups</td>
+              <td>Heavier, harder to move, some off-gassing smell initially</td>
+              <td>$1.50–2.50/sq ft</td>
+            </tr>
+            <tr>
+              <td>Horse stall mats</td>
+              <td>Budget garage gyms — 3/4" solid vulcanized rubber</td>
+              <td>Very heavy (75–100 lbs per 4×6 mat), strong rubber smell</td>
+              <td>$0.75–1.00/sq ft</td>
+            </tr>
+            <tr>
+              <td>Foam mats</td>
+              <td>Yoga, stretching, bodyweight workouts</td>
+              <td>Not suitable for weight drops or heavy equipment</td>
+              <td>$0.50–0.75/sq ft</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The unsung value option not in this roundup: <strong>rubber horse stall mats</strong>
+        from a farm supply store (Tractor Supply Co., Rural King). A 4×6 foot, 3/4-inch solid
+        rubber mat runs $40–50 and is the most durable gym flooring per dollar available. The
+        tradeoffs are weight (one mat is 75–100 lbs) and a strong rubber smell that takes weeks
+        to dissipate. For a garage gym where neither matters, they're the best flooring value
+        that doesn't come in a box from Amazon.
+      </p>
+    </section>
+
+    <!-- Thickness guide -->
+    <section>
+      <h2>How Thick Does Gym Flooring Need to Be?</h2>
+      <div class="thickness-grid">
+        <div class="thickness-card thickness-light">
+          <div class="thickness-val">1/4"</div>
+          <div class="thickness-info">
+            <strong>Yoga, stretching, light cardio</strong>
+            <p>Minimum protection for bodyweight and non-impact use. Does not protect flooring from equipment weight or any drops.</p>
+          </div>
+        </div>
+        <div class="thickness-card thickness-medium">
+          <div class="thickness-val">3/8"</div>
+          <div class="thickness-info">
+            <strong>Dumbbells, cardio equipment, light barbell work</strong>
+            <p>Standard for most home gym tile setups. Handles controlled weight placement and moderate cardio machine loading. Not adequate for Olympic lifts or aggressive barbell drops.</p>
+          </div>
+        </div>
+        <div class="thickness-card thickness-heavy">
+          <div class="thickness-val">3/4"</div>
+          <div class="thickness-info">
+            <strong>Heavy barbell work, drops, power racks</strong>
+            <p>The right thickness for a serious lifting platform. Handles dropped barbells, loaded rack feet, and repeated impact without bottoming out. Required under any equipment you'd consider "heavy."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How much do you need? -->
+    <section>
+      <h2>How Much Flooring Do You Actually Need?</h2>
+      <p>
+        Measure the footprint of your equipment plus 18–24 inches of clearance on each side
+        for safe movement. Common setups:
+      </p>
+      <div class="sqft-table-wrap">
+        <table class="sqft-table">
+          <thead>
+            <tr><th>Setup</th><th>Recommended Coverage</th><th>Tiles Needed (~24"×24")</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Single exercise mat (yoga/stretching)</td>
+              <td>6×4 ft (24 sq ft)</td>
+              <td>6 tiles</td>
+            </tr>
+            <tr>
+              <td>Adjustable dumbbells + bench</td>
+              <td>8×6 ft (48 sq ft)</td>
+              <td>12 tiles</td>
+            </tr>
+            <tr>
+              <td>Power rack + barbell footprint</td>
+              <td>8×8 ft (64 sq ft)</td>
+              <td>16 tiles</td>
+            </tr>
+            <tr>
+              <td>Full home gym (rack + bench + open floor)</td>
+              <td>10×10 ft (100 sq ft)</td>
+              <td>25 tiles</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Don't floor your entire room if you only use a corner of it. Cover the equipment
+        footprint plus clearance zones — this keeps cost down and makes portable tile setups
+        practical for renters who need to store the flooring between sessions or take it when
+        they move.
+      </p>
+    </section>
+
+    <!-- Apartments -->
+    <section>
+      <h2>Is Gym Flooring Allowed in Apartments?</h2>
+      <p>
+        In almost all cases, yes — with the right type. The key is removability. Interlocking
+        tiles and rolled rubber that sit on top of the floor without adhesive are considered
+        personal property, not modifications to the unit. You can install them, use them for
+        years, and remove them when you leave without affecting your lease.
+      </p>
+      <div class="apartment-box">
+        <p><strong>Apartment-safe:</strong> Interlocking foam/rubber tiles, rolled rubber laid
+        flat, exercise mats — anything that sits on the floor without adhesive or fasteners.</p>
+        <p><strong>Check your lease first:</strong> Adhesive-backed flooring, epoxy coatings,
+        and permanent installations may require landlord approval. When in doubt, stick to
+        removable options — which is what all three picks in this roundup are.</p>
+        <p><strong>Noise note:</strong> Even with rubber flooring, heavy barbell drops in an
+        apartment above another unit will transmit impact sound. Rubber reduces this
+        significantly but doesn't eliminate it. Know your building and your neighbors before
+        doing Olympic lifting on the third floor.
+        </p>
+      </div>
+    </section>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <h3>
+        <a href={puzzleUrl} rel="noopener noreferrer sponsored">BalanceFrom Interlocking Puzzle Mats</a>
+        — Best Overall
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Thickness:</strong> 3/8 inch</span>
+        <span class="spec"><strong>Material:</strong> EVA foam with rubber surface</span>
+        <span class="spec"><strong>Coverage:</strong> 24 sq ft per 6-pack</span>
+        <span class="spec"><strong>Price per sq ft:</strong> ~$1.00–1.50</span>
+      </div>
+      <p>
+        Interlocking puzzle mats are the default starting floor for home gyms because they solve
+        the most common problem — getting real floor protection quickly, cheaply, and without
+        committing to a permanent installation. The BalanceFrom tiles interlock tightly, lay flat
+        without curling, and hold their position through normal gym use without adhesive.
+      </p>
+      <p>
+        The 3/8-inch EVA construction handles everything except aggressive barbell drops and
+        heavy rack loads. For a dumbbell and bench setup, a cardio area, or a bodyweight training
+        space, they're entirely sufficient. If your training involves a barbell and regular heavy
+        drops, upgrade to 3/4-inch tiles or rolled rubber for that specific zone — but use these
+        as the base layer for the rest of your floor.
+      </p>
+      <p>
+        Portability is a real feature for renters. These come apart, stack flat, and move with
+        you. A $100 flooring investment that travels with you across three apartments over four
+        years costs less than repairing one security deposit floor damage claim.
+      </p>
+
+      <h3>
+        <a href={rolledUrl} rel="noopener noreferrer sponsored">Rolled Rubber Gym Flooring</a>
+        — Best Premium
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Thickness:</strong> 3/8–3/4 inch options</span>
+        <span class="spec"><strong>Material:</strong> Vulcanized rubber</span>
+        <span class="spec"><strong>Coverage:</strong> Sold by roll (varies)</span>
+        <span class="spec"><strong>Price per sq ft:</strong> ~$1.50–2.50</span>
+      </div>
+      <p>
+        Rolled rubber is the floor that serious home gym builders end up on eventually. Solid
+        vulcanized rubber has no foam core to compress or seams to lift — it's a continuous
+        surface that absorbs impact uniformly, deadens noise exceptionally well, and holds up
+        under decades of equipment weight and dropped barbells. The 3/4-inch option is rated
+        for Olympic lifting and commercial gym use.
+      </p>
+      <p>
+        The installation is straightforward — roll it out, cut to fit with a utility knife,
+        let it settle for 24–48 hours while the natural curl from shipping relaxes. No adhesive
+        required for most installations. The weight (heavier than tiles) means it stays in place
+        without effort.
+      </p>
+      <p>
+        New rolled rubber has a notable off-gassing smell — sharp, chemical rubber odor that
+        dissipates over 2–4 weeks with ventilation. It's a real consideration for a bedroom or
+        finished basement setup; less of an issue in a garage with open air flow.
+      </p>
+
+      <h3>
+        <a href={matUrl} rel="noopener noreferrer sponsored">Amazon Basics Exercise Mat</a>
+        — Best Budget
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Thickness:</strong> 1/4–3/8 inch</span>
+        <span class="spec"><strong>Material:</strong> EVA foam</span>
+        <span class="spec"><strong>Coverage:</strong> Single mat (~12–18 sq ft)</span>
+        <span class="spec"><strong>Price per sq ft:</strong> ~$0.50–0.75</span>
+      </div>
+      <p>
+        The Amazon Basics exercise mat is excellent for exactly one use case: floor work, yoga,
+        stretching, and bodyweight training where you want a comfortable, non-slip surface
+        underfoot. At $25 it's the cheapest floor protection available, it rolls up for storage,
+        and it ships in two days.
+      </p>
+      <p>
+        It is not gym flooring for lifting. The thin EVA foam does not protect hardwood from
+        equipment weight, does not absorb barbell impact, and will compress flat under a power
+        rack within a few sessions. Buy it as a stretching and warm-up surface — or as a layer
+        on top of rubber tiles for additional floor comfort. Don't buy it as a substitute for
+        real gym flooring if you're lifting anything over 50 pounds.
+      </p>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Puzzle Mat Tiles"
+        nameB="Rolled Rubber"
+        nameC="Exercise Mat"
+        rows={rows}
+      />
+    </section>
+
+    <!-- ProsConsList -->
+    <ProsConsList pros={puzzlePros} cons={puzzleCons} productName="BalanceFrom Puzzle Mat Tiles" />
+
+    <!-- Who should buy -->
+    <section>
+      <h2>Who Should Buy the Puzzle Mat Tiles</h2>
+      <ul>
+        <li>Renters who need real floor protection without a permanent installation — the tiles remove cleanly and travel with you when you move, with no adhesive marks or floor damage left behind</li>
+        <li>Anyone building a first home gym around dumbbells, a bench, and cardio equipment — 3/8-inch EVA handles this load range without issue and covers a full gym space for $100–150</li>
+        <li>Students setting up in a spare bedroom, basement corner, or garage space where floor protection and noise reduction matter but a permanent rubber floor isn't practical</li>
+      </ul>
+
+      <h2>Who Should Skip Them</h2>
+      <ul>
+        <li>Serious barbell lifters who regularly drop loaded bars — 3/8-inch foam-core tiles aren't adequate for Olympic lifting or aggressive deadlift drops; go directly to 3/4-inch rolled rubber or horse stall mats</li>
+        <li>Anyone setting up a permanent garage gym who doesn't need portability — rolled rubber costs more but is significantly more durable under heavy equipment and doesn't have seams to manage over time</li>
+        <li>Yoga and stretching-only setups — the Amazon Basics mat at $25 covers that use case for a fraction of the price</li>
+      </ul>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        For most home gym builders — especially renters setting up their first space — the
+        interlocking puzzle mat tiles are where to start. They're cheap enough that the protection
+        value is obvious even on a tight budget, they install in minutes without tools, they hold
+        up well under everyday gym use, and you take them with you when you move.
+      </p>
+      <p>
+        If you're building a permanent garage gym with a power rack and barbell, skip straight to
+        rolled rubber or horse stall mats — the seam-free surface and heavier rubber construction
+        is worth the additional cost for a setup you're not moving. But for a first home gym floor,
+        start here, protect your floor, and upgrade when the space evolves.
+      </p>
+      <AffiliateButton
+        href={puzzleUrl}
+        text="Shop BalanceFrom Puzzle Mat Tiles"
+        subtext="Best Overall · 3/8" · ~$1.00–1.50/sq ft · No Tools"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-family: system-ui, sans-serif;
+    color: #1e293b;
+    line-height: 1.7;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1.75rem;
+    margin-bottom: 0.4rem;
+    color: #1e293b;
+  }
+
+  h3 a {
+    color: #ea580c;
+    text-decoration: none;
+  }
+
+  h3 a:hover { text-decoration: underline; }
+
+  .meta {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  p { margin-bottom: 1rem; }
+
+  ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+
+  li { margin-bottom: 0.5rem; }
+
+  strong { color: #0f172a; }
+
+  /* Verdict box */
+  .verdict-box {
+    background: #fff7ed;
+    border: 2px solid #ea580c;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    margin-top: 0;
+    color: #ea580c;
+    font-size: 1.2rem;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .pick-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #fed7aa;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .pick-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ea580c;
+  }
+
+  .pick-title {
+    font-weight: 700;
+    color: #0f172a;
+    text-decoration: none;
+    font-size: 0.93rem;
+    line-height: 1.3;
+  }
+
+  .pick-title:hover { color: #ea580c; }
+
+  .pick-card p {
+    font-size: 0.82rem;
+    color: #475569;
+    margin: 0;
+    flex: 1;
+  }
+
+  .pick-price {
+    font-size: 0.83rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  /* Reason grid */
+  .reason-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .reason-card {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .reason-card h3 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #166534;
+    margin: 0 0 0.4rem 0;
+  }
+
+  .reason-card p {
+    font-size: 0.83rem;
+    color: #14532d;
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  /* Type table */
+  .type-table-wrap {
+    margin: 1rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+  }
+
+  .type-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.87rem;
+  }
+
+  .type-table thead tr {
+    background: #0f172a;
+    color: #e2e8f0;
+  }
+
+  .type-table th {
+    text-align: left;
+    padding: 0.6rem 1rem;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
+  .type-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+    vertical-align: top;
+  }
+
+  .type-table td:first-child {
+    font-weight: 700;
+    color: #0f172a;
+    white-space: nowrap;
+  }
+
+  .type-table tr:last-child td { border-bottom: none; }
+  .type-table tr:nth-child(even) { background: #f8fafc; }
+
+  /* Thickness grid */
+  .thickness-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .thickness-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.9rem 1.1rem;
+    border-radius: 8px;
+    border: 1px solid;
+  }
+
+  .thickness-light  { background: #f8fafc; border-color: #e2e8f0; }
+  .thickness-medium { background: #eff6ff; border-color: #bfdbfe; }
+  .thickness-heavy  { background: #fff7ed; border-color: #fed7aa; }
+
+  .thickness-val {
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    font-weight: 800;
+    width: 48px;
+    text-align: center;
+  }
+
+  .thickness-light  .thickness-val { color: #64748b; }
+  .thickness-medium .thickness-val { color: #1d4ed8; }
+  .thickness-heavy  .thickness-val { color: #ea580c; }
+
+  .thickness-info strong {
+    display: block;
+    font-size: 0.88rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .thickness-info p {
+    font-size: 0.83rem;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .thickness-light  .thickness-info strong,
+  .thickness-light  .thickness-info p { color: #334155; }
+  .thickness-medium .thickness-info strong,
+  .thickness-medium .thickness-info p { color: #1e3a8a; }
+  .thickness-heavy  .thickness-info strong,
+  .thickness-heavy  .thickness-info p { color: #7c2d12; }
+
+  /* Sqft table */
+  .sqft-table-wrap {
+    margin: 1rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+  }
+
+  .sqft-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.87rem;
+  }
+
+  .sqft-table thead tr {
+    background: #0f172a;
+    color: #e2e8f0;
+  }
+
+  .sqft-table th {
+    text-align: left;
+    padding: 0.6rem 1rem;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
+  .sqft-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+  }
+
+  .sqft-table td:first-child {
+    font-weight: 600;
+    color: #0f172a;
+  }
+
+  .sqft-table tr:last-child td { border-bottom: none; }
+  .sqft-table tr:nth-child(even) { background: #f8fafc; }
+
+  /* Apartment callout */
+  .apartment-box {
+    background: #fefce8;
+    border: 1px solid #fde68a;
+    border-left: 4px solid #f59e0b;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+  }
+
+  .apartment-box p {
+    font-size: 0.88rem;
+    color: #78350f;
+    margin-bottom: 0.6rem;
+    line-height: 1.55;
+  }
+
+  .apartment-box p:last-child { margin-bottom: 0; }
+
+  /* Spec row */
+  .spec-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+    margin: 0.2rem 0 0.75rem;
+  }
+
+  .spec { font-size: 0.83rem; color: #475569; }
+</style>
