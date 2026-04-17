@@ -1,0 +1,768 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Kettlebell for Home Gym Beginners (2025)";
+const description =
+  "A single kettlebell can replace an entire gym for cardio and strength. Here are the best picks for beginners building a home gym on a budget.";
+const pubDate = "2026-04-17";
+const slug = "best-kettlebell-home-gym-beginners";
+
+const rogueUrl    = "https://www.amazon.com/s?k=rogue+fitness+kettlebell&tag=dveverka-20";
+const capUrl      = "https://www.amazon.com/s?k=cap+barbell+cast+iron+kettlebell&tag=dveverka-20";
+const bowflexUrl  = "https://www.amazon.com/s?k=bowflex+selecttech+840+adjustable+kettlebell&tag=dveverka-20";
+
+const capPros = [
+  "Price per pound is unbeatable — the CAP cast iron kettlebell runs $1.00–1.50 per pound at most weights, which means a 35 lb bell costs around $40–50. That's the lowest entry cost into kettlebell training available from a recognizable brand.",
+  "Cast iron construction is genuinely durable — no coating to chip off, no plastic to crack, no rubber to degrade with use. A CAP kettlebell bought today will still be functional in 10 years with zero maintenance.",
+  "The flat base means it sits stable on any surface without rolling — useful when you set it down mid-workout or store it in a corner without a dedicated rack.",
+  "Available in a wide range of weights from 5 lbs to 80+ lbs, so you can start with one bell and add a heavier one later without switching brands or dealing with mismatched handles.",
+  "Handle diameter works for most grip sizes — not as polished as competition-grade handles, but adequate for swings, goblet squats, and standard beginner movements without creating hot spots.",
+];
+
+const capCons = [
+  "Handle finish varies between production runs — some CAP bells arrive with minor casting seams or rough spots on the handle that require light sanding before use, which shouldn't be necessary on a product you just unboxed",
+  "The coating (usually a painted enamel) chips with regular hard use, especially if the bell contacts concrete floors or other weights. The cast iron underneath won't rust quickly in dry environments, but the appearance degrades faster than vinyl-coated or powder-coated alternatives",
+  "No size standardization across weights — the handle diameter and bell dimensions change between weight increments, which means your grip mechanics for a 26 lb CAP bell feel different than a 44 lb CAP bell. Competition kettlebells use identical dimensions at every weight, which this doesn't.",
+];
+
+const comparisonRows = [
+  { feature: "Price Range", nameA: "Rogue Kettlebell", nameB: "CAP Barbell", nameC: "Bowflex 840", valueA: "~$80–120", valueB: "~$40–60", valueC: "~$200", winner: "B" },
+  { feature: "Handle Finish", nameA: "Rogue Kettlebell", nameB: "CAP Barbell", nameC: "Bowflex 840", valueA: "Powder coat, smooth", valueB: "Painted enamel", valueC: "Textured plastic", winner: "A" },
+  { feature: "Weight Options", nameA: "Rogue Kettlebell", nameB: "CAP Barbell", nameC: "Bowflex 840", valueA: "Fixed weights", valueB: "Fixed weights", valueC: "8–35 lbs adjustable", winner: "C" },
+  { feature: "Size Standardized", nameA: "Rogue Kettlebell", nameB: "CAP Barbell", nameC: "Bowflex 840", valueA: "Yes", valueB: "No", valueC: "N/A", winner: "A" },
+  { feature: "Best For", nameA: "Rogue Kettlebell", nameB: "CAP Barbell", nameC: "Bowflex 840", valueA: "Long-term use, technique", valueB: "Budget beginners", valueC: "Space-limited, variety seekers", winner: "" },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        One kettlebell and 20 minutes is one of the most effective workouts you can do. Swings
+        hit your posterior chain harder than most gym machines. Goblet squats build lower body
+        strength without a barbell. A Turkish get-up works every stabilizer in your body
+        simultaneously. And done back-to-back with short rest, all of it doubles as cardio.
+        There's no other piece of equipment at this price point that delivers the same
+        combination of strength, conditioning, and full-body demand.
+      </p>
+      <p>
+        The question isn't whether to buy a kettlebell — it's which one and what weight. Here's
+        the breakdown across three options from budget cast iron to an adjustable bell that
+        replaces a whole rack.
+      </p>
+    </section>
+
+    <!-- Verdict Box -->
+    <div class="verdict-box">
+      <h2>Quick Picks</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-label">Best Overall</span>
+          <a href={rogueUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Rogue Kettlebell
+          </a>
+          <p>Powder-coated, standardized handle diameter, smooth finish for high-rep sets. The long-term buy.</p>
+          <span class="pick-price">~$80–120</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Budget</span>
+          <a href={capUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            CAP Barbell Cast Iron
+          </a>
+          <p>$1–1.50 per pound, cast iron durability, available in every weight. The lowest barrier to entry.</p>
+          <span class="pick-price">~$40–60</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Adjustable</span>
+          <a href={bowflexUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Bowflex SelectTech 840
+          </a>
+          <p>8–35 lbs in one unit, dial-select adjustment. Six kettlebells in the footprint of one.</p>
+          <span class="pick-price">~$200</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- What weight -->
+    <section>
+      <h2>What Weight Kettlebell Should a Beginner Buy?</h2>
+      <p>
+        This is the most important question and most guides get it wrong by recommending too
+        light. Going too light means you'll outgrow the bell in a month and need to buy again.
+        The standard starting recommendations:
+      </p>
+      <div class="weight-rec-grid">
+        <div class="weight-rec-card weight-rec-men">
+          <h3>Men</h3>
+          <p class="weight-rec-primary">16 kg / 35 lbs</p>
+          <p>The standard beginner weight for most men of average fitness. Heavy enough to make swings and goblet squats challenging immediately, light enough to learn technique safely.</p>
+          <p class="weight-rec-note">If you're coming in very deconditioned or have joint issues: start at 12 kg / 26 lbs. If you're already lifting and just adding kettlebells: consider 20 kg / 44 lbs.</p>
+        </div>
+        <div class="weight-rec-card weight-rec-women">
+          <h3>Women</h3>
+          <p class="weight-rec-primary">12 kg / 26 lbs</p>
+          <p>The standard starting point for most women. Light enough to learn the hip hinge pattern and swing mechanics, heavy enough to build real strength through goblet squats and deadlifts.</p>
+          <p class="weight-rec-note">If you're already lifting consistently: 16 kg / 35 lbs. If you're brand new to exercise: 8 kg / 18 lbs for the first month, then move up.</p>
+        </div>
+      </div>
+      <p>
+        The key pattern: kettlebell swings use your biggest muscle groups (glutes, hamstrings,
+        back) and can handle more weight than you expect. Go heavier than feels intuitive.
+        A bell that's too light for swings will be perfect for Turkish get-ups — so owning
+        one slightly heavy bell is better than one that becomes too easy in a week.
+      </p>
+    </section>
+
+    <!-- Cast iron vs competition -->
+    <section>
+      <h2>Cast Iron vs Competition Kettlebell — Which Should You Buy?</h2>
+      <div class="kb-type-grid">
+        <div class="kb-type-card kb-cast">
+          <h3>Cast Iron Kettlebell</h3>
+          <p class="kb-type-price">CAP Barbell · ~$40–60</p>
+          <ul>
+            <li>Size increases as weight increases — a 44 lb bell is noticeably bigger than a 26 lb bell</li>
+            <li>Lower price per pound — typically $1.00–2.00/lb</li>
+            <li>Handle diameter and finish varies between weights and brands</li>
+            <li>Most accessible option — available at Target, Walmart, Amazon, sporting goods stores</li>
+            <li>Best for: general home gym use, beginners, anyone buying a single bell</li>
+          </ul>
+        </div>
+        <div class="kb-type-card kb-comp">
+          <h3>Competition Kettlebell</h3>
+          <p class="kb-type-price">Rogue / Dragon Door · ~$80–150</p>
+          <ul>
+            <li>Identical outer dimensions at every weight — a 44 lb bell is the same size as a 26 lb bell</li>
+            <li>Standardized handle diameter (33mm) designed for competition technique work</li>
+            <li>Higher price — typically $2.00–4.00/lb</li>
+            <li>Better for learning technique if you plan to add multiple bells at different weights</li>
+            <li>Best for: serious kettlebell training, anyone buying 2+ bells, long-term use</li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        For a first kettlebell: cast iron is fine. The technique differences between cast iron
+        and competition bells matter more at advanced weights and high training volumes. Buy a
+        quality cast iron bell, learn the movements, and upgrade to competition-style when and
+        if you get serious about the sport.
+      </p>
+    </section>
+
+    <!-- Adjustable vs fixed -->
+    <section>
+      <h2>Adjustable vs Fixed Kettlebell — Is the Bowflex Worth $200?</h2>
+      <p>
+        The Bowflex SelectTech 840 replaces six fixed kettlebells (8, 12, 20, 25, 30, and 35 lbs)
+        in one unit. If you'd buy all six separately, that's $100–200 in cast iron bells plus
+        the storage space for six pieces of equipment. The Bowflex takes the footprint of one.
+      </p>
+      <div class="adj-grid">
+        <div class="adj-card adj-yes">
+          <h3>Get the Bowflex if:</h3>
+          <ul>
+            <li>You're in an apartment or dorm with minimal storage space</li>
+            <li>You want to vary weight within a single workout (heavier for swings, lighter for Turkish get-ups)</li>
+            <li>You're buying your first kettlebell and want to explore what weight works for different exercises without buying multiple bells</li>
+          </ul>
+        </div>
+        <div class="adj-card adj-no">
+          <h3>Stick with fixed bells if:</h3>
+          <ul>
+            <li>You plan to do high-rep ballistic work (swings, cleans) — the dial mechanism on adjustable bells isn't designed for the impact of fast, repetitive ballistic movements</li>
+            <li>You only need one weight — buying a single fixed bell is a fraction of the price</li>
+            <li>Long-term durability is the priority — a cast iron bell has no moving parts to fail</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <h3>
+        <a href={rogueUrl} rel="noopener noreferrer sponsored">Rogue Kettlebell</a>
+        — Best Overall
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Finish:</strong> Powder coat</span>
+        <span class="spec"><strong>Handle:</strong> Smooth, standardized diameter</span>
+        <span class="spec"><strong>Base:</strong> Flat, no wobble</span>
+        <span class="spec"><strong>Price/lb:</strong> ~$2.00–2.50</span>
+        <span class="spec"><strong>Style:</strong> Cast iron, competition-influenced dimensions</span>
+      </div>
+      <p>
+        The Rogue kettlebell sits between budget cast iron and true competition-grade bells in
+        both price and design. The powder coat finish is smooth enough for high-rep sets without
+        tearing up your hands, and Rogue uses consistent handle dimensions across their weight
+        range — so a technique you develop on a 35 lb bell transfers cleanly to a 53 lb bell
+        without relearning your grip. The flat base is machined, not just cast, which means
+        it sits dead level on any floor.
+      </p>
+      <p>
+        You're paying a premium over the CAP, and it's a real premium — sometimes 2x the price
+        per pound. But for anyone planning to use kettlebells seriously for more than a few
+        months, the handle quality and dimensional consistency are worth the difference. The
+        Rogue bell is the one you buy once.
+      </p>
+
+      <h3>
+        <a href={capUrl} rel="noopener noreferrer sponsored">CAP Barbell Cast Iron Kettlebell</a>
+        — Best Budget
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Finish:</strong> Painted enamel</span>
+        <span class="spec"><strong>Handle:</strong> Cast iron, varies by weight</span>
+        <span class="spec"><strong>Base:</strong> Flat</span>
+        <span class="spec"><strong>Price/lb:</strong> ~$1.00–1.50</span>
+        <span class="spec"><strong>Style:</strong> Traditional cast iron</span>
+      </div>
+      <p>
+        The CAP is the default recommendation for anyone who wants to try kettlebell training
+        without a significant upfront commitment. At $1.00–1.50 per pound, a 35 lb bell costs
+        around $40–50 — which is less than two months of a gym membership and delivers more
+        training variety. The cast iron construction is genuinely durable; these bells don't
+        break, crack, or degrade with normal use.
+      </p>
+      <p>
+        The compromises are real: handle quality control isn't consistent (some bells arrive
+        with rough seams), the enamel coating chips with hard use, and the dimensions shift
+        across weights so your grip mechanics don't carry over cleanly as you progress. For a
+        first bell used for 6–12 months, none of that matters much. For a long-term investment
+        in serious kettlebell training, upgrade to the Rogue when you're ready.
+      </p>
+
+      <h3>
+        <a href={bowflexUrl} rel="noopener noreferrer sponsored">Bowflex SelectTech 840</a>
+        — Best Adjustable
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Weight range:</strong> 8–35 lbs</span>
+        <span class="spec"><strong>Increments:</strong> Dial select (6 settings)</span>
+        <span class="spec"><strong>Replaces:</strong> 6 fixed kettlebells</span>
+        <span class="spec"><strong>Price:</strong> ~$200</span>
+        <span class="spec"><strong>Style:</strong> Adjustable (not suitable for heavy ballistics)</span>
+      </div>
+      <p>
+        The Bowflex 840 is a legitimate space-saving solution for apartment and dorm gym setups.
+        Dial it to 8 lbs for Turkish get-up technique work, crank it to 35 lbs for goblet squats,
+        drop back to 20 lbs for one-arm cleans — all in seconds without a rack of bells taking
+        up floor space. The build quality is better than most adjustable dumbbell knockoffs and
+        the dial mechanism holds up reliably under moderate use.
+      </p>
+      <p>
+        The one firm caveat: don't use it for heavy ballistic work at high rep counts. Kettlebell
+        swings done for 50+ reps put significant stress on the dial mechanism over time.
+        For swings, cleans, and snatches as a primary training focus, get a fixed bell. The
+        Bowflex is ideal for strength-focused kettlebell work (goblet squats, presses, get-ups,
+        rows) where the weight is controlled and not being swung aggressively.
+      </p>
+    </section>
+
+    <!-- Best exercises -->
+    <section>
+      <h2>Best Kettlebell Exercises for Beginners</h2>
+      <p>
+        Start with these four. They cover the full body, they're teachable from a YouTube
+        tutorial, and they form the foundation that every other kettlebell movement builds on.
+      </p>
+      <div class="exercise-grid">
+        <div class="exercise-card">
+          <h4>Kettlebell Swing</h4>
+          <p>The foundation. Drives power from your hips and trains your entire posterior chain — glutes, hamstrings, lower back. Learn the hip hinge first (push your hips back, not squat down), then add the swing. 10–20 reps per set.</p>
+        </div>
+        <div class="exercise-card">
+          <h4>Goblet Squat</h4>
+          <p>Hold the bell by the horns at chest height and squat. Counterbalances your weight forward, making it easier to hit depth than a barbell back squat. Best beginner lower body kettlebell exercise — builds quad, glute, and core strength simultaneously.</p>
+        </div>
+        <div class="exercise-card">
+          <h4>Turkish Get-Up</h4>
+          <p>The most complex beginner movement — learn it slowly and deliberately. From lying down to standing and back, with the bell pressed overhead the entire time. Trains every stabilizer in your shoulder, hip, and core. Use a lighter bell than feels necessary.</p>
+        </div>
+        <div class="exercise-card">
+          <h4>Clean and Press</h4>
+          <p>Clean the bell to the rack position (bell resting on forearm, elbow tucked), then press overhead. One of the most complete kettlebell movements — trains hip power, shoulder stability, and pressing strength in one pattern. Learn the clean first before adding the press.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 20 min workout -->
+    <section>
+      <h2>Sample 20-Minute Beginner Kettlebell Workout</h2>
+      <p>
+        Do this 3x per week with a rest day between sessions. One bell, 20 minutes, full body.
+      </p>
+      <div class="workout-table">
+        <div class="workout-header">
+          <span>Exercise</span>
+          <span>Sets × Reps</span>
+          <span>Rest</span>
+        </div>
+        <div class="workout-row">
+          <span>Kettlebell Swing</span>
+          <span>4 × 15</span>
+          <span>45 sec</span>
+        </div>
+        <div class="workout-row workout-row-alt">
+          <span>Goblet Squat</span>
+          <span>3 × 10</span>
+          <span>60 sec</span>
+        </div>
+        <div class="workout-row">
+          <span>Single-Arm Row (each side)</span>
+          <span>3 × 8</span>
+          <span>45 sec</span>
+        </div>
+        <div class="workout-row workout-row-alt">
+          <span>Kettlebell Press (each side)</span>
+          <span>3 × 6</span>
+          <span>60 sec</span>
+        </div>
+        <div class="workout-row">
+          <span>Turkish Get-Up (each side)</span>
+          <span>2 × 3</span>
+          <span>90 sec</span>
+        </div>
+        <div class="workout-row workout-row-alt">
+          <span>Swing Finisher</span>
+          <span>1 × 30</span>
+          <span>Done</span>
+        </div>
+      </div>
+      <p class="workout-note">
+        Total time: ~18–22 minutes depending on rest. Increase reps before increasing weight —
+        when you can complete every set at the top of the rep range with clean form, move up
+        to the next weight increment.
+      </p>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Rogue Kettlebell"
+        nameB="CAP Barbell"
+        nameC="Bowflex 840"
+        rows={comparisonRows}
+      />
+    </section>
+
+    <!-- Pros/Cons -->
+    <section>
+      <h2>CAP Barbell Cast Iron — Pros & Cons</h2>
+      <ProsConsList pros={capPros} cons={capCons} />
+    </section>
+
+    <!-- Who should buy / skip -->
+    <section>
+      <h2>Who Should Buy the CAP Kettlebell</h2>
+      <p>
+        The CAP is the right call for any beginner who wants to start kettlebell training without
+        spending $100+ on a first bell they might decide isn't for them. It's also the right
+        choice for anyone who needs a specific weight that the Rogue or Bowflex doesn't cover
+        cheaply — adding a 44 lb or 53 lb cast iron bell to a home gym for $50–70 is a better
+        value than any premium alternative at those weights. The cast iron will outlast any use
+        you can throw at it.
+      </p>
+      <h2>Who Should Skip the CAP</h2>
+      <p>
+        If you're serious about kettlebell training beyond the first six months, skip straight
+        to the Rogue. The handle quality difference matters more the more you use it — rough
+        seams and inconsistent dimensions become genuinely annoying in long sweat-drenched
+        sessions. Also skip the CAP if you need multiple weight options in one unit; the
+        Bowflex is a much better answer for that specific problem.
+      </p>
+    </section>
+
+    <!-- Final Verdict -->
+    <section class="final-verdict">
+      <h2>Final Verdict</h2>
+      <p>
+        For most beginners, the CAP cast iron kettlebell at $40–60 is the right first purchase.
+        It's durable, it covers every beginner exercise, and the low price means you can commit
+        to the right starting weight without overthinking the decision. Once you've been training
+        for 6–12 months and know you want to continue, upgrade to the Rogue for a better long-term
+        handle. If space is the constraint, the Bowflex 840 earns its $200 price tag by replacing
+        six bells in one unit. But for day one, start cheap, start heavy enough, and start swinging.
+      </p>
+      <AffiliateButton
+        href={capUrl}
+        text="Check Price on Amazon"
+        subtext="Best Budget Pick · Cast Iron · ~$40–60"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  header h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+    color: #0f172a;
+  }
+
+  .meta {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0 0 2rem;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 1rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  h3 a {
+    color: #f97316;
+    text-decoration: none;
+  }
+
+  h3 a:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    color: #334155;
+    line-height: 1.75;
+    margin: 0 0 1rem;
+  }
+
+  /* Verdict Box */
+  .verdict-box {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    color: #f8fafc;
+    margin-bottom: 1.25rem;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .pick-card {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .pick-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f97316;
+  }
+
+  .pick-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #f8fafc;
+    text-decoration: none;
+    line-height: 1.3;
+  }
+
+  .pick-title:hover {
+    color: #f97316;
+  }
+
+  .pick-card p {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .pick-price {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #4ade80;
+    margin-top: auto;
+  }
+
+  /* Spec Row */
+  .spec-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    background: #f8fafc;
+    border-left: 3px solid #f97316;
+    padding: 0.75rem 1rem;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 1rem;
+  }
+
+  .spec {
+    font-size: 0.82rem;
+    color: #475569;
+  }
+
+  /* Weight Recommendation Grid */
+  .weight-rec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .weight-rec-card {
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+
+  .weight-rec-men {
+    background: #eff6ff;
+    border-top: 4px solid #3b82f6;
+  }
+
+  .weight-rec-women {
+    background: #fdf4ff;
+    border-top: 4px solid #a855f7;
+  }
+
+  .weight-rec-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.4rem;
+  }
+
+  .weight-rec-primary {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 0.75rem;
+    line-height: 1;
+  }
+
+  .weight-rec-note {
+    font-size: 0.78rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+    font-style: italic;
+  }
+
+  /* KB Type Grid */
+  .kb-type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .kb-type-card {
+    border-radius: 8px;
+    padding: 1.25rem;
+    border-top: 4px solid transparent;
+  }
+
+  .kb-cast {
+    background: #fafaf9;
+    border-top-color: #78716c;
+  }
+
+  .kb-comp {
+    background: #fff7ed;
+    border-top-color: #f97316;
+  }
+
+  .kb-type-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.2rem;
+  }
+
+  .kb-type-price {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+  }
+
+  .kb-type-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .kb-type-card li {
+    font-size: 0.85rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Adjustable Grid */
+  .adj-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .adj-card {
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+
+  .adj-yes {
+    background: #f0fdf4;
+    border-top: 3px solid #22c55e;
+  }
+
+  .adj-no {
+    background: #fef2f2;
+    border-top: 3px solid #ef4444;
+  }
+
+  .adj-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.75rem;
+  }
+
+  .adj-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .adj-card li {
+    font-size: 0.85rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 0.35rem;
+  }
+
+  /* Exercise Grid */
+  .exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .exercise-card {
+    background: #0f172a;
+    border-radius: 8px;
+    padding: 1.1rem;
+  }
+
+  .exercise-card h4 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #f97316;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .exercise-card p {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Workout Table */
+  .workout-table {
+    background: #0f172a;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem 0;
+  }
+
+  .workout-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 0.6rem 1rem;
+    background: #1e293b;
+  }
+
+  .workout-header span {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f97316;
+  }
+
+  .workout-row,
+  .workout-row-alt {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 0.65rem 1rem;
+  }
+
+  .workout-row-alt {
+    background: #1e293b;
+  }
+
+  .workout-row span,
+  .workout-row-alt span {
+    font-size: 0.85rem;
+    color: #e2e8f0;
+    line-height: 1.4;
+  }
+
+  .workout-note {
+    font-size: 0.82rem;
+    color: #64748b;
+    font-style: italic;
+    margin: 0.5rem 0 0;
+  }
+
+  /* Final Verdict */
+  .final-verdict {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+
+  .final-verdict h2 {
+    color: #c2410c;
+  }
+</style>
