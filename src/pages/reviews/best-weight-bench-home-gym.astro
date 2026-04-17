@@ -1,0 +1,657 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Weight Bench for Home Gym Under $300 (2025)";
+const description =
+  "A good weight bench is the foundation of any home gym. Here are the best picks under $300 for college students and young adults who lift at home.";
+const pubDate = "2026-04-17";
+const slug = "best-weight-bench-home-gym";
+
+const repUrl     = "https://www.amazon.com/s?k=rep+fitness+adjustable+weight+bench&tag=dveverka-20";
+const flybirdUrl = "https://www.amazon.com/s?k=flybird+adjustable+weight+bench&tag=dveverka-20";
+const rogueUrl   = "https://www.amazon.com/s?k=rogue+flat+utility+bench&tag=dveverka-20";
+
+const flybirdPros = [
+  "Seven back pad positions (flat, 30°, 45°, 60°, 75°, 85°, and decline) give you access to incline and decline pressing, incline curls, and seated shoulder work from a single piece of equipment that costs $150",
+  "Folds completely flat for storage with a pull-pin mechanism that takes under 10 seconds — the folded profile is roughly the size of an ironing board, which makes it genuinely usable in a bedroom or apartment with no dedicated gym space",
+  "750lb weight capacity is rated well above what any beginner or intermediate home gym lifter will ever load — the steel frame handles the weight without any flex or rock at realistic loads",
+  "Dual-triangle leg design provides solid stability for pressing movements — the wide base prevents side-to-side wobble during dumbbell bench press better than single-post budget benches at the same price",
+  "At $150 it's the lowest barrier-to-entry adjustable bench with a legitimate weight capacity — for someone building a first home gym and allocating most of their budget to a barbell and plates, it's the bench that doesn't break the budget",
+];
+
+const flybirdCons = [
+  "Seat pad is short and fixed at a slight upward angle — this works for pressing but the lack of a separate seat adjustment means the hip positioning on steep incline angles (75°–85°) feels slightly awkward for taller users",
+  "Padding density is softer than premium benches — the foam compresses noticeably under heavy loads, which affects feel but not structural safety; experienced lifters who prefer firm padding will feel the difference versus the REP or Rogue",
+  "Long-term durability of the fold mechanism is the main unknown — the pull-pin locking system works well initially but repeated daily folding and unfolding introduces wear on the pin and collar over 2–3 years of heavy use",
+];
+
+const rows = [
+  { label: "Price",           a: "~$200",      b: "~$150",       c: "~$195",       winner: "b" },
+  { label: "Weight capacity", a: "1,000 lb",   b: "750 lb",      c: "1,000 lb",    winner: "tie" },
+  { label: "Positions",       a: "7 + decline",b: "7 + decline", c: "Flat only",   winner: "tie" },
+  { label: "Padding",         a: "Firm/thick", b: "Medium",      c: "Firm/minimal",winner: "a" },
+  { label: "Foldable",        a: "No",         b: "Yes",         c: "No",          winner: "b" },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        A wobbly bench is worse than no bench. If your seat rocks during a heavy dumbbell press,
+        your body compensates — your form breaks down, your stabilizers work overtime correcting
+        for instability, and eventually something gets tweaked. The cheap $60 Amazon benches with
+        four thin legs and foam padding that compresses to nothing after a month aren't saving you
+        money; they're a liability.
+      </p>
+      <p>
+        The good news is you don't need to spend $300 to get a bench that won't move. All three
+        picks below are solid under load, rated for at least 750 pounds, and built to last through
+        years of regular training. The difference between them comes down to whether you need
+        adjustability, how much space you have, and whether you're willing to pay more for premium
+        materials.
+      </p>
+    </section>
+
+    <!-- Verdict Box -->
+    <div class="verdict-box">
+      <h2>Quick Picks</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-label">Best Overall</span>
+          <a href={repUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            REP Fitness AB-3000
+          </a>
+          <p>1,000lb capacity, thick firm padding, 7 back positions + decline. The most complete adjustable under $250.</p>
+          <span class="pick-price">~$200</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Budget</span>
+          <a href={flybirdUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Flybird Adjustable Bench
+          </a>
+          <p>750lb capacity, 7 positions, folds flat in 10 seconds. Best value adjustable bench on the market.</p>
+          <span class="pick-price">~$150</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Flat Bench</span>
+          <a href={rogueUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Rogue Flat Utility Bench
+          </a>
+          <p>1,000lb capacity, minimal padding, bombproof stability. If you only ever bench flat, this is the one.</p>
+          <span class="pick-price">~$195</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flat vs adjustable -->
+    <section>
+      <h2>Flat Bench vs Adjustable — Which Should Beginners Get?</h2>
+      <div class="comparison-block">
+        <div class="comp-col comp-col-green">
+          <h3>Get an Adjustable Bench If:</h3>
+          <ul>
+            <li>You're using dumbbells and want incline and decline press options</li>
+            <li>Space is limited — most adjustable benches fold flat</li>
+            <li>You want seated shoulder press, incline curls, and face pulls from one piece</li>
+            <li>You don't have a dedicated gym space and need the bench to disappear when not in use</li>
+          </ul>
+        </div>
+        <div class="comp-col comp-col-slate">
+          <h3>Get a Flat Bench If:</h3>
+          <ul>
+            <li>You have a power rack and barbell and primarily flat bench press</li>
+            <li>You want maximum stability — flat benches with wide legs don't rock</li>
+            <li>You don't care about incline variations and want simplicity</li>
+            <li>You value Rogue build quality and don't mind paying for it</li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        For most home gym beginners using dumbbells: get an adjustable. The incline press is one
+        of the best upper chest exercises available, and a bench that only goes flat cuts you off
+        from it entirely. The Flybird and REP AB-3000 both deliver real adjustability at prices
+        that leave room in your budget for more plates.
+      </p>
+    </section>
+
+    <!-- Weight capacity -->
+    <section>
+      <h2>What Weight Capacity Do You Actually Need?</h2>
+      <p>
+        The load on your bench is your bodyweight plus whatever you're pressing. A 180-pound
+        person doing dumbbell bench press with 60-pound dumbbells (120 pounds total) is putting
+        300 pounds of load on the bench. Add dynamic loading from pressing movement and you want
+        a meaningful safety margin above that number.
+      </p>
+      <div class="capacity-rule">
+        <p class="capacity-formula">
+          Minimum rated capacity = (your bodyweight + total dumbbell weight) × 2
+        </p>
+        <p>
+          By that formula, a 180-pound person pressing 60lb dumbbells needs a bench rated for at
+          least 600 pounds. All three picks here clear that comfortably — the Flybird at 750lb
+          and the REP and Rogue at 1,000lb. The $60 Amazon benches rated at 300–400 pounds often
+          don't clear this threshold for anyone who actually lifts.
+        </p>
+      </div>
+    </section>
+
+    <!-- What to look for -->
+    <section>
+      <h2>What to Look For in a Budget Bench</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Leg Design and Stability</h3>
+          <p>
+            Wide-stance triangle or A-frame legs are significantly more stable than four thin
+            vertical legs. Look for a base that extends outward rather than straight down — the
+            wider the footprint, the less side-to-side movement during pressing. This is the
+            most important structural feature at the budget end of the market.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Padding Density</h3>
+          <p>
+            Soft foam feels comfortable until you're pressing 80% of your max and your back
+            sinks unevenly into the pad. Quality bench padding is firm enough that your back
+            stays in a stable position throughout a set. Press your thumb into the padding —
+            it should resist meaningfully and spring back quickly.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Angle Range and Increments</h3>
+          <p>
+            The useful incline range for pressing is 30°–45°. Benches that only offer a single
+            incline position (usually 45°) are less flexible than those with multiple stops.
+            The 15°–20° incline that's optimal for upper chest development isn't available on
+            single-position benches. More stops between flat and 45° is better.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Steel Gauge and Frame Weight</h3>
+          <p>
+            Heavier benches are generally sturdier — a bench that feels planted when you sit on
+            it and push has appropriate mass. Light benches (under 25 pounds) tend to slide
+            on smooth floors during pressing. Rubber feet help, but frame weight is the real
+            stability foundation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <h3>
+        <a href={repUrl} rel="noopener noreferrer sponsored">REP Fitness AB-3000</a>
+        — Best Overall
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Capacity:</strong> 1,000 lb</span>
+        <span class="spec"><strong>Positions:</strong> 7 back + decline</span>
+        <span class="spec"><strong>Padding:</strong> 2.5" thick, firm</span>
+        <span class="spec"><strong>Foldable:</strong> No</span>
+      </div>
+      <p>
+        The REP AB-3000 is the adjustable bench that most serious home gym builders end up at
+        after trying something cheaper first. The 1,000lb rated capacity, 2.5-inch dense foam
+        padding, and seven back positions from decline through 85-degree seated cover every
+        pressing angle you need. The independent seat adjustment — absent on the Flybird — lets
+        you dial in hip position on steep incline angles, which matters for both comfort and
+        mechanics.
+      </p>
+      <p>
+        Stability is noticeably better than budget competitors. The wide A-frame base doesn't
+        move during heavy dumbbell pressing, and the frame weight (around 55 pounds) keeps it
+        planted without anchoring it to the floor. The padding is firm enough that your back
+        stays in position through a full set rather than slowly sinking.
+      </p>
+      <p>
+        It doesn't fold, which means it needs a permanent or semi-permanent spot in your space.
+        For a dedicated garage gym or spare bedroom setup, that's fine. For a living room that
+        needs to convert back after every session, the Flybird's fold mechanism is more practical.
+      </p>
+
+      <h3>
+        <a href={flybirdUrl} rel="noopener noreferrer sponsored">Flybird Adjustable Bench</a>
+        — Best Budget
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Capacity:</strong> 750 lb</span>
+        <span class="spec"><strong>Positions:</strong> 7 back + decline</span>
+        <span class="spec"><strong>Padding:</strong> Medium density</span>
+        <span class="spec"><strong>Foldable:</strong> Yes — 10 sec</span>
+      </div>
+      <p>
+        The Flybird has sold millions of units because it solves the problem of needing a real
+        adjustable bench in a space that isn't a dedicated gym. The fold mechanism is genuinely
+        fast — pull the pin, fold, done in ten seconds. The folded bench stands against a wall
+        or fits behind a door without any disassembly. For a student whose "home gym" is a corner
+        of their apartment, this is the bench that makes training possible without permanently
+        sacrificing living space.
+      </p>
+      <p>
+        The seven angle settings cover the full range from decline through near-vertical, and the
+        750-pound capacity handles realistic loads without any structural concerns. The dual
+        A-frame leg design keeps it stable during pressing — side-to-side movement is minimal
+        even at heavier dumbbell weights.
+      </p>
+      <p>
+        The padding is softer than the REP, and you'll feel it under max-effort sets with heavy
+        dumbbells. It's not a safety issue — it's a comfort and consistency issue at higher
+        intensities. For a beginner or intermediate lifter whose top dumbbell weight is under
+        70 pounds per hand, it's a non-issue in practice. For someone regularly pressing 80+
+        per hand, the REP's firmer pad becomes worth the extra $50.
+      </p>
+
+      <h3>
+        <a href={rogueUrl} rel="noopener noreferrer sponsored">Rogue Flat Utility Bench</a>
+        — Best Flat Bench
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Capacity:</strong> 1,000 lb</span>
+        <span class="spec"><strong>Positions:</strong> Flat only</span>
+        <span class="spec"><strong>Padding:</strong> Firm, minimal</span>
+        <span class="spec"><strong>Foldable:</strong> No</span>
+      </div>
+      <p>
+        Rogue's flat utility bench is not trying to do everything — it does one thing with
+        complete commitment. The Westside-style frame is welded, not bolted, and the 3×3 inch
+        uprights don't flex under any load a home gym lifter will put on them. The minimal
+        padding is firm by design: competitive powerlifters prefer a firm, stable surface for
+        maximum leg drive and back position consistency.
+      </p>
+      <p>
+        At ~$195 it costs nearly the same as the REP AB-3000, which makes the comparison
+        straightforward. If you have a power rack, squat and bench with a barbell primarily,
+        and don't want or need incline variations, the Rogue is the better-built piece of
+        equipment. If you're using dumbbells and want adjustability, the REP wins on utility
+        for the same money.
+      </p>
+      <p>
+        The Rogue name carries genuine value here: the quality control, the domestic manufacturing,
+        and the warranty are meaningfully better than import brands at similar prices. You're
+        partly paying for certainty — that this bench will perform exactly as described for as
+        long as you own it.
+      </p>
+    </section>
+
+    <!-- Best exercises -->
+    <section>
+      <h2>Best Exercises for a Home Gym Bench</h2>
+      <div class="exercise-grid">
+        <div class="exercise-card">
+          <span class="exercise-label">Chest</span>
+          <ul>
+            <li>Flat dumbbell bench press</li>
+            <li>Incline dumbbell press (30–45°)</li>
+            <li>Decline press (target lower chest)</li>
+            <li>Dumbbell flyes at any angle</li>
+          </ul>
+        </div>
+        <div class="exercise-card">
+          <span class="exercise-label">Shoulders</span>
+          <ul>
+            <li>Seated dumbbell shoulder press (85°)</li>
+            <li>Seated lateral raises</li>
+            <li>Incline front raises (30°)</li>
+            <li>Rear delt flyes (bent over on bench)</li>
+          </ul>
+        </div>
+        <div class="exercise-card">
+          <span class="exercise-label">Back &amp; Arms</span>
+          <ul>
+            <li>Single-arm dumbbell row (knee on bench)</li>
+            <li>Incline dumbbell curl (great bicep stretch)</li>
+            <li>Lying tricep extensions</li>
+            <li>Chest-supported row (lying prone on incline)</li>
+          </ul>
+        </div>
+        <div class="exercise-card">
+          <span class="exercise-label">Core &amp; Glutes</span>
+          <ul>
+            <li>Decline sit-ups</li>
+            <li>Hip thrusts (upper back on flat bench)</li>
+            <li>Step-ups (flat bench as platform)</li>
+            <li>Bulgarian split squat (rear foot on bench)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="REP AB-3000"
+        nameB="Flybird"
+        nameC="Rogue Flat"
+        rows={rows}
+      />
+    </section>
+
+    <!-- ProsConsList -->
+    <ProsConsList pros={flybirdPros} cons={flybirdCons} productName="Flybird Adjustable Bench" />
+
+    <!-- Who should buy -->
+    <section>
+      <h2>Who Should Buy the Flybird Adjustable Bench</h2>
+      <ul>
+        <li>Students and apartment dwellers who need a real bench that stores out of the way — the fold mechanism makes it possible to train seriously in a space that isn't a dedicated gym</li>
+        <li>Beginner to intermediate lifters using dumbbells under 70 pounds per hand — the padding and stability are well-matched to this load range and the seven angle settings cover everything you need</li>
+        <li>Anyone who wants incline and decline pressing without spending $200+ — at $150, the Flybird is the cheapest path to a full adjustable bench with a legitimate weight capacity</li>
+      </ul>
+
+      <h2>Who Should Skip It</h2>
+      <ul>
+        <li>Advanced lifters regularly pressing 80+ pound dumbbells — the softer padding compresses meaningfully under that load and the firmer REP AB-3000 is worth the extra $50 at that weight</li>
+        <li>Anyone who wants a permanent bench that doesn't flex or shift under any circumstance — the Rogue or REP offer more robust frames with no fold mechanism to wear over time</li>
+        <li>Taller lifters (6'2"+) who may find the fixed seat angle awkward at steeper incline positions — the REP's independent seat adjustment accommodates a wider range of proportions</li>
+      </ul>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        For most college students and young adults building their first home gym, the Flybird
+        Adjustable Bench is where to start. The $150 price, fold-flat storage, seven angle
+        positions, and 750-pound capacity cover everything a beginner through intermediate
+        lifter needs without compromising on the features that actually matter for training.
+      </p>
+      <p>
+        Once you're pressing over 70 pounds per hand consistently and want a firmer, more
+        permanent setup, upgrade to the REP AB-3000. If you have a barbell and rack and primarily
+        flat bench press, the Rogue Flat Utility Bench is the better-built piece of equipment
+        for roughly the same money.
+      </p>
+      <p>
+        But don't overthink the first bench. Get the Flybird, use it for six months, and you'll
+        know exactly what you want from the next one.
+      </p>
+      <AffiliateButton
+        href={flybirdUrl}
+        text="Check Flybird Adjustable Bench on Amazon"
+        subtext="Best Budget Pick · Folds Flat · 750 lb Capacity"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-family: system-ui, sans-serif;
+    color: #1e293b;
+    line-height: 1.7;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1.75rem;
+    margin-bottom: 0.4rem;
+    color: #1e293b;
+  }
+
+  h3 a {
+    color: #ea580c;
+    text-decoration: none;
+  }
+
+  h3 a:hover { text-decoration: underline; }
+
+  .meta {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  p { margin-bottom: 1rem; }
+
+  ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  li { margin-bottom: 0.45rem; }
+
+  strong { color: #0f172a; }
+
+  /* Verdict box */
+  .verdict-box {
+    background: #fff7ed;
+    border: 2px solid #ea580c;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    margin-top: 0;
+    color: #ea580c;
+    font-size: 1.2rem;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .pick-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #fed7aa;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .pick-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ea580c;
+  }
+
+  .pick-title {
+    font-weight: 700;
+    color: #0f172a;
+    text-decoration: none;
+    font-size: 0.93rem;
+    line-height: 1.3;
+  }
+
+  .pick-title:hover { color: #ea580c; }
+
+  .pick-card p {
+    font-size: 0.82rem;
+    color: #475569;
+    margin: 0;
+    flex: 1;
+  }
+
+  .pick-price {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  /* Flat vs adjustable */
+  .comparison-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  @media (max-width: 540px) {
+    .comparison-block { grid-template-columns: 1fr; }
+  }
+
+  .comp-col {
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    border: 1px solid;
+  }
+
+  .comp-col-green { background: #f0fdf4; border-color: #bbf7d0; }
+  .comp-col-slate { background: #f8fafc; border-color: #e2e8f0; }
+
+  .comp-col h3 {
+    font-size: 0.87rem;
+    font-weight: 700;
+    margin: 0 0 0.55rem 0;
+  }
+
+  .comp-col-green h3 { color: #166534; }
+  .comp-col-slate h3 { color: #334155; }
+
+  .comp-col ul { margin: 0; padding-left: 1.2rem; }
+
+  .comp-col li {
+    font-size: 0.84rem;
+    color: #334155;
+    margin-bottom: 0.35rem;
+  }
+
+  /* Capacity rule box */
+  .capacity-rule {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 1.1rem 1.25rem;
+    margin: 1rem 0;
+  }
+
+  .capacity-formula {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1d4ed8;
+    font-family: monospace;
+    background: #dbeafe;
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .capacity-rule p:last-child {
+    font-size: 0.88rem;
+    color: #1e3a8a;
+    margin: 0;
+  }
+
+  /* Feature grid */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .feature-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #ea580c;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .feature-card h3 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.4rem 0;
+  }
+
+  .feature-card p {
+    font-size: 0.83rem;
+    color: #475569;
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  /* Spec row */
+  .spec-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+    margin: 0.2rem 0 0.75rem;
+  }
+
+  .spec {
+    font-size: 0.83rem;
+    color: #475569;
+  }
+
+  /* Exercise grid */
+  .exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .exercise-card {
+    background: #0f172a;
+    border-radius: 8px;
+    padding: 1rem;
+    color: #e2e8f0;
+  }
+
+  .exercise-label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #ea580c;
+    margin-bottom: 0.6rem;
+  }
+
+  .exercise-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+  }
+
+  .exercise-card li {
+    font-size: 0.83rem;
+    color: #cbd5e1;
+    margin-bottom: 0.3rem;
+  }
+</style>
