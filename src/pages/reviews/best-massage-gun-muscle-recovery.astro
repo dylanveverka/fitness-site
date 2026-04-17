@@ -1,0 +1,626 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Massage Gun for Muscle Recovery (2025) — Budget to Premium";
+const description =
+  "Massage guns are the best recovery tool you can buy for sore muscles after lifting. Here are the best picks from budget to premium ranked by power, battery, and value.";
+const pubDate = "2026-04-17";
+const slug = "best-massage-gun-muscle-recovery";
+
+const theragunUrl  = "https://www.amazon.com/s?k=theragun+prime+massage+gun&tag=dveverka-20";
+const hyperUrl     = "https://www.amazon.com/s?k=hypervolt+go+2+massage+gun&tag=dveverka-20";
+const renphoUrl    = "https://www.amazon.com/s?k=renpho+massage+gun&tag=dveverka-20";
+
+const hyperPros = [
+  "The compact form factor — roughly the size of a large TV remote — makes it genuinely portable in a way that larger massage guns aren't; it fits in a gym bag side pocket, a backpack, or a desk drawer without rethinking your packing",
+  "35 lbs of stall force is enough to meaningfully penetrate the quads, glutes, hamstrings, and traps — the muscle groups that need the most attention after lifting — without the gun stalling out under moderate pressure the way budget devices do",
+  "3-speed settings cover the full range of useful percussive therapy: slow for warm-up and sensitive areas, medium for general recovery, fast for flushing out tight spots before they become knots",
+  "Battery lasts 2.5 hours of continuous use, which translates to weeks of real-world sessions at the 60–90 second per muscle group intensity most users operate at — charging it once a week is the norm, not every other day",
+  "Near-quiet operation at lower speeds makes it usable in a dorm room, a library study room, or anywhere you'd normally avoid taking out a jackhammer-volume recovery device",
+];
+
+const hyperCons = [
+  "35 lbs of stall force is a ceiling — it covers most use cases comfortably, but deep tissue work on large, dense muscle groups like the glutes and thoracic back benefits from the 60 lbs the Theragun Prime delivers; serious lifters will eventually feel the limit",
+  "Only two attachment heads included in the base package — the ball and fork heads handle most situations, but the Theragun Prime ships with five, meaning you have more targeted options out of the box for different muscle shapes",
+  "No app connectivity — the Hypervolt Go 2 is a standalone device, which is fine for most users but means you miss out on Hyperice's guided recovery routines that the full Hypervolt lineup accesses through the app",
+];
+
+const rows = [
+  { label: "Price",         a: "~$250",      b: "~$130",      c: "~$40",       winner: "c" },
+  { label: "Stall force",   a: "60 lbs",     b: "35 lbs",     c: "~20 lbs",    winner: "a" },
+  { label: "Battery life",  a: "2 hrs",      b: "2.5 hrs",    c: "~3 hrs",     winner: "c" },
+  { label: "Noise level",   a: "Very quiet", b: "Quiet",      c: "Moderate",   winner: "a" },
+  { label: "Attachments",   a: "5",          b: "2",          c: "6",          winner: "tie" },
+  { label: "Weight",        a: "1.43 lbs",   b: "1.5 lbs",    c: "~2 lbs",     winner: "a" },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        Foam rolling is fine. It improves blood flow, loosens surface-level tightness, and is
+        infinitely better than nothing. But a foam roller requires you to get on the floor, bear
+        your bodyweight on a cylinder, and spend 60–90 seconds rolling each muscle group with
+        enough pressure to actually do something. A massage gun does the same thing in half the
+        time while you sit on the edge of your bed watching YouTube.
+      </p>
+      <p>
+        The difference is percussive depth. A massage gun delivers rapid pulses that penetrate
+        further into muscle tissue than static foam pressure, reaching the connective tissue and
+        muscle fibers where soreness actually lives. The three picks below range from $40 to $250.
+        All three work. The difference is how well they work and for how long.
+      </p>
+    </section>
+
+    <!-- Verdict Box -->
+    <div class="verdict-box">
+      <h2>Quick Picks</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-label">Best Overall</span>
+          <a href={theragunUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Theragun Prime
+          </a>
+          <p>60 lbs stall force, 5 attachments, near-silent motor. The standard for serious recovery.</p>
+          <span class="pick-price">~$250</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Mid-Range</span>
+          <a href={hyperUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Hypervolt Go 2
+          </a>
+          <p>35 lbs stall force, compact, 2.5-hr battery, near-quiet. The best value for most people.</p>
+          <span class="pick-price">~$130</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Budget</span>
+          <a href={renphoUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Renpho Massage Gun
+          </a>
+          <p>~20 lbs stall force, 6 attachments, 3-hr battery. Gets the job done at 1/6th the price.</p>
+          <span class="pick-price">~$40</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Do they work? -->
+    <section>
+      <h2>Do Massage Guns Actually Work?</h2>
+      <p>
+        The research is positive, with appropriate caveats. A 2021 systematic review in the
+        <em>Journal of Sport Rehabilitation</em> found that percussive therapy devices significantly
+        reduce delayed onset muscle soreness (DOMS) when used post-exercise, with the greatest
+        benefit in the 24–72 hour window after training when soreness typically peaks.
+      </p>
+      <p>
+        The mechanisms aren't fully understood, but the working theory involves three overlapping
+        effects: increased localized blood flow (flushing waste products from muscle tissue),
+        reduced neural sensitization to pain (the same mechanism that makes rubbing a bruise feel
+        better), and mechanical breakdown of fascial adhesions — the tight spots in connective
+        tissue that develop after intense training.
+      </p>
+      <p>
+        What they don't do: repair muscle damage faster, replace sleep and nutrition as recovery
+        tools, or prevent injury if you're overtraining. A massage gun is a recovery accelerant,
+        not a recovery replacement.
+      </p>
+    </section>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <h3>
+        <a href={theragunUrl} rel="noopener noreferrer sponsored">Theragun Prime</a>
+        — Best Overall
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Stall force:</strong> 60 lbs</span>
+        <span class="spec"><strong>Speeds:</strong> 5 (1,750–2,400 PPM)</span>
+        <span class="spec"><strong>Battery:</strong> ~2 hours</span>
+        <span class="spec"><strong>Noise:</strong> Very quiet</span>
+        <span class="spec"><strong>Weight:</strong> 1.43 lbs</span>
+      </div>
+      <p>
+        Theragun built the percussive therapy category and the Prime is their entry-level device
+        — which, at $250, is still a significant purchase for a college student. What justifies
+        the price is stall force: 60 lbs of percussive pressure is categorically different from
+        the 20–35 lbs that budget and mid-range devices deliver. On dense muscles like the glutes,
+        thoracic erectors, and hip flexors, that extra force is the difference between surface
+        stimulation and actual deep tissue work.
+      </p>
+      <p>
+        The triangular handle is Theragun's signature design and it serves a real purpose — it
+        lets you reach your upper back, between your shoulder blades, and the back of your legs
+        without contorting your wrist into an awkward position. Five included attachments (ball,
+        dampener, thumb, cone, wedge) cover every major muscle shape and use case. The motor
+        runs at a near-silent volume that's genuinely usable in a shared room.
+      </p>
+      <p>
+        If you train seriously and recovery quality matters to your training frequency, the
+        Theragun Prime is the right long-term investment. If you're a casual lifter who gets
+        sore occasionally, the Hypervolt Go 2 covers your needs at half the price.
+      </p>
+
+      <h3>
+        <a href={hyperUrl} rel="noopener noreferrer sponsored">Hypervolt Go 2</a>
+        — Best Mid-Range
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Stall force:</strong> 35 lbs</span>
+        <span class="spec"><strong>Speeds:</strong> 3 (2,000–3,200 PPM)</span>
+        <span class="spec"><strong>Battery:</strong> 2.5 hours</span>
+        <span class="spec"><strong>Noise:</strong> Quiet</span>
+        <span class="spec"><strong>Weight:</strong> 1.5 lbs</span>
+      </div>
+      <p>
+        The Hypervolt Go 2 is the massage gun most college students should buy. At $130 it's
+        priced between the "actually effective" and "doesn't break your budget" zones, and the
+        35 lbs of stall force is enough for real percussive therapy on every major muscle group.
+        It's not the Theragun's 60 lbs — but it's also not the Renpho's 20 lbs. For quads,
+        hamstrings, calves, traps, and pecs, it does everything you need.
+      </p>
+      <p>
+        The compact size is the standout feature. At 1.5 pounds and roughly 9 inches long, it
+        disappears into any bag. Hyperice's QuietGlide technology keeps the motor genuinely
+        quiet at the two lower speeds — usable in a dorm room late at night without disturbing
+        your roommate. The 2.5-hour battery lasts weeks of daily 10-minute recovery sessions
+        between charges.
+      </p>
+      <p>
+        Two attachment heads is the only limitation that shows up in practice. The ball head
+        works for most muscles, the fork for the spine perimeter and Achilles area. A thumb head
+        for concentrated trigger point work would make it more complete — but it's an omission
+        you can largely work around by varying pressure and angle.
+      </p>
+
+      <h3>
+        <a href={renphoUrl} rel="noopener noreferrer sponsored">Renpho Massage Gun</a>
+        — Best Budget
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Stall force:</strong> ~20 lbs</span>
+        <span class="spec"><strong>Speeds:</strong> 5 (1,800–3,200 RPM)</span>
+        <span class="spec"><strong>Battery:</strong> ~3 hours</span>
+        <span class="spec"><strong>Noise:</strong> Moderate</span>
+        <span class="spec"><strong>Weight:</strong> ~2 lbs</span>
+      </div>
+      <p>
+        At $40, the Renpho costs less than a single sports massage and delivers genuine percussive
+        therapy — not the same quality as the Hypervolt or Theragun, but in a recognizably similar
+        category. It loosens surface-level muscle tension, improves post-workout blood flow, and
+        takes the edge off DOMS. For a college student who's never used a massage gun and wants to
+        try it before committing more money, this is the entry point.
+      </p>
+      <p>
+        The 20 lbs of stall force is the functional ceiling. Press firmly into a dense muscle
+        group like the glutes or upper traps and the motor starts to slow — it can't push through
+        significant resistance the way higher-end devices do. The six included attachments are
+        a genuine plus at this price, and the 3-hour battery outlasts both premium picks.
+      </p>
+      <p>
+        The noise level is moderate — it won't wake a sleeping roommate in the next room, but
+        it's audible to someone in the same room. For solo use or sessions in a private space,
+        it's fine. For late-night dorm room recovery, it's more conspicuous than the Hypervolt.
+      </p>
+    </section>
+
+    <!-- Theragun vs Hypervolt -->
+    <section>
+      <h2>Theragun vs Hypervolt — Is the Price Difference Worth It?</h2>
+      <div class="versus-grid">
+        <div class="versus-card versus-yes">
+          <h3>Worth the $120 extra if:</h3>
+          <ul>
+            <li>You train 4–5 days per week and recovery directly limits your training frequency</li>
+            <li>You need deep tissue work on dense muscle groups — glutes, thoracic back, hip flexors</li>
+            <li>You want the ergonomic handle for reaching your own upper back and behind your shoulder blades</li>
+            <li>You're buying this to last 5+ years and want the best-built option</li>
+          </ul>
+        </div>
+        <div class="versus-card versus-no">
+          <h3>Not worth it if:</h3>
+          <ul>
+            <li>You lift 2–3 days per week with moderate soreness as your typical recovery challenge</li>
+            <li>Budget is a real constraint and you'd rather put $120 toward more plates or a better protein powder</li>
+            <li>You've never used a massage gun before — test the category with the Hypervolt first</li>
+            <li>Portability is the priority — the Hypervolt Go 2 is lighter and more compact</li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        For most college students: start with the Hypervolt Go 2. If you use it consistently for
+        six months and find yourself wishing for more depth on certain muscle groups, you'll know
+        exactly what the Theragun upgrade buys you.
+      </p>
+    </section>
+
+    <!-- How to use correctly -->
+    <section>
+      <h2>How to Use a Massage Gun Correctly</h2>
+      <div class="usage-grid">
+        <div class="usage-card">
+          <h3>Time Per Muscle Group</h3>
+          <p>
+            60–90 seconds per muscle group is the effective window. More than 2 minutes on a
+            single area produces diminishing returns and can irritate the tissue. Move through
+            a full-body sweep rather than camping on one spot.
+          </p>
+        </div>
+        <div class="usage-card">
+          <h3>Where Not to Use It</h3>
+          <p>
+            Avoid direct contact with joints (knees, elbows, shoulders), the spine itself, bony
+            prominences, and any area with bruising, swelling, or acute injury. Massage guns are
+            for muscle belly, not bone or cartilage.
+          </p>
+        </div>
+        <div class="usage-card">
+          <h3>Pressure and Angle</h3>
+          <p>
+            Let the gun do the work — you don't need to press hard. Float the head over the
+            muscle with light-to-moderate contact pressure and move slowly. Tilting the head
+            at a 15–30° angle rather than perpendicular concentrates force on a narrower band
+            of tissue for trigger point work.
+          </p>
+        </div>
+        <div class="usage-card">
+          <h3>Speed Selection</h3>
+          <p>
+            Start at the lowest speed for sensitive or freshly worked areas, and for warm-up
+            activation before training. Use medium for general recovery. Reserve the highest
+            speed for tight, chronic spots in large muscle groups that need more aggressive input.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- When to use -->
+    <section>
+      <h2>When to Use a Massage Gun</h2>
+      <div class="timing-list">
+        <div class="timing-item">
+          <span class="timing-label">Post-Workout</span>
+          <p>
+            The highest-value window. 5–10 minutes of light percussive work immediately after
+            training accelerates the blood flow response and begins addressing the micro-inflammation
+            before it compounds into full DOMS 24–48 hours later. Use low speed on muscles you
+            just trained.
+          </p>
+        </div>
+        <div class="timing-item">
+          <span class="timing-label">Before Bed</span>
+          <p>
+            Light, slow percussive work at bedtime has a parasympathetic effect — the rhythmic
+            stimulus downregulates the nervous system and makes it easier to fall asleep. Avoid
+            the highest speed setting pre-sleep as it can be stimulating rather than relaxing.
+          </p>
+        </div>
+        <div class="timing-item">
+          <span class="timing-label">Between Sessions (Active Recovery Days)</span>
+          <p>
+            On rest days when muscle soreness is at its peak (typically 24–48 hours post-training),
+            a full-body sweep at medium intensity is the most effective use of a massage gun.
+            This is when the DOMS reduction benefit from the 2021 JSR research is most relevant.
+          </p>
+        </div>
+        <div class="timing-item">
+          <span class="timing-label">Pre-Workout Activation</span>
+          <p>
+            10–15 seconds per muscle group at medium speed before lifting activates motor units
+            and improves muscle responsiveness. It's a faster alternative to foam rolling as
+            part of a warm-up sequence, particularly useful for hip flexors and thoracic spine
+            before squats and pressing movements.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Theragun Prime"
+        nameB="Hypervolt Go 2"
+        nameC="Renpho"
+        rows={rows}
+      />
+    </section>
+
+    <!-- ProsConsList -->
+    <ProsConsList pros={hyperPros} cons={hyperCons} productName="Hypervolt Go 2" />
+
+    <!-- Who should buy -->
+    <section>
+      <h2>Who Should Buy the Hypervolt Go 2</h2>
+      <ul>
+        <li>College students who lift 3–4 days per week and want a recovery tool that's actually fast enough to use consistently — the compact size and quick sessions make it easy to build into a post-workout routine</li>
+        <li>Anyone living in a shared space who needs a quiet device — the lower two speed settings are genuinely unobtrusive and usable without a roommate complaint</li>
+        <li>First-time massage gun buyers who want real percussive therapy performance without committing $250 to a category they haven't tested yet</li>
+      </ul>
+
+      <h2>Who Should Skip It</h2>
+      <ul>
+        <li>Serious lifters training 5+ days per week who do heavy compound work — the Theragun's 60 lbs of stall force is a meaningful upgrade for deep tissue work on glutes, erectors, and hip flexors after heavy training days</li>
+        <li>Very budget-constrained buyers — the Renpho at $40 is a real massage gun that delivers genuine percussive therapy; the Hypervolt is better, but the $90 gap is real money for a student on a tight budget</li>
+        <li>Anyone who wants app-connected guided recovery routines — the Go 2 has no app integration; the full Hypervolt lineup or Theragun app ecosystem provides that if it matters to you</li>
+      </ul>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        The Hypervolt Go 2 is the massage gun most college students should own. It's compact
+        enough to carry everywhere, quiet enough to use in a dorm room, powerful enough to
+        provide real percussive recovery on every major muscle group, and priced at half of
+        what the Theragun costs. For someone who lifts three or four times a week and wants a
+        faster, more effective alternative to foam rolling, it covers everything.
+      </p>
+      <p>
+        Start here. If you're still using it daily a year from now and wish it went deeper on
+        your glutes and thoracic spine, you'll know the Theragun upgrade is worth it. If you
+        want to try the category first for as little as possible, the Renpho at $40 is a
+        legitimate entry point.
+      </p>
+      <AffiliateButton
+        href={hyperUrl}
+        text="Check Hypervolt Go 2 on Amazon"
+        subtext="Best Value · 35 lbs Stall Force · Near-Quiet"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-family: system-ui, sans-serif;
+    color: #1e293b;
+    line-height: 1.7;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1.75rem;
+    margin-bottom: 0.4rem;
+    color: #1e293b;
+  }
+
+  h3 a {
+    color: #ea580c;
+    text-decoration: none;
+  }
+
+  h3 a:hover { text-decoration: underline; }
+
+  .meta {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  p { margin-bottom: 1rem; }
+
+  ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  li { margin-bottom: 0.5rem; }
+
+  strong { color: #0f172a; }
+
+  em { font-style: italic; }
+
+  /* Verdict box */
+  .verdict-box {
+    background: #fff7ed;
+    border: 2px solid #ea580c;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    margin-top: 0;
+    color: #ea580c;
+    font-size: 1.2rem;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .pick-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #fed7aa;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .pick-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ea580c;
+  }
+
+  .pick-title {
+    font-weight: 700;
+    color: #0f172a;
+    text-decoration: none;
+    font-size: 0.93rem;
+    line-height: 1.3;
+  }
+
+  .pick-title:hover { color: #ea580c; }
+
+  .pick-card p {
+    font-size: 0.82rem;
+    color: #475569;
+    margin: 0;
+    flex: 1;
+  }
+
+  .pick-price {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  /* Spec row */
+  .spec-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+    margin: 0.2rem 0 0.75rem;
+  }
+
+  .spec { font-size: 0.83rem; color: #475569; }
+
+  /* Theragun vs Hypervolt */
+  .versus-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  @media (max-width: 540px) {
+    .versus-grid { grid-template-columns: 1fr; }
+  }
+
+  .versus-card {
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    border: 1px solid;
+  }
+
+  .versus-yes { background: #f0fdf4; border-color: #bbf7d0; }
+  .versus-no  { background: #f8fafc; border-color: #e2e8f0; }
+
+  .versus-card h3 {
+    font-size: 0.87rem;
+    font-weight: 700;
+    margin: 0 0 0.55rem 0;
+  }
+
+  .versus-yes h3 { color: #166534; }
+  .versus-no  h3 { color: #334155; }
+
+  .versus-card ul { margin: 0; padding-left: 1.2rem; }
+
+  .versus-card li {
+    font-size: 0.84rem;
+    color: #334155;
+    margin-bottom: 0.35rem;
+  }
+
+  /* Usage grid */
+  .usage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .usage-card {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .usage-card h3 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #0369a1;
+    margin: 0 0 0.4rem 0;
+  }
+
+  .usage-card p {
+    font-size: 0.83rem;
+    color: #0c4a6e;
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  /* Timing list */
+  .timing-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-top: 1rem;
+  }
+
+  .timing-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 1rem;
+    align-items: start;
+    padding: 0.9rem 1rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #ea580c;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 520px) {
+    .timing-item { grid-template-columns: 1fr; gap: 0.3rem; }
+  }
+
+  .timing-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ea580c;
+    padding-top: 0.15rem;
+  }
+
+  .timing-item p {
+    font-size: 0.85rem;
+    color: #475569;
+    margin: 0;
+    line-height: 1.55;
+  }
+</style>
