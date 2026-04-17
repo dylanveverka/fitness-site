@@ -1,0 +1,690 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Rowing Machine for Home Gym Under $1000 (2025)";
+const description =
+  "Rowing machines give you the best full body cardio workout of any home gym equipment. Here are the best picks under $1000 for serious home gym builders.";
+const pubDate = "2026-04-17";
+const slug = "best-rowing-machine-home-gym";
+
+const concept2Url = "https://www.amazon.com/s?k=concept2+rowing+machine+model+D&tag=dveverka-20";
+const sunnyUrl    = "https://www.amazon.com/s?k=sunny+health+fitness+magnetic+rowing+machine&tag=dveverka-20";
+const hydrowUrl   = "https://www.amazon.com/s?k=hydrow+wave+rowing+machine&tag=dveverka-20";
+
+const concept2Pros = [
+  "Used by every serious rowing program in the world — Olympic teams, collegiate programs, CrossFit boxes, and elite training facilities all use the Concept2 as their standard, which means every split time and 2k benchmark you see online is on this machine",
+  "PM5 performance monitor is the best rowing computer at any price — it tracks split times, watts, stroke rate, calories, and heart rate (with optional chest strap), and connects to the Concept2 logbook where you can track every session and compare against a global database",
+  "Air resistance scales perfectly with effort — there's no preset resistance level to fidget with; the harder you pull, the more resistance you feel, which means the machine matches your output automatically across every workout intensity",
+  "Separates into two pieces for storage and stores upright against a wall — the full footprint when in use is about 9×4 feet, but stored it takes up roughly 2×4 feet of floor space, which solves the storage problem that kills most cardio equipment",
+  "Built to last 20+ years with minimal maintenance — Concept2 RowErgs from the 1990s are still in active use; the chain needs occasional lubrication, the seat slides need occasional cleaning, and that's largely it",
+];
+
+const concept2Cons = [
+  "Air resistance means noise — the flywheel produces a consistent whooshing sound that's louder than magnetic resistance; it's not excessive, but early morning sessions in an apartment or thin-walled shared housing will be audible to neighbors or roommates",
+  "At ~$900 it's the most expensive pick by a significant margin — it's genuinely worth the price for anyone serious about cardio training, but the upfront cost is a real barrier for a first purchase when you're not sure how much you'll use it",
+  "No connected screen or guided workout content built in — the PM5 monitor is excellent for data but purely functional; if you want instructor-led classes or Netflix-while-rowing, you're adding a tablet mount and a separate subscription",
+];
+
+const rows = [
+  { label: "Price",           a: "~$900",        b: "~$300",        c: "~$995",        winner: "b" },
+  { label: "Resistance",      a: "Air",           b: "Magnetic",     c: "Magnetic",     winner: "tie" },
+  { label: "Noise level",     a: "Moderate",      b: "Near silent",  c: "Near silent",  winner: "tie" },
+  { label: "Storage",         a: "Vertical/2pc",  b: "Foldable",     c: "Upright",      winner: "b" },
+  { label: "Monitor",         a: "PM5 (best)",    b: "Basic LCD",    c: "22\" touchscreen", winner: "tie" },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        A 2011 study published in the <em>Journal of Strength and Conditioning Research</em> found
+        that rowing engages approximately 86% of the body's muscle mass — more than any other
+        single cardio exercise. It burns 400–600 calories per hour depending on intensity, it's
+        completely zero impact on your joints, and when you're done, it folds up or stands upright
+        against a wall. For a home gym, it's arguably the best cardio equipment you can buy.
+      </p>
+      <p>
+        Treadmills are loud, large, hard on knees, and only train your lower body. Stationary bikes
+        are lower calorie burn and limited to legs. A rowing machine is full body, low impact,
+        quietly powerful, and takes up a fraction of the floor space when stored. The three picks
+        below cover every budget from $300 to $1,000.
+      </p>
+    </section>
+
+    <!-- Verdict Box -->
+    <div class="verdict-box">
+      <h2>Quick Picks</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-label">Best Overall</span>
+          <a href={concept2Url} rel="noopener noreferrer sponsored" class="pick-title">
+            Concept2 RowErg
+          </a>
+          <p>Air resistance, PM5 monitor, splits into two for storage. The gold standard used by Olympic athletes.</p>
+          <span class="pick-price">~$900</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Budget</span>
+          <a href={sunnyUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Sunny Health &amp; Fitness Magnetic Rower
+          </a>
+          <p>Near-silent magnetic resistance, foldable, 8 resistance levels. The best entry point under $350.</p>
+          <span class="pick-price">~$300</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Connected</span>
+          <a href={hydrowUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Hydrow Wave
+          </a>
+          <p>22-inch touchscreen, live and on-demand classes, near-silent magnetic resistance. The Peloton of rowing.</p>
+          <span class="pick-price">~$995</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rowing vs treadmill -->
+    <section>
+      <h2>Why Rowing Beats a Treadmill for a Home Gym</h2>
+      <div class="benefit-grid">
+        <div class="benefit-card">
+          <h3>Full Body, Not Just Legs</h3>
+          <p>
+            A proper rowing stroke is 65–70% legs and 30–35% upper body — your quads, hamstrings,
+            glutes, core, back, and arms all contribute. Treadmills are exclusively lower body
+            cardio. For a home gym where you want one machine to cover as much ground as possible,
+            full-body beats legs-only.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <h3>Zero Joint Impact</h3>
+          <p>
+            Rowing is seated and non-weight-bearing, so there's no impact stress on knees, hips,
+            or ankles. Treadmill running — even at moderate speeds — generates 1.5–3x your
+            bodyweight in impact force per stride. For anyone with existing joint issues or who
+            wants to preserve joint health long term, this matters.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <h3>Compact Storage</h3>
+          <p>
+            A treadmill weighs 200–300 lbs and doesn't move easily. The Concept2 separates into
+            two pieces that store upright against a wall. The Sunny Health rower folds flat. No
+            rowing machine reviewed here requires a permanent dedicated floor footprint the way
+            a treadmill does.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <h3>Scalable Intensity</h3>
+          <p>
+            Rowing adapts instantly to effort. A slow recovery row at 18 strokes per minute is
+            active recovery. An all-out 500m sprint at 30+ strokes per minute is one of the most
+            intense workouts you can do. The same machine handles both without adjusting a dial.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Air vs magnetic vs water -->
+    <section>
+      <h2>Air vs Magnetic vs Water Resistance — Which Is Best?</h2>
+      <div class="resistance-grid">
+        <div class="resistance-card resistance-air">
+          <h3>Air Resistance</h3>
+          <p class="resistance-example">Example: Concept2 RowErg</p>
+          <p>
+            A flywheel spins inside a cage — the harder you pull, the faster it spins and the more
+            resistance you feel. The resistance curve is perfectly natural and scales infinitely
+            with your effort. This is why air rowers are the standard for serious training. The
+            tradeoff is noise: the spinning flywheel produces a consistent whoosh that's louder
+            than the alternatives.
+          </p>
+          <div class="resistance-verdict">
+            <strong>Best for:</strong> Serious training, performance tracking, long-term use
+          </div>
+        </div>
+        <div class="resistance-card resistance-magnetic">
+          <h3>Magnetic Resistance</h3>
+          <p class="resistance-example">Examples: Sunny Health, Hydrow Wave</p>
+          <p>
+            Magnets create resistance against a flywheel with no contact, producing near-silent
+            operation. Resistance levels are set manually (8–16 preset levels typically), so
+            the feel doesn't automatically adjust with your effort the way air does — you pick
+            a level and work within it. Great for apartment use, early morning workouts, or
+            shared living situations where noise is a real constraint.
+          </p>
+          <div class="resistance-verdict">
+            <strong>Best for:</strong> Apartments, noise-sensitive environments, casual use
+          </div>
+        </div>
+        <div class="resistance-card resistance-water">
+          <h3>Water Resistance</h3>
+          <p class="resistance-example">Examples: WaterRower, Ergatta</p>
+          <p>
+            Paddles spin in a tank of water — the resistance is natural and self-regulating like
+            air, but with a different sound profile (the rush of water rather than spinning air).
+            Water rowers are beautiful pieces of furniture and the feel is often preferred for its
+            smoothness. They're also heavy, expensive ($600–1,500), and harder to store. Not
+            covered here because they sit outside our budget window.
+          </p>
+          <div class="resistance-verdict">
+            <strong>Best for:</strong> Aesthetics, smooth feel — but pricier and less portable
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <h3>
+        <a href={concept2Url} rel="noopener noreferrer sponsored">Concept2 RowErg</a>
+        — Best Overall
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Resistance:</strong> Air</span>
+        <span class="spec"><strong>Noise:</strong> Moderate (flywheel)</span>
+        <span class="spec"><strong>Storage:</strong> Separates into 2 pieces, stores vertical</span>
+        <span class="spec"><strong>Warranty:</strong> 5 yr frame / 2 yr parts</span>
+      </div>
+      <p>
+        The Concept2 RowErg is one of those rare products where the "best overall" designation is
+        genuinely unchallengeable. It is the standard. Every elite rowing program, every CrossFit
+        box, every collegiate and Olympic training facility uses Concept2 as their benchmark
+        machine. When rowing coaches and athletes talk about times, splits, and records, they're
+        talking about times set on this machine. That standardization has real value.
+      </p>
+      <p>
+        The PM5 monitor is the other reason to buy it. It tracks every metric that matters for
+        cardio training — split pace per 500m, watts, stroke rate, calories — and connects to
+        Concept2's online logbook where you can track every session and compare your performance
+        against a global database of rowers. The gamification of seeing your 2k time on a leaderboard
+        is more motivating than it sounds.
+      </p>
+      <p>
+        Air resistance means the machine responds to effort in a way that magnetic rowers don't.
+        Pull harder and the resistance increases naturally. That self-regulating quality makes
+        intervals, sprint sets, and steady-state cardio all feel correct without ever touching a
+        setting.
+      </p>
+      <p>
+        The noise is real but manageable. It's not suitable for a midnight workout in a thin-walled
+        apartment, but it's quieter than a treadmill at any speed. In a garage or dedicated room,
+        it's a non-issue. The machine separates into two sections in under 30 seconds and stores
+        upright with a footprint roughly the size of a bicycle — a meaningful design consideration
+        for home gym use.
+      </p>
+
+      <h3>
+        <a href={sunnyUrl} rel="noopener noreferrer sponsored">Sunny Health &amp; Fitness Magnetic Rower</a>
+        — Best Budget
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Resistance:</strong> Magnetic (8 levels)</span>
+        <span class="spec"><strong>Noise:</strong> Near silent</span>
+        <span class="spec"><strong>Storage:</strong> Folds upright</span>
+        <span class="spec"><strong>Warranty:</strong> 3 yr frame / 180 days parts</span>
+      </div>
+      <p>
+        Sunny Health & Fitness makes the most popular budget rowing machines in the market, and
+        the magnetic rower earns its reputation by delivering the core rowing experience — full
+        body engagement, low impact cardio, proper stroke mechanics — at a price that doesn't
+        require a serious commitment. At around $300, it's the answer to "I want to try rowing
+        without spending $900."
+      </p>
+      <p>
+        Near-silent magnetic resistance is the most practical feature for apartment or shared
+        housing use. You can row at 6am without waking your roommates. The fold-flat storage
+        design reduces the footprint to something manageable for a bedroom corner or closet space.
+      </p>
+      <p>
+        The tradeoffs versus the Concept2 are real. Eight resistance levels are a ceiling — you
+        can't increase beyond level 8, and strong rowers will max it out within a year. The LCD
+        monitor is functional but basic, without the data depth of the PM5. Build quality is
+        solid for the price but uses more plastic than the Concept2's industrial hardware. For a
+        first rowing machine or an apartment-constrained buyer, it's excellent. For a serious
+        long-term investment in cardio training, save for the Concept2.
+      </p>
+
+      <h3>
+        <a href={hydrowUrl} rel="noopener noreferrer sponsored">Hydrow Wave</a>
+        — Best Connected
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Resistance:</strong> Magnetic (computer-controlled)</span>
+        <span class="spec"><strong>Noise:</strong> Near silent</span>
+        <span class="spec"><strong>Storage:</strong> Stores upright on end</span>
+        <span class="spec"><strong>Warranty:</strong> 5 yr frame / 1 yr parts</span>
+      </div>
+      <p>
+        Hydrow is the Peloton of rowing — built around live and on-demand instructor-led workouts
+        delivered on a 22-inch touchscreen. The Wave is their smaller, more affordable model
+        (versus the full Hydrow at $1,500+), and at $995 it sits right at the top of our budget
+        window.
+      </p>
+      <p>
+        The case for the Hydrow Wave is the content platform. Hydrow films workouts on actual
+        water with Olympic and professional rowers as instructors — the production quality is
+        noticeably better than most connected fitness content. If you find that guided workouts
+        are what keeps you consistent (the Peloton effect — people who buy one tend to actually
+        use it), the Hydrow ecosystem is a genuine motivation tool.
+      </p>
+      <p>
+        The catch is the subscription: $44/month for full content access. Over a year that's
+        $528 added to the hardware cost. For a college student or budget-conscious buyer, that
+        ongoing cost changes the value calculation significantly. The machine also requires that
+        $44/month to be useful as designed — without the subscription, you have a near-silent
+        magnetic rower with a large screen and no content.
+      </p>
+      <p>
+        Buy it if the guided content is what gets you on the machine consistently. Skip it if
+        you're self-motivated and want pure performance data — the Concept2 is the better
+        training tool for $100 less before subscriptions.
+      </p>
+    </section>
+
+    <!-- Is Concept2 worth it? -->
+    <section>
+      <h2>Is the Concept2 Worth $900?</h2>
+      <p>
+        The honest answer is yes — with context. If you're serious about cardio training, plan to
+        use a rower more than twice a week, and want a machine that'll still be working perfectly
+        in 20 years, the Concept2 is worth every dollar. Units purchased in the early 2000s are
+        still in active use in commercial gyms. The resale value holds remarkably well — used
+        Concept2s in good condition sell for $600–750 consistently, which means if you ever stop
+        using it, you're not eating the full depreciation.
+      </p>
+      <p>
+        If you're not sure whether you'll stick with rowing or your budget genuinely doesn't
+        stretch to $900, start with the Sunny Health rower. Spend three months learning proper
+        technique and building the habit. If you're still rowing consistently after that, you'll
+        have earned the Concept2 upgrade — and you'll know exactly why it's worth the price.
+      </p>
+    </section>
+
+    <!-- Space requirements -->
+    <section>
+      <h2>How Much Space Does a Rowing Machine Need?</h2>
+      <div class="space-table-wrap">
+        <table class="space-table">
+          <thead>
+            <tr><th>Measurement</th><th>In Use</th><th>Stored</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Length</td>
+              <td>~9 ft</td>
+              <td>2–4 ft</td>
+              <td>Concept2 separates; Sunny folds; Hydrow stores upright</td>
+            </tr>
+            <tr>
+              <td>Width</td>
+              <td>~2 ft</td>
+              <td>~2 ft</td>
+              <td>Consistent across all models</td>
+            </tr>
+            <tr>
+              <td>Ceiling height</td>
+              <td>4–5 ft</td>
+              <td>7–8 ft upright</td>
+              <td>No overhead clearance needed while rowing</td>
+            </tr>
+            <tr>
+              <td>Floor area (in use)</td>
+              <td>~18 sq ft</td>
+              <td>~5–8 sq ft</td>
+              <td>Narrowest footprint of any full-body cardio machine</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        A rowing machine needs roughly 9×2 feet of clear floor space while in use — significantly
+        less than a treadmill (typically 3×6 feet, but you need a safety clearance zone behind it)
+        and less than an elliptical. The ability to store all three options here vertically or
+        folded flat means it doesn't require a permanent footprint in a shared living space.
+      </p>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Concept2 RowErg"
+        nameB="Sunny Magnetic"
+        nameC="Hydrow Wave"
+        rows={rows}
+      />
+    </section>
+
+    <!-- ProsConsList -->
+    <ProsConsList pros={concept2Pros} cons={concept2Cons} productName="Concept2 RowErg" />
+
+    <!-- Who should buy -->
+    <section>
+      <h2>Who Should Buy the Concept2 RowErg</h2>
+      <ul>
+        <li>Serious home gym builders who want one cardio machine to last a decade or longer — the Concept2's build quality and resale value make it the most financially sensible high-end purchase in this category</li>
+        <li>Anyone who trains with a program or follows workout benchmarks — every rowing split time, 2k record, and interval program online is built around the Concept2 as the standard</li>
+        <li>People with a garage or dedicated room where the flywheel noise isn't a neighbor issue — the air resistance is worth tolerating the sound in any setting with adequate separation</li>
+      </ul>
+
+      <h2>Who Should Skip It</h2>
+      <ul>
+        <li>Apartment or dorm dwellers who row early morning or late night — the flywheel noise is manageable in isolation but genuinely audible through walls; the Sunny Health magnetic rower is the better apartment pick</li>
+        <li>Budget-constrained buyers on their first rowing machine — start with the Sunny Health at $300 to confirm the habit before committing $900; the upgrade path is clear if you stick with it</li>
+        <li>Buyers who need guided workout content to stay motivated — the PM5 is excellent for data but the Concept2 has no built-in screen content; a tablet mount plus a rowing app fills the gap but isn't as seamless as the Hydrow</li>
+      </ul>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        The Concept2 RowErg is the correct answer for anyone serious about rowing as a long-term
+        part of their training. It's the machine every serious athlete uses, the standard every
+        workout program references, and the piece of equipment most likely to still be working in
+        your home gym in 2040. The $900 price is high, but when you factor in 20-year lifespan
+        and strong resale value, the cost per year is lower than most cardio equipment at half
+        the price.
+      </p>
+      <p>
+        If $900 isn't the right move right now, the Sunny Health magnetic rower is a legitimate
+        starting point — quiet, compact, and cheap enough that you're not overcommitting to a
+        habit you haven't built yet. If you want guided content and the connected fitness
+        experience, the Hydrow Wave is the most polished option, but budget for the subscription.
+      </p>
+      <AffiliateButton
+        href={concept2Url}
+        text="Check Concept2 RowErg on Amazon"
+        subtext="Best Overall · Air Resistance · PM5 Monitor"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-family: system-ui, sans-serif;
+    color: #1e293b;
+    line-height: 1.7;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1.75rem;
+    margin-bottom: 0.4rem;
+    color: #1e293b;
+  }
+
+  h3 a {
+    color: #ea580c;
+    text-decoration: none;
+  }
+
+  h3 a:hover { text-decoration: underline; }
+
+  .meta {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  p { margin-bottom: 1rem; }
+
+  ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  li { margin-bottom: 0.5rem; }
+
+  strong { color: #0f172a; }
+
+  em { font-style: italic; }
+
+  /* Verdict box */
+  .verdict-box {
+    background: #fff7ed;
+    border: 2px solid #ea580c;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    margin-top: 0;
+    color: #ea580c;
+    font-size: 1.2rem;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .pick-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #fed7aa;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .pick-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ea580c;
+  }
+
+  .pick-title {
+    font-weight: 700;
+    color: #0f172a;
+    text-decoration: none;
+    font-size: 0.93rem;
+    line-height: 1.3;
+  }
+
+  .pick-title:hover { color: #ea580c; }
+
+  .pick-card p {
+    font-size: 0.82rem;
+    color: #475569;
+    margin: 0;
+    flex: 1;
+  }
+
+  .pick-price {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  /* Benefit grid */
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .benefit-card {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .benefit-card h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #166534;
+    margin: 0 0 0.4rem 0;
+  }
+
+  .benefit-card p {
+    font-size: 0.84rem;
+    color: #14532d;
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  /* Resistance cards */
+  .resistance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .resistance-card {
+    border-radius: 10px;
+    padding: 1.1rem;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .resistance-air   { background: #fff7ed; border-color: #fed7aa; }
+  .resistance-magnetic { background: #eff6ff; border-color: #bfdbfe; }
+  .resistance-water { background: #f0fdfa; border-color: #99f6e4; }
+
+  .resistance-card h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .resistance-air h3      { color: #c2410c; }
+  .resistance-magnetic h3 { color: #1d4ed8; }
+  .resistance-water h3    { color: #0f766e; }
+
+  .resistance-example {
+    font-size: 0.75rem;
+    font-style: italic;
+    margin: 0;
+  }
+
+  .resistance-air .resistance-example      { color: #9a3412; }
+  .resistance-magnetic .resistance-example { color: #1e40af; }
+  .resistance-water .resistance-example    { color: #115e59; }
+
+  .resistance-card > p:not(.resistance-example) {
+    font-size: 0.84rem;
+    line-height: 1.55;
+    margin: 0;
+    flex: 1;
+  }
+
+  .resistance-air   > p:not(.resistance-example) { color: #7c2d12; }
+  .resistance-magnetic > p:not(.resistance-example) { color: #1e3a8a; }
+  .resistance-water > p:not(.resistance-example) { color: #134e4a; }
+
+  .resistance-verdict {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    margin-top: 0.25rem;
+  }
+
+  .resistance-air .resistance-verdict      { background: #fed7aa; color: #7c2d12; }
+  .resistance-magnetic .resistance-verdict { background: #bfdbfe; color: #1e3a8a; }
+  .resistance-water .resistance-verdict    { background: #99f6e4; color: #134e4a; }
+
+  /* Spec row */
+  .spec-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+    margin: 0.2rem 0 0.75rem;
+  }
+
+  .spec {
+    font-size: 0.83rem;
+    color: #475569;
+  }
+
+  /* Space table */
+  .space-table-wrap {
+    margin: 1rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+  }
+
+  .space-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+
+  .space-table thead tr {
+    background: #0f172a;
+    color: #e2e8f0;
+  }
+
+  .space-table th {
+    text-align: left;
+    padding: 0.6rem 1rem;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
+  .space-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+    vertical-align: top;
+  }
+
+  .space-table td:first-child {
+    font-weight: 700;
+    color: #0f172a;
+    white-space: nowrap;
+  }
+
+  .space-table tr:last-child td { border-bottom: none; }
+  .space-table tr:nth-child(even) { background: #f8fafc; }
+</style>
