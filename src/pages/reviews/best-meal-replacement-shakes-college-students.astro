@@ -1,0 +1,668 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Meal Replacement Shakes for College Students (2025)";
+const description =
+  "The best meal replacement shakes for college students who skip meals, need quick nutrition between classes, or want to lose weight without starving.";
+const pubDate = "2026-04-17";
+const slug = "best-meal-replacement-shakes-college-students";
+
+const huelUrl    = "https://www.amazon.com/s?k=huel+black+edition+meal+replacement&tag=dveverka-20";
+const soylentUrl = "https://www.amazon.com/s?k=soylent+complete+nutrition+shake&tag=dveverka-20";
+const orgainUrl  = "https://www.amazon.com/s?k=orgain+organic+nutrition+shake&tag=dveverka-20";
+const gardenUrl  = "https://www.amazon.com/s?k=garden+of+life+meal+replacement+powder&tag=dveverka-20";
+
+const huelPros = [
+  "The macro profile is genuinely well-engineered for college students — 400 calories, 40g protein, 17g fat, and 26g carbs per serving means it keeps you full for 3–4 hours in a way that a protein shake simply doesn't, because the fat and fiber content slows digestion and prevents the rapid blood sugar crash that follows a high-sugar meal",
+  "The micronutrient coverage is exceptional — 26 vitamins and minerals at meaningful doses covers the nutritional gaps that make college students feel chronically tired and unfocused. Most students are deficient in vitamin D, magnesium, and B12, and a daily Huel serving addresses all three without needing separate supplements",
+  "At ~$2.50 per meal the cost is lower than most campus dining options, lower than a meal delivery order, and competitive with cooking from scratch when time and ingredient cost are factored in — the value proposition is real for budget-conscious students",
+  "The powder format means no refrigeration until mixed — a bag of Huel Black sits in your dorm room, apartment cabinet, or backpack without spoiling, which solves the convenience gap that makes RTD shakes impractical as a daily habit",
+  "Taste has improved significantly from early Huel formulations — the flavored options (Vanilla, Chocolate, Cookies and Cream) are genuinely pleasant with water alone, and mixing with a small amount of oat milk makes them noticeably better if texture is a concern",
+];
+
+const huelCons = [
+  "Digestive adjustment period is real — the high fiber content (about 6g per serving from oats and flaxseed) causes bloating and gas for many new users in the first 1–2 weeks. Start with half a serving and scale up over a week rather than going straight to a full serving daily",
+  "The powder-to-liquid ratio requires experimentation — the recommended amount of water produces a thicker consistency than most people expect, and the texture is polarizing. Users who dislike thick shakes often need more water than the instructions suggest, which dilutes the flavor and requires its own adjustment",
+  "Subscription dependency for the best pricing — Huel's lowest per-meal cost requires buying in bulk through their subscription, which ties up $70–100 upfront. Individual bag purchases from Amazon cost more per serving. For students on month-to-month budgets, the upfront cost is a genuine barrier.",
+];
+
+const comparisonRows = [
+  { feature: "Cost per Meal", nameA: "Huel Black", nameB: "Soylent RTD", nameC: "Orgain", nameD: "Garden of Life", valueA: "~$2.50", valueB: "~$3.50", valueC: "~$2.00", valueD: "~$2.50", winner: "C" },
+  { feature: "Calories", nameA: "Huel Black", nameB: "Soylent RTD", nameC: "Orgain", nameD: "Garden of Life", valueA: "400", valueB: "400", valueC: "255", valueD: "130–180", winner: "" },
+  { feature: "Protein", nameA: "Huel Black", nameB: "Soylent RTD", nameC: "Orgain", nameD: "Garden of Life", valueA: "40g", valueB: "20g", valueC: "16g", valueD: "20g", winner: "A" },
+  { feature: "Vitamins & Minerals", nameA: "Huel Black", nameB: "Soylent RTD", nameC: "Orgain", nameD: "Garden of Life", valueA: "26 (comprehensive)", valueB: "26 (comprehensive)", valueC: "20+ (partial)", valueD: "20+ (organic)", winner: "" },
+  { feature: "Best For", nameA: "Huel Black", nameB: "Soylent RTD", nameC: "Orgain", nameD: "Garden of Life", valueA: "Cutting, high protein", valueB: "No-prep convenience", valueC: "Budget, lighter meal", valueD: "Clean eating focus", winner: "" },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        Skipping lunch because you have back-to-back classes isn't a neutral decision —
+        it's four hours of low blood sugar, declining focus, and a body starting to
+        catabolize muscle for fuel because you haven't eaten since 8am. Most college
+        students know this pattern intimately and accept it as unavoidable. It isn't.
+      </p>
+      <p>
+        A meal replacement shake takes 60 seconds to mix, fits in a bag, costs less than
+        dining hall food, and covers your nutritional bases for a full meal. It's not a
+        lifestyle — it's a practical fix for the three or four days per week when eating
+        a real meal between classes isn't actually possible. Here are the four best options
+        at every price point.
+      </p>
+    </section>
+
+    <!-- Verdict Box -->
+    <div class="verdict-box">
+      <h2>Quick Picks</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-label">Best Overall</span>
+          <a href={huelUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Huel Black Edition
+          </a>
+          <p>400 cal, 40g protein, 26 vitamins. The most complete meal replacement for students who lift.</p>
+          <span class="pick-price">~$2.50/meal</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best RTD</span>
+          <a href={soylentUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Soylent Complete Nutrition
+          </a>
+          <p>Ready to drink, 400 cal, 20g protein, zero prep. Grab it from the fridge and go.</p>
+          <span class="pick-price">~$3.50/bottle</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Budget</span>
+          <a href={orgainUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Orgain Organic Nutrition
+          </a>
+          <p>255 cal, 16g protein, organic ingredients, widely available at Target and Costco.</p>
+          <span class="pick-price">~$2.00/bottle</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Clean Label</span>
+          <a href={gardenUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Garden of Life Meal
+          </a>
+          <p>Organic, plant-based, 20g protein, minimal processed ingredients. For students who care about what's in the bag.</p>
+          <span class="pick-price">~$2.50/serving</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Meal replacement vs protein shake -->
+    <section>
+      <h2>Meal Replacement vs Protein Shake — What's the Difference?</h2>
+      <p>
+        These are not the same product and buying the wrong one for your situation is a
+        common mistake. The distinction is straightforward:
+      </p>
+      <div class="diff-grid">
+        <div class="diff-card diff-meal">
+          <h3>Meal Replacement</h3>
+          <p class="diff-example">Huel Black, Soylent, Orgain, Garden of Life</p>
+          <ul>
+            <li>Designed to replace a full meal — macros and micronutrients included</li>
+            <li>Typically 300–500 calories per serving</li>
+            <li>Contains fat, carbs, protein, fiber, vitamins, and minerals</li>
+            <li>Keeps you full for 3–4 hours because it has complete nutrition</li>
+            <li>Use when: skipping a meal isn't an option but cooking isn't either</li>
+          </ul>
+        </div>
+        <div class="diff-card diff-protein">
+          <h3>Protein Shake</h3>
+          <p class="diff-example">Whey, casein, plant protein powders</p>
+          <ul>
+            <li>Designed to supplement protein intake — not a meal</li>
+            <li>Typically 100–160 calories per serving</li>
+            <li>Contains primarily protein with minimal other nutrients</li>
+            <li>Won't keep you full — doesn't have the fat or fiber to slow digestion</li>
+            <li>Use when: you've eaten but need to hit your protein target</li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        Using a protein shake as a meal replacement is why people feel hungry again in
+        45 minutes. Use a meal replacement when you're replacing a meal. Use a protein
+        shake when you've eaten and want more protein.
+      </p>
+    </section>
+
+    <!-- Best times to use -->
+    <section>
+      <h2>Best Times to Use a Meal Replacement in College</h2>
+      <p>
+        Meal replacements are a tool for specific situations, not a daily lifestyle.
+        Here are the three contexts where they genuinely earn their place:
+      </p>
+      <div class="timing-grid">
+        <div class="timing-card">
+          <h4>Between Back-to-Back Classes</h4>
+          <p>A Huel or Orgain in your bag means a missed dining hall window doesn't mean a missed meal. Mix it in 30 seconds between classes, drink it during lecture, and your blood sugar stays stable through a 3-hour afternoon block.</p>
+        </div>
+        <div class="timing-card">
+          <h4>Post-Workout When You Can't Cook</h4>
+          <p>After an evening gym session when the dining hall is closed or you don't have groceries, a 400-calorie meal replacement with 40g protein handles your post-workout nutrition window without requiring a kitchen or delivery app.</p>
+        </div>
+        <div class="timing-card">
+          <h4>Exam Day Breakfast</h4>
+          <p>Eating before an exam matters for cognitive performance. On mornings where you're too stressed or rushed to cook, a meal replacement beats skipping breakfast entirely — covers calories, protein, B vitamins, and enough fat to sustain focus through a two-hour test.</p>
+        </div>
+        <div class="timing-card">
+          <h4>Cutting Calories Without Starving</h4>
+          <p>Replacing one dining hall meal per day with a controlled 400-calorie shake creates a predictable calorie deficit without the hunger that crashes diets. It's easier to maintain a deficit when one meal is quantified and not subject to the portion variability of an all-you-can-eat buffet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <h3>
+        <a href={huelUrl} rel="noopener noreferrer sponsored">Huel Black Edition</a>
+        — Best Overall
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Calories:</strong> 400</span>
+        <span class="spec"><strong>Protein:</strong> 40g</span>
+        <span class="spec"><strong>Carbs:</strong> 26g</span>
+        <span class="spec"><strong>Fat:</strong> 17g</span>
+        <span class="spec"><strong>Vitamins:</strong> 26 essential</span>
+        <span class="spec"><strong>Cost/meal:</strong> ~$2.50</span>
+      </div>
+      <p>
+        Huel Black Edition is the highest-protein meal replacement in this roundup and
+        the best option for students who train. The 40g protein per serving is more than
+        most protein shakes, combined with the fat, fiber, and micronutrients that turn
+        it into an actual meal. The macro split — low carb, high protein, moderate fat —
+        is designed for people in a calorie deficit or maintenance who want satiety
+        without excess calories.
+      </p>
+      <p>
+        The 26 vitamins and minerals cover a meaningful portion of daily requirements —
+        including vitamin D (often deficient in college students who don't see daylight
+        during finals), magnesium, B12, and zinc. For students who aren't consistently
+        eating balanced meals, a daily Huel serving plugs nutritional gaps that would
+        otherwise require a separate multivitamin. The powder format is less convenient
+        than ready-to-drink options but meaningfully cheaper and shelf-stable.
+      </p>
+
+      <h3>
+        <a href={soylentUrl} rel="noopener noreferrer sponsored">Soylent Complete Nutrition</a>
+        — Best RTD
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Calories:</strong> 400</span>
+        <span class="spec"><strong>Protein:</strong> 20g</span>
+        <span class="spec"><strong>Carbs:</strong> 36g</span>
+        <span class="spec"><strong>Fat:</strong> 21g</span>
+        <span class="spec"><strong>Vitamins:</strong> 26 essential</span>
+        <span class="spec"><strong>Cost/meal:</strong> ~$3.50</span>
+      </div>
+      <p>
+        Soylent's appeal is pure convenience. It's a ready-to-drink bottle that requires
+        zero preparation — grab from the fridge, shake once, open, drink. The 400-calorie
+        profile and 26 vitamins and minerals match Huel's nutritional coverage. The protein
+        count at 20g is lower than Huel but appropriate for a general meal replacement
+        rather than a high-protein training supplement.
+      </p>
+      <p>
+        The cost premium ($3.50 vs $2.50 for Huel) reflects the convenience factor. For
+        students with a mini-fridge who want a grab-and-go option for exam weeks or busy
+        stretches without any mixing or prep, the premium is worth it. For daily use over
+        months, the cost difference adds up — $30/month more than Huel powder for the
+        same nutritional result is real money on a student budget.
+      </p>
+
+      <h3>
+        <a href={orgainUrl} rel="noopener noreferrer sponsored">Orgain Organic Nutrition Shake</a>
+        — Best Budget
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Calories:</strong> 255</span>
+        <span class="spec"><strong>Protein:</strong> 16g</span>
+        <span class="spec"><strong>Carbs:</strong> 34g</span>
+        <span class="spec"><strong>Fat:</strong> 7g</span>
+        <span class="spec"><strong>Vitamins:</strong> 20+ (partial coverage)</span>
+        <span class="spec"><strong>Cost/meal:</strong> ~$2.00</span>
+      </div>
+      <p>
+        Orgain sits in a slightly different category than the others — at 255 calories
+        it's a light meal replacement rather than a full meal substitute. Think of it
+        as the nutrition of a decent snack or light lunch rather than a complete meal.
+        The organic ingredient profile, widely available retail presence (Target, Costco,
+        Walmart), and familiar chocolate/vanilla flavors make it the most accessible
+        option for students who want something better than skipping a meal without
+        committing to a specialty subscription.
+      </p>
+      <p>
+        The tradeoff: at 255 calories and 16g protein, it won't replace a full meal the
+        way Huel or Soylent does. Plan to pair it with a piece of fruit or a handful of
+        nuts if you're using it in place of lunch — on its own it leaves most people
+        hungry within two hours. Best use case: light breakfast, between-meal bridge,
+        or pre-workout snack rather than a true meal replacement.
+      </p>
+
+      <h3>
+        <a href={gardenUrl} rel="noopener noreferrer sponsored">Garden of Life Meal Replacement</a>
+        — Best Clean Label
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Calories:</strong> 130–180</span>
+        <span class="spec"><strong>Protein:</strong> 20g</span>
+        <span class="spec"><strong>Carbs:</strong> 7–13g</span>
+        <span class="spec"><strong>Fat:</strong> 3–5g</span>
+        <span class="spec"><strong>Vitamins:</strong> 20+ (whole food sourced)</span>
+        <span class="spec"><strong>Cost/serving:</strong> ~$2.50</span>
+      </div>
+      <p>
+        Garden of Life's meal replacement powder is the pick for students who prioritize
+        ingredient quality over calorie density. The protein comes from organic pea,
+        brown rice, and chia. The vitamins and minerals are sourced from whole foods
+        rather than synthetic additives. The flavor profile is less sweet than Huel or
+        Orgain — better for students who don't like the heavily flavored meal replacement
+        taste that some options have.
+      </p>
+      <p>
+        At 130–180 calories per serving, it's closer to a high-protein snack than a
+        true meal replacement — similar to Orgain in that way. Students who use it as
+        a meal substitute typically mix two scoops or add it to oat milk with a banana
+        to hit a more complete calorie target. On its own it won't keep you full
+        through a four-hour class block, but it's the cleanest label option in the
+        category for students who read ingredient lists.
+      </p>
+    </section>
+
+    <!-- Are they healthy -->
+    <section>
+      <h2>Are Meal Replacement Shakes Actually Healthy?</h2>
+      <p>
+        For most students, the relevant comparison isn't "meal replacement vs a perfectly
+        balanced home-cooked meal" — it's "meal replacement vs skipping the meal entirely"
+        or "meal replacement vs dining hall pizza at 10pm because the good options were
+        gone." In that context, a nutritionally complete meal replacement is clearly better.
+      </p>
+      <div class="health-grid">
+        <div class="health-card health-yes">
+          <h4>Fine as an occasional meal</h4>
+          <ul>
+            <li>Covers macros and micronutrients in one serving</li>
+            <li>Controlled calories — easier to manage intake than buffet dining</li>
+            <li>Better than skipping meals entirely</li>
+            <li>Appropriate for 1–2 meals per day as part of a varied diet</li>
+          </ul>
+        </div>
+        <div class="health-card health-limit">
+          <h4>Not a replacement for real food every meal</h4>
+          <ul>
+            <li>Lacks the fiber diversity of whole fruits, vegetables, and grains</li>
+            <li>Missing phytonutrients that whole foods provide but supplements can't replicate</li>
+            <li>Long-term gut health benefits from dietary variety that liquid-only diets don't deliver</li>
+            <li>Social and psychological aspects of eating real food matter for wellbeing</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout-box">
+        <strong>The sensible rule:</strong> Replace 1–2 meals per day with a quality meal
+        replacement on days when real food isn't practical. Don't replace every meal. Eat
+        actual food when you have the time and access to do so.
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Huel Black"
+        nameB="Soylent RTD"
+        nameC="Orgain"
+        nameD="Garden of Life"
+        rows={comparisonRows}
+      />
+    </section>
+
+    <!-- Pros/Cons -->
+    <section>
+      <h2>Huel Black Edition — Pros &amp; Cons</h2>
+      <ProsConsList pros={huelPros} cons={huelCons} />
+    </section>
+
+    <!-- Who should buy / skip -->
+    <section>
+      <h2>Who Should Buy Huel Black Edition</h2>
+      <p>
+        Huel Black is the right call for college students who train regularly, have
+        unpredictable schedules that lead to missed meals, and want to manage their
+        calorie and protein intake without tracking every food item. The 40g protein
+        and 400-calorie profile covers a meal and a post-workout protein dose
+        simultaneously. If you're already spending $2–4 on dining hall food between
+        classes and ending up with a meal that's 80% refined carbs and 10g protein,
+        Huel Black is a nutritional upgrade at the same price.
+      </p>
+      <h2>Who Should Skip Huel Black</h2>
+      <p>
+        Skip it if you have no tolerance for thicker shake textures or the fiber
+        adjustment period — the first two weeks of daily Huel use are rough for
+        high-fiber-sensitive digestive systems. Also skip it if you just need a protein
+        supplement and already eat balanced meals — a whey protein powder is the better
+        tool for that scenario at half the price. And skip the powder format generally
+        if you have no access to a shaker bottle or blender and need something
+        completely grab-and-go; Soylent RTD is the better answer in that case.
+      </p>
+    </section>
+
+    <!-- Final Verdict -->
+    <section class="final-verdict">
+      <h2>Final Verdict</h2>
+      <p>
+        For college students who lift, skip meals due to schedule pressure, and want
+        controlled nutrition at a reasonable cost: Huel Black Edition is the pick.
+        The protein content, micronutrient coverage, and price per meal are the best
+        combination available. If you need zero-prep convenience, Soylent RTD is worth
+        the $1/meal premium. If budget is the primary driver, Orgain at $2/bottle is
+        widely available and gets the job done for lighter meal replacement needs.
+        Any of these is a better choice than skipping the meal — which is the decision
+        most college students are actually making.
+      </p>
+      <AffiliateButton
+        href={huelUrl}
+        text="Check Price on Amazon"
+        subtext="Best Overall · 40g Protein · ~$2.50/meal"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  header h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+    color: #0f172a;
+  }
+
+  .meta {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0 0 2rem;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 1rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  h3 a {
+    color: #f97316;
+    text-decoration: none;
+  }
+
+  h3 a:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    color: #334155;
+    line-height: 1.75;
+    margin: 0 0 1rem;
+  }
+
+  /* Verdict Box */
+  .verdict-box {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    color: #f8fafc;
+    margin-bottom: 1.25rem;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1rem;
+  }
+
+  .pick-card {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .pick-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f97316;
+  }
+
+  .pick-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #f8fafc;
+    text-decoration: none;
+    line-height: 1.3;
+  }
+
+  .pick-title:hover {
+    color: #f97316;
+  }
+
+  .pick-card p {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .pick-price {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #4ade80;
+    margin-top: auto;
+  }
+
+  /* Spec Row */
+  .spec-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    background: #f8fafc;
+    border-left: 3px solid #f97316;
+    padding: 0.75rem 1rem;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 1rem;
+  }
+
+  .spec {
+    font-size: 0.82rem;
+    color: #475569;
+  }
+
+  /* Meal replacement vs protein shake */
+  .diff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .diff-card {
+    border-radius: 8px;
+    padding: 1.25rem;
+    border-top: 4px solid transparent;
+  }
+
+  .diff-meal {
+    background: #f0fdf4;
+    border-top-color: #22c55e;
+  }
+
+  .diff-protein {
+    background: #eff6ff;
+    border-top-color: #3b82f6;
+  }
+
+  .diff-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.2rem;
+  }
+
+  .diff-example {
+    font-size: 0.72rem;
+    color: #64748b;
+    font-style: italic;
+    margin: 0 0 0.75rem;
+  }
+
+  .diff-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .diff-card li {
+    font-size: 0.85rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Timing Grid */
+  .timing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .timing-card {
+    background: #0f172a;
+    border-radius: 8px;
+    padding: 1.1rem;
+  }
+
+  .timing-card h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #f97316;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.5rem;
+  }
+
+  .timing-card p {
+    font-size: 0.81rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Health Grid */
+  .health-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .health-card {
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+
+  .health-yes {
+    background: #f0fdf4;
+    border-top: 3px solid #22c55e;
+  }
+
+  .health-limit {
+    background: #fefce8;
+    border-top: 3px solid #eab308;
+  }
+
+  .health-card h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.75rem;
+  }
+
+  .health-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .health-card li {
+    font-size: 0.84rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Callout Box */
+  .callout-box {
+    background: #fefce8;
+    border: 1px solid #fde047;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    font-size: 0.88rem;
+    color: #713f12;
+    line-height: 1.65;
+    margin-top: 1rem;
+  }
+
+  /* Final Verdict */
+  .final-verdict {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+
+  .final-verdict h2 {
+    color: #c2410c;
+  }
+</style>
