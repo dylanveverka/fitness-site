@@ -1,0 +1,687 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+
+const title = "Best Dorm Room Workout Plan for Beginners (No Equipment Needed)";
+const description =
+  "A complete beginner workout plan you can do entirely in your dorm room with zero equipment. Build muscle, burn fat, and get fit without a gym membership.";
+const pubDate = "2026-04-16";
+const slug = "dorm-room-workout-plan-beginners";
+
+const bandsUrl   = "https://www.amazon.com/s?k=resistance+bands+set+workout&tag=dveverka-20";
+const matUrl     = "https://www.amazon.com/s?k=exercise+yoga+mat&tag=dveverka-20";
+const pullupUrl  = "https://www.amazon.com/s?k=doorframe+pull+up+bar&tag=dveverka-20";
+
+const bwPros = [
+  "Zero cost and zero equipment — the entire program requires 10 square feet of floor space, which every dorm room has, and nothing you need to buy before you start",
+  "Builds real functional strength — push-up and squat progressions develop the same pressing and hinging movement patterns as bench press and barbell squats, just with less absolute load",
+  "Lower injury risk for beginners — bodyweight movements are easier to control and self-correct than barbell lifts, which makes them a genuinely better starting point before learning to manage external load",
+  "No commute, no wait time, no gym anxiety — you can train between classes, at midnight during finals, or at 6am before your 8am lecture without leaving the building",
+  "Scales indefinitely — once basic push-ups become easy, progression to pike push-ups, archer push-ups, and eventually one-arm push-ups represents a years-long challenge curve, not a temporary stopgap",
+];
+
+const bwCons = [
+  "Upper back and bicep development is limited without a horizontal or vertical pulling movement — inverted rows under a desk partially fill this gap but can't fully replace pull-ups or rows with resistance",
+  "Progressive overload is less straightforward than adding a plate — instead of adding 5 pounds, you're changing leverage, range of motion, or tempo, which requires more thought and isn't as immediately satisfying",
+  "Load ceiling exists — at an advanced level, bodyweight training alone can't fully replicate high-load compound movements for maximum hypertrophy, which is why it's a starting point rather than a permanent ceiling",
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/guides/${slug}`}>
+  <article class="guide">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        No gym membership. No equipment. No excuse to skip a workout because the rec center is 20
+        minutes away and your 8am is in 45 minutes. This is the point of a dorm room workout plan —
+        the friction is gone. Your gym is ten feet from your bed, and you can be done in 30 minutes
+        before most of your floor is awake.
+      </p>
+      <p>
+        This guide is a complete four-week beginner program built entirely around bodyweight
+        movements you can do in a standard dorm room. No pull-up bar required for the first two
+        weeks. No exercise mat required (though a $15 one helps). Just floor space, a chair, and a
+        desk — things every dorm room already has.
+      </p>
+    </section>
+
+    <!-- Can you build muscle without weights? -->
+    <section>
+      <h2>Can You Actually Build Muscle Without Weights?</h2>
+      <p>
+        Yes — with one condition. Muscle grows in response to progressive overload, meaning you
+        need to consistently give your muscles a harder challenge over time. With weights, that's
+        simple: add five pounds to the bar. With bodyweight, it works differently, but the
+        principle is identical.
+      </p>
+      <p>
+        A beginner doing push-ups for the first time is applying significant tension to their
+        chest, shoulders, and triceps relative to what those muscles are used to. That tension
+        drives adaptation — the muscle repairs slightly stronger after each session. As long as
+        you keep progressing (more reps, harder variation, slower tempo, shorter rest), muscle
+        growth continues.
+      </p>
+      <p>
+        The research on this is solid. A 2017 review in the <em>Journal of Human Kinetics</em>
+        found that bodyweight training produces meaningful hypertrophy in untrained individuals,
+        particularly in the early months of consistent training. For a college student who hasn't
+        been lifting, bodyweight work is not a compromise — it's an appropriate starting point.
+      </p>
+    </section>
+
+    <!-- Exercise Library -->
+    <section>
+      <h2>Your Exercise Library</h2>
+      <p>
+        Nine movements. Learn these and you have everything you need for the full four-week program.
+      </p>
+
+      <div class="exercise-list">
+        <div class="exercise-card">
+          <h3>Push-Up</h3>
+          <p>Hands shoulder-width, body in a straight line from head to heels. Lower your chest to
+          an inch from the floor, press back up. Keep your core tight — don't let your hips sag.
+          <strong>Muscles:</strong> chest, shoulders, triceps.</p>
+        </div>
+        <div class="exercise-card">
+          <h3>Pike Push-Up</h3>
+          <p>Start in a downward dog position — hips high, body in an inverted V. Bend your elbows
+          to lower the top of your head toward the floor, then press back up. Shifts the load from
+          chest to shoulders compared to a standard push-up.
+          <strong>Muscles:</strong> shoulders, triceps.</p>
+        </div>
+        <div class="exercise-card">
+          <h3>Bodyweight Squat</h3>
+          <p>Feet shoulder-width, toes slightly out. Sit your hips back and down until your thighs
+          are parallel to the floor. Drive through your whole foot to stand. Keep your chest up
+          throughout — don't let it cave forward.
+          <strong>Muscles:</strong> quads, glutes, hamstrings.</p>
+        </div>
+        <div class="exercise-card">
+          <h3>Reverse Lunge</h3>
+          <p>Step one foot back and lower your rear knee toward the floor, keeping your front shin
+          vertical. Drive through your front heel to return to standing. More knee-friendly than
+          forward lunges, easier to balance for beginners.
+          <strong>Muscles:</strong> quads, glutes, hamstrings.</p>
+        </div>
+        <div class="exercise-card">
+          <h3>Glute Bridge</h3>
+          <p>Lie on your back with knees bent, feet flat on the floor. Drive your hips up until
+          your body forms a straight line from knees to shoulders. Squeeze your glutes at the top
+          for one second, lower slowly.
+          <strong>Muscles:</strong> glutes, hamstrings, lower back.</p>
+        </div>
+        <div class="exercise-card">
+          <h3>Plank</h3>
+          <p>Forearms on the floor, elbows under shoulders, body in a straight line. Hold. The
+          goal is not to shake — brace your core like you're about to get hit in the stomach.
+          Don't hold your breath.
+          <strong>Muscles:</strong> core, shoulders, glutes.</p>
+        </div>
+        <div class="exercise-card">
+          <h3>Mountain Climbers</h3>
+          <p>Start in a high push-up position. Drive one knee toward your chest, then quickly
+          switch legs in a running motion. Keep your hips level — don't let them bounce up and
+          down with each rep.
+          <strong>Muscles:</strong> core, hip flexors, shoulders (isometric).</p>
+        </div>
+        <div class="exercise-card">
+          <h3>Tricep Dips (Chair)</h3>
+          <p>Hands on the seat of a sturdy chair, fingers forward. Lower your body by bending your
+          elbows to 90 degrees, then press back up. Keep your back close to the chair throughout —
+          don't let your hips drift forward.
+          <strong>Muscles:</strong> triceps, chest (lower), shoulders (front).</p>
+        </div>
+        <div class="exercise-card">
+          <h3>Inverted Row (Under Desk)</h3>
+          <p>Lie under a sturdy desk, grip the edge with both hands, body in a straight line. Pull
+          your chest up to the desk, lower slowly. Check that the desk is stable before loading
+          it — most dorm desks handle 100–150 lbs without issue.
+          <strong>Muscles:</strong> upper back, biceps, rear delts.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4-Week Program -->
+    <section>
+      <h2>The 4-Week Beginner Program</h2>
+      <p>
+        Weeks 1–2 are three days per week with a rest day between each session. Weeks 3–4 add a
+        fourth day and increase volume. Follow the rest periods — they're not optional, especially
+        in week one when everything will be sore.
+      </p>
+
+      <div class="workout-block">
+        <div class="workout-header">
+          <span class="week-label">Weeks 1–2</span>
+          <span class="week-detail">3 days/week &nbsp;·&nbsp; Mon / Wed / Fri &nbsp;·&nbsp; ~25 min</span>
+        </div>
+
+        <p class="workout-note">Rest 60–90 seconds between sets. Complete all sets of one exercise before moving to the next.</p>
+
+        <table class="workout-table">
+          <thead>
+            <tr>
+              <th>Exercise</th>
+              <th>Sets</th>
+              <th>Reps / Hold</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Push-Up</td>
+              <td>3</td>
+              <td>8–10</td>
+              <td>Knee push-ups OK if needed</td>
+            </tr>
+            <tr>
+              <td>Bodyweight Squat</td>
+              <td>3</td>
+              <td>12–15</td>
+              <td>Hold 2 sec at bottom</td>
+            </tr>
+            <tr>
+              <td>Glute Bridge</td>
+              <td>3</td>
+              <td>12</td>
+              <td>Squeeze glutes at top</td>
+            </tr>
+            <tr>
+              <td>Plank</td>
+              <td>3</td>
+              <td>20–30 sec</td>
+              <td>Don't hold breath</td>
+            </tr>
+            <tr>
+              <td>Tricep Dips</td>
+              <td>2</td>
+              <td>8–10</td>
+              <td>Sturdy chair only</td>
+            </tr>
+            <tr>
+              <td>Mountain Climbers</td>
+              <td>2</td>
+              <td>20 total</td>
+              <td>Controlled pace</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="progression-note">
+          <strong>Progression goal:</strong> By the end of week 2, you should be hitting the top
+          of every rep range consistently. Once you can do 3×10 push-ups with good form, you're
+          ready for week 3.
+        </p>
+      </div>
+
+      <div class="workout-block">
+        <div class="workout-header">
+          <span class="week-label">Weeks 3–4</span>
+          <span class="week-detail">4 days/week &nbsp;·&nbsp; Mon / Tue / Thu / Fri &nbsp;·&nbsp; ~30 min</span>
+        </div>
+
+        <p class="workout-note">Split into Push/Pull days. Rest 60 sec between sets. Tuesday and Friday are lower body + core.</p>
+
+        <p class="split-label">Monday &amp; Thursday — Upper Body</p>
+        <table class="workout-table">
+          <thead>
+            <tr>
+              <th>Exercise</th>
+              <th>Sets</th>
+              <th>Reps / Hold</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Push-Up</td>
+              <td>4</td>
+              <td>10–12</td>
+              <td>Full range, no half reps</td>
+            </tr>
+            <tr>
+              <td>Pike Push-Up</td>
+              <td>3</td>
+              <td>8–10</td>
+              <td>Hips high throughout</td>
+            </tr>
+            <tr>
+              <td>Inverted Row</td>
+              <td>3</td>
+              <td>8–10</td>
+              <td>Check desk stability first</td>
+            </tr>
+            <tr>
+              <td>Tricep Dips</td>
+              <td>3</td>
+              <td>10–12</td>
+              <td>Elbows back, not flared</td>
+            </tr>
+            <tr>
+              <td>Plank</td>
+              <td>3</td>
+              <td>40–60 sec</td>
+              <td>Brace and breathe</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="split-label">Tuesday &amp; Friday — Lower Body &amp; Core</p>
+        <table class="workout-table">
+          <thead>
+            <tr>
+              <th>Exercise</th>
+              <th>Sets</th>
+              <th>Reps / Hold</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bodyweight Squat</td>
+              <td>4</td>
+              <td>15–20</td>
+              <td>Slow descent (3 sec)</td>
+            </tr>
+            <tr>
+              <td>Reverse Lunge</td>
+              <td>3</td>
+              <td>10 each leg</td>
+              <td>Front shin stays vertical</td>
+            </tr>
+            <tr>
+              <td>Glute Bridge</td>
+              <td>3</td>
+              <td>15</td>
+              <td>Single-leg if easy</td>
+            </tr>
+            <tr>
+              <td>Mountain Climbers</td>
+              <td>3</td>
+              <td>30 total</td>
+              <td>Keep hips level</td>
+            </tr>
+            <tr>
+              <td>Plank</td>
+              <td>3</td>
+              <td>45–60 sec</td>
+              <td>Or side plank 30 sec each</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Progressive Overload -->
+    <section>
+      <h2>How to Make Bodyweight Exercises Harder Over Time</h2>
+      <p>
+        Progressive overload without weights works through four levers. Use them in order — go to
+        the next one only when the current one stops producing progress.
+      </p>
+      <div class="overload-grid">
+        <div class="overload-card">
+          <span class="overload-num">1</span>
+          <div>
+            <strong>More reps.</strong> Can't do 10 push-ups? Do 6. Next session aim for 7. Add a
+            rep or two per week until you hit the top of the range.
+          </div>
+        </div>
+        <div class="overload-card">
+          <span class="overload-num">2</span>
+          <div>
+            <strong>Slower tempo.</strong> 3-second descent on squats or push-ups dramatically
+            increases time under tension — same movement, meaningfully harder, no equipment required.
+          </div>
+        </div>
+        <div class="overload-card">
+          <span class="overload-num">3</span>
+          <div>
+            <strong>Harder variation.</strong> Push-up → decline push-up → archer push-up. Squat →
+            Bulgarian split squat → pistol squat. Every movement has a harder progression to
+            unlock when the standard version gets easy.
+          </div>
+        </div>
+        <div class="overload-card">
+          <span class="overload-num">4</span>
+          <div>
+            <strong>More volume.</strong> Add a fourth set, or add a fifth day. Volume is the last
+            lever because more sets takes more time — exhaust the other three options first.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- When to add equipment -->
+    <section>
+      <h2>When to Add Equipment</h2>
+      <p>
+        After four weeks of consistent training, two pieces of equipment will meaningfully expand
+        what you can do in your dorm room:
+      </p>
+      <p>
+        <strong>Resistance bands ($15–30)</strong> are the highest-value upgrade. They add load to
+        squats, bridges, and push-ups, allow banded pull-aparts for rear delt work, and fill the
+        gap where bodyweight doesn't provide enough resistance for certain movements. A full set
+        with multiple resistance levels covers most needs.
+      </p>
+      <AffiliateButton
+        href={bandsUrl}
+        text="Shop Resistance Bands on Amazon"
+        subtext="Best First Equipment Upgrade — $15–30"
+      />
+      <p>
+        <strong>A doorframe pull-up bar ($25–35)</strong> solves the biggest limitation of
+        bodyweight training — horizontal pulling. Inverted rows under a desk are a solid substitute,
+        but pull-ups and chin-ups are the most effective upper back exercise available and worth
+        adding as soon as you can do 3–5 reps consistently.
+      </p>
+      <AffiliateButton
+        href={pullupUrl}
+        text="Shop Pull-Up Bars on Amazon"
+        subtext="Adds Pull-Ups & Chin-Ups — $25–35"
+      />
+      <p>
+        An <a href={matUrl} rel="noopener noreferrer sponsored">exercise mat</a> is optional but
+        genuinely useful — dorm floors are hard, and having a dedicated surface makes floor work
+        more comfortable and signals to your brain that it's workout time.
+      </p>
+    </section>
+
+    <!-- Nutrition -->
+    <section>
+      <h2>How to Combine This With Proper Nutrition</h2>
+      <p>
+        Training consistency matters more than nutrition when you're a beginner. But the two work
+        together, and a few basic principles make this program significantly more effective:
+      </p>
+      <ul>
+        <li>
+          <strong>Eat enough protein.</strong> Aim for 0.7–1.0g per pound of bodyweight. Dining hall
+          staples like eggs, chicken, Greek yogurt, and cottage cheese cover most of this. A protein
+          shake fills gaps on days when the options are limited.
+        </li>
+        <li>
+          <strong>Don't dramatically under-eat.</strong> If you're trying to lose fat and build muscle
+          simultaneously (recomposition), a modest deficit of 200–300 calories works. A large deficit
+          blunts muscle growth and makes training feel terrible.
+        </li>
+        <li>
+          <strong>Eat something before and after training.</strong> A piece of fruit or a small
+          bowl of oats before is enough to fuel a 30-minute session. Protein within two hours
+          after training helps recovery — a shake, some cottage cheese, or a dining hall meal all
+          work.
+        </li>
+        <li>
+          <strong>Stay consistent with sleep.</strong> This is the one that college students
+          consistently underweight. Muscle is built during recovery, not during the workout — and
+          recovery quality is directly tied to sleep quantity. Seven to nine hours isn't a luxury.
+        </li>
+      </ul>
+    </section>
+
+    <!-- ProsConsList -->
+    <ProsConsList
+      pros={bwPros}
+      cons={bwCons}
+      productName="Bodyweight Training in a Dorm Room"
+    />
+
+    <!-- Final section -->
+    <section>
+      <h2>Just Start</h2>
+      <p>
+        The four-week program above is a starting point, not a permanent plan. After a month of
+        consistent sessions, you'll have baseline strength, better movement patterns, and a clearer
+        sense of what kind of training you enjoy. That's the actual goal of the first four weeks —
+        not a transformation, just a foundation.
+      </p>
+      <p>
+        Plenty of college students have built real, visible fitness without ever stepping foot in a
+        gym. The constraint of a dorm room is mostly a mental one. Ten square feet, thirty minutes,
+        three days a week — that's all this requires.
+      </p>
+      <AffiliateButton
+        href={bandsUrl}
+        text="Upgrade With Resistance Bands"
+        subtext="Best First Equipment Purchase After Week 4"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .guide {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-family: system-ui, sans-serif;
+    color: #1e293b;
+    line-height: 1.7;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 0.35rem 0;
+    color: #0f172a;
+  }
+
+  .meta {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  li {
+    margin-bottom: 0.6rem;
+  }
+
+  a {
+    color: #ea580c;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  strong {
+    color: #0f172a;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  /* Exercise list */
+  .exercise-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 0.9rem;
+    margin-top: 1rem;
+  }
+
+  .exercise-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #ea580c;
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+  }
+
+  .exercise-card p {
+    font-size: 0.85rem;
+    color: #475569;
+    margin: 0;
+  }
+
+  /* Workout blocks */
+  .workout-block {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    color: #e2e8f0;
+  }
+
+  .workout-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+  }
+
+  .week-label {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #ea580c;
+  }
+
+  .week-detail {
+    font-size: 0.85rem;
+    color: #94a3b8;
+  }
+
+  .workout-note {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  .split-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #ea580c;
+    margin: 1.25rem 0 0.5rem 0;
+  }
+
+  .workout-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .workout-table thead tr {
+    border-bottom: 1px solid #334155;
+  }
+
+  .workout-table th {
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .workout-table td {
+    padding: 0.55rem 0.5rem;
+    border-bottom: 1px solid #1e293b;
+    color: #cbd5e1;
+    vertical-align: top;
+  }
+
+  .workout-table td:first-child {
+    font-weight: 600;
+    color: #f1f5f9;
+    white-space: nowrap;
+  }
+
+  .workout-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .progression-note {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding: 0.75rem;
+    background: #1e293b;
+    border-radius: 6px;
+  }
+
+  /* Progressive overload */
+  .overload-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .overload-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+  }
+
+  .overload-num {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: #16a34a;
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.9rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.1rem;
+  }
+
+  .overload-card div {
+    font-size: 0.9rem;
+    color: #166534;
+    line-height: 1.5;
+  }
+
+  .overload-card strong {
+    color: #14532d;
+  }
+</style>
