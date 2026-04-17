@@ -1,0 +1,700 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Headphones for Working Out (2025) — College Student Picks";
+const description =
+  "The best workout headphones for college students — sweat proof, secure fit, great sound, and actually affordable. Ranked by sound quality, fit, and value.";
+const pubDate = "2026-04-17";
+const slug = "best-headphones-working-out-college-students";
+
+const beatsUrl    = "https://www.amazon.com/s?k=beats+fit+pro+wireless+earbuds&tag=dveverka-20";
+const jabraUrl    = "https://www.amazon.com/s?k=jabra+elite+4+active+earbuds&tag=dveverka-20";
+const soundcoreUrl = "https://www.amazon.com/s?k=soundcore+sport+x10+workout+earbuds&tag=dveverka-20";
+const shokzUrl    = "https://www.amazon.com/s?k=shokz+openrun+bone+conduction+headphones&tag=dveverka-20";
+
+const jabraPros = [
+  "IP57 water resistance is meaningfully better than the IPX4 minimum — it handles heavy sweat sessions, rain runs, and the occasional gym bag water bottle leak without issue, which is the real-world protection level most active users actually need",
+  "The secure fit ear tips grip without the wing clip hardware that makes other earbuds uncomfortable during long sessions — the Jabra's fit holds through burpees, box jumps, and heavy barbell work without requiring constant readjustment",
+  "Active noise cancellation at $100 is a significant value play — ANC at this price tier was rare two years ago and the Jabra Elite 4 delivers it at a level that handles gym ambient noise and library distractions without the $200 price tag of the Beats Fit Pro",
+  "Transparency (HearThrough) mode lets you hear your surroundings without removing the earbuds — useful for outdoor runs where you need to hear traffic, gym conversations, or a trainer cuing your form",
+  "Battery life of 7 hours per charge plus 28 hours in the case covers a full week of daily hour-long workouts without needing to recharge the case — practical for students who charge devices infrequently",
+];
+
+const jabraCons = [
+  "Sound profile leans toward balanced over bass-heavy, which is a legitimate preference mismatch for listeners who want the punchy low-end that makes hip-hop and EDM feel right during a heavy set — the Beats Fit Pro and Soundcore Sport X10 both deliver more bass out of the box",
+  "Touch controls take adjustment — the gesture sensitivity is well-calibrated but the touch zones are small enough that gym-gloved hands or sweaty fingers sometimes register accidental inputs, particularly skipping tracks when you meant to adjust volume",
+  "Ear tip sizing is critical and the fit varies by ear canal shape — the included three tip sizes cover most users but those with unusual ear canal geometry may find the seal inconsistent, which affects both ANC effectiveness and sound quality. Budget for aftermarket tips if the included sizes don't fit cleanly.",
+];
+
+const comparisonRows = [
+  { feature: "Price", nameA: "Beats Fit Pro", nameB: "Jabra Elite 4", nameC: "Soundcore X10", nameD: "Shokz OpenRun", valueA: "~$200", valueB: "~$100", valueC: "~$50", valueD: "~$130", winner: "C" },
+  { feature: "IPX Rating", nameA: "Beats Fit Pro", nameB: "Jabra Elite 4", nameC: "Soundcore X10", nameD: "Shokz OpenRun", valueA: "IPX4", valueB: "IP57", valueC: "IPX7", valueD: "IP55", winner: "B" },
+  { feature: "Battery Life", nameA: "Beats Fit Pro", nameB: "Jabra Elite 4", nameC: "Soundcore X10", nameD: "Shokz OpenRun", valueA: "6hr + 18hr case", valueB: "7hr + 28hr case", valueC: "9hr + 36hr case", valueD: "8hr (no case)", winner: "C" },
+  { feature: "Noise Cancellation", nameA: "Beats Fit Pro", nameB: "Jabra Elite 4", nameC: "Soundcore X10", nameD: "Shokz OpenRun", valueA: "Yes (ANC)", valueB: "Yes (ANC)", valueC: "No", valueD: "No (open ear)", winner: "" },
+  { feature: "Best For", nameA: "Beats Fit Pro", nameB: "Jabra Elite 4", nameC: "Soundcore X10", nameD: "Shokz OpenRun", valueA: "All gym activities", valueB: "Value + ANC", valueC: "Budget lifters", valueD: "Outdoor running", winner: "" },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        An earbud falling out mid-squat is one of the most distracting things that happens
+        in the gym. You're 3 reps into a heavy set, the left bud pops out, and now you're
+        either finishing the set with one ear or breaking concentration to shove it back in.
+        It sounds minor until it's happened to you fifteen times. The right workout headphones
+        stay in, handle sweat, and sound good enough that you actually want to use them every
+        session — and under $200 there are genuinely great options.
+      </p>
+      <p>
+        Four picks cover every budget from $50 to $200. Here's what each one is actually
+        built for and how to decide between them.
+      </p>
+    </section>
+
+    <!-- Verdict Box -->
+    <div class="verdict-box">
+      <h2>Quick Picks</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-label">Best Overall</span>
+          <a href={beatsUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Beats Fit Pro
+          </a>
+          <p>Wingtip lock, ANC, Apple H1 chip, IPX4. The gym earbud that doesn't move no matter what you're doing.</p>
+          <span class="pick-price">~$200</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Mid-Range</span>
+          <a href={jabraUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Jabra Elite 4 Active
+          </a>
+          <p>IP57 water resistance, ANC, 7hr battery. The best balance of features and price for most college students.</p>
+          <span class="pick-price">~$100</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Budget</span>
+          <a href={soundcoreUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Soundcore Sport X10
+          </a>
+          <p>IPX7 waterproofing, 9hr battery, rotating ear hook. Serious water protection at half the price of the competition.</p>
+          <span class="pick-price">~$50</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best for Running</span>
+          <a href={shokzUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Shokz OpenRun
+          </a>
+          <p>Bone conduction, fully open ear, IP55. Hears traffic and runners — the safety pick for outdoor workouts.</p>
+          <span class="pick-price">~$130</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Earbuds vs over-ear -->
+    <section>
+      <h2>Earbuds vs Over-Ear Headphones for the Gym</h2>
+      <p>
+        Over-ear headphones sound better. Earbuds are better for the gym. That's the short
+        version — here's why:
+      </p>
+      <div class="vs-grid">
+        <div class="vs-card vs-earbuds">
+          <h3>Earbuds</h3>
+          <ul>
+            <li>Stay put during dynamic movements — box jumps, burpees, heavy squats</li>
+            <li>No headband pressure during barbell squats or bench press</li>
+            <li>Lighter and less sweaty against the skin during cardio</li>
+            <li>Fit in a pocket or small case for commuting to the gym</li>
+            <li>Sound quality gap vs over-ear has closed significantly in the last two years</li>
+          </ul>
+          <p class="vs-verdict"><strong>Best for:</strong> Lifting, HIIT, running, any activity with full range of motion</p>
+        </div>
+        <div class="vs-card vs-overear">
+          <h3>Over-Ear Headphones</h3>
+          <ul>
+            <li>Better soundstage and bass — genuinely better audio for music listening</li>
+            <li>Uncomfortable under a barbell — the headband gets compressed during high-bar squats</li>
+            <li>Sweat accumulates in the ear cups during long or high-intensity sessions</li>
+            <li>Fine for steady-state cardio (treadmill, elliptical) where head movement is minimal</li>
+            <li>Better ANC at equivalent prices — the physics of larger drivers and ear cups help</li>
+          </ul>
+          <p class="vs-verdict"><strong>Best for:</strong> Treadmill / elliptical cardio, studying, commuting — not lifting</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- IPX rating -->
+    <section>
+      <h2>What Is IPX Rating and What Do You Actually Need?</h2>
+      <p>
+        IPX ratings measure water resistance. The number tells you how much water exposure
+        the device can survive. For workout headphones, the rating is the most important
+        spec most people ignore until their earbuds die from sweat damage three months in.
+      </p>
+      <div class="ipx-grid">
+        <div class="ipx-card">
+          <h4>IPX4</h4>
+          <p class="ipx-protection">Splash resistant</p>
+          <p>Handles sweat and light rain from any direction. The minimum for any workout earbud. Beats Fit Pro stops here — adequate for gym use, not ideal for heavy sweaters or outdoor runs in rain.</p>
+        </div>
+        <div class="ipx-card">
+          <h4>IPX5</h4>
+          <p class="ipx-protection">Water jet resistant</p>
+          <p>Handles heavy sweat and light rain jets. Shokz OpenRun sits at IP55 (dust + water jets). Good for outdoor use where rain is possible.</p>
+        </div>
+        <div class="ipx-card ipx-highlight">
+          <h4>IP57 / IPX7</h4>
+          <p class="ipx-protection">Submersion to 1 meter</p>
+          <p>Handles immersion up to 1 meter for 30 minutes. Jabra Elite 4 Active (IP57) and Soundcore X10 (IPX7) both hit this tier. The practical ceiling for workout use — handles any sweat level, rain, and accidental drops in puddles or gym water bottles.</p>
+        </div>
+        <div class="ipx-card">
+          <h4>IPX8</h4>
+          <p class="ipx-protection">Deep submersion</p>
+          <p>Rated for depths beyond 1 meter. Overkill for gym use but found on some swim-specific products. Not necessary for any land-based workout.</p>
+        </div>
+      </div>
+      <p>
+        The practical minimum for any serious workout use: <strong>IPX4</strong> for gym
+        only, <strong>IPX7</strong> if you run outdoors or sweat heavily. The Jabra Elite 4
+        Active's IP57 is the best value at the $100 price tier.
+      </p>
+    </section>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <h3>
+        <a href={beatsUrl} rel="noopener noreferrer sponsored">Beats Fit Pro</a>
+        — Best Overall
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>IPX rating:</strong> IPX4</span>
+        <span class="spec"><strong>Battery:</strong> 6hr + 18hr case</span>
+        <span class="spec"><strong>ANC:</strong> Yes</span>
+        <span class="spec"><strong>Fit system:</strong> Flexible wingtip + ear tip</span>
+        <span class="spec"><strong>Chip:</strong> Apple H1 (seamless iOS pairing)</span>
+      </div>
+      <p>
+        The Beats Fit Pro solves the earbud-falling-out problem with a flexible wingtip
+        that hooks into the upper ear cartilage. It doesn't use a hard ear hook (which digs
+        in after 20 minutes) — the wingtip is soft and conforms to your ear shape, which
+        means it stays locked during a 500 lb deadlift, a set of box jumps, or a 5-mile
+        run without any discomfort. That's the primary reason to choose these over equally
+        priced alternatives.
+      </p>
+      <p>
+        Sound quality is excellent for workout earbuds — bass-forward profile that makes
+        heavy lifting playlists hit correctly, with ANC that effectively blocks gym ambient
+        noise between sets. The Apple H1 chip means instant seamless pairing on iOS devices,
+        which is a meaningful quality-of-life improvement if you're in the Apple ecosystem.
+        The IPX4 rating is the one asterisk — it handles normal gym sweat fine but isn't
+        the pick for outdoor runs in heavy rain.
+      </p>
+
+      <h3>
+        <a href={jabraUrl} rel="noopener noreferrer sponsored">Jabra Elite 4 Active</a>
+        — Best Mid-Range
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>IPX rating:</strong> IP57</span>
+        <span class="spec"><strong>Battery:</strong> 7hr + 28hr case</span>
+        <span class="spec"><strong>ANC:</strong> Yes</span>
+        <span class="spec"><strong>Fit system:</strong> Ear tip + angled nozzle</span>
+        <span class="spec"><strong>Transparency:</strong> HearThrough mode</span>
+      </div>
+      <p>
+        At $100, the Jabra Elite 4 Active delivers IP57 water resistance and active noise
+        cancellation — two features that would have cost $200+ two years ago. The IP57 rating
+        handles heavy sweat sessions, outdoor runs in rain, and gym bag water bottle leaks
+        with no issues. The ANC quality is solid for the price tier — not Beats or AirPods
+        Pro level, but effective at cutting gym ambient noise and allowing focus between sets.
+      </p>
+      <p>
+        The fit holds through most lifting movements without a dedicated wingtip system —
+        the angled nozzle and ear tip combination create enough friction grip for squats,
+        presses, and moderate cardio. The 7-hour battery is a full week of daily hour-long
+        workouts on a single charge, and the 28-hour case means you can genuinely go weeks
+        without thinking about charging. For most college students who want a single pair
+        of earbuds that covers gym, library, and commute, the Jabra Elite 4 Active is the
+        rational choice.
+      </p>
+
+      <h3>
+        <a href={soundcoreUrl} rel="noopener noreferrer sponsored">Soundcore Sport X10</a>
+        — Best Budget
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>IPX rating:</strong> IPX7</span>
+        <span class="spec"><strong>Battery:</strong> 9hr + 36hr case</span>
+        <span class="spec"><strong>ANC:</strong> No</span>
+        <span class="spec"><strong>Fit system:</strong> Rotating ear hook</span>
+        <span class="spec"><strong>Bass boost:</strong> Yes (dedicated mode)</span>
+      </div>
+      <p>
+        The Soundcore Sport X10 punches well above its $50 price on the specs that matter
+        most for gym use. IPX7 waterproofing beats the Beats Fit Pro's IPX4 at less than
+        a quarter of the price. The 9-hour battery outlasts every other pick in this
+        roundup. The rotating ear hook locks the buds in place during movement and is
+        adjustable to fit different ear shapes. And a dedicated bass boost mode makes the
+        sound profile hit harder for lifting playlists.
+      </p>
+      <p>
+        The tradeoffs are real: no ANC, slightly bulkier in-ear profile than the Jabra or
+        Beats, and sound quality that doesn't match the $100–200 tier for nuanced listening.
+        For lifting, running, and gym cardio where you want something secure, waterproof,
+        and cheap enough that losing or breaking it isn't a catastrophe — the Soundcore
+        Sport X10 is hard to fault.
+      </p>
+
+      <h3>
+        <a href={shokzUrl} rel="noopener noreferrer sponsored">Shokz OpenRun</a>
+        — Best for Running
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>IPX rating:</strong> IP55</span>
+        <span class="spec"><strong>Battery:</strong> 8hr</span>
+        <span class="spec"><strong>ANC:</strong> No</span>
+        <span class="spec"><strong>Type:</strong> Bone conduction (open ear)</span>
+        <span class="spec"><strong>Fit system:</strong> Wraparound titanium frame</span>
+      </div>
+      <p>
+        Bone conduction headphones work differently than every other pick here: the
+        transducers sit on your cheekbones and vibrate sound directly through bone to
+        your inner ear, leaving your ear canals completely open. You hear music and you
+        hear everything around you simultaneously. For road running where traffic awareness
+        is a safety concern, this is the only headphone design that doesn't require a
+        compromise between music and situational awareness.
+      </p>
+      <p>
+        Sound quality is the known limitation — bone conduction can't produce the bass
+        response or separation that in-ear drivers deliver, and the audio leaks slightly
+        to people near you at higher volumes. It's not the pick for heavy lifting or
+        gym-focused use where ANC and isolation are the priority. But for any outdoor
+        cardio — running, cycling, hiking — the Shokz OpenRun is the best tool for
+        listening to music without tuning out the world.
+      </p>
+    </section>
+
+    <!-- Bone conduction section -->
+    <section>
+      <h2>Bone Conduction Headphones for Runners — Are They Worth It?</h2>
+      <p>
+        If you run on roads, paths, or anywhere with traffic or other people, yes.
+        The safety argument is simple: earbuds isolate you from your environment.
+        Bone conduction keeps you fully aware of cars, cyclists, other runners, and
+        hazards without requiring you to run in silence. Many runners who have switched
+        describe it as something they won't go back from.
+      </p>
+      <div class="bc-grid">
+        <div class="bc-card bc-yes">
+          <h3>Choose bone conduction if:</h3>
+          <ul>
+            <li>You run outdoors on roads or trails where situational awareness matters</li>
+            <li>You cycle and need to hear traffic</li>
+            <li>Your ear canals are sensitive to in-ear buds after long sessions</li>
+            <li>You have hearing aids or ear conditions that make in-ear buds impractical</li>
+          </ul>
+        </div>
+        <div class="bc-card bc-no">
+          <h3>Stick with in-ear if:</h3>
+          <ul>
+            <li>Your workouts are primarily gym-based (lifting, machines, indoor cardio)</li>
+            <li>Sound quality and bass are priorities — bone conduction can't match in-ear drivers</li>
+            <li>You want ANC for studying or blocking gym noise between sets</li>
+            <li>Budget is tight — in-ear options at $50 outperform bone conduction at the same price</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- AirPods Pro section -->
+    <section>
+      <h2>Do AirPods Pro Work for the Gym?</h2>
+      <p>
+        Yes, with caveats. The AirPods Pro have IPX4 water resistance (same as Beats Fit
+        Pro), good ANC, excellent Apple ecosystem integration, and a fit that holds during
+        moderate activity. For most gym workouts — lifting, treadmill, elliptical — they
+        work fine.
+      </p>
+      <p>
+        Where they fall short for serious gym use: they don't have a wingtip or ear hook,
+        so during high-intensity movement (heavy squats, box jumps, sprints) the fit is
+        less secure than earbuds with dedicated retention systems. The IPX4 rating means
+        heavy sweat sessions or outdoor runs in rain are a genuine risk over time. And at
+        $249, you're paying a significant Apple premium over earbuds with better gym-specific
+        specs.
+      </p>
+      <div class="callout-box">
+        <strong>The honest answer:</strong> If you already own AirPods Pro, use them —
+        they're good enough for most gym activities. If you're buying new earbuds specifically
+        for working out, the Jabra Elite 4 Active at $100 has better water resistance and
+        comparable ANC for $150 less.
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Beats Fit Pro"
+        nameB="Jabra Elite 4"
+        nameC="Soundcore X10"
+        nameD="Shokz OpenRun"
+        rows={comparisonRows}
+      />
+    </section>
+
+    <!-- Pros/Cons -->
+    <section>
+      <h2>Jabra Elite 4 Active — Pros &amp; Cons</h2>
+      <ProsConsList pros={jabraPros} cons={jabraCons} />
+    </section>
+
+    <!-- Who should buy / skip -->
+    <section>
+      <h2>Who Should Buy the Jabra Elite 4 Active</h2>
+      <p>
+        The Jabra Elite 4 Active is for any college student who wants one pair of earbuds
+        that covers the gym, outdoor runs, the library, and commuting — without spending
+        $200. The IP57 rating handles every sweat level and weather condition you'll
+        encounter. The ANC works for studying. The 7-hour battery covers daily use all
+        week. It's the rational all-purpose pick for students who don't want to think
+        about their headphones.
+      </p>
+      <h2>Who Should Skip the Jabra Elite 4 Active</h2>
+      <p>
+        Skip it if fit security during intense movement is the absolute priority — the
+        Beats Fit Pro's wingtip system is meaningfully more secure for heavy lifting and
+        high-intensity training. Also skip it if you're on a strict $50 budget; the
+        Soundcore Sport X10 delivers better water resistance and battery life at half the
+        price for pure gym use. And skip the entire in-ear category if your primary
+        activity is outdoor running — the Shokz OpenRun is the better tool for that
+        specific use case.
+      </p>
+    </section>
+
+    <!-- Final Verdict -->
+    <section class="final-verdict">
+      <h2>Final Verdict</h2>
+      <p>
+        For most college students: the Jabra Elite 4 Active at $100 is the pick. IP57
+        water resistance, active noise cancellation, and a week of battery life in a
+        $100 package is the best value in workout earbuds right now. If you're lifting
+        heavy and need absolute fit security, the Beats Fit Pro wingtip is worth the
+        $200. If budget is the constraint, the Soundcore Sport X10 at $50 gives you
+        better waterproofing than the Beats at a fraction of the price. And if running
+        outdoors is your primary cardio, the Shokz OpenRun is in a category of its own.
+        Pick the one that matches how you actually train.
+      </p>
+      <AffiliateButton
+        href={jabraUrl}
+        text="Check Price on Amazon"
+        subtext="Best Mid-Range · IP57 · ANC · ~$100"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  header h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+    color: #0f172a;
+  }
+
+  .meta {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0 0 2rem;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 1rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  h3 a {
+    color: #f97316;
+    text-decoration: none;
+  }
+
+  h3 a:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    color: #334155;
+    line-height: 1.75;
+    margin: 0 0 1rem;
+  }
+
+  /* Verdict Box */
+  .verdict-box {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    color: #f8fafc;
+    margin-bottom: 1.25rem;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1rem;
+  }
+
+  .pick-card {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .pick-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f97316;
+  }
+
+  .pick-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #f8fafc;
+    text-decoration: none;
+    line-height: 1.3;
+  }
+
+  .pick-title:hover {
+    color: #f97316;
+  }
+
+  .pick-card p {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .pick-price {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #4ade80;
+    margin-top: auto;
+  }
+
+  /* Spec Row */
+  .spec-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    background: #f8fafc;
+    border-left: 3px solid #f97316;
+    padding: 0.75rem 1rem;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 1rem;
+  }
+
+  .spec {
+    font-size: 0.82rem;
+    color: #475569;
+  }
+
+  /* Earbuds vs Over-ear */
+  .vs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .vs-card {
+    border-radius: 8px;
+    padding: 1.25rem;
+    border-top: 4px solid transparent;
+  }
+
+  .vs-earbuds {
+    background: #f0fdf4;
+    border-top-color: #22c55e;
+  }
+
+  .vs-overear {
+    background: #f0f9ff;
+    border-top-color: #0ea5e9;
+  }
+
+  .vs-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.75rem;
+  }
+
+  .vs-card ul {
+    margin: 0 0 0.75rem;
+    padding-left: 1.2rem;
+  }
+
+  .vs-card li {
+    font-size: 0.85rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+
+  .vs-verdict {
+    font-size: 0.82rem;
+    color: #475569;
+    margin: 0;
+  }
+
+  /* IPX Grid */
+  .ipx-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .ipx-card {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .ipx-highlight {
+    background: #1c3a2e;
+    border: 1px solid #22c55e;
+  }
+
+  .ipx-card h4 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #f8fafc;
+    margin: 0 0 0.2rem;
+  }
+
+  .ipx-protection {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #4ade80;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 0.5rem;
+  }
+
+  .ipx-card p:last-child {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Bone Conduction Grid */
+  .bc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .bc-card {
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+
+  .bc-yes {
+    background: #f0fdf4;
+    border-top: 3px solid #22c55e;
+  }
+
+  .bc-no {
+    background: #fef2f2;
+    border-top: 3px solid #ef4444;
+  }
+
+  .bc-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.75rem;
+  }
+
+  .bc-card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .bc-card li {
+    font-size: 0.85rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Callout Box */
+  .callout-box {
+    background: #fefce8;
+    border: 1px solid #fde047;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    font-size: 0.88rem;
+    color: #713f12;
+    line-height: 1.65;
+    margin-top: 1rem;
+  }
+
+  /* Final Verdict */
+  .final-verdict {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+
+  .final-verdict h2 {
+    color: #c2410c;
+  }
+</style>
