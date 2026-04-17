@@ -1,0 +1,668 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Elliptical for Home Gym Under $800 (2025)";
+const description =
+  "Ellipticals are the best low impact cardio machine for a home gym. Here are the best picks under $800 for college students and young adults.";
+const pubDate = "2026-04-17";
+const slug = "best-elliptical-home-gym-under-800";
+
+const schwinnUrl    = "https://www.amazon.com/s?k=schwinn+430+elliptical+machine&tag=dveverka-20";
+const sunnyUrl      = "https://www.amazon.com/s?k=sunny+health+fitness+elliptical+machine&tag=dveverka-20";
+const nordictrackUrl = "https://www.amazon.com/s?k=nordictrack+se7i+elliptical&tag=dveverka-20";
+
+const schwinnPros = [
+  "20-inch stride length fits adults up to 6 feet tall without shortening your gait — the most common failure point on budget ellipticals is too-short stride lengths that force an unnatural choppy motion, and the Schwinn 430 clears that bar comfortably",
+  "22 resistance levels give you real progression room — most budget ellipticals cap at 8 or 12 levels, which means you hit the ceiling within a few months as fitness improves. 22 levels means the machine grows with you for years",
+  "Dual 20-lb flywheels produce a noticeably smoother stride than single-flywheel machines at the same price — the momentum through the pedal stroke feels more like a commercial gym machine and less like you're fighting the resistance",
+  "Bluetooth connectivity pairs with the Schwinn app, Peloton app, and other third-party platforms — so you're not locked into a single ecosystem or forced to buy a subscription to access workout programming",
+  "325 lb weight capacity handles a wider range of users than most competitors in this price range, which run 250–300 lb limits and make the machine unusable for heavier users or when adding weighted vest training",
+];
+
+const schwinnCons = [
+  "Assembly is a serious undertaking — the machine ships in multiple heavy boxes and the instruction manual assumes a level of mechanical comfort that first-time fitness equipment assemblers often don't have. Budget 2–3 hours and ideally a second person for the uprights and drive system.",
+  "The console display is functional but dated — the LCD screen shows the necessary metrics but looks and feels behind a generation compared to the color touchscreens on NordicTrack and Peloton equipment at higher price points. It does the job but won't impress anyone.",
+  "At ~$700 it's the most expensive pick in this roundup, and the price fluctuates significantly on Amazon — the same machine sometimes sells for $550 and sometimes $750 depending on availability. Setting a price alert before buying is worth the extra five minutes.",
+];
+
+const comparisonRows = [
+  { feature: "Price", nameA: "Schwinn 430", nameB: "Sunny Health", nameC: "NordicTrack SE7i", valueA: "~$700", valueB: "~$300", valueC: "~$800", winner: "B" },
+  { feature: "Stride Length", nameA: "Schwinn 430", nameB: "Sunny Health", nameC: "NordicTrack SE7i", valueA: "20 inches", valueB: "18 inches", valueC: "18 inches", winner: "A" },
+  { feature: "Resistance Levels", nameA: "Schwinn 430", nameB: "Sunny Health", nameC: "NordicTrack SE7i", valueA: "22", valueB: "8", valueC: "26 (auto-adjust)", winner: "C" },
+  { feature: "Flywheel Weight", nameA: "Schwinn 430", nameB: "Sunny Health", nameC: "NordicTrack SE7i", valueA: "2x 20 lbs", valueB: "Single flywheel", valueC: "Single 18 lbs", winner: "A" },
+  { feature: "Folding", nameA: "Schwinn 430", nameB: "Sunny Health", nameC: "NordicTrack SE7i", valueA: "No", valueB: "Yes", valueC: "No", winner: "B" },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        Ellipticals burn roughly the same calories as running — sometimes more — with zero
+        impact on your knees, hips, and ankles. That's the case for buying one: all the
+        cardiovascular benefit of a run, none of the joint stress that makes daily running
+        unsustainable for most people over time. If you're coming back from an injury, managing
+        knee issues, or just want cardio that you can do every day without your body eventually
+        protesting, an elliptical is the machine.
+      </p>
+      <p>
+        Under $800 there are three legitimate options — a budget pick that gets the job done,
+        a best-overall that hits a quality ceiling before price becomes the limiting factor,
+        and a connected option with auto-adjusting resistance for anyone who wants structured
+        programming. Here's how to decide between them.
+      </p>
+    </section>
+
+    <!-- Verdict Box -->
+    <div class="verdict-box">
+      <h2>Quick Picks</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-label">Best Overall</span>
+          <a href={schwinnUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Schwinn 430 Elliptical
+          </a>
+          <p>20-inch stride, 22 resistance levels, dual 20 lb flywheels. The smoothest ride under $800.</p>
+          <span class="pick-price">~$700</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Budget</span>
+          <a href={sunnyUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Sunny Health &amp; Fitness Elliptical
+          </a>
+          <p>18-inch stride, 8 resistance levels, folds for storage. Gets you into home elliptical training for $300.</p>
+          <span class="pick-price">~$300</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Mid-Range</span>
+          <a href={nordictrackUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            NordicTrack SE7i
+          </a>
+          <p>26 auto-adjusting resistance levels, iFIT integration, incline ramp. Best for structured workout programming.</p>
+          <span class="pick-price">~$800</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Elliptical vs treadmill -->
+    <section>
+      <h2>Elliptical vs Treadmill for a Home Gym</h2>
+      <p>
+        These two machines overlap in purpose but serve different needs. Neither is objectively
+        better — it depends what you're optimizing for.
+      </p>
+      <div class="vs-grid">
+        <div class="vs-card vs-elliptical">
+          <h3>Elliptical</h3>
+          <ul>
+            <li>Zero impact — no joint stress on knees, hips, or ankles</li>
+            <li>Upper body engagement through moving handlebars (additional calorie burn)</li>
+            <li>Lower noise — better for apartments and shared spaces</li>
+            <li>Works both pushing and pulling muscle groups simultaneously</li>
+            <li>Lower ceiling for intensity — hard to replicate the cardiovascular demand of a fast run</li>
+            <li>Takes up less floor space at equivalent price points</li>
+          </ul>
+          <p class="vs-verdict"><strong>Best for:</strong> Anyone managing joint issues, daily cardio, apartment use, fat loss</p>
+        </div>
+        <div class="vs-card vs-treadmill">
+          <h3>Treadmill</h3>
+          <ul>
+            <li>Higher max intensity — sprinting, incline intervals, speed work</li>
+            <li>More transferable to real-world running performance</li>
+            <li>Better for athletes training for running events</li>
+            <li>Higher impact — needs floor mat, more noise, harder on joints over time</li>
+            <li>Generally requires more maintenance (belt alignment, lubrication)</li>
+            <li>Better calorie burn at high intensities</li>
+          </ul>
+          <p class="vs-verdict"><strong>Best for:</strong> Runners, high-intensity interval training, sport-specific cardio</p>
+        </div>
+      </div>
+      <p>
+        If you're not training for a running event and want cardio you can do daily without
+        accumulating joint wear, pick the elliptical. If running performance matters or you
+        need max-intensity intervals, the treadmill is the better tool.
+      </p>
+    </section>
+
+    <!-- What stride length -->
+    <section>
+      <h2>What Stride Length Do You Need?</h2>
+      <p>
+        Stride length is the single most important spec to check before buying an elliptical —
+        more important than resistance levels or flywheel weight. Too short a stride and every
+        rep feels cramped, unnatural, and harder on your hips than it should be.
+      </p>
+      <div class="stride-grid">
+        <div class="stride-card">
+          <h4>Under 5'3"</h4>
+          <p class="stride-range">16–18 inch stride</p>
+          <p>Most budget ellipticals (including the Sunny Health) work fine. An 18-inch stride fits shorter users without modification.</p>
+        </div>
+        <div class="stride-card">
+          <h4>5'3" – 5'11"</h4>
+          <p class="stride-range">18–20 inch stride</p>
+          <p>The largest segment of buyers. An 18-inch stride is the minimum — 20 inches is noticeably more comfortable. The Schwinn 430 hits this range well.</p>
+        </div>
+        <div class="stride-card">
+          <h4>6'0" and taller</h4>
+          <p class="stride-range">20–22 inch stride</p>
+          <p>Most budget ellipticals under $500 top out at 18 inches, which forces a shortened stride for tall users. The Schwinn 430 at 20 inches is the minimum worth considering. Look for 22 inches if you're 6'2" or above.</p>
+        </div>
+      </div>
+      <p>
+        When in doubt, go longer. A slightly longer stride than necessary is comfortable — a
+        shorter stride than you need is immediately apparent and impossible to work around.
+      </p>
+    </section>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <h3>
+        <a href={schwinnUrl} rel="noopener noreferrer sponsored">Schwinn 430 Elliptical</a>
+        — Best Overall
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Stride length:</strong> 20 inches</span>
+        <span class="spec"><strong>Resistance:</strong> 22 levels</span>
+        <span class="spec"><strong>Flywheel:</strong> 2x 20 lbs</span>
+        <span class="spec"><strong>Max user weight:</strong> 325 lbs</span>
+        <span class="spec"><strong>Folding:</strong> No</span>
+        <span class="spec"><strong>Noise level:</strong> Low-moderate</span>
+      </div>
+      <p>
+        The Schwinn 430 is the elliptical most people should buy if their budget reaches $700.
+        The dual 20 lb flywheels produce a stride feel that's noticeably smoother than
+        single-flywheel machines — there's real momentum through the pedal stroke rather than
+        the jerky resistance you get from cheaper builds. The 22-level resistance range means
+        the machine won't plateau you in six months the way an 8-level budget option will. And
+        the 20-inch stride fits most adults without the compromised gait you get from 16-inch
+        or 18-inch budget machines.
+      </p>
+      <p>
+        Bluetooth connectivity is worth mentioning specifically: the Schwinn 430 connects to the
+        Schwinn app, but also to third-party platforms including Peloton (via the Peloton app
+        on your own device) and Zwift. You're not forced into a subscription to access the
+        machine's full functionality, which is a meaningful distinction from the NordicTrack
+        SE7i's iFIT dependency. Assembly is legitimately difficult — plan for 2–3 hours and
+        get a second person for the heavy sections.
+      </p>
+
+      <h3>
+        <a href={sunnyUrl} rel="noopener noreferrer sponsored">Sunny Health &amp; Fitness Elliptical</a>
+        — Best Budget
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Stride length:</strong> 18 inches</span>
+        <span class="spec"><strong>Resistance:</strong> 8 levels</span>
+        <span class="spec"><strong>Flywheel:</strong> Single</span>
+        <span class="spec"><strong>Max user weight:</strong> 220–250 lbs (varies by model)</span>
+        <span class="spec"><strong>Folding:</strong> Yes</span>
+        <span class="spec"><strong>Noise level:</strong> Low</span>
+      </div>
+      <p>
+        Sunny Health makes the same promise as every budget fitness brand: commercial-gym-like
+        performance at a fraction of the price. What they actually deliver is different —
+        but still worth $300 if you're honest about your use case. The Sunny elliptical is
+        quiet (better for apartments), folds for storage (better for small spaces), and covers
+        the basic cardio use case without drama. The 18-inch stride is adequate for adults
+        up to about 5'10" before the shorter gait becomes noticeable.
+      </p>
+      <p>
+        The 8-level resistance cap will feel limiting within a year of consistent use — the
+        upper levels stop being challenging once you're in reasonable cardiovascular shape.
+        The single flywheel produces a less smooth stride than the Schwinn's dual setup,
+        especially at lower resistance levels where there's less momentum to smooth out the
+        pedal stroke. For someone starting from scratch who wants to establish a cardio habit
+        before spending more, the Sunny is the right buy. For anyone already fit or planning
+        to use this machine seriously for years, budget for the Schwinn.
+      </p>
+
+      <h3>
+        <a href={nordictrackUrl} rel="noopener noreferrer sponsored">NordicTrack SE7i</a>
+        — Best Mid-Range
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Stride length:</strong> 18 inches</span>
+        <span class="spec"><strong>Resistance:</strong> 26 levels (auto-adjusting)</span>
+        <span class="spec"><strong>Flywheel:</strong> Single 18 lbs</span>
+        <span class="spec"><strong>Max user weight:</strong> 300 lbs</span>
+        <span class="spec"><strong>Folding:</strong> No</span>
+        <span class="spec"><strong>Noise level:</strong> Low-moderate</span>
+      </div>
+      <p>
+        The NordicTrack SE7i is the pick for anyone who wants structured workout programming
+        and is willing to pay for it. The 26-level auto-adjusting resistance syncs with iFIT
+        workouts — trainers control the machine's resistance in real time during classes, which
+        is a meaningfully different experience from manually adjusting a dial. The incline ramp
+        adjustment adds a dimension of difficulty that flat ellipticals can't replicate.
+      </p>
+      <p>
+        The iFIT subscription is the asterisk: $39/month (or ~$180/year) to access the full
+        workout library. The machine functions without a subscription but the value proposition
+        drops considerably if you're just freestriding without the programming. Factor that
+        into the total cost — $800 machine + $180/year in subscriptions is a different budget
+        calculation than a Schwinn 430 with free third-party app compatibility. The 18-inch
+        stride is also shorter than the Schwinn's 20 inches, which is a real tradeoff for
+        taller users at the same price tier.
+      </p>
+    </section>
+
+    <!-- Weight loss section -->
+    <section>
+      <h2>Is an Elliptical Good for Weight Loss?</h2>
+      <p>
+        Yes — and it's one of the best machines for it specifically because the low impact means
+        you can use it every day without accumulating the joint stress that forces rest days
+        on higher-impact equipment. A 155 lb person burns roughly 335 calories in 30 minutes
+        on an elliptical at moderate intensity. That's comparable to running at 5 mph with
+        none of the knee wear.
+      </p>
+      <div class="calorie-grid">
+        <div class="calorie-card">
+          <h4>30 min · Low Intensity</h4>
+          <p class="calorie-burn">~200–250 cal</p>
+          <p>Recovery pace, resistance 4–8, conversational effort. Good for active recovery days or morning sessions before eating.</p>
+        </div>
+        <div class="calorie-card">
+          <h4>30 min · Moderate</h4>
+          <p class="calorie-burn">~300–380 cal</p>
+          <p>Comfortable but working, resistance 10–16, able to speak in short sentences. The most sustainable daily intensity for most people.</p>
+        </div>
+        <div class="calorie-card">
+          <h4>30 min · High Intensity</h4>
+          <p class="calorie-burn">~400–500 cal</p>
+          <p>Resistance 18+, pushing pace, borderline uncomfortable. Not sustainable daily — better as 2–3x per week interval sessions.</p>
+        </div>
+        <div class="calorie-card">
+          <h4>HIIT · 20 min</h4>
+          <p class="calorie-burn">~300–400 cal + afterburn</p>
+          <p>30 sec max effort / 60 sec easy alternating. Shorter sessions with higher post-workout calorie burn (EPOC). Best for time-limited schedules.</p>
+        </div>
+      </div>
+      <p>
+        The practical edge of an elliptical for fat loss: you can do it daily. A 30-minute
+        moderate session every day of the week is 2,100–2,660 calories burned per week — more
+        than most people accumulate through inconsistent running that gets cut short by sore
+        knees or tired legs.
+      </p>
+    </section>
+
+    <!-- Can you build muscle -->
+    <section>
+      <h2>Can You Build Muscle on an Elliptical?</h2>
+      <p>
+        Not meaningfully — at least not the kind of muscle growth you'd get from resistance
+        training. An elliptical trains muscular endurance and cardiovascular capacity. The
+        resistance levels don't create enough mechanical tension to drive hypertrophy in your
+        quads, glutes, or hamstrings the way squats, lunges, or leg press work does.
+      </p>
+      <p>
+        What an elliptical does do for muscle: it maintains the muscle you already have during
+        a fat loss phase better than pure walking or cycling, because the full-body movement
+        pattern keeps more muscle tissue under some load. It's also effective for building
+        aerobic capacity in your legs and improving the muscular endurance that makes weight
+        training sessions feel easier. Think of it as support work for a lifting program, not
+        a replacement for it.
+      </p>
+      <div class="callout-box">
+        <strong>The right combination:</strong> Lift weights 3–4x per week for muscle, use
+        the elliptical 3–5x per week for cardiovascular health and calorie burn. The two
+        complement each other — they don't compete.
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Schwinn 430"
+        nameB="Sunny Health"
+        nameC="NordicTrack SE7i"
+        rows={comparisonRows}
+      />
+    </section>
+
+    <!-- Pros/Cons -->
+    <section>
+      <h2>Schwinn 430 — Pros &amp; Cons</h2>
+      <ProsConsList pros={schwinnPros} cons={schwinnCons} />
+    </section>
+
+    <!-- Who should buy / skip -->
+    <section>
+      <h2>Who Should Buy the Schwinn 430</h2>
+      <p>
+        The Schwinn 430 is the right call for anyone who wants a home elliptical they'll still
+        be using in five years. The 20-inch stride, 22 resistance levels, and dual flywheels
+        put it in a different performance category than budget machines, and the Bluetooth
+        compatibility means you can use it with any app you're already paying for without
+        a new subscription. If your budget reaches $700 and cardio is a serious part of your
+        home gym plan, this is where to spend it.
+      </p>
+      <h2>Who Should Skip the Schwinn 430</h2>
+      <p>
+        Skip it if your budget is under $500 and you want to start a cardio habit rather than
+        commit to a full setup — the Sunny Health at $300 is the right first machine in that
+        scenario. Also skip it if structured, coach-led programming is your primary motivation:
+        the NordicTrack SE7i's iFIT integration delivers a significantly better coached
+        experience if you'll actually use it. And skip it if your space requires a folding
+        machine — the Schwinn 430 doesn't fold.
+      </p>
+    </section>
+
+    <!-- Final Verdict -->
+    <section class="final-verdict">
+      <h2>Final Verdict</h2>
+      <p>
+        For most people building a home gym, the Schwinn 430 is the elliptical to buy. It hits
+        the quality ceiling of what's available under $800, covers users up to 6 feet tall
+        comfortably, and won't plateau you in six months the way budget options do. If $700 is
+        too much right now, the Sunny Health at $300 is a legitimate starting point — it folds,
+        it's quiet, and it covers the basic low-impact cardio use case without complications.
+        Either way, an elliptical in your home gym means cardio that you'll actually do
+        consistently — which is the only metric that matters for weight loss and cardiovascular
+        health.
+      </p>
+      <AffiliateButton
+        href={schwinnUrl}
+        text="Check Price on Amazon"
+        subtext="Best Overall · 20-inch Stride · ~$700"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  header h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+    color: #0f172a;
+  }
+
+  .meta {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0 0 2rem;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 1rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  h3 a {
+    color: #f97316;
+    text-decoration: none;
+  }
+
+  h3 a:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    color: #334155;
+    line-height: 1.75;
+    margin: 0 0 1rem;
+  }
+
+  /* Verdict Box */
+  .verdict-box {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    color: #f8fafc;
+    margin-bottom: 1.25rem;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .pick-card {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .pick-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f97316;
+  }
+
+  .pick-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #f8fafc;
+    text-decoration: none;
+    line-height: 1.3;
+  }
+
+  .pick-title:hover {
+    color: #f97316;
+  }
+
+  .pick-card p {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .pick-price {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #4ade80;
+    margin-top: auto;
+  }
+
+  /* Spec Row */
+  .spec-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    background: #f8fafc;
+    border-left: 3px solid #f97316;
+    padding: 0.75rem 1rem;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 1rem;
+  }
+
+  .spec {
+    font-size: 0.82rem;
+    color: #475569;
+  }
+
+  /* Elliptical vs Treadmill */
+  .vs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .vs-card {
+    border-radius: 8px;
+    padding: 1.25rem;
+    border-top: 4px solid transparent;
+  }
+
+  .vs-elliptical {
+    background: #f0fdf4;
+    border-top-color: #22c55e;
+  }
+
+  .vs-treadmill {
+    background: #eff6ff;
+    border-top-color: #3b82f6;
+  }
+
+  .vs-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.75rem;
+  }
+
+  .vs-card ul {
+    margin: 0 0 0.75rem;
+    padding-left: 1.2rem;
+  }
+
+  .vs-card li {
+    font-size: 0.85rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+
+  .vs-verdict {
+    font-size: 0.82rem;
+    color: #475569;
+    margin: 0;
+  }
+
+  /* Stride Length Grid */
+  .stride-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .stride-card {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 1.1rem;
+  }
+
+  .stride-card h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #f97316;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.35rem;
+  }
+
+  .stride-range {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #4ade80;
+    margin: 0 0 0.5rem;
+  }
+
+  .stride-card p:last-child {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Calorie Grid */
+  .calorie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .calorie-card {
+    background: #0f172a;
+    border-radius: 8px;
+    padding: 1.1rem;
+  }
+
+  .calorie-card h4 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #f97316;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.35rem;
+  }
+
+  .calorie-burn {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #4ade80;
+    margin: 0 0 0.5rem;
+    line-height: 1;
+  }
+
+  .calorie-card p:last-child {
+    font-size: 0.79rem;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Callout Box */
+  .callout-box {
+    background: #fefce8;
+    border: 1px solid #fde047;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    font-size: 0.88rem;
+    color: #713f12;
+    line-height: 1.65;
+    margin-top: 1rem;
+  }
+
+  /* Final Verdict */
+  .final-verdict {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+
+  .final-verdict h2 {
+    color: #c2410c;
+  }
+</style>
