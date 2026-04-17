@@ -1,0 +1,591 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Greek Yogurt for College Students Who Lift (2025)";
+const description =
+  "Greek yogurt is one of the cheapest and most convenient high protein foods for college students. Here are the best picks ranked by protein, taste, and value.";
+const pubDate = "2026-04-16";
+const slug = "best-greek-yogurt-college-students";
+
+const chobaniUrl = "https://www.amazon.com/s?k=chobani+zero+sugar+greek+yogurt&tag=dveverka-20";
+const fageUrl    = "https://www.amazon.com/s?k=fage+total+0+greek+yogurt&tag=dveverka-20";
+const oikosUrl   = "https://www.amazon.com/s?k=oikos+pro+greek+yogurt&tag=dveverka-20";
+
+const comparisonRows = [
+  { label: "Protein (per cup)", a: "12g",       b: "17g",       c: "20g",       winner: "c" },
+  { label: "Calories",          a: "60",        b: "90",        c: "130",       winner: "a" },
+  { label: "Sugar",             a: "0g",        b: "6g",        c: "5g",        winner: "a" },
+  { label: "Fat",               a: "0g",        b: "0g",        c: "0g",        winner: "tie" },
+  { label: "Price per Cup",     a: "~$1.50",    b: "~$1.25",    c: "~$1.75",    winner: "b" },
+];
+
+const fagePros = [
+  "17g protein per 170g cup from a casein-dominant protein blend that digests slowly — keeps you full significantly longer than a whey shake at the same protein count",
+  "0g fat in the Total 0% version with no artificial sweeteners, no added protein isolates, and no thickeners — the ingredient list is milk and live cultures, nothing else",
+  "Thick, dense texture from the authentic straining process — Fage actually strains the whey out rather than adding thickeners to fake the consistency, which produces a noticeably better mouthfeel",
+  "Unflavored versatility — the plain version works as a sour cream substitute, a cooking ingredient, a protein-adding base for sauces, and a topping for pancakes or savory bowls without imposing a flavor",
+  "Widely available at every major grocery chain and most campus-area convenience stores in multiple sizes — 6oz individual cups up to 35oz bulk containers that bring the per-serving cost down significantly",
+];
+
+const fageCons = [
+  "Plain Fage is genuinely tart — the unflavored version requires added toppings or mix-ins to be palatable for most people who are accustomed to sweetened yogurt; eating it plain out of the container is an acquired taste",
+  "Higher sugar than Chobani Zero Sugar at 6g per cup, which is low in absolute terms but relevant for students cutting aggressively who are tracking every gram of carbohydrate",
+  "The large bulk containers (17.6oz and 35oz) are excellent value but less practical if your dorm mini-fridge is small — individual cups are more convenient but cost more per gram of protein",
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        Greek yogurt is one of the most slept-on protein sources for college
+        students. It's cheaper per gram of protein than most protein bars,
+        requires zero prep, available at every grocery store and most dining
+        halls, works as a snack, a meal component, a topping, a cooking
+        ingredient, and a protein powder replacement in a pinch. A 170g cup
+        of Fage Total 0% has 17g of protein for about $1.25 — cheaper than
+        a protein bar with better macros and no artificial sweeteners.
+      </p>
+      <p>
+        The problem is that most students either buy the sweetened, low-protein
+        flavored versions that are essentially dessert with a health halo, or
+        they try plain Greek yogurt once, find it too tart, and give up. The
+        fix is knowing which brand to buy, which version within that brand,
+        and what to do with it. Here are the three worth buying.
+      </p>
+    </section>
+
+    <!-- Quick Verdict -->
+    <section>
+      <h2>Quick Verdict</h2>
+      <div class="verdict-box">
+        <div class="picks-grid">
+          <div class="pick-card">
+            <span class="pick-label">Best Overall</span>
+            <p class="pick-name">Chobani Zero Sugar</p>
+            <p class="pick-detail">12g protein, 60 cal, 0g sugar, ~$1.50/cup</p>
+            <a href={chobaniUrl} class="pick-link" rel="noopener noreferrer sponsored" target="_blank">View on Amazon →</a>
+          </div>
+          <div class="pick-card">
+            <span class="pick-label">Best for Macros</span>
+            <p class="pick-name">Fage Total 0%</p>
+            <p class="pick-detail">17g protein, 90 cal, 6g sugar, ~$1.25/cup</p>
+            <a href={fageUrl} class="pick-link" rel="noopener noreferrer sponsored" target="_blank">View on Amazon →</a>
+          </div>
+          <div class="pick-card">
+            <span class="pick-label">Best High Protein</span>
+            <p class="pick-name">Oikos Pro</p>
+            <p class="pick-detail">20g protein, 130 cal, 5g sugar, ~$1.75/cup</p>
+            <a href={oikosUrl} class="pick-link" rel="noopener noreferrer sponsored" target="_blank">View on Amazon →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Greek vs Regular -->
+    <section>
+      <h2>Greek Yogurt vs Regular Yogurt</h2>
+      <p>
+        The difference is the straining process. Regular yogurt is fermented
+        milk. Greek yogurt is regular yogurt with the liquid whey strained
+        out, which concentrates the protein and reduces the sugar content.
+        It takes roughly three cups of regular yogurt to produce one cup of
+        Greek yogurt, which is why Greek is more expensive — and why the
+        protein count is so much higher.
+      </p>
+      <p>
+        The protein comparison is stark. A cup of regular yogurt has 5–8g
+        of protein. A cup of Greek yogurt has 12–20g depending on the brand
+        and style. Regular yogurt also retains more of the natural milk sugars
+        (lactose) because the straining process that removes them is incomplete
+        — most Greek yogurt runs 5–8g sugar per cup versus 12–15g for regular.
+      </p>
+      <p>
+        The protein type matters too. Greek yogurt is predominantly casein
+        protein — the slow-digesting form that creates a sustained amino acid
+        release over 3–5 hours versus whey's faster 1–2 hour window. For
+        a pre-sleep snack, before a long gap between meals, or as part of
+        a breakfast that needs to hold you through a 90-minute class, casein
+        protein from Greek yogurt performs differently and more usefully
+        than whey in those contexts.
+      </p>
+    </section>
+
+    <!-- How Much Protein -->
+    <section>
+      <h2>How Much Protein Is in Greek Yogurt?</h2>
+      <div class="protein-table">
+        <div class="protein-header">
+          <span>Brand / Type</span>
+          <span>Serving</span>
+          <span>Protein</span>
+          <span>Calories</span>
+        </div>
+        <div class="protein-row">
+          <span>Fage Total 0%</span>
+          <span>170g</span>
+          <span class="protein-highlight">17g</span>
+          <span>90</span>
+        </div>
+        <div class="protein-row">
+          <span>Oikos Pro</span>
+          <span>150g</span>
+          <span class="protein-highlight">20g</span>
+          <span>130</span>
+        </div>
+        <div class="protein-row">
+          <span>Chobani Zero Sugar</span>
+          <span>150g</span>
+          <span class="protein-highlight">12g</span>
+          <span>60</span>
+        </div>
+        <div class="protein-row">
+          <span>Chobani Plain 0%</span>
+          <span>170g</span>
+          <span class="protein-highlight">15g</span>
+          <span>90</span>
+        </div>
+        <div class="protein-row">
+          <span>Regular Yogurt (typical)</span>
+          <span>170g</span>
+          <span>6g</span>
+          <span>100</span>
+        </div>
+        <div class="protein-row accent-row">
+          <span>Large Fage (35oz / bulk)</span>
+          <span>Per 170g serving</span>
+          <span class="protein-highlight">17g</span>
+          <span>~$0.60/serving</span>
+        </div>
+      </div>
+      <p>
+        The bulk container option at the bottom is worth highlighting for
+        students who eat Greek yogurt daily. A 35oz Fage container at roughly
+        $6–8 delivers 8–10 servings at $0.60–0.80 each — less than half
+        the cost of individual cups. If you have fridge space and eat yogurt
+        consistently, buying in bulk is one of the better per-gram-of-protein
+        value improvements available.
+      </p>
+    </section>
+
+    <!-- Chobani -->
+    <section>
+      <h2>1. Chobani Zero Sugar — Best Overall</h2>
+      <p>
+        Chobani Zero Sugar solves the problem that stops most students from
+        eating plain Greek yogurt consistently: it tastes good without requiring
+        toppings. The zero-sugar flavored versions (strawberry, blueberry,
+        black cherry, vanilla) use monk fruit and stevia to deliver a sweetened
+        experience at zero sugar and zero added calories from sweeteners. The
+        result is a cup you can eat straight from the fridge without mentally
+        preparing yourself for tartness.
+      </p>
+      <p>
+        The trade-off versus Fage is protein count: 12g per cup versus
+        Fage's 17g. For students who prioritize palatability and will actually
+        eat Greek yogurt daily because it tastes like a treat, the Chobani
+        Zero Sugar is the better daily driver. For students who are comfortable
+        with plain yogurt and want maximum protein per calorie, Fage wins.
+      </p>
+      <p>
+        At 60 calories and 0g sugar, it's also the most compatible option
+        for aggressive cuts where carbohydrate and calorie targets are tight.
+        A cup in the afternoon provides 12g protein and barely registers
+        on the day's calorie count.
+      </p>
+      <AffiliateButton href={chobaniUrl} label="Buy Chobani Zero Sugar on Amazon" />
+    </section>
+
+    <!-- Fage -->
+    <section>
+      <h2>2. Fage Total 0% — Best for Macros</h2>
+      <p>
+        Fage is the cleanest Greek yogurt available at a mainstream price
+        point. Two ingredients: grade A pasteurized skimmed milk and live
+        active cultures. That's it. No added protein isolates, no thickeners,
+        no stabilizers, no sweeteners — the protein count comes from genuine
+        straining, which is why the texture is notably thicker and denser
+        than competitors who add pectin or starch to fake the consistency.
+      </p>
+      <p>
+        17g of protein at 90 calories for a 170g cup is an excellent
+        protein-to-calorie ratio — about 1g of protein per 5.3 calories,
+        which is competitive with unflavored whey isolate. The protein is
+        predominantly casein, which digests slowly and contributes to satiety
+        for 3–4 hours after eating. Used as a pre-sleep snack at 9–10pm,
+        it provides a slow amino acid release through the overnight fast —
+        the same mechanism as dedicated casein protein supplements, but
+        cheaper and in a form that tastes like food.
+      </p>
+      <p>
+        Buy the large containers when possible. The 35oz size brings the
+        per-serving cost under $0.80, which is significantly cheaper than
+        individual cups and the best protein-per-dollar value in the grocery
+        store dairy aisle.
+      </p>
+      <AffiliateButton href={fageUrl} label="Buy Fage Total 0% on Amazon" />
+    </section>
+
+    <!-- Oikos Pro -->
+    <section>
+      <h2>3. Oikos Pro — Best High Protein</h2>
+      <p>
+        Oikos Pro achieves 20g of protein per cup by adding milk protein
+        concentrate to the base Greek yogurt formula. The result is the
+        highest protein count of any mainstream Greek yogurt — more than
+        most protein bars at a lower calorie cost. If hitting a high daily
+        protein target is the primary goal and you want the most protein
+        per container, Oikos Pro is the pick.
+      </p>
+      <p>
+        The added milk protein concentrate is what distinguishes it from
+        pure-strained options like Fage. It's not a negative from a nutrition
+        standpoint — milk protein concentrate is a complete protein with a
+        good amino acid profile — but it does mean the ingredient list is
+        longer than Fage's minimal two ingredients. For students who care
+        primarily about the protein number, this distinction is irrelevant.
+        For students who prefer cleaner labels, Fage is the better choice.
+      </p>
+      <p>
+        Available in flavored versions (mixed berry, vanilla, strawberry)
+        at most Target, Walmart, and grocery chains. The flavored versions
+        have 5g of sugar from fruit and added sweeteners — acceptable on
+        most diets but worth knowing if you're tracking closely. Price
+        runs $1.75–2.00 per cup.
+      </p>
+      <AffiliateButton href={oikosUrl} label="Buy Oikos Pro on Amazon" />
+    </section>
+
+    <!-- Best Ways to Eat It -->
+    <section>
+      <h2>Best Ways to Eat Greek Yogurt to Hit Your Macros</h2>
+
+      <div class="usage-grid">
+        <div class="usage-card">
+          <h3>With Protein Powder Stirred In</h3>
+          <p>A scoop of vanilla whey stirred into plain Fage creates a protein mousse with 40+ grams of protein per serving and the consistency of a thick dessert. Add berries on top and it's a legitimately satisfying meal that costs under $2.50 total.</p>
+        </div>
+        <div class="usage-card">
+          <h3>As a Sour Cream Substitute</h3>
+          <p>Plain Fage Total 0% tastes nearly identical to sour cream in savory applications — burritos, tacos, chili, baked potatoes. A regular tablespoon of sour cream has 0.5g protein; a tablespoon of Fage has 2g and fewer calories. Small swap, consistent upside.</p>
+        </div>
+        <div class="usage-card">
+          <h3>Overnight Oats Base</h3>
+          <p>½ cup Greek yogurt + ½ cup oats + protein powder + berries overnight = a 40–45g protein breakfast that takes 3 minutes to assemble the night before and zero effort in the morning. The yogurt is what gives overnight oats their creamy texture.</p>
+        </div>
+        <div class="usage-card">
+          <h3>Pre-Sleep Protein Source</h3>
+          <p>A cup of plain Fage 30–60 minutes before bed provides 17g of slow-digesting casein protein that maintains amino acid availability through the overnight fast. Cheaper than dedicated casein powder and more filling because it's actual food with volume.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Chobani Zero Sugar"
+        nameB="Fage Total 0%"
+        nameC="Oikos Pro"
+        rows={comparisonRows}
+      />
+    </section>
+
+    <!-- Pros & Cons -->
+    <section>
+      <h2>Fage Total 0%: Pros &amp; Cons</h2>
+      <ProsConsList pros={fagePros} cons={fageCons} />
+    </section>
+
+    <!-- Who Should Buy -->
+    <section>
+      <h2>Who Should Buy Greek Yogurt</h2>
+      <ul>
+        <li>
+          <strong>Students who struggle to hit daily protein targets from
+          whole food alone.</strong> A cup of Greek yogurt at breakfast or
+          as an afternoon snack adds 15–20g of protein passively — you're
+          eating a snack you'd eat anyway, it just happens to have macros
+          that contribute meaningfully to your daily goal.
+        </li>
+        <li>
+          <strong>Students cutting who need low-calorie, high-protein
+          options.</strong> At 60–90 calories and 12–17g protein, Greek
+          yogurt delivers one of the best protein-to-calorie ratios of
+          any whole food. During a deficit where every calorie matters,
+          it's one of the most efficient ways to stay full and hit protein
+          without spending your calorie budget.
+        </li>
+        <li>
+          <strong>Anyone looking for a pre-sleep protein source.</strong>
+          Casein protein's slow-digesting properties make it specifically
+          useful before an overnight fast. A cup of Fage before bed costs
+          $1.25 and does the same job as a $1.75 scoop of casein powder
+          in a less convenient, less tasty form.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Who Should Skip Greek Yogurt</h2>
+      <ul>
+        <li>
+          <strong>Students who are lactose intolerant.</strong> Greek yogurt
+          has lower lactose than regular yogurt due to the straining process,
+          and many lactose-intolerant people tolerate it fine. But if dairy
+          consistently causes GI issues for you, Greek yogurt is still a
+          dairy product and may trigger the same response. Test a small portion
+          first.
+        </li>
+        <li>
+          <strong>Students who find plain yogurt unpalatable and won't eat
+          it consistently.</strong> A food that's optimal on paper but that
+          you don't eat is worse than a food that's slightly less optimal
+          that you eat every day. If the tartness is a genuine barrier,
+          start with Chobani Zero Sugar in a fruit flavor. Don't force
+          yourself to eat Fage plain if you hate it.
+        </li>
+        <li>
+          <strong>Students who already hit protein targets easily.</strong>
+          If you're consistently hitting 150g+ of protein daily from chicken,
+          eggs, and protein powder, adding Greek yogurt is a marginal
+          optimization rather than a meaningful addition. Buy it if you enjoy
+          it; skip it if you'd rather spend the money elsewhere.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        Greek yogurt is the best value protein source in the grocery store
+        dairy aisle. At $0.60–1.75 per serving for 12–20g of slow-digesting
+        protein, it beats protein bars on cost, beats cottage cheese on taste
+        for most people, and beats plain whey shakes on satiety. The only
+        students who shouldn't be eating it regularly are those with dairy
+        intolerances or genuine taste aversions to anything yogurt-adjacent.
+      </p>
+      <p>
+        Fage Total 0% is the pick for students who care about macros: 17g
+        protein, 90 calories, two ingredients, available everywhere, and
+        significantly cheaper per serving when bought in bulk containers.
+        Plain is the most versatile version — add your own toppings, stir
+        in protein powder, or use it in cooking without adding sweetness
+        you don't want.
+      </p>
+      <p>
+        If you won't eat plain yogurt consistently, start with Chobani Zero
+        Sugar in your favorite flavor. The protein count is lower but the
+        adherence is higher, and a food you actually eat beats an optimal
+        food you avoid.
+      </p>
+      <AffiliateButton href={fageUrl} label="Buy Fage Total 0% on Amazon" />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.4rem;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 0.75rem 0;
+    color: #334155;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Quick Verdict Box */
+  .verdict-box {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-left: 4px solid #f97316;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 0.75rem;
+  }
+
+  .pick-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    padding: 1rem;
+  }
+
+  .pick-label {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f97316;
+    margin-bottom: 0.4rem;
+  }
+
+  .pick-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.25rem;
+    line-height: 1.3;
+  }
+
+  .pick-detail {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0 0 0.75rem;
+    line-height: 1.4;
+  }
+
+  .pick-link {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #f97316;
+    text-decoration: none;
+  }
+
+  .pick-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Protein Table */
+  .protein-table {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin: 1rem 0;
+    font-size: 0.875rem;
+  }
+
+  .protein-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    background: #0f172a;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.6rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .protein-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 0.6rem 0.75rem;
+    gap: 0.5rem;
+    color: #334155;
+    border-top: 1px solid #e2e8f0;
+    align-items: center;
+  }
+
+  .protein-row:nth-child(even) {
+    background: #f8fafc;
+  }
+
+  .protein-highlight {
+    font-weight: 700;
+    color: #15803d;
+  }
+
+  .accent-row {
+    background: #f0fdf4 !important;
+    border-top: 2px solid #22c55e;
+  }
+
+  /* Usage Grid */
+  .usage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .usage-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    padding: 1rem;
+  }
+
+  .usage-card p {
+    font-size: 0.875rem;
+    color: #475569;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 600px) {
+    .picks-grid,
+    .usage-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .protein-header,
+    .protein-row {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .protein-header span:nth-child(2),
+    .protein-row span:nth-child(2) {
+      display: none;
+    }
+  }
+</style>
