@@ -1,0 +1,633 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+
+const title = "Best Pull Up Bar for Home Gym (2025) — Doorframe & Standalone Picks";
+const description =
+  "Pull ups are one of the best exercises you can do. Here are the best pull up bars for home gyms at every price point — from $20 doorframe bars to full standalone rigs.";
+const pubDate = "2026-04-17";
+const slug = "best-pull-up-bar-home-gym";
+
+const ironGymUrl = "https://www.amazon.com/s?k=iron+gym+pull+up+bar+doorframe&tag=dveverka-20";
+const rogueUrl   = "https://www.amazon.com/s?k=wall+mounted+pull+up+bar+home+gym&tag=dveverka-20";
+const titanUrl   = "https://www.amazon.com/s?k=titan+fitness+squat+stand+pull+up&tag=dveverka-20";
+
+const ironGymPros = [
+  "No tools, no drilling, no installation — the bar rests in the doorframe using leverage and your bodyweight, which means it takes 30 seconds to set up and comes down just as fast when you need the doorway clear",
+  "At $30 it's the lowest barrier-to-entry pull up setup available — less than a single month at most commercial gyms and the entire cost is recovered if it gets you doing pull ups consistently for one month",
+  "Multiple grip positions (wide, narrow, neutral/hammer) on the same bar means you can hit pull ups, chin-ups, and neutral-grip pull ups without changing equipment or your position in the doorframe",
+  "Portable — it fits in a duffle bag, travels to dorm rooms or new apartments, and requires no permanent installation that a landlord could object to",
+  "300 lb weight capacity covers the vast majority of users with a comfortable margin — the doorframe contact design distributes load through the trim and door molding rather than a single mounting point",
+];
+
+const ironGymCons = [
+  "Requires a standard doorframe width (24–32 inches) with a lip of at least 3.5 inches to hook over — unusual or very narrow doorframes may not work, and some modern hollow-core interior doors flex uncomfortably under load",
+  "Limited to the doorframe height — you're constrained to whatever ceiling clearance exists above the bar, which in rooms with low ceilings can mean a bent-knee hang rather than full extension on every rep",
+  "No weight plate or weighted vest loading past bodyweight is practical on the door trim contact points — serious weighted pull up training eventually requires a wall mount or rack attachment that can handle the added load safely",
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        If you could add only one piece of equipment to a home gym, a pull up bar would be the
+        argument. A single doorframe bar costing $30 unlocks pull ups, chin-ups, neutral-grip
+        rows, hanging ab work, and passive shoulder decompression — all upper body pulling
+        movements that are nearly impossible to replicate with bodyweight alone. Nothing else
+        at that price comes close.
+      </p>
+      <p>
+        The three picks below span every setup from a doorframe apartment bar to a wall-mounted
+        station to a freestanding standalone rig. The right one depends on whether you're renting,
+        whether you want permanence, and how seriously you're building out your home gym.
+      </p>
+    </section>
+
+    <!-- Verdict Box -->
+    <div class="verdict-box">
+      <h2>Quick Picks</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-label">Best Doorframe</span>
+          <a href={ironGymUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Iron Gym Pull Up Bar
+          </a>
+          <p>No tools, 300 lb capacity, 3 grip positions. The $30 bar that belongs in every home gym.</p>
+          <span class="pick-price">~$30</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Wall Mount</span>
+          <a href={rogueUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Wall-Mounted Pull Up Bar
+          </a>
+          <p>Permanent installation, heavy-duty steel, handles weighted pull ups and kipping. For serious home gyms.</p>
+          <span class="pick-price">~$150</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Standalone</span>
+          <a href={titanUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Titan Squat Stand with Pull Up
+          </a>
+          <p>No wall drilling, built-in pull up bar on squat stand uprights. Two pieces of equipment in one.</p>
+          <span class="pick-price">~$300</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Doorframe vs wall vs standalone -->
+    <section>
+      <h2>Doorframe vs Wall Mount vs Standalone — Which Is Right for You?</h2>
+      <div class="type-grid">
+        <div class="type-card type-doorframe">
+          <h3>Doorframe Bar</h3>
+          <p class="type-price">$20–40</p>
+          <ul>
+            <li>No installation, no tools, no drilling</li>
+            <li>Portable — moves with you</li>
+            <li>Works in any apartment or rental</li>
+            <li>Ceiling height and doorframe width dependent</li>
+            <li>Not suitable for weighted pull ups above bodyweight</li>
+          </ul>
+          <p class="type-verdict"><strong>Best for:</strong> Renters, beginners, first home gym setup</p>
+        </div>
+        <div class="type-card type-wall">
+          <h3>Wall Mount</h3>
+          <p class="type-price">$100–200</p>
+          <ul>
+            <li>Permanent installation into studs</li>
+            <li>Handles heavy loads and weighted pull ups</li>
+            <li>Multiple grip positions and ring attachment points</li>
+            <li>Requires drilling — not renter-friendly</li>
+            <li>Space efficient — stays on the wall when not in use</li>
+          </ul>
+          <p class="type-verdict"><strong>Best for:</strong> Homeowners, serious lifters, garage gyms</p>
+        </div>
+        <div class="type-card type-standalone">
+          <h3>Standalone / Rack Attachment</h3>
+          <p class="type-price">$200–500+</p>
+          <ul>
+            <li>No wall or doorframe required</li>
+            <li>Integrates with a power rack or squat stand</li>
+            <li>Highest weight capacity and stability</li>
+            <li>Largest footprint — needs dedicated floor space</li>
+            <li>Most versatile for adding rings, straps, and accessories</li>
+          </ul>
+          <p class="type-verdict"><strong>Best for:</strong> Dedicated garage gyms, rack owners adding pulling work</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Will it damage my door? -->
+    <section>
+      <h2>Will a Doorframe Pull Up Bar Damage My Door?</h2>
+      <p>
+        The honest answer: it can, but it usually doesn't with proper use. The bar rests on
+        the door molding and trim — it doesn't contact the door itself. Over time, repeated
+        use leaves slight indentation marks on the trim where the bar's contact pads press.
+        These are typically minor and can be buffed out, but they're real.
+      </p>
+      <div class="damage-grid">
+        <div class="damage-card damage-safe">
+          <h3>Lower risk if:</h3>
+          <ul>
+            <li>Your door molding is solid wood (not MDF)</li>
+            <li>You use the foam contact pads that come with the bar</li>
+            <li>Your total weight is under 200 lbs</li>
+            <li>You mount and dismount slowly without swinging</li>
+          </ul>
+        </div>
+        <div class="damage-card damage-risk">
+          <h3>Higher risk if:</h3>
+          <ul>
+            <li>Your trim is MDF or thin composite — it dents easily</li>
+            <li>You kip or swing aggressively while hanging</li>
+            <li>The door itself flexes under load (hollow-core doors)</li>
+            <li>You're doing weighted pull ups — move to a wall mount</li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        For most renters doing bodyweight pull ups: the risk is low with a quality bar and
+        basic care. Place a thin piece of cardboard or foam under the contact points if you
+        want extra insurance on the trim finish.
+      </p>
+    </section>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <h3>
+        <a href={ironGymUrl} rel="noopener noreferrer sponsored">Iron Gym Pull Up Bar</a>
+        — Best Doorframe
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Capacity:</strong> 300 lbs</span>
+        <span class="spec"><strong>Grip positions:</strong> Wide, narrow, neutral</span>
+        <span class="spec"><strong>Installation:</strong> No tools, no drilling</span>
+        <span class="spec"><strong>Fits doorframes:</strong> 24–36 inches wide</span>
+      </div>
+      <p>
+        The Iron Gym is the pull up bar that has been in college apartments and dorm rooms for
+        two decades for good reason — it works, it's cheap, and it requires nothing to install.
+        The leverage design hooks over the door molding and uses your bodyweight to press the
+        bar against the frame, which means the heavier you are, the more secure it sits. It
+        doesn't slip under normal use.
+      </p>
+      <p>
+        Three grip positions on the same bar — wide overhand for pull ups, close underhand for
+        chin-ups, and neutral hammer grips on the ends — cover every major pulling variation
+        without moving. The foam padding on the contact points protects the door trim and gives
+        you a comfortable wrist rest for hanging ab exercises.
+      </p>
+      <p>
+        The floor attachment on many Iron Gym models also lets you use it as a push-up handle
+        set on the floor, which adds dips and elevated push-ups to the equipment's repertoire.
+        At $30 it's the most versatile per-dollar purchase in home gym equipment.
+      </p>
+
+      <h3>
+        <a href={rogueUrl} rel="noopener noreferrer sponsored">Wall-Mounted Pull Up Bar</a>
+        — Best Wall Mount
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Capacity:</strong> 500+ lbs</span>
+        <span class="spec"><strong>Grip positions:</strong> Multiple (varies by model)</span>
+        <span class="spec"><strong>Installation:</strong> Lag bolts into studs</span>
+        <span class="spec"><strong>Height:</strong> Adjustable at install time</span>
+      </div>
+      <p>
+        A wall-mounted pull up bar is the right choice once you've outgrown doorframe bars —
+        whether because you want weighted pull ups, you want to do kipping movements without
+        worrying about the door trim, or you want a permanent station that doesn't get moved.
+        Mounted properly into studs with 3-inch lag bolts, a quality wall mount handles
+        500+ pounds of dynamic load without any movement.
+      </p>
+      <p>
+        The big advantage beyond capacity is flexibility. Most wall-mount designs include
+        multiple width options, ring attachment points, and extension kits for adding a dip
+        station or gymnastics rings. You install it once at your ideal height and it becomes
+        a permanent training station.
+      </p>
+      <p>
+        The catch is irreversibility. This requires drilling into your wall, finding studs,
+        and accepting that you'll patch holes when you move. For renters, that's a non-starter.
+        For homeowners with a dedicated gym space, it's the cleanest pull up setup available.
+      </p>
+
+      <h3>
+        <a href={titanUrl} rel="noopener noreferrer sponsored">Titan Squat Stand with Pull Up Bar</a>
+        — Best Standalone
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Capacity:</strong> 700–1,000 lbs (full rack loads)</span>
+        <span class="spec"><strong>Grip positions:</strong> Pull up bar on uprights</span>
+        <span class="spec"><strong>Installation:</strong> Assembly only, no wall drilling</span>
+        <span class="spec"><strong>Footprint:</strong> ~48 x 24 inches</span>
+      </div>
+      <p>
+        If you're building a home gym around a squat stand or power rack, the integrated pull
+        up bar is the no-brainer option — you're not buying a separate piece of equipment,
+        you're using the uprights you already have. Titan's squat stands include pull up bars
+        across most of their lineup, and the capacity is governed by the rack itself rather
+        than a door or wall anchor.
+      </p>
+      <p>
+        For someone who doesn't own a rack yet, a squat stand with an integrated pull up bar
+        at $300 buys two pieces of equipment simultaneously — a squat and bench setup plus a
+        pull up station. That's meaningful value in a first home gym build where every dollar
+        needs to pull double duty.
+      </p>
+    </section>
+
+    <!-- How to do first pull up -->
+    <section>
+      <h2>How to Do Your First Pull Up</h2>
+      <p>
+        Most people who "can't do pull ups" can do them — they just haven't trained the movement
+        progressively. Three steps to your first rep:
+      </p>
+      <div class="progression-list">
+        <div class="progression-step">
+          <span class="step-num">1</span>
+          <div>
+            <strong>Dead hangs.</strong> Grab the bar, hang with arms fully extended, and hold
+            for as long as possible. Build to 30–60 seconds. This develops grip strength and
+            shoulder joint integrity — both prerequisites for pulling reps.
+          </div>
+        </div>
+        <div class="progression-step">
+          <span class="step-num">2</span>
+          <div>
+            <strong>Scapular pulls.</strong> From a dead hang, retract your shoulder blades
+            without bending your elbows — like you're trying to put your shoulder blades in
+            your back pockets. This activates the lat and upper back muscles that initiate
+            a pull up before your arms do anything.
+          </div>
+        </div>
+        <div class="progression-step">
+          <span class="step-num">3</span>
+          <div>
+            <strong>Negatives.</strong> Use a chair to get your chin above the bar, then lower
+            yourself as slowly as possible — aim for 5–8 seconds on the descent. Your muscles
+            are stronger lowering than lifting. Three sets of 3–5 slow negatives three times
+            per week builds the pulling strength for your first full rep faster than almost
+            anything else.
+          </div>
+        </div>
+      </div>
+      <p>
+        Most people get their first unassisted pull up within 4–8 weeks of consistent work
+        on these three progressions. Chin-ups (underhand grip) are slightly easier than
+        pull ups and a good bridge between negatives and full reps.
+      </p>
+    </section>
+
+    <!-- Exercises beyond pull ups -->
+    <section>
+      <h2>Best Pull Up Bar Exercises Beyond Just Pull Ups</h2>
+      <div class="exercise-grid">
+        <div class="exercise-card">
+          <span class="ex-label">Back &amp; Biceps</span>
+          <ul>
+            <li>Pull-ups (overhand, wide)</li>
+            <li>Chin-ups (underhand, shoulder-width)</li>
+            <li>Neutral-grip pull-ups (hammer)</li>
+            <li>L-sit pull-ups (legs extended)</li>
+          </ul>
+        </div>
+        <div class="exercise-card">
+          <span class="ex-label">Core</span>
+          <ul>
+            <li>Hanging knee raises</li>
+            <li>Hanging leg raises (toes to bar)</li>
+            <li>Windshield wipers</li>
+            <li>L-sit hold (isometric)</li>
+          </ul>
+        </div>
+        <div class="exercise-card">
+          <span class="ex-label">Shoulders</span>
+          <ul>
+            <li>Dead hang (passive decompression)</li>
+            <li>Scapular pulls (shoulder blade retractions)</li>
+            <li>Bar active hangs (packed shoulder position)</li>
+            <li>Archer pull-ups (unilateral)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ProsConsList -->
+    <ProsConsList pros={ironGymPros} cons={ironGymCons} productName="Iron Gym Pull Up Bar" />
+
+    <!-- Who should buy -->
+    <section>
+      <h2>Who Should Buy the Iron Gym Pull Up Bar</h2>
+      <ul>
+        <li>Renters and students who can't drill into walls — the doorframe design requires no installation and leaves no permanent marks when used with care</li>
+        <li>Beginners starting their first pull up progression — at $30, the cost barrier is low enough that there's no reason to delay adding pulling work to your training</li>
+        <li>Anyone who wants a portable pull up bar that travels between apartments or dorm rooms without having to reinstall anything</li>
+      </ul>
+
+      <h2>Who Should Skip It</h2>
+      <ul>
+        <li>Anyone doing weighted pull ups with a belt or vest — the door trim contact design isn't rated for significant loads above bodyweight; move to a wall mount or rack attachment for weighted work</li>
+        <li>Homeowners with a dedicated gym space who want a permanent station — a wall-mounted bar at $150 is a better long-term investment for anyone who can drill into studs</li>
+        <li>Tall lifters in rooms with low ceilings — if your doorframe doesn't leave full arm extension without bent knees, the range of motion limitation makes the bar less useful for strict pull ups</li>
+      </ul>
+    </section>
+
+    <!-- Final Verdict -->
+    <section>
+      <h2>Final Verdict</h2>
+      <p>
+        Start with the Iron Gym. At $30, the decision is effectively free — the cost of one
+        missed gym session. It delivers real pull up training in any doorframe with no tools
+        and no commitment, which means there's no reason to wait until you have a more
+        permanent setup to start building pulling strength.
+      </p>
+      <p>
+        Once you're doing 10 clean pull ups consistently and want to add weight or want a
+        more permanent station, upgrade to a wall mount. If you're building a rack-based home
+        gym simultaneously, get the Titan squat stand with the integrated bar and skip the
+        doorframe bar entirely. But for a first purchase, the Iron Gym is the answer.
+      </p>
+      <AffiliateButton
+        href={ironGymUrl}
+        text="Shop Iron Gym Pull Up Bar on Amazon"
+        subtext="Best Doorframe Pick · $30 · No Tools Required"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    font-family: system-ui, sans-serif;
+    color: #1e293b;
+    line-height: 1.7;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1.75rem;
+    margin-bottom: 0.4rem;
+    color: #1e293b;
+  }
+
+  h3 a { color: #ea580c; text-decoration: none; }
+  h3 a:hover { text-decoration: underline; }
+
+  .meta { font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem; }
+
+  p { margin-bottom: 1rem; }
+
+  ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+
+  li { margin-bottom: 0.45rem; }
+
+  strong { color: #0f172a; }
+
+  /* Verdict box */
+  .verdict-box {
+    background: #fff7ed;
+    border: 2px solid #ea580c;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 { margin-top: 0; color: #ea580c; font-size: 1.2rem; }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .pick-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #fed7aa;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .pick-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ea580c;
+  }
+
+  .pick-title {
+    font-weight: 700;
+    color: #0f172a;
+    text-decoration: none;
+    font-size: 0.93rem;
+    line-height: 1.3;
+  }
+
+  .pick-title:hover { color: #ea580c; }
+
+  .pick-card p { font-size: 0.82rem; color: #475569; margin: 0; flex: 1; }
+
+  .pick-price { font-size: 0.85rem; font-weight: 700; color: #0f172a; }
+
+  /* Type grid */
+  .type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .type-card {
+    border-radius: 10px;
+    padding: 1.1rem;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .type-doorframe { background: #f0fdf4; border-color: #bbf7d0; }
+  .type-wall      { background: #eff6ff; border-color: #bfdbfe; }
+  .type-standalone { background: #fff7ed; border-color: #fed7aa; }
+
+  .type-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .type-doorframe  h3 { color: #166534; }
+  .type-wall       h3 { color: #1d4ed8; }
+  .type-standalone h3 { color: #c2410c; }
+
+  .type-price {
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .type-doorframe  .type-price { color: #15803d; }
+  .type-wall       .type-price { color: #2563eb; }
+  .type-standalone .type-price { color: #ea580c; }
+
+  .type-card ul { margin: 0.25rem 0; padding-left: 1.2rem; flex: 1; }
+
+  .type-card li { font-size: 0.83rem; margin-bottom: 0.3rem; color: #334155; }
+
+  .type-verdict {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.6rem;
+    border-radius: 5px;
+    margin-top: 0.25rem;
+  }
+
+  .type-doorframe  .type-verdict { background: #dcfce7; color: #14532d; }
+  .type-wall       .type-verdict { background: #dbeafe; color: #1e3a8a; }
+  .type-standalone .type-verdict { background: #ffedd5; color: #7c2d12; }
+
+  /* Damage grid */
+  .damage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  @media (max-width: 520px) { .damage-grid { grid-template-columns: 1fr; } }
+
+  .damage-card {
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    border: 1px solid;
+  }
+
+  .damage-safe { background: #f0fdf4; border-color: #bbf7d0; }
+  .damage-risk { background: #fff1f2; border-color: #fecdd3; }
+
+  .damage-card h3 {
+    font-size: 0.87rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .damage-safe h3 { color: #166534; }
+  .damage-risk h3 { color: #9f1239; }
+
+  .damage-card ul { margin: 0; padding-left: 1.2rem; }
+
+  .damage-card li { font-size: 0.84rem; margin-bottom: 0.35rem; color: #334155; }
+
+  /* Spec row */
+  .spec-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+    margin: 0.2rem 0 0.75rem;
+  }
+
+  .spec { font-size: 0.83rem; color: #475569; }
+
+  /* Progression list */
+  .progression-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1rem 0;
+  }
+
+  .progression-step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #ea580c;
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+    font-size: 0.9rem;
+    color: #334155;
+    line-height: 1.55;
+  }
+
+  .step-num {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: #ea580c;
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.88rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.1rem;
+  }
+
+  /* Exercise grid */
+  .exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .exercise-card {
+    background: #0f172a;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .ex-label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #ea580c;
+    margin-bottom: 0.6rem;
+  }
+
+  .exercise-card ul { margin: 0; padding-left: 1.1rem; }
+
+  .exercise-card li { font-size: 0.83rem; color: #cbd5e1; margin-bottom: 0.3rem; }
+</style>
