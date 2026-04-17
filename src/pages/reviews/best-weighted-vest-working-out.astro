@@ -1,0 +1,644 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProsConsList from "../../components/ProsConsList.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
+
+const title = "Best Weighted Vest for Working Out (2025) — Home Gym Picks";
+const description =
+  "A weighted vest turns bodyweight exercises into serious strength training. Here are the best picks for college students and home gym builders ranked by comfort and value.";
+const pubDate = "2026-04-17";
+const slug = "best-weighted-vest-working-out";
+
+const rogueUrl   = "https://www.amazon.com/s?k=rogue+weight+vest&tag=dveverka-20";
+const cross101Url = "https://www.amazon.com/s?k=cross101+adjustable+weight+vest&tag=dveverka-20";
+const tactecUrl  = "https://www.amazon.com/s?k=5.11+tactec+plate+carrier+weight+vest&tag=dveverka-20";
+
+const cross101Pros = [
+  "At ~$60 it's the lowest-cost way to add load to pull ups, push ups, and dips — cheaper than a single month at most commercial gyms and the investment pays back the first week you use it",
+  "Adjustable weight in small increments means you can start at 5 lbs and work up to the vest's max over months rather than committing to a fixed load that might be too heavy or too light on day one",
+  "Wide shoulder straps and a wrap-around design distribute weight across the chest and back rather than concentrating it on one point — comfortable enough for AMRAP sets and shorter conditioning workouts without causing shoulder pressure",
+  "Fits most torso shapes without extensive adjustment — the buckle system lets you cinch it snug for pull ups without the vest shifting, and loosen slightly for squats or running where rigidity matters less",
+  "Works for a wide range of exercises without modification — pull ups, dips, push ups, walking lunges, box steps, and light running are all functional with the Cross101 at moderate weights",
+];
+
+const cross101Cons = [
+  "The weight distribution isn't as even as premium vests — at higher loads (20+ lbs) there's noticeable front-back imbalance that makes running uncomfortable and causes the vest to shift during dynamic movements like box jumps",
+  "Build quality is adequate but not long-term durable — the stitching and buckle hardware hold up fine for bodyweight work but show wear faster than the Rogue or TacTec under frequent use, especially if the vest gets sweated on daily",
+  "Weight pocket system is functional but not elegant — adding and removing weights takes more effort than the quick-adjust sand-filled designs on premium vests, which matters when you want to drop weight mid-workout",
+];
+
+const comparisonRows = [
+  { feature: "Price", nameA: "Rogue Weight Vest", nameB: "Cross101", nameC: "5.11 TacTec", valueA: "~$175", valueB: "~$60", valueC: "~$180", winner: "B" },
+  { feature: "Max Weight", nameA: "Rogue Weight Vest", nameB: "Cross101", nameC: "5.11 TacTec", valueA: "20 lbs", valueB: "40 lbs", valueC: "~30 lbs (plates)", winner: "B" },
+  { feature: "Adjustable", nameA: "Rogue Weight Vest", nameB: "Cross101", nameC: "5.11 TacTec", valueA: "Yes (1 lb increments)", valueB: "Yes (variable)", valueC: "Yes (plate swaps)", winner: "A" },
+  { feature: "Best For", nameA: "Rogue Weight Vest", nameB: "Cross101", nameC: "5.11 TacTec", valueA: "Pull ups, runs, WODs", valueB: "Bodyweight work, walking", valueC: "Rucking, heavy carries", winner: "" },
+  { feature: "Comfort Rating", nameA: "Rogue Weight Vest", nameB: "Cross101", nameC: "5.11 TacTec", valueA: "Excellent", valueB: "Good", valueC: "Excellent", winner: "" },
+];
+---
+
+<Layout {title} {description} canonicalUrl={`/reviews/${slug}`}>
+  <article class="review">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        Published: <time datetime={pubDate}>{pubDate}</time>
+      </p>
+    </header>
+
+    <!-- Intro -->
+    <section>
+      <p>
+        At some point, push ups get easy. Pull ups get easy. Dips get easy. And when that happens,
+        most people either add reps until the set takes four minutes, or they stall out and wonder
+        why they're not getting stronger. The actual solution is simpler: add weight. A weighted
+        vest is the cheapest way to turn bodyweight exercises back into strength training — and
+        unlike a dumbbell between your feet during pull ups, a vest keeps your hands free,
+        your form intact, and the load stable through the full range of motion.
+      </p>
+      <p>
+        The three picks below cover every budget from $60 to $180, from basic adjustable vests
+        to plate carrier systems. Here's what each one is actually good for.
+      </p>
+    </section>
+
+    <!-- Verdict Box -->
+    <div class="verdict-box">
+      <h2>Quick Picks</h2>
+      <div class="picks-grid">
+        <div class="pick-card">
+          <span class="pick-label">Best Overall</span>
+          <a href={rogueUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            Rogue Weight Vest
+          </a>
+          <p>20 lbs, 1 lb increments, built for high-rep CrossFit-style work. Best fit and stability of the three.</p>
+          <span class="pick-price">~$175</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Budget</span>
+          <a href={cross101Url} rel="noopener noreferrer sponsored" class="pick-title">
+            Cross101 Adjustable Vest
+          </a>
+          <p>Up to 40 lbs, adjustable in small increments, covers the full exercise list at a fraction of the price.</p>
+          <span class="pick-price">~$60</span>
+        </div>
+        <div class="pick-card">
+          <span class="pick-label">Best Premium</span>
+          <a href={tactecUrl} rel="noopener noreferrer sponsored" class="pick-title">
+            5.11 TacTec Plate Carrier
+          </a>
+          <p>Plate carrier design, military-grade build, excellent weight distribution for rucking and heavy carries.</p>
+          <span class="pick-price">~$180</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plate carrier vs traditional -->
+    <section>
+      <h2>Plate Carrier vs Traditional Weighted Vest — Which Should You Buy?</h2>
+      <p>
+        These are two different tools that happen to add weight to your torso. Knowing the
+        difference before you buy saves you from picking the wrong one.
+      </p>
+      <div class="carrier-grid">
+        <div class="carrier-card carrier-traditional">
+          <h3>Traditional Weighted Vest</h3>
+          <p class="carrier-price">Rogue / Cross101 · $60–175</p>
+          <ul>
+            <li>Weight is distributed in small pockets across the vest</li>
+            <li>Flexible, form-fitting — moves with your body</li>
+            <li>Better for dynamic exercises: pull ups, push ups, runs, box jumps</li>
+            <li>Fine-grained weight adjustment (1–5 lb increments)</li>
+            <li>Sits close to the body — less movement and shifting during reps</li>
+          </ul>
+          <p class="carrier-verdict"><strong>Best for:</strong> Bodyweight training, conditioning, home gym work</p>
+        </div>
+        <div class="carrier-card carrier-plate">
+          <h3>Plate Carrier</h3>
+          <p class="carrier-price">5.11 TacTec · ~$180</p>
+          <ul>
+            <li>Designed for steel or ceramic armor plates (use training plates)</li>
+            <li>Weight sits in two pockets — front and back of torso</li>
+            <li>Best for slow, steady-state work: rucking, loaded walks, carries</li>
+            <li>Weight adjustments require swapping out full plates</li>
+            <li>More rigid than traditional vests — less comfortable for high-rep dynamic work</li>
+          </ul>
+          <p class="carrier-verdict"><strong>Best for:</strong> Rucking, weighted hikes, slow carries, military-style conditioning</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Reviews -->
+    <section>
+      <h2>Full Reviews</h2>
+
+      <h3>
+        <a href={rogueUrl} rel="noopener noreferrer sponsored">Rogue Weight Vest</a>
+        — Best Overall
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Max weight:</strong> 20 lbs</span>
+        <span class="spec"><strong>Increments:</strong> 1 lb</span>
+        <span class="spec"><strong>Adjustable:</strong> Yes</span>
+        <span class="spec"><strong>Style:</strong> Traditional vest</span>
+        <span class="spec"><strong>Best for:</strong> Pull ups, push ups, running, WODs</span>
+      </div>
+      <p>
+        Rogue makes equipment built for abuse, and the weight vest is no exception. The 1 lb
+        increment system lets you dial in load precisely — useful when you're trying to add
+        progressive overload to pull ups where jumping from 10 lbs to 15 lbs in one step might
+        push you out of your rep range. The fit is snug without being constrictive, stays put
+        through kipping pull ups and dynamic movements, and the shoulder construction doesn't
+        dig into your traps during long conditioning sets.
+      </p>
+      <p>
+        The 20 lb cap is the main limitation — if you're already strong and looking to add
+        serious load to your bodyweight work, 20 lbs tops out faster than you'd like. For most
+        people working at the intersection of bodyweight strength and conditioning, though,
+        20 lbs at 1 lb increments is plenty for years of progression.
+      </p>
+
+      <h3>
+        <a href={cross101Url} rel="noopener noreferrer sponsored">Cross101 Adjustable Weight Vest</a>
+        — Best Budget
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Max weight:</strong> 40 lbs</span>
+        <span class="spec"><strong>Increments:</strong> Variable</span>
+        <span class="spec"><strong>Adjustable:</strong> Yes</span>
+        <span class="spec"><strong>Style:</strong> Traditional vest</span>
+        <span class="spec"><strong>Best for:</strong> Bodyweight training, walking, moderate conditioning</span>
+      </div>
+      <p>
+        For $60, the Cross101 is genuinely hard to fault for the exercises it's designed for.
+        Pull ups, push ups, dips, walking lunges, and box steps — it handles all of them without
+        shifting or digging in at lighter loads (under 20 lbs). The wide shoulder straps and
+        adjustable buckle system give a secure fit for most torso shapes, and the adjustable
+        weight system means you're not locked into a fixed load from day one.
+      </p>
+      <p>
+        It shows its price at higher loads and during high-impact work. Running with 25+ lbs
+        in the Cross101 is uncomfortable — the front-back imbalance and vest bounce become
+        noticeable above 20 lbs of total load. For bodyweight strength training at moderate
+        weights, though, it does the job at a fraction of the Rogue price.
+      </p>
+
+      <h3>
+        <a href={tactecUrl} rel="noopener noreferrer sponsored">5.11 Tactical TacTec Plate Carrier</a>
+        — Best Premium
+      </h3>
+      <div class="spec-row">
+        <span class="spec"><strong>Max weight:</strong> ~30 lbs (plate-dependent)</span>
+        <span class="spec"><strong>Increments:</strong> Plate swaps</span>
+        <span class="spec"><strong>Adjustable:</strong> Yes (via plates)</span>
+        <span class="spec"><strong>Style:</strong> Plate carrier</span>
+        <span class="spec"><strong>Best for:</strong> Rucking, loaded hikes, heavy steady-state carries</span>
+      </div>
+      <p>
+        The TacTec is a different piece of equipment than the other two and shouldn't be
+        compared directly. It's a plate carrier — built to hold steel training plates close
+        to your torso with military-grade construction and padding. The weight distribution
+        across front and back plates is exceptional for slow, sustained work: rucking, loaded
+        walks, stair climbing, and farmer-carry style conditioning.
+      </p>
+      <p>
+        Where it falls short for standard home gym use: pull ups and push ups in a plate
+        carrier are awkward. The rigid structure doesn't flex with dynamic movements the way
+        a traditional vest does, and swapping plates to adjust weight is a bigger production
+        than pulling or adding a 1 lb packet. If rucking and loaded carries are your primary
+        use case, the TacTec is the best option at the price. For pull-up and push-up
+        progressions, get the Rogue or Cross101 instead.
+      </p>
+    </section>
+
+    <!-- Best exercises -->
+    <section>
+      <h2>What Exercises Are Best with a Weighted Vest?</h2>
+      <p>
+        A weighted vest improves almost any bodyweight movement — but some benefit more than
+        others. These six are the core use cases:
+      </p>
+      <div class="exercise-grid">
+        <div class="exercise-card">
+          <h4>Pull Ups</h4>
+          <p>The primary use case for most home gym vests. Once you can do 10–15 clean reps, adding weight is the only path to continued strength gains. Even 10 lbs changes the stimulus dramatically.</p>
+        </div>
+        <div class="exercise-card">
+          <h4>Push Ups</h4>
+          <p>A weighted vest turns push ups back into a challenging chest and tricep movement for anyone who's been training more than 6 months. Use it for max-effort sets or loaded push up progressions.</p>
+        </div>
+        <div class="exercise-card">
+          <h4>Dips</h4>
+          <p>Parallel bar dips loaded with a vest are one of the best tricep and lower-chest movements you can do. The vest keeps your hands free and posture more natural than a dumbbell between your knees.</p>
+        </div>
+        <div class="exercise-card">
+          <h4>Walking / Rucking</h4>
+          <p>Low-intensity cardio with a vest — often called rucking — burns significantly more calories than walking alone and builds work capacity without joint stress. 20–30 lb vest, 3–5 mph, 30–60 min.</p>
+        </div>
+        <div class="exercise-card">
+          <h4>Running</h4>
+          <p>Light vest only (5–10% of bodyweight). Increases caloric expenditure and cardiovascular demand. Requires a snug-fitting vest that doesn't bounce — the Rogue handles this better than the Cross101 at running speeds.</p>
+        </div>
+        <div class="exercise-card">
+          <h4>Squats & Lunges</h4>
+          <p>Body-weight squats and walking lunges with a vest build lower body endurance and volume without a barbell. Not a replacement for loaded squats, but useful for conditioning circuits and active recovery days.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How heavy -->
+    <section>
+      <h2>How Heavy Should Your Weighted Vest Be?</h2>
+      <p>
+        The standard starting point: <strong>5–10% of your bodyweight</strong>. For a 180 lb person
+        that's 9–18 lbs — enough to meaningfully increase difficulty without wrecking form or
+        creating excessive joint stress. Here's how to think about it by exercise:
+      </p>
+      <div class="weight-grid">
+        <div class="weight-card">
+          <h4>Pull Ups & Dips</h4>
+          <p class="weight-range">Start: 5–10 lbs<br />Intermediate: 10–25 lbs<br />Advanced: 25–45 lbs</p>
+          <p>Progress slowly — adding too much too fast ruins technique before strength has a chance to catch up.</p>
+        </div>
+        <div class="weight-card">
+          <h4>Push Ups</h4>
+          <p class="weight-range">Start: 5–15 lbs<br />Intermediate: 15–30 lbs<br />Advanced: 30–45 lbs</p>
+          <p>Heavier than pull ups at each stage because the movement is less technically demanding under load.</p>
+        </div>
+        <div class="weight-card">
+          <h4>Rucking / Walking</h4>
+          <p class="weight-range">Start: 10–20 lbs<br />Intermediate: 20–35 lbs<br />Advanced: 35–50 lbs</p>
+          <p>Higher loads are practical for slow-paced walking. Most rucking protocols target 20–30 lbs as the sweet spot for sustained distance.</p>
+        </div>
+        <div class="weight-card">
+          <h4>Running</h4>
+          <p class="weight-range">Start: 5–10 lbs<br />Max recommended: 10–15 lbs</p>
+          <p>More than 10% of bodyweight while running increases impact forces on knees and ankles. Keep it light for running — heavier for static work.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fat loss section -->
+    <section>
+      <h2>Is a Weighted Vest Worth It for Fat Loss?</h2>
+      <p>
+        Yes, with appropriate expectations. A weighted vest increases caloric expenditure on
+        every activity you do while wearing it — walking, workouts, even standing. The effect
+        isn't enormous, but it's real: a 20 lb vest adds roughly 5–10% more calories burned
+        per session compared to the same workout unweighted. Over time, that compounds.
+      </p>
+      <p>
+        The bigger fat loss benefit is indirect. A weighted vest makes bodyweight training
+        challenging again — meaning you can build and preserve muscle mass while in a calorie
+        deficit, which is what actually drives body composition change. If you're cutting
+        calories and doing weighted pull ups, push ups, and rucking, you'll hold on to more
+        muscle than someone doing the same cardio unweighted. That's the real argument for
+        a vest during a fat loss phase.
+      </p>
+      <div class="callout-box">
+        <strong>Quick rule:</strong> Wear the vest during conditioning work and walks, not as a
+        substitute for progressive strength training. It adds load to what you're already doing —
+        it doesn't replace heavier dumbbell or barbell work if building muscle is the goal.
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section>
+      <h2>Side-by-Side Comparison</h2>
+      <ComparisonTable
+        nameA="Rogue Weight Vest"
+        nameB="Cross101"
+        nameC="5.11 TacTec"
+        rows={comparisonRows}
+      />
+    </section>
+
+    <!-- Pros/Cons -->
+    <section>
+      <h2>Cross101 Adjustable Vest — Pros & Cons</h2>
+      <ProsConsList pros={cross101Pros} cons={cross101Cons} />
+    </section>
+
+    <!-- Who should buy / skip -->
+    <section>
+      <h2>Who Should Buy the Cross101</h2>
+      <p>
+        The Cross101 is for anyone who wants to add a weighted vest to their home gym without
+        spending $175. If your primary use case is pull ups, push ups, dips, and loaded walks
+        at weights under 20 lbs, it covers the full exercise list at a fraction of the Rogue
+        price. It's also the right call if you're new to weighted vest training and want to
+        experiment before committing to a premium option.
+      </p>
+      <h2>Who Should Skip the Cross101</h2>
+      <p>
+        Skip it if you're planning to run with the vest regularly — the fit and weight
+        distribution aren't built for that use case at higher loads. Also skip it if you
+        want a long-term setup you won't need to replace in 2–3 years of heavy daily use;
+        the Rogue is worth the premium for that scenario. And if rucking and loaded carries
+        are your main goal, get the TacTec — it's built for exactly that and the Cross101 isn't.
+      </p>
+    </section>
+
+    <!-- Final Verdict -->
+    <section class="final-verdict">
+      <h2>Final Verdict</h2>
+      <p>
+        If your pull ups and push ups have gotten too easy, a weighted vest is the fix —
+        and the Cross101 at $60 is the lowest-friction way to get there. It handles
+        every standard bodyweight exercise at moderate loads, adjusts in small increments
+        so you can progress sensibly, and won't eat your equipment budget before you know
+        whether you like training with added weight. If you're ready to commit to vest
+        training long-term, step up to the Rogue for better fit, finer increments, and
+        build quality that lasts. Either way, the upgrade from unweighted bodyweight work
+        to even 10 lbs of added load is noticeable the first session.
+      </p>
+      <AffiliateButton
+        href={cross101Url}
+        text="Check Price on Amazon"
+        subtext="Best Budget Pick · Up to 40 lbs · ~$60"
+      />
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .review {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  header h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+    color: #0f172a;
+  }
+
+  .meta {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0 0 2rem;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 1rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  h3 a {
+    color: #f97316;
+    text-decoration: none;
+  }
+
+  h3 a:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    color: #334155;
+    line-height: 1.75;
+    margin: 0 0 1rem;
+  }
+
+  /* Verdict Box */
+  .verdict-box {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin: 2rem 0;
+  }
+
+  .verdict-box h2 {
+    color: #f8fafc;
+    margin-bottom: 1.25rem;
+  }
+
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .pick-card {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .pick-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #f97316;
+  }
+
+  .pick-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #f8fafc;
+    text-decoration: none;
+    line-height: 1.3;
+  }
+
+  .pick-title:hover {
+    color: #f97316;
+  }
+
+  .pick-card p {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .pick-price {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #4ade80;
+    margin-top: auto;
+  }
+
+  /* Spec Row */
+  .spec-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    background: #f8fafc;
+    border-left: 3px solid #f97316;
+    padding: 0.75rem 1rem;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 1rem;
+  }
+
+  .spec {
+    font-size: 0.82rem;
+    color: #475569;
+  }
+
+  /* Carrier Grid */
+  .carrier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .carrier-card {
+    border-radius: 8px;
+    padding: 1.25rem;
+    border-top: 4px solid transparent;
+  }
+
+  .carrier-traditional {
+    background: #f0fdf4;
+    border-top-color: #22c55e;
+  }
+
+  .carrier-plate {
+    background: #f0f9ff;
+    border-top-color: #0ea5e9;
+  }
+
+  .carrier-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 0.2rem;
+    color: #0f172a;
+  }
+
+  .carrier-price {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+  }
+
+  .carrier-card ul {
+    margin: 0 0 0.75rem;
+    padding-left: 1.2rem;
+  }
+
+  .carrier-card li {
+    font-size: 0.85rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+
+  .carrier-verdict {
+    font-size: 0.82rem;
+    color: #475569;
+    margin: 0;
+  }
+
+  /* Exercise Grid */
+  .exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .exercise-card {
+    background: #0f172a;
+    border-radius: 8px;
+    padding: 1.1rem;
+  }
+
+  .exercise-card h4 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #f97316;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .exercise-card p {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Weight Guide Grid */
+  .weight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .weight-card {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 1.1rem;
+  }
+
+  .weight-card h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #f97316;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.5rem;
+  }
+
+  .weight-range {
+    font-size: 0.8rem;
+    color: #4ade80;
+    font-weight: 600;
+    line-height: 1.6;
+    margin: 0 0 0.5rem;
+  }
+
+  .weight-card p:last-child {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Callout Box */
+  .callout-box {
+    background: #fefce8;
+    border: 1px solid #fde047;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    font-size: 0.88rem;
+    color: #713f12;
+    line-height: 1.65;
+    margin-top: 1rem;
+  }
+
+  /* Final Verdict */
+  .final-verdict {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+
+  .final-verdict h2 {
+    color: #c2410c;
+  }
+</style>
