@@ -2,29 +2,41 @@
 import Layout from "../../layouts/Layout.astro";
 import ProsConsList from "../../components/ProsConsList.astro";
 import AffiliateButton from "../../components/AffiliateButton.astro";
+import ComparisonTable from "../../components/ComparisonTable.astro";
 
 const title = "Best Whey Protein for Cutting: Top Picks for College Students (2025)";
 const description =
-  "Trying to lean out without losing muscle? These are the best whey proteins for cutting as a college student on a budget.";
-const pubDate = "2026-04-15";
+  "Trying to lean out without losing muscle? These are the best whey proteins for cutting — isolates and budget picks for college students watching every calorie.";
+const pubDate = "2026-04-16";
 const slug = "best-whey-protein-cutting-college-students";
 
-const isopureUrl = "https://www.amazon.com/s?k=isopure+zero+carb+protein&tag=dveverka-20";
+const isopureUrl = "https://www.amazon.com/s?k=isopure+zero+carb+protein+powder&tag=dveverka-20";
 const onUrl = "https://www.amazon.com/s?k=optimum+nutrition+gold+standard+whey&tag=dveverka-20";
 const ghostUrl = "https://www.amazon.com/s?k=ghost+whey+protein&tag=dveverka-20";
+const transparentUrl = "https://www.amazon.com/s?k=transparent+labs+whey+isolate&tag=dveverka-20";
+const dymatizeUrl = "https://www.amazon.com/s?k=dymatize+iso100+whey+isolate&tag=dveverka-20";
 
 const pros = [
-  "Zero carbs and zero fat — the cleanest macro profile of any mainstream protein powder",
-  "25g protein for just 100 calories makes hitting targets easy without blowing your calorie budget",
-  "No filler ingredients — pure whey protein isolate with nothing to hide",
-  "Mixes cleanly and doesn't leave the thick, heavy feeling that concentrates do",
-  "Available in flavored and unflavored — versatile enough to cook with or mix into anything",
+  "25g protein at only 100 calories per serving — one of the best protein-to-calorie ratios available, exactly what matters when every calorie has to earn its place",
+  "Zero carbs and zero fat means the macros are pure protein — no hidden calories from fillers, fits into almost any cutting diet without throwing off your daily targets",
+  "Mixes clean in water without a blender — no gritty texture, no clumping, just shake it in a bottle and drink it between classes",
+  "Unflavored version works as a completely invisible protein boost — add it to oatmeal, yogurt, or coffee without changing the taste at all",
+  "Lactose-free isolate is easy on digestion compared to concentrates — relevant for the large number of college students with mild undiagnosed lactose sensitivity",
 ];
 
 const cons = [
-  "More expensive than concentrate-based powders — around $1.50–2.00 per serving",
-  "Flavor selection is limited compared to competitors like Ghost or ON",
-  "The price premium is hard to justify if you're not actively cutting — Gold Standard is better value otherwise",
+  "More expensive than concentrate-based powders — around $1.50–2.00 per serving, roughly $0.50 more than budget options",
+  "Flavored versions are hit or miss — vanilla and chocolate are solid, but fruit flavors lean artificial in a way that gets old quickly",
+  "The price premium is hard to justify if you're not actively cutting — Gold Standard or Dymatize are better value otherwise",
+];
+
+const rows = [
+  { label: "Protein per serving", a: "25g", b: "28g", c: "25g", winner: "b" },
+  { label: "Calories", a: "100", b: "120", c: "110", winner: "a" },
+  { label: "Carbs", a: "0g", b: "1g", c: "1g", winner: "a" },
+  { label: "Fat", a: "0g", b: "1g", c: "0.5g", winner: "a" },
+  { label: "Cost per serving", a: "~$1.75", b: "~$2.50", c: "~$1.50", winner: "c" },
+  { label: "Best for", a: "Cutting strict", b: "Quality & trust", c: "Value isolate", winner: "tie" },
 ];
 ---
 
@@ -51,7 +63,7 @@ const cons = [
         doing it with as few extra calories as possible. The wrong choice costs you 100–150
         unnecessary calories per serving, every single day. The right choice fits into a tight
         calorie deficit without sacrificing the 0.8–1g per pound of protein your muscles need
-        to hold on to what you built. Here are three picks that actually understand the assignment.
+        to hold on to what you built. Here are the best options for every budget.
       </p>
     </section>
 
@@ -68,10 +80,10 @@ const cons = [
           </a>
         </div>
         <div class="pick-card">
-          <span class="pick-badge alt">Best Overall</span>
-          <p class="pick-name">ON Gold Standard</p>
-          <p class="pick-detail">120 cal · 24g protein · 3g carbs</p>
-          <a href={onUrl} target="_blank" rel="noopener noreferrer sponsored" class="pick-link">
+          <span class="pick-badge alt">Best Value Isolate</span>
+          <p class="pick-name">Dymatize ISO100</p>
+          <p class="pick-detail">110 cal · 25g protein · 1g carbs</p>
+          <a href={dymatizeUrl} target="_blank" rel="noopener noreferrer sponsored" class="pick-link">
             View on Amazon →
           </a>
         </div>
@@ -88,6 +100,55 @@ const cons = [
         <small>As an Amazon Associate I earn from qualifying purchases.</small>
       </p>
     </div>
+
+    <!-- How protein helps weight loss -->
+    <section>
+      <h2>How Does Protein Actually Help With Weight Loss?</h2>
+      <p>
+        Three mechanisms, all relevant to cutting as a college student:
+      </p>
+      <p>
+        <strong>Satiety.</strong> Protein is the most filling macronutrient per calorie. A 25g
+        protein shake at 100 calories will keep you more satisfied for longer than 100 calories of
+        crackers, fruit, or even complex carbs. When dining hall options are limited and you're
+        trying to eat at a deficit, having a high-protein snack makes it significantly easier to
+        avoid overeating.
+      </p>
+      <p>
+        <strong>Thermic effect.</strong> Your body burns more calories digesting protein than it
+        does digesting carbs or fat — roughly 20–30% of the calories in protein get used up in the
+        digestion process itself. It's not a huge effect on its own, but it adds a modest metabolic
+        advantage to a high-protein diet without requiring anything extra from you.
+      </p>
+      <p>
+        <strong>Muscle preservation.</strong> This is the big one. When you're eating in a calorie
+        deficit, your body will break down muscle for energy if it doesn't get enough protein.
+        Losing muscle while cutting makes you weaker, slows your metabolism over time, and means
+        the weight you lose is partly muscle — not the goal. High protein intake during a cut
+        preserves muscle so the weight you lose is mostly fat.
+      </p>
+    </section>
+
+    <!-- Isolate vs Concentrate -->
+    <section>
+      <h2>Whey Isolate vs Concentrate When Cutting</h2>
+      <p>
+        If you're buying protein powder specifically for cutting, isolate is the better choice
+        and it's not close.
+      </p>
+      <p>
+        Whey concentrate is cheaper and still a solid protein source, but it retains more of the
+        fat and lactose from milk during processing — typically 70–80% protein by weight compared to
+        90%+ for isolate. That difference translates to more carbs and fat per serving, which means
+        more calories for the same amount of protein. When you're trying to stay in a 300–500
+        calorie deficit, those extra 20–30 calories per serving add up across a month of daily use.
+      </p>
+      <p>
+        Isolate is processed further to remove most of the fat and carbs, leaving you with nearly
+        pure protein. It's typically $0.25–0.50 more per serving, but for cutting purposes the
+        cleaner macro profile is worth it. Three of the five picks below are true isolates.
+      </p>
+    </section>
 
     <!-- How much protein when cutting -->
     <section>
@@ -144,6 +205,17 @@ const cons = [
       </p>
     </section>
 
+    <!-- Isolate Comparison Table -->
+    <section>
+      <h2>Isolate Comparison: Macros & Cost at a Glance</h2>
+      <ComparisonTable
+        nameA="Isopure Zero Carb"
+        nameB="Transparent Labs Whey"
+        nameC="Dymatize ISO100"
+        rows={rows}
+      />
+    </section>
+
     <!-- Full Reviews -->
     <section>
       <h2>Full Reviews</h2>
@@ -167,25 +239,59 @@ const cons = [
           left with is about as close to pure protein as a powder gets.
         </p>
         <p>
-          <strong>Taste:</strong> The flavored versions are decent but lean toward subtle — this
-          isn't a powder built around dessert flavors. Dutch Chocolate and Creamy Vanilla are the
-          most consistent performers. The unflavored version is genuinely tasteless, which makes it
-          useful for adding to oatmeal, yogurt, or cooking without changing the flavor profile.
+          <strong>Taste:</strong> The flavored versions are decent but lean toward subtle. Dutch
+          Chocolate and Creamy Vanilla are the most consistent performers. Avoid the fruit flavors
+          — they lean artificial in a way that gets old quickly. The unflavored version is genuinely
+          tasteless, which makes it useful for adding to oatmeal, yogurt, or cooking without changing
+          the flavor profile.
         </p>
         <p>
           <strong>Cost per serving:</strong> Around $1.50–2.00 depending on retailer and size.
-          Higher than Gold Standard, which is the honest trade-off for the purer formula. If you're
-          not actively cutting, the calorie difference between Isopure and Gold Standard is small
-          enough that it's not worth the price premium.
+          Higher than Gold Standard or ISO100, which is the honest trade-off for the purer formula.
+          If you're not actively cutting, the calorie difference is small enough that it's not worth
+          the price premium.
         </p>
         <p>
           <strong>Best for:</strong> Students in an active calorie deficit who want maximum protein
-          per calorie and are willing to pay a bit more for a cleaner formula.
+          per calorie and a formula clean enough that you know exactly what you're putting in your body.
         </p>
 
         <h4>Pros & Cons</h4>
         <ProsConsList pros={pros} cons={cons} />
         <AffiliateButton href={isopureUrl} label="Buy Isopure Zero Carb on Amazon" />
+      </div>
+
+      <div class="product-section">
+        <h3>
+          <span class="badge value">Best Value Isolate</span>
+          Dymatize ISO100
+        </h3>
+        <p>
+          Dymatize ISO100 is the best argument for not overpaying for protein powder. It's a
+          hydrolyzed whey isolate — pre-digested for faster absorption — with 25g protein and about
+          110 calories per serving. The macro profile is nearly identical to Isopure at a lower cost
+          per serving, often available for around $1.25–1.50 depending on the size you buy.
+        </p>
+        <p>
+          <strong>Macros per serving:</strong> 110 calories, 25g protein, 1g carbs, 0.5g fat.
+          Close enough to Isopure's profile that the difference won't show up in your cut.
+        </p>
+        <p>
+          <strong>Taste:</strong> Some of the best in the isolate category. Fruity Pebbles, Birthday
+          Cake, and Cocoa Pebbles taste like dessert without wrecking your calories. If you're going
+          to be drinking this every day during a cut, ISO100 is the most enjoyable option at a
+          budget price.
+        </p>
+        <p>
+          <strong>Cost per serving:</strong> Around $1.25–1.50 — the most affordable true isolate
+          on this list. For most college students, the value-to-quality ratio makes this the
+          practical first choice.
+        </p>
+        <p>
+          <strong>Best for:</strong> Students who want a true isolate macro profile without the
+          Isopure price tag, or anyone who wants better flavor options.
+        </p>
+        <AffiliateButton href={dymatizeUrl} label="Buy Dymatize ISO100 on Amazon" />
       </div>
 
       <div class="product-section">
@@ -208,18 +314,50 @@ const cons = [
           <strong>Why it makes the cutting list:</strong> Third-party Informed Sport certification,
           whey isolate as the primary ingredient, and the best mixability in its price class. When
           you're already managing a lot of dietary variables during a cut, having a reliable protein
-          that you know exactly what's in it is valuable. Gold Standard gives you that.
+          you know exactly what's in it is valuable.
         </p>
         <p>
           <strong>Cost per serving:</strong> Around $0.75–0.85 per serving — significantly cheaper
-          than Isopure. If the 20-calorie difference between the two doesn't matter to you, this is
-          the better value by a clear margin.
+          than any of the isolates above. If the 10–20 calorie difference between products doesn't
+          matter to you, this is the better value by a clear margin.
         </p>
         <p>
           <strong>Best for:</strong> Students who want a cutting-compatible protein without paying
-          the isolate premium, or who are cutting slowly (small deficit) and don't need to squeeze
-          every calorie.
+          the isolate premium, or who are cutting slowly and don't need to squeeze every calorie.
         </p>
+        <AffiliateButton href={onUrl} label="Buy ON Gold Standard on Amazon" />
+      </div>
+
+      <div class="product-section">
+        <h3>
+          <span class="badge premium">Best Premium</span>
+          Transparent Labs Whey Isolate
+        </h3>
+        <p>
+          Transparent Labs is what you buy when you want to know exactly what's in your protein
+          powder. Every product is third-party tested, nothing is hidden in a proprietary blend, and
+          they don't use artificial sweeteners or food dyes. For cutting specifically, the macro
+          profile is excellent — 28g protein at 120 calories with minimal carbs and fat.
+        </p>
+        <p>
+          <strong>Macros per serving:</strong> 120 calories, 28g protein, 1g carbs, 1g fat. The
+          highest protein-per-serving on this list.
+        </p>
+        <p>
+          <strong>Taste:</strong> French Vanilla, Milk Chocolate, and Cinnamon French Toast are the
+          standouts — they taste like actual food rather than a chemistry experiment. Mixes well in
+          water or almond milk.
+        </p>
+        <p>
+          <strong>Cost per serving:</strong> Around $2.25–2.50 per serving — the most expensive
+          option here. Worth it if you have the budget, but Isopure or Dymatize get you 95% of the
+          way there for less money.
+        </p>
+        <p>
+          <strong>Best for:</strong> Students who prioritize clean ingredients and third-party
+          testing above all else and have the budget to support it.
+        </p>
+        <AffiliateButton href={transparentUrl} label="Buy Transparent Labs Whey on Amazon" />
       </div>
 
       <div class="product-section">
@@ -255,10 +393,48 @@ const cons = [
           everything tastes bad, or anyone who wants a protein shake that doubles as a
           craving-killer.
         </p>
+        <AffiliateButton href={ghostUrl} label="Buy Ghost Whey on Amazon" />
       </div>
     </section>
 
-    <!-- Pros & Cons already inline above for Isopure -->
+    <!-- How to use when cutting -->
+    <section>
+      <h2>How to Use Protein Powder When Cutting</h2>
+      <div class="usage-grid">
+        <div class="usage-card">
+          <h3>Replace High-Calorie Snacks</h3>
+          <p>
+            Swap an afternoon bag of chips or a granola bar (200–300 calories, mostly carbs) for a
+            protein shake. You'll get more satiety from the protein and cut 100–200 calories per
+            day without feeling deprived.
+          </p>
+        </div>
+        <div class="usage-card">
+          <h3>Add to Meals Without Adding Bulk</h3>
+          <p>
+            Stir a scoop of unflavored Isopure into oatmeal, yogurt, or soup. You get an extra 25g
+            of protein without adding volume to the meal — useful when dining hall portions are
+            fixed and you can't easily increase serving sizes.
+          </p>
+        </div>
+        <div class="usage-card">
+          <h3>Post-Workout Recovery</h3>
+          <p>
+            After training in a deficit, getting protein in within 1–2 hours helps signal muscle
+            preservation. A 100-calorie shake that delivers 25g protein is far more efficient than
+            a high-calorie meal for this specific purpose.
+          </p>
+        </div>
+        <div class="usage-card">
+          <h3>Light Meal Replacement</h3>
+          <p>
+            On days when the dining hall only has terrible options, a protein shake plus a piece of
+            fruit and a handful of nuts (350–400 calories total) is a cleaner, cheaper alternative
+            to a 700-calorie pizza slice. Not every day — real food matters — but it works.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- Who Should Buy -->
     <section>
@@ -273,7 +449,7 @@ const cons = [
         <li>
           <strong>Anyone with a tight daily calorie budget.</strong> If you're eating 1,800
           calories a day and hitting two protein shakes, the efficiency of those 200 calories
-          matters. Isopure gives you 50g of protein in that window. A cheaper concentrate gives
+          matters. Isopure gives you 50g of protein in that window; a cheaper concentrate gives
           you 40g and uses 40–50 more calories doing it.
         </li>
         <li>
@@ -281,6 +457,10 @@ const cons = [
           High-protein, low-calorie shakes are one of the most effective tools for managing
           hunger during a cut. Protein is the most satiating macronutrient — using it
           efficiently means you can eat more food overall while staying in deficit.
+        </li>
+        <li>
+          <strong>Anyone with mild lactose sensitivity.</strong> The isolate process removes most
+          lactose, making isolates easier to digest than concentrate-based powders.
         </li>
       </ul>
     </section>
@@ -296,10 +476,9 @@ const cons = [
           cutting.
         </li>
         <li>
-          <strong>Anyone on a very tight supplement budget.</strong> Isopure and Ghost are premium
-          products. If cost is the main constraint, ON Gold Standard is cutting-compatible at a
-          much lower price point — don't pay the isolate premium if it means you can't afford
-          enough powder to hit your protein targets consistently.
+          <strong>Anyone on a very tight supplement budget.</strong> If cost is the main constraint,
+          ON Gold Standard is cutting-compatible at a much lower price point — don't pay the isolate
+          premium if it means you can't afford enough powder to hit your protein targets consistently.
         </li>
         <li>
           <strong>People who don't track macros at all.</strong> The calorie savings from a
@@ -315,15 +494,17 @@ const cons = [
       <h2>Final Verdict</h2>
       <p>
         If you're serious about cutting while holding onto your muscle, protein powder selection
-        actually matters. <strong>Isopure Zero Carb</strong> is the pick for students in an active
-        calorie deficit — 25g of protein for 100 calories, zero carbs, and a formula clean enough
-        that you know exactly what you're putting in your body. It's not cheap, but during an
-        eight-week cut, the daily calorie savings compound into a real difference.
+        actually matters. <strong>Isopure Zero Carb</strong> is the top pick for students in an
+        active calorie deficit — 25g of protein for 100 calories, zero carbs, and a formula clean
+        enough that you know exactly what you're putting in your body.
       </p>
       <p>
-        If the Isopure price is too steep, Gold Standard is close enough on macros at roughly half
-        the per-serving cost. If taste is the thing that's killed your last two cuts, Ghost is worth
-        the premium — consistency matters more than perfect macros if you can't stick to the plan.
+        If the Isopure price is a stretch, <strong>Dymatize ISO100</strong> gives you nearly
+        identical macros for $0.25–0.50 less per serving and has better flavors. If you're not
+        tracking tightly, <strong>ON Gold Standard</strong> is cutting-compatible at roughly half
+        the per-serving cost of an isolate. And if taste is the thing that's killed your last two
+        cuts, <strong>Ghost</strong> is worth the premium — consistency matters more than perfect
+        macros if you can't stick to the plan.
       </p>
       <AffiliateButton
         href={isopureUrl}
@@ -500,14 +681,54 @@ const cons = [
     color: #1d4ed8;
   }
 
-  .badge.overall {
+  .badge.value {
     background: #dcfce7;
     color: #15803d;
+  }
+
+  .badge.overall {
+    background: #f0fdf4;
+    color: #166534;
+  }
+
+  .badge.premium {
+    background: #faf5ff;
+    color: #7e22ce;
   }
 
   .badge.taste {
     background: #fef9c3;
     color: #854d0e;
+  }
+
+  /* Usage Grid */
+  .usage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .usage-card {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 0.5rem;
+    padding: 1.1rem;
+  }
+
+  .usage-card h3 {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0369a1;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .usage-card p {
+    font-size: 0.85rem;
+    color: #334155;
+    margin: 0;
   }
 
   @media (max-width: 600px) {
